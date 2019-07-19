@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Raythompsonwebdev.com`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
@@ -13,6 +13,49 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+
+    `gatsby-plugin-sass`,
+
+    {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        excludedRoutes:['/wp/v2/users/**', '/wp/v2/settings*'],
+        includedRoutes: [
+          "**/posts",
+          "**/pages",
+          "**/media",
+          "**/categories",
+          
+          "**/taxonomies",
+          "**/users",
+        ],
+        baseUrl: "raythompsonwebdevlocal.com/wordpress",
+        protocol: "https",
+        hostingWPCOM: false,
+        useACF: false,
+        verboseOutput: true,
+        // Search and Replace Urls across WordPress content.
+        searchAndReplaceContentUrls: {
+          sourceUrl: "https://raythompsonwebdevlocal.com/wordpress",
+          replacementUrl: "",
+        },
+      }
+    },
+
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: 'gatsby-plugin-prefetch-google-fonts',
+      options:{
+        fonts: [
+          {
+            family: 'Cabin',
+            variants: ['200','300', '400', '500', '600', '700' ],
+          }
+        ]
+      }
+    },
+
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
