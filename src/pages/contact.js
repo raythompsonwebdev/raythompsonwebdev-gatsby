@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const ContactPage = () => (
+  
   <Layout>
     <SEO title="Contact Page" />
     <h1>Contact</h1>
@@ -16,7 +17,7 @@ const ContactPage = () => (
 
 <div id="map_container">
 </div>
-<ul class="contact-details">
+<ul className="contact-details">
 <li id="fa-email"><Link to="">raymond.thompson@raythompsonwebdev.co.uk</Link></li>
 <li id="fa-email"><Link to="">www.facebook.com/raythompsonwebdeveloper/</Link></li>
 <li id="fa-email"><Link to="">@RayThompWeb</Link></li>
@@ -25,7 +26,7 @@ const ContactPage = () => (
 </ul>
 
 
-<div class="clearfix"></div>
+<div className="clearfix"></div>
 
 
   </Layout>

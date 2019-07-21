@@ -8,19 +8,20 @@ const ListLink = props => (
 	</li>
   )
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, siteDescription}) => (
   
   <header>
 	
 		<div className="site-logo">
 	
-			<Link to="">R</Link>
+			<Link to="/">R</Link>
 
 		</div>
 	
 			<hgroup>
 
 			  <h1 id="logo">{siteTitle}</h1>
+			  <h2>{siteDescription}</h2>
 
 			</hgroup>
 

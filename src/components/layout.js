@@ -8,10 +8,15 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { Link } from "gatsby"
 import Header from "./header"
-import "./style.scss"
+import "../css/style.scss"
 
+const ListLink = props => (
+	<li className="menu-item">
+	  <Link to={props.to}>{props.children}</Link>
+	</li>
+  )
 
 const Layout = ({ children }) => {
 
@@ -20,6 +25,7 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          description
         }
       }
     }
@@ -29,22 +35,61 @@ const Layout = ({ children }) => {
     <>
 <div id="wrapper_container">
 
-      <Header siteTitle={data.site.siteMetadata.title} />
+  <Header siteTitle={data.site.siteMetadata.title} siteDescription={data.site.siteMetadata.description}  />
+  
 
+    <main id="main-content">{children}</main>
+          
+  <br/>
+
+  <footer>
+
+  <ul >
+          <ListLink to="/">Home</ListLink>
+					<ListLink to="/about">About</ListLink>
+					<ListLink to="/contact">Contact</ListLink>
+					
+	</ul>
+
+
+    <div className="socialpics">
+
+    <Link className="social-icon linkedin-icon" to="" target="new" title="">
+      <span>
+        <i className="fa fa-linkedin"></i>
+      </span>
+    </Link>
+
+    <Link className="social-icon twitter-icon" to="" target="new" title="">
+      <span>
+        <i className="fa fa-twitter"></i>
+      </span>
+    </Link>
+
+    <Link className="social-icon facebook-icon" to="" target="new" title="">
+      <span>
+        <i className="fa fa-facebook"></i>
+      </span>
+    </Link>
+
+    <Link className="social-icon google-icon" to="" target="new" title="">
+      <span>
+        <i className="fa fa-github"></i>
+      </span>
+    </Link>
+
+  </div>
+    
       
+  </footer>
 
-      
+  <p id="copyr" > 
 
-        <main id="main-content">{children}</main>
-             
-     
+    © {new Date().getFullYear()}, Built with {` `} <Link to="">Gatsby</Link>
 
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
- </div>
+  </p>
+
+</div>
     </>
   )
 }

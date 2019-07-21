@@ -1,16 +1,23 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const GalleryPage = () => (
+//import Img from "../components/image"
+
+
+const GalleryPage = ({ data }) => (
+ 
+
 
 <Layout>
 
-    <SEO title="Page Gallery"/>
+    <SEO title="Gallery Page"/>
 
     <div id="photocontainer" >
+
+ <div className="content">
 
         <nav className="menuSwitch">
 
@@ -27,16 +34,28 @@ const GalleryPage = () => (
                 <li className="">Link</li>
 
             </ul>
+
         </nav>
 
-        <div id="panel" className="prod-cnt" >
+       
+
+
+            {data.allWordpressWpGallery.nodes.map((items, i) => (
+
+
+            <div id="panel" className="prod-cnt"  key={i}>
 
             <figure className="showcase-container" id="showcaseimg1">
+
                 <div className="showcase-img">
+
+                
                     
                 </div>
+
                 <figcaption className="showcase-content showcase">
-                    <h1>Title</h1>
+
+                    <h1>{items.title}</h1>
                 
                     <Link to="/contact" >Link to Contact page</Link>
 
@@ -44,15 +63,14 @@ const GalleryPage = () => (
 
             </figure>
 
+
+
         </div>
 
-
+))}
+        </div> 
     </div>
 
-
-    <Link to="/blog">Go to Blog</Link><br/>
-    <Link to="/">Go back to the homepage</Link><br/>
-    <Link to="/about">Link to About page</Link>
 
 </Layout>
 
@@ -61,6 +79,17 @@ const GalleryPage = () => (
 export default GalleryPage
 
 
-
+export const data = graphql`
+    query SiteCustomQuery {
+        allWordpressWpGallery {
+            nodes {
+                title
+                featured_media {
+                    source_url
+                }
+            }
+        }
+    }
+    `
 
 

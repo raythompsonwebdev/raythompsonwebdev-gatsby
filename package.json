@@ -26,6 +26,8 @@
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
+    "env-cmd": "^9.0.3",
+    "gatsby-transformer-remark": "^2.6.8",
     "prettier": "^1.18.2"
   },
   "keywords": [
