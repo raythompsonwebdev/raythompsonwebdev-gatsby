@@ -25,7 +25,7 @@ const BlogPage = ({data}) => (
 				
 				<p>{node.excerpt}</p>
 
-				<Link to={node.path}></Link>
+				<Link to={node.link}></Link>
 
                 </div>
            ))}
@@ -50,6 +50,7 @@ query {
                 title
                 excerpt
                 path
+                link
             }
         }
     }

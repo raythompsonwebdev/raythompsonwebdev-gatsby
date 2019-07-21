@@ -9,8 +9,7 @@ import SEO from "../components/seo"
 
 const GalleryPage = ({ data }) => (
  
-
-
+ 
 <Layout>
 
     <SEO title="Gallery Page"/>

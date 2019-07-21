@@ -15,31 +15,31 @@ const SliderPanel = () => {
 
                 <ul id="list">
                     <li>
-                        <a to="#" rel="#panel-1" className="active" title="" ></a>
+                        <Link to="#" rel="#panel-1" className="active">1</Link>
                     </li>
                     <li>
-                        <a to="#" rel="#panel-2" title=""></a>
+                        <Link to="#" rel="#panel-2" >2</Link>
                     </li>
                     <li>
-                        <a to="#" rel="#panel-3" title=""></a>
+                        <Link to="#" rel="#panel-3" >3</Link>
                     </li>
                     <li>
-                        <a to="#" rel="#panel-4" title=""></a>
+                        <Link to="#" rel="#panel-4" >4</Link>
                     </li>
                     <li>
-                        <a to="#" rel="#panel-5" title=""></a>
+                        <Link to="#" rel="#panel-5" >5</Link>
                     </li>
                     <li>
-                        <a to="#" rel="#panel-6" title=""></a>
+                        <Link to="#" rel="#panel-6" >6</Link>
                     </li>
                     <li>
-                        <a to="#" rel="#panel-7" title=""></a>
+                        <Link to="#" rel="#panel-7" >7</Link>
                     </li>
                     <li>
-                        <a to="#" rel="#panel-8" title=""></a>
+                        <Link to="#" rel="#panel-8" >8</Link>
                     </li>
                     <li>
-                        <a to="#" rel="#panel-9" title=""></a>
+                        <Link to="#" rel="#panel-9" ></Link>
                     </li>
                 </ul>
 
@@ -49,17 +49,17 @@ const SliderPanel = () => {
 
                         <article className="panel" id="panel-1">
 
-                            <h2></h2>
+                            <h2>Title 1</h2>
 
                             <figure className="slider-panel">
 
-                                <Link to="/" className="fancybox" title="">
-                                    <span></span>
+                                <Link to="/" className="fancybox" >
+                                Title 1
                                 </Link>
 
                                 <figcaption>
-                                    <h3></h3>
-                                    <h4></h4>
+                                    <h3>Title 1</h3>
+                                    <h4>Title 1</h4>
 
                                     <ul>
                                         <li></li>
@@ -80,17 +80,17 @@ const SliderPanel = () => {
 
                         <article className="panel" id="panel-2">
 
-                            <h2></h2>
+                            <h2>Title 1</h2>
 
                             <figure className="slider-panel">
 
-                                <Link to="/" className="fancybox" title="">
-                                    <span> </span>
+                                <Link to="/" className="fancybox" >
+                                Title 1
                                 </Link>
 
                                 <figcaption>
-                                    <h3></h3>
-                                    <h4></h4>
+                                    <h3>Title 1</h3>
+                                    <h4>Title 1</h4>
 
                                     <ul>
                                         <li></li>
@@ -109,16 +109,16 @@ const SliderPanel = () => {
 
                         <article className="panel" id="panel-3">
 
-                            <h2></h2>
+                            <h2>Title 1</h2>
 
                             <figure className="slider-panel">
 
-                                <Link to="/" className="fancybox" title="">
-                                    <span> </span>
+                                <Link to="/" className="fancybox" >
+                                Title 1
                                 </Link>
                                 <figcaption>
-                                    <h3></h3>
-                                    <h4></h4>
+                                    <h3>Title 1</h3>
+                                    <h4>Title 1</h4>
 
                                     <ul>
                                         <li></li>
@@ -136,16 +136,16 @@ const SliderPanel = () => {
 
                         <article className="panel" id="panel-4">
 
-                            <h2></h2>
+                            <h2>Title 1</h2>
 
                             <figure className="slider-panel">
 
-                                <Link to="/" className="fancybox" title="">
-                                    <span> </span>
+                                <Link to="/" className="fancybox" >
+                                Title 1
                                 </Link>
                                 <figcaption>
-                                    <h3></h3>
-                                    <h4></h4>
+                                    <h3>Title 1</h3>
+                                    <h4>Title 1</h4>
 
                                     <ul>
                                         <li></li>
@@ -164,17 +164,17 @@ const SliderPanel = () => {
 
                         <article className="panel" id="panel-5">
 
-                            <h2></h2>
+                            <h2>Title 1</h2>
 
                             <figure className="slider-panel">
 
                                 <Link to="/"  className="fancybox"  title=";">
-                                    <span></span>
+                                Title 1
                                 </Link>
 
                                 <figcaption>
-                                    <h3></h3>
-                                    <h4></h4>
+                                    <h3>Title 1</h3>
+                                    <h4>Title 1</h4>
                                     <ul>
                                         <li></li>
                                         <li></li>
@@ -193,17 +193,17 @@ const SliderPanel = () => {
 
                         <article className="panel" id="panel-6">
 
-                            <h2></h2>
+                            <h2>Title 1</h2>
 
                             <figure className="slider-panel">
 
-                                <Link to="/"  className="fancybox"  title="">
-                                    <span></span>
+                                <Link to="/"  className="fancybox"  >
+                                    Link 1
                                 </Link>
 
                                 <figcaption>
-                                    <h3></h3>
-                                    <h4></h4>
+                                    <h3>Title 1</h3>
+                                    <h4>Title 1</h4>
 
                                     <ul>
                                         <li></li>
@@ -221,17 +221,17 @@ const SliderPanel = () => {
 
                         <article className="panel" id="panel-7">
 
-                            <h2></h2>
+                            <h2>Title 1</h2>
 
                             <figure className="slider-panel">
 
-                                <Link to="/"  className="fancybox" title="">
+                                <Link to="/"  className="fancybox" >
                                     <span></span>
                                 </Link>
 
                                 <figcaption>
-                                    <h3></h3>
-                                    <h4></h4>
+                                    <h3>Title 1</h3>
+                                    <h4>Title 1</h4>
 
                                     <ul>
                                         <li></li>
@@ -250,17 +250,17 @@ const SliderPanel = () => {
 
                         <article className="panel" id="panel-8">
 
-                            <h2></h2>
+                            <h2>Title 1</h2>
 
                             <figure className="slider-panel">
 
-                                <Link to="/"  className="fancybox" title="">
-                                    <span></span>
+                                <Link to="/"  className="fancybox" >
+                                Link 1
                                 </Link>
 
                                 <figcaption>
-                                    <h3></h3>
-                                    <h4></h4>
+                                    <h3>Title 1</h3>
+                                    <h4>Title 1</h4>
 
                                     <ul>
                                         <li></li>
@@ -280,18 +280,18 @@ const SliderPanel = () => {
 
                         <article className="panel" id="panel-9">
 
-                            <h2></h2>
+                            <h2>Title 1</h2>
 
                             <figure className="slider-panel">
 
-                                <Link to="/"  className="fancybox" title="">
-                                    <span></span>
+                                <Link to="/"  className="fancybox" >
+                                Link 1
                                 </Link>
 
                                 
                                 <figcaption>
-                                    <h3></h3>
-                                    <h4></h4>
+                                    <h3>Title 1</h3>
+                                    <h4>Title 1</h4>
 
                                     <ul>
                                         <li></li>

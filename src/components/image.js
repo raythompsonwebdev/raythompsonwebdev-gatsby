@@ -13,21 +13,22 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = () => {
+const Image = ( {data} ) => {
+  
 
-  const data = useStaticQuery(graphql`
+  const data = graphql`
     query {
-      allWordpressWpGallery {
-        nodes {
-          featured_media {
+      allWordpressWpMedia {
+        edges {
+          node {
             source_url
           }
         }
       }
     }
-  `)
+  `
 
-  return <Img fluid={data.allWordpressWpGallery.nodes} />
+  return <Img  />
 }
 
 export default Image
