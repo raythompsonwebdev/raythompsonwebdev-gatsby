@@ -3,9 +3,10 @@
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Ray Thompson <webdesignbully@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
+    "env-cmd": "^9.0.3",
     "gatsby": "^2.13.25",
     "gatsby-image": "^2.2.6",
     "gatsby-plugin-manifest": "^2.2.3",
@@ -26,7 +27,6 @@
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "env-cmd": "^9.0.3",
     "gatsby-transformer-remark": "^2.6.8",
     "prettier": "^1.18.2"
   },

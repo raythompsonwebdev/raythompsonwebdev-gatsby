@@ -3,10 +3,12 @@ import { graphql } from "gatsby"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+//import Img from "gatsby-image"
+
 
 
 const BlogPage = ({data}) => (
-
+  
     
   <Layout>
 
@@ -19,11 +21,14 @@ const BlogPage = ({data}) => (
     
             {data.allWordpressPost.edges.map(({ node }, index) => (
 
+                
                 <div className="blogboxes" key={index}>
 
 				<h1>{node.title}</h1>
+
+               <img src={node.featured_media.localFile.childImageSharp.resolutions.src} alt="" />
 				
-				<p>{node.excerpt}</p>
+				<div dangerouslySetInnerHTML={{ __html: node.excerpt }}></div>
 
 				<Link to={node.link}></Link>
 
@@ -33,25 +38,37 @@ const BlogPage = ({data}) => (
 
     </div>
 
-    <Link to="/">Go back to the homepage</Link><br/>
-    <Link to="/contact" >Link to Contact page</Link>
+
 
   </Layout>
+
+
 )
 
 export default BlogPage
 
 export const pageQuery = graphql`
-query {
-    allWordpressPost {
-        edges {
-            node {
-                id
-                title
-                excerpt
-                path
-                link
+    query {
+        allWordpressPost {
+            edges {
+                node {
+                    id
+                    title
+                    excerpt
+                    path
+                    link
+                    featured_media {
+                        localFile {
+                            childImageSharp {
+                                resolutions {
+                                    src
+                                    height
+                                    width
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
-    }
-}`
+    }`

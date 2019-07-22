@@ -17,6 +17,8 @@ const ContactPage = () => (
 
 <div id="map_container">
 </div>
+
+
 <ul className="contact-details">
 <li id="fa-email"><Link to="">raymond.thompson@raythompsonwebdev.co.uk</Link></li>
 <li id="fa-email"><Link to="">www.facebook.com/raythompsonwebdeveloper/</Link></li>

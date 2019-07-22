@@ -11,6 +11,8 @@
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
+const path = require(`path`)
+
 module.exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions
     // Transform the new node here and create a new node or
@@ -29,9 +31,9 @@ module.exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 
   const { createFilePath } = require(`gatsby-source-filesystem`)
-  const path = require(`path`)
+  
 
-  exports.createPages = ({ graphql, actions }) => {
+module.exports.createPages = ({ graphql, actions }) => {
     // **Note:** The graphql function call returns a Promise
     // see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise for more info
     
@@ -58,12 +60,12 @@ module.exports.onCreateNode = ({ node, getNode, actions }) => {
 
       result.data.allWordpressPost.edges.forEach(({ node }) => {
 
-       console.log(node.slug)
+       //console.log(node.slug)
   
 
         createPage({
-          path: node.slug,
-          component: path.resolve(`src/components/templates/blog-post.js`),
+          path: `/blog/${node.slug}`,
+          component: path.resolve(`src/templates/blog-post.js`),
           context: {
             // Data passed to context is available
             // in page queries as GraphQL variables.
