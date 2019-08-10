@@ -10,7 +10,30 @@ const ContactPage = () => (
     <SEO title="Contact Page" />
     <h1>Contact</h1>
 
-<div id="contactform">
+    <div id="contactform">
+
+<form action="" method="post" id="contact-form">
+<ul>
+  <li>
+    <label htmlFor="name">Name</label>
+    <input name="name" type="text"/>
+  </li>
+
+  <li>
+    <label htmlFor="email">Name</label>
+    <input name="email" type="email"/>
+  </li>
+  <li>
+    <label htmlFor="text">Message</label>
+    <textarea name="text"></textarea>
+  </li>
+  <li>
+    
+    <input type="submit"/>
+  </li>
+</ul>
+
+</form>
 
 </div>
 

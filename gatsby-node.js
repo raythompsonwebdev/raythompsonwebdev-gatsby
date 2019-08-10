@@ -12,13 +12,16 @@
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
+
 
 module.exports.onCreateNode = ({ node, getNode, actions }) => {
+    
     const { createNodeField } = actions
     // Transform the new node here and create a new node or
     // create a new node field.
 
-    if (node.internal.type === `wordpress__POST`) {
+    if (node.internal.type === `wordpress__POST` && `wordpress__wp_project`) {
 
       const slug = createFilePath({ node, getNode, basePath: `pages` })
 
@@ -28,9 +31,9 @@ module.exports.onCreateNode = ({ node, getNode, actions }) => {
         value: slug,
       })
     }
-  }
 
-  const { createFilePath } = require(`gatsby-source-filesystem`)
+
+  }
   
 
 module.exports.createPages = ({ graphql, actions }) => {
@@ -49,21 +52,30 @@ module.exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+        allWordpressWpProject {
+          edges {
+            node {
+              slug
+              path
+            }
+          }
+        }
       }
     `).then(result => {
 
       //console.log(JSON.stringify(result, null, 4))
 
       if (result.errors) {
+
         reject(result.errors)
+        
       }
 
       result.data.allWordpressPost.edges.forEach(({ node }) => {
 
-       //console.log(node.slug)
-  
+          //console.log(node.slug)
 
-        createPage({
+          createPage({
           path: `/blog/${node.slug}`,
           component: path.resolve(`src/templates/blog-post.js`),
           context: {
@@ -71,8 +83,28 @@ module.exports.createPages = ({ graphql, actions }) => {
             // in page queries as GraphQL variables.
             slug: node.slug,
           },
-        })
+          })
       })
 
+
+      //custom posts
+      result.data.allWordpressWpProject.edges.forEach(({ node }) => {
+        
+
+        createPage({
+        path: `/project/${node.slug}`,
+        component: path.resolve(`src/templates/project-single.js`),
+        context: {
+          // Data passed to context is available
+          // in page queries as GraphQL variables.
+          slug: node.slug,
+        },
+        })
     })
+
+
+
+    })
+
+
   }

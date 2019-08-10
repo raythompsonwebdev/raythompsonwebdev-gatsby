@@ -1,45 +1,47 @@
 import { Link } from "gatsby"
 //import PropTypes from "prop-types"
 import React from "react"
+//import $ from 'jquery';
 
 
 const SliderPanel = () => {
-  
+ 
+
     return (
           
         <section id="prof_cont-a">
 
-            <h1>Slider Panel</h1>
+            <h1>Web Development Courses</h1>
 
             <article className="hero-slider">
 
                 <ul id="list">
                     <li>
-                        <Link to="#" rel="#panel-1" className="active">1</Link>
+                        <Link to="#" rel="#panel-1" className="active">Adobe</Link>
                     </li>
                     <li>
-                        <Link to="#" rel="#panel-2" >2</Link>
+                        <Link to="#" rel="#panel-2" >ELATT</Link>
                     </li>
                     <li>
-                        <Link to="#" rel="#panel-3" >3</Link>
+                        <Link to="#" rel="#panel-3" >Udemy</Link>
                     </li>
                     <li>
-                        <Link to="#" rel="#panel-4" >4</Link>
+                        <Link to="#" rel="#panel-4" >FreeCodeCamp</Link>
                     </li>
                     <li>
-                        <Link to="#" rel="#panel-5" >5</Link>
+                        <Link to="#" rel="#panel-5" >Lynda.com</Link>
                     </li>
                     <li>
-                        <Link to="#" rel="#panel-6" >6</Link>
+                        <Link to="#" rel="#panel-6" >Shaw Academy</Link>
                     </li>
                     <li>
-                        <Link to="#" rel="#panel-7" >7</Link>
+                        <Link to="#" rel="#panel-7" >Code Academy</Link>
                     </li>
                     <li>
-                        <Link to="#" rel="#panel-8" >8</Link>
+                        <Link to="#" rel="#panel-8" >Udacity</Link>
                     </li>
                     <li>
-                        <Link to="#" rel="#panel-9" ></Link>
+                        <Link to="#" rel="#panel-9" >Digital Futures</Link>
                     </li>
                 </ul>
 
@@ -49,7 +51,7 @@ const SliderPanel = () => {
 
                         <article className="panel" id="panel-1">
 
-                            <h2>Title 1</h2>
+                            <h2>Adobe Certified Associates</h2>
 
                             <figure className="slider-panel">
 
@@ -58,8 +60,8 @@ const SliderPanel = () => {
                                 </Link>
 
                                 <figcaption>
-                                    <h3>Title 1</h3>
-                                    <h4>Title 1</h4>
+                                    <h3>Visual Communication: Photoshop CS4</h3>
+                                    <h4>Topics :</h4>
 
                                     <ul>
                                         <li></li>

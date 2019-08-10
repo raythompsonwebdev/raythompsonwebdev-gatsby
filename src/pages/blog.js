@@ -30,7 +30,7 @@ const BlogPage = ({data}) => (
 				
 				<div dangerouslySetInnerHTML={{ __html: node.excerpt }}></div>
 
-				<Link to={node.link}></Link>
+				<Link to={`/blog/${node.link}`}></Link>
 
                 </div>
            ))}
@@ -51,24 +51,24 @@ export const pageQuery = graphql`
     query {
         allWordpressPost {
             edges {
-                node {
-                    id
-                    title
-                    excerpt
-                    path
-                    link
-                    featured_media {
-                        localFile {
-                            childImageSharp {
-                                resolutions {
-                                    src
-                                    height
-                                    width
-                                }
-                            }
-                        }
+              node {
+                id
+                title
+                excerpt
+                path
+                link
+                featured_media {
+                  localFile {
+                    childImageSharp {
+                      resolutions {
+                        src
+                        width
+                        height
+                      }
                     }
+                  }
                 }
+              }
             }
-        }
+          }
     }`

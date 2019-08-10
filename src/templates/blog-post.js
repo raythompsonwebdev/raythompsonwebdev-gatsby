@@ -8,10 +8,21 @@ export const post = graphql`
     query ($slug: String!) {
         allWordpressPost(filter: {slug: {eq: $slug}}) {
             nodes {
-                content
-                title
+              content
+              title
+              featured_media {
+                localFile {
+                  childImageSharp {
+                    resolutions {
+                      src
+                      width
+                      height
+                    }
+                  }
+                }
+              }
             }
-        }
+          }
     }`
 
     
@@ -41,9 +52,7 @@ const BlogPost = (props) => {
             <Link href="" title="Permanent Link to">
 
                 <figure className="featuredImage">
-                    <Link to="/" >
-                        Image
-                    </Link>
+                <img src={props.data.allWordpressPost.nodes[0].featured_media.localFile.childImageSharp.resolutions.src} alt="" />
                 </figure>
 
             </Link>

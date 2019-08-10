@@ -29,10 +29,10 @@ const Header = ({ siteTitle, siteDescription}) => (
 
 				<ul >
 					<ListLink to="/">Home</ListLink>
-					<ListLink to="/about">About</ListLink>
-					<ListLink to="/contact">Contact</ListLink>
-					<ListLink to="/gallery">Gallery</ListLink>
+					<ListLink to="/about">About</ListLink>					
+					<ListLink to="/project">Projects</ListLink>
 					<ListLink to="/blog">Blog</ListLink>
+					<ListLink to="/contact">Contact</ListLink>
 				</ul>
 			</nav>	
 

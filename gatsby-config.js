@@ -21,6 +21,7 @@ module.exports = {
       options: {
         excludedRoutes:['/wp/v2/users/**', '/wp/v2/settings*'],
         
+        
         baseUrl: "raythompsonwebdevlocal.com/wordpress",
         protocol: "https",
         hostingWPCOM: false,

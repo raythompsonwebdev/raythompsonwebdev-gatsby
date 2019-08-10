@@ -68,4 +68,6 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 fonts/
-images/
+src/images/
+src/js/scrollto.js
+.env

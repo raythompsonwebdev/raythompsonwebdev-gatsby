@@ -20,6 +20,8 @@ const AboutPage = () => (
           <div className="introimg">
 
           </div>
+
+          
           <p>I have a passion for web design and web development and particularly like using HTML, CSS and Javascipt for front-end development, responsive web development and php for back end development and WordPress theme development .</p>
 
 

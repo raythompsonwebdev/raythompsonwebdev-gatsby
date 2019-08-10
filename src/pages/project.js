@@ -6,9 +6,9 @@ import SEO from "../components/seo"
 
 //import Img from "../components/image"
 
-const GalleryPage = ({ data }) => (
+const ProjectPage = ({ data }) => (
   <Layout>
-    <SEO title="Gallery Page" />
+    <SEO title="Project Page" />
 
     <div id="photocontainer">
       <div className="content">
@@ -26,7 +26,7 @@ const GalleryPage = ({ data }) => (
           </ul>
         </nav>
 
-        {data.allWordpressWpGallery.nodes.map((items, i) => (
+        {data.allWordpressWpProject.nodes.map((items, i) => (
           <div id="panel" className="prod-cnt" key={i}>
             <figure className="showcase-container" id="showcaseimg1">
               <div className="showcase-img">
@@ -36,7 +36,7 @@ const GalleryPage = ({ data }) => (
               <figcaption className="showcase-content showcase">
                 <h1>{items.title}</h1>
 
-                <Link to="/contact">Link to Contact page</Link>
+              <Link to={`/project/${items.slug}`}>Link</Link>
               </figcaption>
             </figure>
           </div>
@@ -46,13 +46,14 @@ const GalleryPage = ({ data }) => (
   </Layout>
 )
 
-export default GalleryPage
+export default ProjectPage
 
 export const data = graphql`
     query SiteCustomQuery {
-        allWordpressWpGallery {
+        allWordpressWpProject {
             nodes {
                 title
+                slug
                 featured_media {
                     localFile {
                         childImageSharp {

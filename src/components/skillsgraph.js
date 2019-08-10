@@ -1,9 +1,24 @@
 //import { Link } from "gatsby"
 //import PropTypes from "prop-types"
 import React from "react"
+import $ from 'jquery';
 
 
 const SkillsGraph = () => {
+
+$(document).ready(function(){
+    //Hero Slider
+    $(" #chart #bars li .bar").each( function( key, bar ) {
+           
+        var percentage = $(this).data('percentage');
+    
+        $(this).animate({
+            'width' : percentage + '%'
+        }, 1000);
+
+    });
+});   
+     
   
     return (
   
@@ -16,34 +31,30 @@ const SkillsGraph = () => {
                 <ul id="bars">
 
                     <li>
-                        <div className="bar"></div>
-                        <span></span>
+                        <div className="bar" data-percentage="85"></div>
+                        <span>HTML5</span>
                     </li>
 
                     <li>
-                        <div className="bar"></div>
-                        <span></span>
+                        <div className="bar" data-percentage="85"></div>
+                        <span>CSS3</span>
                     </li>
 
                     <li>
-                        <div className="bar"></div>
-                        <span></span>
+                        <div className="bar" data-percentage="70"></div>
+                        <span>Javascript</span>
                     </li>
 
                     <li>
-                        <div className="bar"></div>
-                        <span></span>
+                        <div className="bar" data-percentage="65"></div>
+                        <span>PHP</span>
                     </li>
 
                     <li>
-                        <div className="bar"></div>
-                        <span></span>
+                        <div className="bar" data-percentage="70"></div>
+                        <span>SQL</span>
                     </li>
 
-                    <li>
-                        <div className="bar"></div>
-                        <span></span>
-                    </li>
 
                 </ul>
 

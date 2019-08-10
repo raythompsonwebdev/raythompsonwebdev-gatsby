@@ -13,10 +13,7 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = ( {data} ) => {
-  
-
-  const data = graphql`
+const data = graphql`
     query {
       allWordpressWpMedia {
         edges {
@@ -25,10 +22,12 @@ const Image = ( {data} ) => {
           }
         }
       }
-    }
-  `
+    } `
 
+const Image = ( {data} ) => {
+  
   return <Img  />
+  
 }
 
 export default Image
