@@ -12,6 +12,8 @@ import { Link } from "gatsby"
 import Header from "./header"
 import "../css/style.scss"
 
+
+
 const ListLink = props => (
 	<li className="menu-item">
 	  <Link to={props.to}>{props.children}</Link>

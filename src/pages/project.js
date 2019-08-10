@@ -12,22 +12,21 @@ const ProjectPage = ({ data }) => (
 
     <div id="photocontainer">
       <div className="content">
+        <h1>Projects</h1>
         <nav className="menuSwitch">
           <ul>
-            <li className="cat-active">Link</li>
+            <li className="cat-active" category="prod-cnt">All</li>
 
-            <li className="">Link</li>
+            <li className="" category="vanilla">Plain Code</li>
 
-            <li className="">Link</li>
+            <li className="" category="wordpress">WordPress</li>
 
-            <li className="">Link</li>
 
-            <li className="">Link</li>
           </ul>
         </nav>
 
         {data.allWordpressWpProject.nodes.map((items, i) => (
-          <div id="panel" className="prod-cnt" key={i}>
+          <div id="panel" className={`prod-cnt ${data.allWordpressWpProject.nodes[0].slug}`} key={i}>
             <figure className="showcase-container" id="showcaseimg1">
               <div className="showcase-img">
                 <img src={items.featured_media.localFile.childImageSharp.resolutions.src} alt="" />
@@ -50,22 +49,22 @@ export default ProjectPage
 
 export const data = graphql`
     query SiteCustomQuery {
-        allWordpressWpProject {
-            nodes {
-                title
-                slug
-                featured_media {
-                    localFile {
-                        childImageSharp {
-                            resolutions {
-                                src
-                                width
-                                height
-                            }
-                        }
-                    }
-                }
-            }
-        }
+      allWordpressWpProject {
+          nodes {
+              title
+              slug
+              featured_media {
+                  localFile {
+                      childImageSharp {
+                          resolutions {
+                              src
+                              width
+                              height
+                          }
+                      }
+                  }
+              }
+          }
+      }
     }
   `

@@ -1,11 +1,27 @@
 import { Link } from "gatsby"
 //import PropTypes from "prop-types"
 import React from "react"
-//import $ from 'jquery';
+import $ from 'jquery';
 
 
 const SliderPanel = () => {
  
+    //Hero Slider
+$(document).ready(function($){
+
+    $('.hero-slider ul a').click(function() {
+        //reset all the items
+        $('.customBlock ul a').removeClass('active');
+        //set current item as active
+        $(this).addClass('active');
+       //scroll it to the right position
+        $('.hero-slider .mask').scrollTo($(this).attr('rel'), 300);
+       //disable click event
+        return false;
+    });
+      
+    
+});
 
     return (
           
@@ -56,7 +72,9 @@ const SliderPanel = () => {
                             <figure className="slider-panel">
 
                                 <Link to="/" className="fancybox" >
-                                Title 1
+                                <span>
+
+                                    </span>
                                 </Link>
 
                                 <figcaption>
@@ -87,8 +105,11 @@ const SliderPanel = () => {
                             <figure className="slider-panel">
 
                                 <Link to="/" className="fancybox" >
-                                Title 1
+                                    <span>
+
+                                    </span>
                                 </Link>
+
 
                                 <figcaption>
                                     <h3>Title 1</h3>
@@ -116,7 +137,9 @@ const SliderPanel = () => {
                             <figure className="slider-panel">
 
                                 <Link to="/" className="fancybox" >
-                                Title 1
+                                <span>
+
+                                    </span>
                                 </Link>
                                 <figcaption>
                                     <h3>Title 1</h3>
@@ -143,7 +166,9 @@ const SliderPanel = () => {
                             <figure className="slider-panel">
 
                                 <Link to="/" className="fancybox" >
-                                Title 1
+                                <span>
+
+                                    </span>
                                 </Link>
                                 <figcaption>
                                     <h3>Title 1</h3>
@@ -171,7 +196,9 @@ const SliderPanel = () => {
                             <figure className="slider-panel">
 
                                 <Link to="/"  className="fancybox"  title=";">
-                                Title 1
+                                <span>
+
+                                    </span>
                                 </Link>
 
                                 <figcaption>
@@ -200,7 +227,9 @@ const SliderPanel = () => {
                             <figure className="slider-panel">
 
                                 <Link to="/"  className="fancybox"  >
-                                    Link 1
+                                <span>
+
+</span>
                                 </Link>
 
                                 <figcaption>
