@@ -52,6 +52,14 @@ module.exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+        allWordpressCategory {
+          edges {
+            node {
+              slug
+              path
+            }
+          }
+        }
         allWordpressWpProject {
           edges {
             node {

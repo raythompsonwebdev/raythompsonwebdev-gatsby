@@ -1,33 +1,54 @@
-import { Link } from "gatsby"
-//import PropTypes from "prop-types"
 import React from "react"
+import { StaticQuery, Link , graphql } from "gatsby"
 import $ from 'jquery';
+require('jquery.scrollto');
 
+      
 
 const SliderPanel = () => {
- 
+
     //Hero Slider
-$(document).ready(function($){
+    $(document).ready(function($){
 
-    $('.hero-slider ul a').click(function() {
-        //reset all the items
-        $('.customBlock ul a').removeClass('active');
-        //set current item as active
-        $(this).addClass('active');
-       //scroll it to the right position
-        $('.hero-slider .mask').scrollTo($(this).attr('rel'), 300);
-       //disable click event
-        return false;
-    });
-      
-    
-});
+        $('.hero-slider ul a').click(function() {
+            //reset all the items
+            $('.customBlock ul a').removeClass('active');
+            //set current item as active
+            $(this).addClass('active');
+            //scroll it to the right position
+                $('.hero-slider .mask').scrollTo($(this).attr('rel'), 300);
+            //disable click event
+                return false;
+            });
+            
+            
+        });  
+        
+        return <StaticQuery query = { graphql`
+            query MyQuery {
+                allSliderpaneltextJson {
+                    nodes {
+                        id
+                        title
+                        header
+                        task1
+                        task2
+                        task3
+                        task4
+                        task5
+                    }
+                }
+            }`
+        }
+        
+        render={data => (
 
-    return (
-          
-        <section id="prof_cont-a">
+            
+           
+            <section id="prof_cont-a">
 
-            <h1>Web Development Courses</h1>
+                
+            <h1>Development Courses Taken</h1>
 
             <article className="hero-slider">
 
@@ -64,293 +85,59 @@ $(document).ready(function($){
                 <div className="mask">
 
                     <div className="slider-body">
+                       
+                        {data.allSliderpaneltextJson.nodes.map((node) => ( 
 
-                        <article className="panel" id="panel-1">
+                            <article className="panel" id={`panel-${node.id}`}>
 
-                            <h2>Adobe Certified Associates</h2>
+                                <h2>{node.header}</h2>
 
-                            <figure className="slider-panel">
+                                <figure className="slider-panel">
 
-                                <Link to="/" className="fancybox" >
-                                <span>
+                                    <Link to="" className="fancybox" >
+                                        <span>
 
-                                    </span>
-                                </Link>
+                                        </span>
+                                    </Link>
 
-                                <figcaption>
-                                    <h3>Visual Communication: Photoshop CS4</h3>
-                                    <h4>Topics :</h4>
+                                    <figcaption>
+                                        <h3>{node.header}</h3>
+                                        <h4>{node.subheader}</h4>
 
-                                    <ul>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
+                                        <ul>
+                                            <li>{node.task1}</li>
+                                            <li>{node.task2}</li>
+                                            <li>{node.task3}</li>
+                                            <li>{node.task4}</li>
+                                            <li>{node.task5}</li>
+                                            
 
-                                    </ul>
+                                        </ul>
 
-                                    <div className="clearfix"></div>
-                                </figcaption>
+                                        <div className="clearfix"></div>
+                                    </figcaption>
 
-                            </figure>
+                                </figure>
 
-                        </article>
+                            </article>
+                        
+                        ))}
 
-                        <article className="panel" id="panel-2">
-
-                            <h2>Title 1</h2>
-
-                            <figure className="slider-panel">
-
-                                <Link to="/" className="fancybox" >
-                                    <span>
-
-                                    </span>
-                                </Link>
-
-
-                                <figcaption>
-                                    <h3>Title 1</h3>
-                                    <h4>Title 1</h4>
-
-                                    <ul>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-                                    <div className="clearfix"></div>
-                                </figcaption>
-                            </figure>
-
-
-                        </article>
-
-                        <article className="panel" id="panel-3">
-
-                            <h2>Title 1</h2>
-
-                            <figure className="slider-panel">
-
-                                <Link to="/" className="fancybox" >
-                                <span>
-
-                                    </span>
-                                </Link>
-                                <figcaption>
-                                    <h3>Title 1</h3>
-                                    <h4>Title 1</h4>
-
-                                    <ul>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>                                   
-                                        <li></li>
-                                    </ul>
-                                    <div className="clearfix"></div>
-                                </figcaption>
-
-                            </figure>
-
-                        </article>
-
-                        <article className="panel" id="panel-4">
-
-                            <h2>Title 1</h2>
-
-                            <figure className="slider-panel">
-
-                                <Link to="/" className="fancybox" >
-                                <span>
-
-                                    </span>
-                                </Link>
-                                <figcaption>
-                                    <h3>Title 1</h3>
-                                    <h4>Title 1</h4>
-
-                                    <ul>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>                                   
-                                        <li></li>
-                                    </ul>
-                                    <div className="clearfix"></div>
-                                </figcaption>
-
-                            </figure>
-
-
-                        </article>
-
-                        <article className="panel" id="panel-5">
-
-                            <h2>Title 1</h2>
-
-                            <figure className="slider-panel">
-
-                                <Link to="/"  className="fancybox"  title=";">
-                                <span>
-
-                                    </span>
-                                </Link>
-
-                                <figcaption>
-                                    <h3>Title 1</h3>
-                                    <h4>Title 1</h4>
-                                    <ul>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>                                   
-                                        <li></li>
-                                    </ul>
-
-                                    <div className="clearfix"></div>
-                                </figcaption>
-
-                            </figure>
-
-
-                        </article>
-
-                        <article className="panel" id="panel-6">
-
-                            <h2>Title 1</h2>
-
-                            <figure className="slider-panel">
-
-                                <Link to="/"  className="fancybox"  >
-                                <span>
-
-</span>
-                                </Link>
-
-                                <figcaption>
-                                    <h3>Title 1</h3>
-                                    <h4>Title 1</h4>
-
-                                    <ul>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>                                   
-                                        <li></li>
-                                    </ul>
-                                    <div className="clearfix"></div>
-                                </figcaption>
-
-                            </figure>
-
-                        </article>
-
-                        <article className="panel" id="panel-7">
-
-                            <h2>Title 1</h2>
-
-                            <figure className="slider-panel">
-
-                                <Link to="/"  className="fancybox" >
-                                    <span></span>
-                                </Link>
-
-                                <figcaption>
-                                    <h3>Title 1</h3>
-                                    <h4>Title 1</h4>
-
-                                    <ul>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>                                   
-                                        <li></li>
-                                    </ul>
-                                    <div className="clearfix"></div>
-                                </figcaption>
-
-                            </figure>
-
-
-                        </article>
-
-                        <article className="panel" id="panel-8">
-
-                            <h2>Title 1</h2>
-
-                            <figure className="slider-panel">
-
-                                <Link to="/"  className="fancybox" >
-                                Link 1
-                                </Link>
-
-                                <figcaption>
-                                    <h3>Title 1</h3>
-                                    <h4>Title 1</h4>
-
-                                    <ul>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>                                   
-                                        <li></li>
-                                    </ul>
-
-                                    <div className="clearfix"></div>
-                                </figcaption>
-
-                            </figure>
-
-
-                        </article>
-
-                        <article className="panel" id="panel-9">
-
-                            <h2>Title 1</h2>
-
-                            <figure className="slider-panel">
-
-                                <Link to="/"  className="fancybox" >
-                                Link 1
-                                </Link>
-
-                                
-                                <figcaption>
-                                    <h3>Title 1</h3>
-                                    <h4>Title 1</h4>
-
-                                    <ul>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>                                   
-                                        <li></li>
-                                    </ul>
-
-                                    <div className="clearfix"></div>
-
-                                </figcaption>
-
-                            </figure>
-
-                        </article>
-
-
+                        
                     </div>
 
                 </div>
 
             </article>
-
+                       
         </section>
-  
-    )
+        )}
+                
+    />  
+
+    
 }
 
 
 export default SliderPanel
+

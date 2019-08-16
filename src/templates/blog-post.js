@@ -10,6 +10,7 @@ export const post = graphql`
             nodes {
               content
               title
+              date(formatString: "Y:MM:DD")
               featured_media {
                 localFile {
                   childImageSharp {
@@ -19,6 +20,14 @@ export const post = graphql`
                       height
                     }
                   }
+                }
+              }
+              author {
+                name
+                avatar_urls {
+                  wordpress_24
+                  wordpress_48
+                  wordpress_96
                 }
               }
             }
@@ -44,15 +53,36 @@ const BlogPost = (props) => {
 
             <header className="byline">
                 <div className="entry-meta">
-                    
+                  <div className="meta-content has-avatar">
+
+                    <div className="author-avatar">
+                      <Link className="url fn n" to="">
+                        <img src={props.data.allWordpressPost.nodes[0].author.avatar_urls.wordpress_96} alt="Blog" />
+                      </Link>
+                    </div> 
+                                      
+                  <Link to="" rel="bookmark"></Link>
+                                    
+                  <span className="byline">Posted By :  {props.data.allWordpressPost.nodes[0].author.name} </span>
+                  <span className="posted-on">Posted on :<time className="entry-date published" >     {props.data.allWordpressPost.nodes[0].date}
+                  </time></span>
+                  <span className="byline">Updated: <time className="updated" ></time></span>
+                  <span className="comments-link">comments-link</span>
+                  <span className="byline">
+                    <time className="entry-date published updated" >Tags-link</time>
+                  </span>
+                
+                  </div>
+                
+                  
                 </div>
             </header>
 
 
-            <Link href="" title="Permanent Link to">
+            <Link to="" title="Permanent Link to">
 
                 <figure className="featuredImage">
-                <img src={props.data.allWordpressPost.nodes[0].featured_media.localFile.childImageSharp.resolutions.src} alt="" />
+                <img src={props.data.allWordpressPost.nodes[0].featured_media.localFile.childImageSharp.resolutions.src} alt="Blog" />
                 </figure>
 
             </Link>

@@ -3,8 +3,6 @@ import { graphql } from "gatsby"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-//import Img from "gatsby-image"
-
 
 
 const BlogPage = ({data}) => (
@@ -30,7 +28,7 @@ const BlogPage = ({data}) => (
 				
 				<div dangerouslySetInnerHTML={{ __html: node.excerpt }}></div>
 
-				<Link to={`/blog/${node.link}`}></Link>
+				<Link to={`/blog/${node.link}`}>Read More..</Link>
 
                 </div>
            ))}

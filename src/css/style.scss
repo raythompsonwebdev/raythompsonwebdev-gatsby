@@ -209,10 +209,10 @@ desktop 1920px*/
         /*Site Logo*/
         .site-logo {
             position: relative;
-            top: 0.5em;
+            top: 0;
             left: 0;
             width: 5%;
-            height: auto;
+            height: 55px;
             -webkit-flex: 0 0 auto;
             -ms-flex: 0 0 auto;
             flex: 0 0 auto;
@@ -298,14 +298,15 @@ desktop 1920px*/
                 margin:0;
                 font-size: 1.5em;
                 width: 100%;
-                height: 40px;
+                height: 35px;
                 font-weight: bold;
-                line-height: 40px;
+                line-height: 35px;
                 color: $color4;
                 text-transform:uppercase;
-                display: block;
+                text-shadow: 2px 3px $color11;
                 letter-spacing: 0.03em;
-                float: left;
+                text-indent:0.25em;
+                
                 span {
                     height: 100%;
                     margin: 0;
@@ -323,14 +324,14 @@ desktop 1920px*/
             h1#logo-blog {
                 margin:0;
                 font-size: 1.5em;
-                height: 40px;
+                height: 35px;
                 font-weight: bold;
-                line-height: 40px;
+                line-height: 35x;
                 color: $color4;
-                //text-shadow: 2px 3px $color11;
-                display: block;
+                text-shadow: 2px 3px $color11;
+                text-indent:0.5em;
                 letter-spacing: 0.03em;
-                float: left;
+                
                 width: 100%;
                 span {
                     height: 100%;
@@ -354,6 +355,7 @@ desktop 1920px*/
                 font-weight: normal;
                 padding: 0;
                 clear: left;
+                text-indent:0.5em;
             }
             #title {
                 float: left;
@@ -445,6 +447,58 @@ desktop 1920px*/
         padding: 0;
         font-size: 1em;
 
+        /*maintext */
+        
+        div.main-text {
+            padding: 0.5em;
+
+            p {
+                font-size: 0.9em;
+                line-height: 1.9em;
+                background-color:$color4;
+                padding:0.5em;
+            }
+            ul {
+                width: 100%;
+    
+                li {
+                    
+                    font-size: 0.9em;
+                    line-height:35px;
+                    display:block;
+                    div.error{
+                        font-size:0.9em;
+
+                    }
+    
+                    &:before {
+                        font-family: "FontAwesome";
+                        font-size: 0.95em;
+                        color: $color1;
+                        content: "\f19d";
+                        margin: 0 1%;
+                        line-height: 1.5em;
+
+                    }
+                    a {
+                        display: inline-block;
+                        &:hover {
+                            font-weight:bold;
+                            cursor:pointer;
+                            
+                        }
+                    }
+    
+                }
+            }
+
+            hr {
+                height: 1px;
+                margin: 5% auto;
+                width: 80%;
+            }
+        }
+
         #blogbox{
             width:100%;
             height:100%;
@@ -478,7 +532,8 @@ desktop 1920px*/
                     text-align:center;
                     background-color:$color3;
                     color:$color1;
-                    margin-bottom:0.5em;
+                    margin-bottom:0.5em;    
+                    line-height: 50px;
                 }
                 p{
                     font-size:0.9em;
@@ -515,7 +570,8 @@ desktop 1920px*/
                         color: $color4;
                         font-weight: bold;
                         line-height: 35px;
-                        ;
+                        cursor:pointer;
+                        
                     }
                     &:active {
                         background-color: $color1;
@@ -772,14 +828,15 @@ desktop 1920px*/
                     line-height:40px;
                     &:hover {
                         color: $color4;
-                        font-weight:bold;
-                        font-size: inherit;
+                        font-weight:normal;
+                        cursor:pointer;
                     }
                 }
 
             }
             li:nth-of-type(2){
                 font-size: 1em;
+                font-family: "FontAwesome";
                 &:before {
                     content: "\f39e";
                     font-size: 1.4em;
@@ -788,13 +845,14 @@ desktop 1920px*/
                     width: auto;
                     font-size: 1em;
                     &:hover {
-                        font-size: inherit;
+                        font-weight:normal;
                     }
                 }
 
             }
             li:nth-of-type(3){
                 font-size: 1em;
+                font-family: "FontAwesome";
                 &:before {
                     content: "\f099";
                     font-size: 1.4em;
@@ -803,13 +861,14 @@ desktop 1920px*/
                     width: auto;
                     font-size: 1em;
                     &:hover {
-                        font-size: inherit;
+                        font-weight:normal;
                     }
                 }
 
             }
             li:nth-of-type(4){
                 font-size: 1em;
+                font-family: "FontAwesome";
                 &:before {
                     content: "\f0e1";
                     font-size: 1.4em;
@@ -818,13 +877,14 @@ desktop 1920px*/
                     width: auto;
                     font-size: 1em;
                     &:hover {
-                        font-size: inherit;
+                        font-weight:normal;
                     }
                 }
 
             }
             li:nth-of-type(5){
                 font-size: 1em;
+                font-family: "FontAwesome";
                 &:before {
                     content: "\f09b";
                     font-size: 1.4em;
@@ -833,7 +893,7 @@ desktop 1920px*/
                     width: auto;
                     font-size: 1em;
                     &:hover {
-                        font-size: inherit;
+                        font-weight:normal;
                     }
                 }
 
@@ -1493,7 +1553,8 @@ desktop 1920px*/
                             text-align: left;
                             line-height: 60px;
                             font-size: 0.9em;
-                            background-color:$color2;
+                            background-color:$color4;
+                            color:$color1;
                             z-index:3;
                             text-indent:0.5em;
                             border-right:2px solid #fff;
@@ -3119,7 +3180,7 @@ desktop 1440px*/
 
                 font-size: 1.4em;
 
-                line-height: 40px;
+                
 
                 span {
                     height: 100%;
@@ -3357,9 +3418,7 @@ desktop 1440px*/
                 a {
 
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -3372,9 +3431,7 @@ desktop 1440px*/
                 a {
                     
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -3387,9 +3444,7 @@ desktop 1440px*/
                 a {
                     
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -3402,9 +3457,7 @@ desktop 1440px*/
                 a {
                     
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -3508,7 +3561,7 @@ desktop 1440px*/
             
             /*front-page image container*/
             div#svg-image-container {
-                width: 49%;
+                width: 100%;
 
                 
                 /*PNG for IE8*/
@@ -4697,7 +4750,7 @@ desktop 1280px*/
 
                 font-size: 1.3em;
 
-                line-height: 40px;
+                
 
                 span {
                     height: 100%;
@@ -4767,9 +4820,7 @@ desktop 1280px*/
             .blogboxes{
                 width:31%;
 
-                margin: 0.5em;
-                padding:0.5em;
-
+                
                 
                 h1{
                     font-size:0.9em;
@@ -4940,9 +4991,7 @@ desktop 1280px*/
                 a {
 
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -4955,9 +5004,7 @@ desktop 1280px*/
                 a {
                     
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                   
                 }
 
             }
@@ -4970,9 +5017,7 @@ desktop 1280px*/
                 a {
                     
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -4985,9 +5030,7 @@ desktop 1280px*/
                 a {
                     
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                   
                 }
 
             }
@@ -5092,7 +5135,7 @@ desktop 1280px*/
             
             /*front-page image container*/
             div#svg-image-container {
-                width: 45%;
+                width: 100%;
                                     
                 /*PNG for IE8*/
                 figure#image-6 {
@@ -6068,13 +6111,12 @@ desktop 1280px*/
             .blogboxes{
                 width:31%;
 
-                margin: 0.5em;
-                padding:0.5em;
+                
 
                 
                 h1{
                     font-size:0.9em;
-
+                    line-height: 45px;
                 }
                 p{
                     font-size:0.8em;
@@ -6251,9 +6293,7 @@ desktop 1280px*/
                 a {
 
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -6266,9 +6306,7 @@ desktop 1280px*/
                 a {
                     
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -6281,9 +6319,7 @@ desktop 1280px*/
                 a {
                     
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -6296,9 +6332,7 @@ desktop 1280px*/
                 a {
                     
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -6404,7 +6438,7 @@ desktop 1280px*/
             
             /*front-page image container*/
             div#svg-image-container {
-                width: 46%;
+                width: 100%;
                                     
                 /*PNG for IE8*/
                 figure#image-6 {
@@ -7377,7 +7411,7 @@ desktop 980px*/
     /*Header*/
     header {
 
-        height: 100px;
+        height: 125px;
 
         
         /*Site Logo*/
@@ -7423,13 +7457,11 @@ desktop 980px*/
 
         /*Header Title*/
         hgroup {
-            
+            width:93%;
             h1#logo {
 
                 font-size: 1.2em;
-
-                height: 35px;
-
+               
                 span {
                     height: 100%;
 
@@ -7441,8 +7473,7 @@ desktop 980px*/
             }
             h1#logo-blog {
                 font-size: 1.2em;
-                height: 35px;
-                
+                                
                 span:last-of-type {
                     height: 100%;
 
@@ -7466,7 +7497,7 @@ desktop 980px*/
 
             margin: 0.5em 0 0 0;
             height: 35px;
-
+            width:100%;
 
             ul {
                 height: 35px;
@@ -7477,7 +7508,7 @@ desktop 980px*/
 
                     a {
 
-                        font-size: 0.65em;
+                        font-size: 0.9em;
 
    
                     }
@@ -7498,10 +7529,9 @@ desktop 980px*/
            
 
             .blogboxes{
-                width:31%;
+                width:30%;
 
-                margin: 0.5em;
-                padding:0.5em;
+               
 
                 
                 h1{
@@ -7683,9 +7713,7 @@ desktop 980px*/
                 a {
 
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -7698,9 +7726,7 @@ desktop 980px*/
                 a {
                     
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -7713,9 +7739,7 @@ desktop 980px*/
                 a {
                     
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -7728,9 +7752,7 @@ desktop 980px*/
                 a {
                     
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -8838,13 +8860,13 @@ tablet 800px */
     /*Header*/
     header {
 
-        height: 100px;
+        
 
         
         /*Site Logo*/
         .site-logo {
 
-            width: 5%;
+            width: 7%;
 
             a {
 
@@ -8891,7 +8913,7 @@ tablet 800px */
 
                 font-size: 1.2em;
 
-                height: 35px;
+               
 
                 span {
                     height: 100%;
@@ -8904,7 +8926,7 @@ tablet 800px */
             }
             h1#logo-blog {
                 font-size: 1.2em;
-                height: 35px;
+               
                 
                 span:last-of-type {
                     height: 100%;
@@ -8937,7 +8959,7 @@ tablet 800px */
 
                     a {
 
-                        font-size: 0.75em;
+                        font-size: 0.85em;
    
                     }
                 }
@@ -8957,14 +8979,15 @@ tablet 800px */
            
 
             .blogboxes{
-                width:31%;
-
-                margin: 0.5em;
-                padding:0.5em;
+                width:32%;
+                
+                margin: 0.25em;
+                padding:0.25em;
 
                 
                 h1{
                     font-size:0.9em;
+                    line-height: 35px;
 
                 }
                 p{
@@ -9156,9 +9179,7 @@ tablet 800px */
                 a {
                     
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -9171,9 +9192,7 @@ tablet 800px */
                 a {
                     
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                     
                 }
 
             }
@@ -9186,9 +9205,7 @@ tablet 800px */
                 a {
                     
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -10329,14 +10346,14 @@ tablet 667px*/
     
     /*Header*/
     header {
-
-        height: 100px;
+        padding:0.25em;
+        
 
         
         /*Site Logo*/
         .site-logo {
 
-            width: 5%;
+            width: 7%;
 
             a {
 
@@ -10395,7 +10412,7 @@ tablet 667px*/
             }
             h1#logo-blog {
                 font-size: 1.3em;
-                height: 35px;
+                
                 span:last-of-type {
                     height: 100%;
 
@@ -10430,7 +10447,7 @@ tablet 667px*/
 
                     a {
 
-                        font-size: 0.7em;
+                        font-size: 0.8em;
 
    
                     }
@@ -10452,8 +10469,7 @@ tablet 667px*/
 
             .blogboxes{
 
-                margin: 0.5em;
-                padding:0.5em;
+                
                 width: 47%;
 
                 h1{
@@ -10645,9 +10661,7 @@ tablet 667px*/
                 a {
                     
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -10660,9 +10674,7 @@ tablet 667px*/
                 a {
                     
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -10675,9 +10687,7 @@ tablet 667px*/
                 a {
                     
                     font-size: 0.9em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -11756,6 +11766,43 @@ tablet 667px*/
 
 /*tablet 536px */
 @media only screen and (max-width: 536px) {
+    .menu-toggle,
+    .menu-main-container.toggled ul {
+        display: block;
+    }
+
+    .menu-toggle {
+        position: fixed;
+        z-index: 100;
+        top: 0.2em;
+        left: calc(86% - 1vw);
+        padding: 0.7em;
+        font-size: 1em;
+        text-transform: uppercase;
+        background-color: $color1;
+        color:  $color2;
+        border:none;
+        transition: all ease-out 400ms;
+        height:60px;
+    }
+
+    .menu-toggle.hide {
+        left: 100vw;
+    }
+
+    /* Make sure the button doesn't hide when menu is open. */
+
+    .toggled .menu-toggle.hide {
+        bottom: 1em;
+    }
+
+    .menu-toggle:hover,
+    .menu-toggle:focus {
+        text-decoration: underline;
+        border: solid 2px $color2;
+        cursor:pointer;
+    }
+
     .socialpics {
         
         width: 40%;
@@ -11792,13 +11839,13 @@ tablet 667px*/
     /*Header*/
     header {
 
-        height: 100px;
+        
 
         
         /*Site Logo*/
         .site-logo {
 
-            width: 5%;
+            width: 12%;
 
             a {
 
@@ -11839,12 +11886,12 @@ tablet 667px*/
 
         /*Header Title*/
         hgroup {
-            
+            width:88%;
             h1#logo {
 
                 font-size: 1.2em;
 
-                height: 35px;
+                
 
                 span {
                     height: 100%;
@@ -11857,7 +11904,7 @@ tablet 667px*/
             }
             h1#logo-blog {
                 font-size: 1.2em;
-                height: 35px;
+                
                 span:last-of-type {
                     height: 100%;
 
@@ -11879,22 +11926,46 @@ tablet 667px*/
         /*Navigation*/
         nav {
 
-            margin: 0.5em 0 0 0;
-            height: 35px;
-
+            position: fixed;
+            top: 5em;
+            z-index: 100;
+            left: -250px;
+            width: 250px;
+            height: auto;
 
             ul {
-                height: 35px;
 
+                height: 15.5em;
+                -webkit-flex-flow: column ;
+                -ms-flex-flow: column ;
+                flex-flow: column ;
+                
 
                 li {
-                    width: 19%;
+                    height: 45px;
+                    list-style: none;
+                    width: 100%;
+                    display: block;
+                    background-color: $color2;
+                    height: 45px;
+                    margin-bottom: 0.25em;
 
                     a {
+                        line-height: 45px;
+                        margin: 0;
+                        letter-spacing: 0.1em;
+                        font-size: 1em;
+                        text-align: center;
+                        display: block;
+                        
 
-                        font-size: 0.7em;
+                        &:hover {
 
-   
+                            letter-spacing: 0.2em;
+                            font-weight: bold;
+                            background-color: $color1;
+                            color: $color4;
+                        }
                     }
                 }
             }
@@ -11910,13 +11981,13 @@ tablet 667px*/
     #main-content {
 
         #blogbox{
-           
+            flex-flow: column;
+            align-items: center;
 
             .blogboxes{
 
-                margin: 0.5em;
-                padding:0.5em;
-                width: 97%;
+                
+                width: 80%;
 
                 h1{
                     font-size:0.85em;
@@ -11938,6 +12009,7 @@ tablet 667px*/
         h1 {
             font-size: 1.1em;
             line-height:50px;
+            text-align:center;
 
 
         }
@@ -12107,9 +12179,7 @@ tablet 667px*/
                 a {
                     
                     font-size: 0.8em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -12122,9 +12192,7 @@ tablet 667px*/
                 a {
                     
                     font-size: 0.8em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -12137,9 +12205,7 @@ tablet 667px*/
                 a {
                     
                     font-size: 0.8em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -12260,7 +12326,7 @@ tablet 667px*/
                 -ms-flex-order: 0;
                 order: 0;
                 width: 65%;
-                margin: 1em;
+                
                                     
                 /*PNG for IE8*/
                 figure#image-6 {
@@ -13174,8 +13240,16 @@ tablet 667px*/
 /*
 mobile 480px */
 @media only screen and (max-width: 30em) {
-
     
+
+    .menu-toggle {
+        
+        left: calc(84% - 1vw);
+        font-size: 0.9em;
+        top: 3em;
+        
+    }
+
     .socialpics {
         
         width: 40%;
@@ -13213,17 +13287,17 @@ mobile 480px */
     /*Header*/
     header {
 
-        height: 55px;
+        height: 105px;
 
         
         /*Site Logo*/
         .site-logo {
-            width: 5%;
+            width: 15%;
 
             a {
 
-                line-height: 40px;
-                width: 83%;
+                line-height: 50px;
+                
 
                 
                 /* Text meant only for screen readers. */
@@ -13259,15 +13333,12 @@ mobile 480px */
 
         /*Header Title*/
         hgroup {
-            width: 65%;
-
-            height: 4em;
-
+            width:85%;           
             h1#logo {
 
-                font-size: 1.2em;
+                font-size: 1.15em;
 
-                height: 35px;
+                
 
                 span {
                     height: 100%;
@@ -13279,8 +13350,8 @@ mobile 480px */
                 }
             }
             h1#logo-blog {
-                font-size: 1.2em;
-                height: 35px;
+                font-size: 1.15em;
+                he
                 span:last-of-type {
                     height: 100%;
 
@@ -13299,25 +13370,35 @@ mobile 480px */
             }
         }
 
-        /*Navigation*/
-        nav {
+         /*Navigation*/
+         nav {
 
-            margin: 0.5em 0 0 0;
-            height: 35px;
-
+            
+            top: 5em;
+            
 
             ul {
-                height: 35px;
 
+                height: 15.5em;
+                
+                
 
                 li {
-                    width: 19%;
+                    height: 45px;
+                                       
 
                     a {
+                        
+                        font-size: 1em;
+                       
+                        
 
-                        font-size: 0.7em;
+                        &:hover {
 
-   
+                            
+                            font-weight: bold;
+                            
+                        }
                     }
                 }
             }
@@ -13333,13 +13414,14 @@ mobile 480px */
     #main-content {
 
         #blogbox{
+            
            
 
             .blogboxes{
 
-                margin: 0.5em;
-                padding:0.5em;
-                width: 97%;
+                margin:0;
+                padding:0;
+                width: 80%;
 
                 h1{
                     font-size:0.8em;
@@ -13533,9 +13615,7 @@ mobile 480px */
                 a {
                     
                     font-size: 0.8em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -13548,9 +13628,7 @@ mobile 480px */
                 a {
                     
                     font-size: 0.8em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -13563,9 +13641,7 @@ mobile 480px */
                 a {
                     
                     font-size: 0.8em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -13685,11 +13761,9 @@ mobile 480px */
             
             /*front-page image container*/
             div#svg-image-container {
-                -webkit-order: 0;
-                -ms-flex-order: 0;
-                order: 0;
-                width: 75%;
-                margin: 1em;
+                
+                width: 94%;
+                
                                     
                 /*PNG for IE8*/
                 figure#image-6 {
@@ -14651,6 +14725,12 @@ mobile 480px */
 mobile 360px */
 @media only screen and (max-width: 22.5em) {
 
+    .menu-toggle {
+        
+        left: calc(83% - 1vw);
+        
+    }
+
     .fixed-side-social-container {
         display: none;
     }
@@ -14693,19 +14773,18 @@ mobile 360px */
     /*Header*/
     header {
 
-        height: 55px;
+        height:105px;
 
         
         /*Site Logo*/
         .site-logo {
 
-            width: 2.5em;
-            height: 3.5em;
+            
 
             a {
 
-                line-height: 40px;
-                width: 90%;
+                line-height: 50px;
+                
 
                 
                 /* Text meant only for screen readers. */
@@ -14741,15 +14820,14 @@ mobile 360px */
 
         /*Header Title*/
         hgroup {
-            width: 77%;
+            width: 85%;
 
-            height: 4em;
-
+            
             h1#logo {
 
-                font-size: 1em;
+                font-size: 1.1em;
 
-                height: 30px;
+                
 
                 span {
                     height: 100%;
@@ -14761,8 +14839,8 @@ mobile 360px */
                 }
             }
             h1#logo-blog {
-                font-size: 1em;
-                height: 30px;
+                font-size: 1.1em;
+                
                 span:last-of-type {
                     height: 100%;
 
@@ -14784,26 +14862,37 @@ mobile 360px */
         /*Navigation*/
         nav {
 
-            margin: 0.5em 0 0 0;
-            height: 35px;
-
+            
+            top: 5em;
+            
 
             ul {
-                height: 35px;
 
+                height: 15.5em;
+                
+                
 
                 li {
-                    width: 19%;
+                    height: 45px;
+                                       
 
                     a {
+                        
+                        font-size: 1em;
+                       
+                        
 
-                        font-size: 0.7em;
+                        &:hover {
 
-   
+                            
+                            font-weight: bold;
+                            
+                        }
                     }
                 }
             }
         }
+
         /*Mobile-Navigation*/
         nav#mobile-nav {
             display: none;
@@ -15012,9 +15101,7 @@ mobile 360px */
                 a {
                     
                     font-size: 0.7em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -15027,9 +15114,7 @@ mobile 360px */
                 a {
                     
                     font-size: 0.7em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -15042,9 +15127,7 @@ mobile 360px */
                 a {
                     
                     font-size: 0.7em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -15165,11 +15248,8 @@ mobile 360px */
             
             /*front-page image container*/
             div#svg-image-container {
-                -webkit-order: 0;
-                -ms-flex-order: 0;
-                order: 0;
-                width: 75%;
-                margin: 1em;
+                
+                margin: 0.5em;
                                     
                 /*PNG for IE8*/
                 figure#image-6 {
@@ -16129,6 +16209,13 @@ mobile 360px */
 mobile 320px */
 @media only screen and (max-width: 20em) {
 
+    .menu-toggle {
+        
+        left: calc(82% - 1vw);
+        font-size: 0.8em;
+        
+    }
+
     .fixed-side-social-container {
         display: none;
     }
@@ -16170,21 +16257,15 @@ mobile 320px */
     
     /*Header*/
     header {
-
-        height: 55px;
-
-        
+        height: 95px;
+              
         /*Site Logo*/
         .site-logo {
-
-            width: 2.5em;
-            height: 3.5em;
-
+            
             a {
 
-                line-height: 40px;
-                width: 85%;
-
+                line-height: 50px;
+                
                 
                 /* Text meant only for screen readers. */
                 div.screen-reader-text {
@@ -16219,13 +16300,11 @@ mobile 320px */
 
         /*Header Title*/
         hgroup {
-            width: 77%;
-
-            height: 4em;
-
+            
+            
             h1#logo {
 
-                font-size: 0.9em;
+                font-size: 1.05em;
 
                 span {
                     height: 100%;
@@ -16237,7 +16316,7 @@ mobile 320px */
                 }
             }
             h1#logo-blog {
-                font-size: 0.9em;
+                font-size: 1.05em;
 
                 span:last-of-type {
                     height: 100%;
@@ -16258,22 +16337,34 @@ mobile 320px */
         }
 
         /*Navigation*/
-        nav {
+         nav {
 
-            height: 35px;
+            
+            top: 5em;
+            
 
             ul {
-                height: 35px;
 
+                height: 15.5em;
+                
+                
 
                 li {
-                    width: 19%;
+                    height: 45px;
+                                       
 
                     a {
+                        
+                        font-size: 1em;
+                       
+                        
 
-                        font-size: 0.7em;
+                        &:hover {
 
-   
+                            
+                            font-weight: bold;
+                            
+                        }
                     }
                 }
             }
@@ -16483,9 +16574,7 @@ mobile 320px */
                 a {
                     
                     font-size: 0.7em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -16498,9 +16587,7 @@ mobile 320px */
                 a {
                     
                     font-size: 0.7em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -16513,9 +16600,7 @@ mobile 320px */
                 a {
                     
                     font-size: 0.7em;
-                    &:hover {
-                        font-size: inherit;
-                    }
+                    
                 }
 
             }
@@ -16636,11 +16721,8 @@ mobile 320px */
             
             /*front-page image container*/
             div#svg-image-container {
-                -webkit-order: 0;
-                -ms-flex-order: 0;
-                order: 0;
-                width: 75%;
-                margin: 1em;
+                               
+                
                                     
                 /*PNG for IE8*/
                 figure#image-6 {
