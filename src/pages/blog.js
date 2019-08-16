@@ -12,30 +12,46 @@ const BlogPage = ({data}) => (
 
     <SEO title="Blog Page" />
 
+    <h1>Interested in web design and web development</h1>
+
+    <div class="main-text">
+
+      <p>
+      Whether you are just beginning to learn or are alreading building websites I would like to share  what I have learnt so far about web design and web development through the tons of valuable web development and web design related resources I have read, watched and listened to over the past few years&#46; content like
+      </p>
+      <br/>
+      <br/>
+    </div>
+
     <div id="blogbox">
-
-	    <h1 className="page-title">Title</h1>
-
     
-            {data.allWordpressPost.edges.map(({ node }, index) => (
+      {data.allWordpressPost.edges.map(({ node }, index) => (
 
-                
-                <div className="blogboxes" key={index}>
+          
+          <div className="blogboxes" key={index}>
 
-				<h1>{node.title}</h1>
+            <h1>{node.title}</h1>
 
-               <img src={node.featured_media.localFile.childImageSharp.resolutions.src} alt="" />
-				
-				<div dangerouslySetInnerHTML={{ __html: node.excerpt }}></div>
+            <img src={node.featured_media.localFile.childImageSharp.resolutions.src} alt="" />
+  
+            <div dangerouslySetInnerHTML={{ __html: node.excerpt }}></div>
 
-				<Link to={`/blog/${node.link}`}>Read More..</Link>
+              <Link to={`/blog/${node.link}`}>Read More..</Link>
 
-                </div>
-           ))}
+          </div>
+
+      ))}
        
 
     </div>
 
+    <div class="clearfix"></div>
+
+{/*Related Items */}
+<section class="contact-wide">
+	<h1>Related Items</h1>
+
+</section>
 
 
   </Layout>

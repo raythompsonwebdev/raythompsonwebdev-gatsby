@@ -11,8 +11,36 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import Header from "./header"
 import "../css/style.scss"
+import $ from 'jquery';
 
+// Hide/show toggle button on scroll
+$(document).ready(function($){
+     
+  // sliding menu mobile 
+  $('header button.menu-toggle').on('click', function(event){
+  
+	  event.preventDefault();
+  
+	  // create menu variables
+	  var slideoutMenu = $('header nav ');
+	  var slideoutMenuWidth = $('header nav').width();
+  
+	  // toggle open class
+	  slideoutMenu.toggleClass("open");
+  
+	  // slide menu
+	  if (slideoutMenu.hasClass("open")) {
+		  slideoutMenu.animate({
+			  left: "0px"
+		  });	
+	  } else {
+		  slideoutMenu.animate({
+			  left: -slideoutMenuWidth
+		  }, 500);	
+	  }
+  });
 
+}); 
 
 const ListLink = props => (
 	<li className="menu-item">
