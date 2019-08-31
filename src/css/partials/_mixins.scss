@@ -1,0 +1,62 @@
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+
+//Transition
+@mixin Transition( $move... ) {
+    -webkit-transition: $move;
+    -moz-transition: $move;
+    -o-transition: $move;
+    -ms-transition: $move;
+    transition:$move;	
+}
+
+//Scaling
+@mixin TransScale( $TransScale ) {
+    -webkit-transform: $TransScale;
+    -moz-transform: $TransScale;
+    -o-transform: $TransScale;
+    -ms-transform: $TransScale;
+    transform:$TransScale;	
+}
+
+//Box-sizing -IE5
+@mixin box-sizing($type:border-box) {
+    -webkit-box-sizing: $type; // Android < 2.3, iOS < 4
+    -moz-box-sizing: $type; // Firefox < 29
+    box-sizing: $type; // Chrome, IE 8+, Opera, Safari 5.1
+}
+
+//Box Shadow
+@mixin boxShadow( $shadow... ) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    -o-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+// Border radius
+@mixin boredrady( $bordrady... ) {
+    -webkit-border-radius: $bordrady;
+    -moz-border-radius: $bordrady;
+    -o-border-radius: $bordrady;
+    border-radius: $bordrady;
+}
+
+//Transform Origin
+@mixin originTran( $origin... ) {
+    -webkit-transform-origin: $origin;
+    -moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
