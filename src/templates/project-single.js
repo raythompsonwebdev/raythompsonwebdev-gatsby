@@ -1,11 +1,11 @@
 import React from "react"
-import { Link , graphql } from "gatsby"
-import Layout from "../components/layout"
+import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
+import Layout from "../components/layout"
 
 export const post = graphql`
-  query ($slug: String!) {
-    allWordpressWpProject(filter: {slug: {eq: $slug}}) {
+  query($slug: String!) {
+    allWordpressWpProject(filter: { slug: { eq: $slug } }) {
       edges {
         node {
           id
@@ -14,13 +14,13 @@ export const post = graphql`
           featured_media {
             localFile {
               childImageSharp {
-                resolutions {
+                fixed {
                   src
                 }
               }
             }
           }
-          
+
           meta {
             project_code
             project_description
@@ -30,63 +30,68 @@ export const post = graphql`
         }
       }
     }
-  }`
+  }
+`
 
-    
-const ProjectSingle = (props) => {
-     
-    
-    return (
-      <Layout>
-        <SEO title="Single Project Page" />
+const ProjectSingle = props => {
+  return (
+    <Layout>
+      <SEO title="Single Project Page" />
 
-        <article className="post group">
-          <h1> {props.data.allWordpressWpProject.edges[0].node.title} </h1>
-          <figure className="websiteImage">
-            <Link
-              to=""
-              className="fancybox"
-              title=""
-            >
-<img src={props.data.allWordpressWpProject.edges[0].node.featured_media.localFile.childImageSharp.resolutions.src} alt="" />
-            </Link>
-          </figure>
-          <div className="website-text">
-            <h1 className="post-meta-key">Project Name</h1>
+      <article className="post group">
+        <h1> {props.data.allWordpressWpProject.edges[0].node.title} </h1>
+        <figure className="websiteImage">
+          <Link to="" className="fancybox" title="">
+            <img
+              src={
+                props.data.allWordpressWpProject.edges[0].node.featured_media
+                  .localFile.childImageSharp.fixed.src
+              }
+              alt=""
+            />
+          </Link>
+        </figure>
+        <div className="website-text">
+          <h1 className="post-meta-key">Project Name</h1>
 
-            <p className="websitetext">{props.data.allWordpressWpProject.edges[0].node.meta.project_name} </p>
+          <p className="websitetext">
+            {props.data.allWordpressWpProject.edges[0].node.meta.project_name}{" "}
+          </p>
 
-            <h1 className="post-meta-key">Project Description</h1>
+          <h1 className="post-meta-key">Project Description</h1>
 
-            <p className="websitetext">{props.data.allWordpressWpProject.edges[0].node.meta.project_description} </p>
+          <p className="websitetext">
+            {
+              props.data.allWordpressWpProject.edges[0].node.meta
+                .project_description
+            }{" "}
+          </p>
 
-            <h1 className="post-meta-key">Project Code</h1>
+          <h1 className="post-meta-key">Project Code</h1>
 
-            <p className="websitetext">{props.data.allWordpressWpProject.edges[0].node.meta.project_code} </p>
+          <p className="websitetext">
+            {props.data.allWordpressWpProject.edges[0].node.meta.project_code}{" "}
+          </p>
 
-            <h1 className="post-meta-key">Project URL</h1>
+          <h1 className="post-meta-key">Project URL</h1>
 
-            <Link className="webformats" to="">
+          <Link className="webformats" to="">
             {props.data.allWordpressWpProject.edges[0].node.meta.project_url}
-            </Link>
+          </Link>
 
-            <h1 className="post-meta-key">Project Source Code</h1>
-            
-            <a className="webformats" href={`https://github.com/raythompsonwebdev/${props.data.allWordpressWpProject.edges[0].node.slug}`}>
+          <h1 className="post-meta-key">Project Source Code</h1>
 
-              Link
-            </a>
-          </div>
-          <footer className="byline">
-
-          </footer>
-          
-        </article>
-
-        
-      </Layout>
-    )
+          <a
+            className="webformats"
+            href={`https://github.com/raythompsonwebdev/${props.data.allWordpressWpProject.edges[0].node.slug}`}
+          >
+            Link
+          </a>
+        </div>
+        <footer className="byline"></footer>
+      </article>
+    </Layout>
+  )
 }
-  
-export default ProjectSingle
 
+export default ProjectSingle

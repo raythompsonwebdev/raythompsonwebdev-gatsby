@@ -4,39 +4,55 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 
 export const post = graphql`
-  query($slug: String!) {
-    allWordpressPost(filter: { slug: { eq: $slug } }) {
-      nodes {
-        content
-        title
-        date(formatString: "Y:MM:DD")
-        featured_media {
-          localFile {
-            childImageSharp {
-              fixed {
-                src
-                width
-                height
+  query($skip: Int!, $limit: Int!) {
+    allWordpressPost(
+      sort: {  order: DESC }
+      limit: $limit
+      skip: $skip
+    ) {      
+        nodes {
+          content
+          title
+          date(formatString: "Y:MM:DD")
+          featured_media {
+            localFile {
+              childImageSharp {
+                fixed {
+                  src
+                  width
+                  height
+                }
               }
             }
           }
-        }
-        author {
-          name
-          avatar_urls {
-            wordpress_24
-            wordpress_48
-            wordpress_96
+          slug
+          author {
+            name
+            avatar_urls {
+              wordpress_24
+              wordpress_48
+              wordpress_96
+            }
           }
         }
       }
-    }
+    
   }
 `
 
-const BlogPost = props => {
+const NavLink = props => {
+  if (!props.test) {
+    return <Link to={props.url}>{props.text}</Link>
+  } else {
+    return <span>{props.text}</span>
+  }
+}
 
-  
+const BlogPost = ({ pageContext }) => {
+  const { group, index, first, last, pageCount } = pageContext
+  const previousUrl = index - 1 == 1 ? "/" : (index - 1).toString()
+  const nextUrl = (index + 1).toString()
+
   return (
     <Layout>
       <SEO title="Blog Post" />
@@ -89,7 +105,7 @@ const BlogPost = props => {
             <img
               src={
                 props.data.allWordpressPost.nodes[0].featured_media.localFile
-                  .childImageSharp.fixed.src
+                  .childImageSharp.resolutions.src
               }
               alt="Blog"
             />
@@ -118,8 +134,17 @@ const BlogPost = props => {
           <p>Text</p>
         </footer>
       </article>
+
+      <div className="previousLink">
+        <NavLink test={first} url={previousUrl} text="Go to Previous Page" />
+      </div>
+      <div className="nextLink">
+        <NavLink test={last} url={nextUrl} text="Go to Next Page" />
+      </div>
     </Layout>
   )
 }
 
 export default BlogPost
+
+

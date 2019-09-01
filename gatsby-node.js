@@ -80,16 +80,26 @@ module.exports.createPages = ({ graphql, actions }) => {
       }
 
           /*
-            createPaginatedPages({
-              edges: result.data.allWordpressPost.edges,
-              createPage: createPage,
-              pageTemplate: 'src/templates/blog-post-pag.js',
-              pageLength: 5, // This is optional and defaults to 10 if not used
-              pathPrefix: 'blog-post-pag', // This is optional and defaults to an empty string if not used
-              context: {}, // This is optional and defaults to an empty object if not used
-              buildPath: (index, pathPrefix) =>
-                index > 1 ? `${pathPrefix}/${index}` : `/${pathPrefix}`, // This is optional and this is the default
-            })
+            // Create blog-list pages
+      createPaginatedPages({
+        edges: data.allWordpressPost.edges,
+        createPage: createPage,
+        pageTemplate: 'src/templates/blog-post-template.js',
+        pageLength: 5, // This is optional and defaults to 10 if not used
+        pathPrefix: '', // This is optional and defaults to an empty string if not used
+        context: {}, // This is optional and defaults to an empty object if not used
+        buildPath: (index, pathPrefix) => index > 1 ? `${pathPrefix}/${index}` : `/${pathPrefix}`, // This is optional and this is the default
+    
+      })
+      result.data.allWordpressPost.edges.map(({ node }) => {
+        createPage({
+          path: node.fields.slug,
+          component: path.resolve('./src/templates/blog-post-template.js'),
+          context: {
+            slug: node.fields.slug,
+          },
+        })
+      })
           */
 
       result.data.allWordpressPost.edges.forEach(({ node }) => {

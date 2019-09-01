@@ -366,7 +366,7 @@ desktop 1920px*/
         }
 
         /*Navigation*/
-        nav {
+        nav#main-nav {
             padding: 0;
             font-family: ($FontStyle);
             
@@ -446,6 +446,7 @@ desktop 1920px*/
         margin: 0;
         padding: 0;
         font-size: 1em;
+        
 
         /*maintext */
         
@@ -3235,7 +3236,7 @@ desktop 1440px*/
         }
 
         /*Navigation*/
-        nav {
+        nav#main-nav {
             height: 35px;
 
             ul {
@@ -4805,7 +4806,7 @@ desktop 1280px*/
         }
 
         /*Navigation*/
-        nav {
+        nav#main-nav {
  
             height: 35px;
             width:45%;
@@ -7513,7 +7514,7 @@ desktop 980px*/
         }
 
         /*Navigation*/
-        nav {
+        nav#main-nav {
 
             margin: 0.5em 0 0 0;
             height: 35px;
@@ -8967,7 +8968,7 @@ tablet 800px */
         }
 
         /*Navigation*/
-        nav {
+        nav#main-nav {
 
             height: 35px;
 
@@ -10452,7 +10453,7 @@ tablet 667px*/
         }
 
         /*Navigation*/
-        nav {
+        nav#main-nav {
 
             margin: 0.5em 0 0 0;
             height: 35px;
@@ -11810,6 +11811,10 @@ tablet 667px*/
         left: 100vw;
     }
 
+    .hidemenu {
+        left: 250px;
+    }
+
     /* Make sure the button doesn't hide when menu is open. */
 
     .toggled .menu-toggle.hide {
@@ -11855,6 +11860,7 @@ tablet 667px*/
         
         
     }
+    
     
     /*Header*/
     header {
@@ -11944,12 +11950,12 @@ tablet 667px*/
         }
 
         /*Navigation*/
-        nav {
+        nav#main-nav {
 
             position: fixed;
             top: 5em;
             z-index: 100;
-            left: -250px;
+            left:-250px;
             width: 250px;
             height: auto;
 
@@ -13391,7 +13397,7 @@ mobile 480px */
         }
 
          /*Navigation*/
-         nav {
+         nav#main-nav{
 
             
             top: 5em;
@@ -14880,7 +14886,7 @@ mobile 360px */
         }
 
         /*Navigation*/
-        nav {
+        nav#main-nav {
 
             
             top: 5em;
@@ -16357,7 +16363,7 @@ mobile 320px */
         }
 
         /*Navigation*/
-         nav {
+        nav#main-nav{
 
             
             top: 5em;

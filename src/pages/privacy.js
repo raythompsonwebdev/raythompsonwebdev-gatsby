@@ -1,10 +1,12 @@
 import React from "react"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Layout from "../components/layout"
 
 const PrivacyPage = () => (
   <Layout>
     <SEO title="Privacy Page" />
+
+    
 
     <div class="main-text">
       <h1>Privacy Policy</h1>
@@ -385,7 +387,10 @@ const PrivacyPage = () => (
         v.3.0 November 2017 Edited &amp; customised by:RAYTHOMPSONWEBDEV.CO.UK
       </p>
     </div>
-  </Layout>
+    
+    </Layout>
+  
+  
 )
 
 export default PrivacyPage

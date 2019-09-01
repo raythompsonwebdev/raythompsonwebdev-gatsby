@@ -1,10 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 import $ from "jquery"
-//import Img from "../components/image"
-
+import SEO from "../components/seo"
+import Layout from "../components/layout"
 
 $(function() {
   /* filter */
@@ -22,6 +20,8 @@ $(function() {
 })
 
 const ProjectPage = ({ data }) => (
+
+ 
   <Layout>
     <SEO title="Project Page" />
 
@@ -34,20 +34,21 @@ const ProjectPage = ({ data }) => (
               All
             </li>
 
-            <li className="" category="vanilla">
+            <li className="at" category="vanilla">
               Plain Code
             </li>
 
-            <li className="" category="wordpress">
+            <li className="at" category="wordpress">
               WordPress
             </li>
           </ul>
         </nav>
 
         {data.allWordpressWpProject.nodes.map((items, i) => (
+        
           <div
             id="panel"
-            className={`prod-cnt ${data.allWordpressWpProject.nodes[0].slug}`}
+            className={`prod-cnt ${items.slug}`}
             key={i}
           >
             <figure className="showcase-container" id="showcaseimg1">
@@ -61,14 +62,13 @@ const ProjectPage = ({ data }) => (
               <figcaption className="showcase-content showcase">
                 <h1>{items.title}</h1>
 
-                <Link to={`/projects/${items.slug}`}>Link</Link>
+                <Link to={`/project/${items.slug}`}>Link</Link>
               </figcaption>
             </figure>
           </div>
         ))}
       </div>
     </div>
-
   </Layout>
 )
 

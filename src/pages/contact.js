@@ -1,15 +1,11 @@
 import React from "react"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ContactForm from "../components/contactform"
-
+import Layout from "../components/layout"
 
 const contactPage = () => (
   <Layout>
-
     <SEO title="Contact Page" />
-
-   
 
     <h1>Contact</h1>
 
@@ -40,8 +36,6 @@ const contactPage = () => (
     </ul>
 
     <div className="clearfix"></div>
-    
-
   </Layout>
 )
 

@@ -13,8 +13,7 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-
-        
+                   
     `gatsby-plugin-sass`,
 
     {
@@ -56,9 +55,9 @@ module.exports = {
         ]
       }
     },
-
+    
     `gatsby-plugin-transition-link`,
-        
+                   
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -76,6 +75,7 @@ module.exports = {
       options: {
         path: `./src/data/`,
       },
-    },
+    }
+    
   ],
 }

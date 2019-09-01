@@ -1,15 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
-//import Img from "../components/image"
+import Layout from "../components/layout"
 
 const BlogPage = ({ data }) => (
-
-
   <Layout>
-  
     <SEO title="Blog Page" />
 
     <h1>Interested in web design and web development</h1>
@@ -27,31 +23,31 @@ const BlogPage = ({ data }) => (
     </div>
 
     <div id="blogbox">
-
       {data.allWordpressPost.edges.map(({ node }, index) => (
-        
         <div className="blogboxes" key={index}>
           <h1 dangerouslySetInnerHTML={{ __html: node.title }}></h1>
 
-          {node.featured_media && node.featured_media.localFile.childImageSharp.fixed &&
-            <img src={node.featured_media.localFile.childImageSharp.fixed.src} alt=""/>
-          }
+          {node.featured_media &&
+            node.featured_media.localFile.childImageSharp.fixed && (
+              <img
+                src={node.featured_media.localFile.childImageSharp.fixed.src}
+                alt=""
+              />
+            )}
 
           <div dangerouslySetInnerHTML={{ __html: node.excerpt }}></div>
 
           <Link to={`/blog/${node.link}`}>Read More..</Link>
-
         </div>
       ))}
     </div>
 
     <div className="clearfix"></div>
-<br/>
+    <br />
     {/*Related Items */}
     <section className="contact-wide">
       <h1>Related Items</h1>
     </section>
-    
   </Layout>
 )
 

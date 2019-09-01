@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-//import PropTypes from "prop-types"
+
 import React from "react"
 
 const ListLink = props => (
@@ -15,7 +15,7 @@ const Footer = () => (
     </ul>
 
     <div className="socialpics">
-      <ListLink
+      <Link
         className="social-icon linkedin-icon"
         to="https://www.raythompsonwebdevlocal.com"
         target="new"
@@ -24,9 +24,9 @@ const Footer = () => (
         <span>
           <i className="fa fa-linkedin"></i>
         </span>
-      </ListLink>
+      </Link>
 
-      <ListLink
+      <Link
         className="social-icon twitter-icon"
         to="https://www.raythompsonwebdevlocal.com"
         target="new"
@@ -35,9 +35,9 @@ const Footer = () => (
         <span>
           <i className="fa fa-twitter"></i>
         </span>
-      </ListLink>
+      </Link>
 
-      <ListLink
+      <Link
         className="social-icon facebook-icon"
         to="https://www.raythompsonwebdevlocal.com"
         target="new"
@@ -46,9 +46,9 @@ const Footer = () => (
         <span>
           <i className="fa fa-facebook"></i>
         </span>
-      </ListLink>
+      </Link>
 
-      <ListLink
+      <Link
         className="social-icon google-icon"
         to="https://www.raythompsonwebdevlocal.com"
         target="new"
@@ -57,7 +57,7 @@ const Footer = () => (
         <span>
           <i className="fa fa-github"></i>
         </span>
-      </ListLink>
+      </Link>
     </div>
   </footer>
 )
