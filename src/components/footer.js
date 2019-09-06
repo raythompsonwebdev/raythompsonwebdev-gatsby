@@ -1,5 +1,4 @@
 import { Link } from "gatsby"
-
 import React from "react"
 
 const ListLink = props => (
@@ -17,7 +16,7 @@ const Footer = () => (
     <div className="socialpics">
       <Link
         className="social-icon linkedin-icon"
-        to="https://www.raythompsonwebdevlocal.com"
+        to="/raythompsonwebdevlocal"
         target="new"
         title="linkedin"
       >
@@ -28,7 +27,7 @@ const Footer = () => (
 
       <Link
         className="social-icon twitter-icon"
-        to="https://www.raythompsonwebdevlocal.com"
+        to="/raythompsonwebdevlocal"
         target="new"
         title="twitter"
       >
@@ -39,7 +38,7 @@ const Footer = () => (
 
       <Link
         className="social-icon facebook-icon"
-        to="https://www.raythompsonwebdevlocal.com"
+        to="/raythompsonwebdevlocal"
         target="new"
         title="facebook"
       >
@@ -50,7 +49,7 @@ const Footer = () => (
 
       <Link
         className="social-icon google-icon"
-        to="https://www.raythompsonwebdevlocal.com"
+        to="/raythompsonwebdevlocal"
         target="new"
         title="google"
       >

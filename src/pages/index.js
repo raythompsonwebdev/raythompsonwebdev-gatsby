@@ -1,11 +1,12 @@
 import React from "react"
 import SEO from "../components/seo"
-import Layout from "../components/layout"
 
 const IndexPage = () => (
-  <Layout >
-    <SEO title="Home Page" />
 
+  <main id="main-content">
+    
+    <SEO title="Home Page" />
+    
     <div id="frontpage_container">
       <div id="svg-image-container">
         <figure id="image-7"></figure>
@@ -18,6 +19,7 @@ const IndexPage = () => (
         <p>{`From idea to launch I can help build your project with the focus on simplicity, usability and accessibility for all users. I use clean semantic code and following latest web standards compliances and best practices. I can ensure any website or web application built can be found by most search engines, viewed within in most modern browsers and mobile devices, and have fast page loading for a great user experience.`}</p>
         <p>{`To see a few examples of my work click here.`}</p>
         <br />
+        
         <section id="calltoaction">
           <article className="frntpgbox">
             <h1>Wordpress</h1>
@@ -59,11 +61,13 @@ const IndexPage = () => (
             </ul>
           </article>
         </section>
+      
       </div>
 
       <div className="clearfix"></div>
     </div>
-  </Layout>
+   
+ </main>
 )
 
 export default IndexPage

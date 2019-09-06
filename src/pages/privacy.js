@@ -1,12 +1,12 @@
 import React from "react"
 import SEO from "../components/seo"
-import Layout from "../components/layout"
+
 
 const PrivacyPage = () => (
-  <Layout>
-    <SEO title="Privacy Page" />
 
     
+    <main id="main-content">
+    <SEO title="Privacy Page" />
 
     <div class="main-text">
       <h1>Privacy Policy</h1>
@@ -388,7 +388,7 @@ const PrivacyPage = () => (
       </p>
     </div>
     
-    </Layout>
+   </main>
   
   
 )

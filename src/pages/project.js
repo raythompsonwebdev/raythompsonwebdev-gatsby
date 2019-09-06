@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import $ from "jquery"
 import SEO from "../components/seo"
-import Layout from "../components/layout"
+
 
 $(function() {
   /* filter */
@@ -22,7 +22,7 @@ $(function() {
 const ProjectPage = ({ data }) => (
 
  
-  <Layout>
+  <main id="main-content">
     <SEO title="Project Page" />
 
     <div id="photocontainer">
@@ -69,7 +69,7 @@ const ProjectPage = ({ data }) => (
         ))}
       </div>
     </div>
-  </Layout>
+ </main>
 )
 
 export default ProjectPage

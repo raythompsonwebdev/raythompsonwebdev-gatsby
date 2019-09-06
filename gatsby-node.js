@@ -13,6 +13,7 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+//const createPaginatedPages = require('gatsby-paginate')
 
 
 module.exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -31,8 +32,6 @@ module.exports.onCreateNode = ({ node, getNode, actions }) => {
         value: slug,
       })
     }
-
-
   }
   
 
@@ -70,42 +69,38 @@ module.exports.createPages = ({ graphql, actions }) => {
         }
       }
     `).then(result => {
-
-      //console.log(JSON.stringify(result, null, 4))
-
+      
       if (result.errors) {
 
         reject(result.errors)
         
       }
 
-          /*
+      /*    
             // Create blog-list pages
       createPaginatedPages({
-        edges: data.allWordpressPost.edges,
+        edges: result.data.allWordpressPost.edges,
         createPage: createPage,
         pageTemplate: 'src/templates/blog-post-template.js',
         pageLength: 5, // This is optional and defaults to 10 if not used
-        pathPrefix: '', // This is optional and defaults to an empty string if not used
+        pathPrefix: '/blogpag/', // This is optional and defaults to an empty string if not used
         context: {}, // This is optional and defaults to an empty object if not used
         buildPath: (index, pathPrefix) => index > 1 ? `${pathPrefix}/${index}` : `/${pathPrefix}`, // This is optional and this is the default
     
       })
       result.data.allWordpressPost.edges.map(({ node }) => {
         createPage({
-          path: node.fields.slug,
+          path: `/blogpag/${node.slug}`,
           component: path.resolve('./src/templates/blog-post-template.js'),
           context: {
-            slug: node.fields.slug,
+            slug: node.slug,
           },
         })
       })
-          */
-
+          
+*/
       result.data.allWordpressPost.edges.forEach(({ node }) => {
-
-          //console.log(node.slug)
-
+          
           createPage({
           path: `/blog/${node.slug}`,
           component: path.resolve(`src/templates/blog-post.js`),

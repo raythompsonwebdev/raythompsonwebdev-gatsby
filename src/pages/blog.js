@@ -2,12 +2,12 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
 import SEO from "../components/seo"
-import Layout from "../components/layout"
+
 
 const BlogPage = ({ data }) => (
-  <Layout>
+  <main id="main-content">
     <SEO title="Blog Page" />
-
+    
     <h1>Interested in web design and web development</h1>
 
     <div className="main-text">
@@ -48,7 +48,8 @@ const BlogPage = ({ data }) => (
     <section className="contact-wide">
       <h1>Related Items</h1>
     </section>
-  </Layout>
+    
+ </main>
 )
 
 export default BlogPage

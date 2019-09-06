@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
-import Layout from "../components/layout"
+
 
 export const post = graphql`
   query($slug: String!) {
@@ -38,7 +38,7 @@ const BlogPost = props => {
 
   
   return (
-    <Layout>
+   <div>
       <SEO title="Blog Post" />
 
       <article className="post group" id="post">
@@ -118,7 +118,7 @@ const BlogPost = props => {
           <p>Text</p>
         </footer>
       </article>
-    </Layout>
+   </div>
   )
 }
 

@@ -1,3 +1,4 @@
+
 /**
  * Implement Gatsby's Browser APIs in this file.
  *
@@ -5,20 +6,9 @@
  */
 
 // You can delete this file if you're not using it
-const transitionDelay = 500
+import React from "react";
+import Transition from "./src/components/transition";
 
-exports.shouldUpdateScroll = ({
-    routerProps: { location },
-    getSavedScrollPosition,
-}) => {
-    if (location.action === 'PUSH') {
-        window.setTimeout(() => window.scrollTo(0, 0), transitionDelay)
-    } else {
-        const savedPosition = getSavedScrollPosition(location)
-        window.setTimeout(
-            () => window.scrollTo(...(savedPosition || [0, 0])),
-            transitionDelay
-        )
-    }
-    return false
-    }
+export const wrapPageElement = ({ element, props }) => {
+  return <Transition {...props}>{element}</Transition>;
+};

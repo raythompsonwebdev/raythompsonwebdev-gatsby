@@ -1,10 +1,10 @@
 import React from "react"
 import SEO from "../components/seo"
 import ContactForm from "../components/contactform"
-import Layout from "../components/layout"
+
 
 const contactPage = () => (
-  <Layout>
+  <main id="main-content">
     <SEO title="Contact Page" />
 
     <h1>Contact</h1>
@@ -36,7 +36,7 @@ const contactPage = () => (
     </ul>
 
     <div className="clearfix"></div>
-  </Layout>
+ </main>
 )
 
 export default contactPage

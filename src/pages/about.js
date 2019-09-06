@@ -1,15 +1,18 @@
 import React from "react"
 import { Link } from "gatsby"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SkillsGraph from "../components/skillsgraph"
 import SliderPanel from "../components/sliderpanel"
 
 const AboutPage = () => (
-  <Layout>
-    <SEO title="About Page" />
 
+  <main id="main-content">
+  
+
+    <SEO title="About Page" />
+    
     <div id="profile_container">
+
       <h1>About Me</h1>
 
       <article id="text-box-profile">
@@ -87,9 +90,14 @@ const AboutPage = () => (
       </article>
 
       <SliderPanel />
+
     </div>
+
     <div className="clearfix"></div>
-  </Layout>
+
+   
+
+ </main>
 )
 
 export default AboutPage

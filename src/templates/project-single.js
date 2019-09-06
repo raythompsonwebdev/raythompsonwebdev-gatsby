@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
-import Layout from "../components/layout"
 
 export const post = graphql`
   query($slug: String!) {
@@ -35,7 +34,7 @@ export const post = graphql`
 
 const ProjectSingle = props => {
   return (
-    <Layout>
+   <div>
       <SEO title="Single Project Page" />
 
       <article className="post group">
@@ -90,7 +89,7 @@ const ProjectSingle = props => {
         </div>
         <footer className="byline"></footer>
       </article>
-    </Layout>
+   </div>
   )
 }
 

@@ -11,7 +11,7 @@ const SkillsGraph = () => {
         {
           width: percentage + "%",
         },
-        1000
+        2000
       )
     })
   })

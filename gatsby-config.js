@@ -55,9 +55,15 @@ module.exports = {
         ]
       }
     },
+
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/layout`),
+      },
+    },
     
-    `gatsby-plugin-transition-link`,
-                   
+                                       
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

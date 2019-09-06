@@ -1,10 +1,12 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import $ from "jquery"
+//import $ from "jquery"
 
 // Hide/show toggle button on scroll
+/*
 $(document).ready(function($) {
+	
 	var position, direction, previous;
 
 	$(window).scroll(function(){
@@ -52,8 +54,9 @@ $(document).ready(function($) {
 		}
 	});
 })
-
+*/
 const ListLink = props => (
+	
 	<li className="menu-item">
 	  <Link to={props.to}>{props.children}</Link>
 	</li>
