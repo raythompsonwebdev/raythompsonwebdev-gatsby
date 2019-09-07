@@ -34,7 +34,7 @@ export const post = graphql`
 
 const ProjectSingle = props => {
   return (
-   <div>
+  <main id="main-content">
       <SEO title="Single Project Page" />
 
       <article className="post group">
@@ -89,7 +89,7 @@ const ProjectSingle = props => {
         </div>
         <footer className="byline"></footer>
       </article>
-   </div>
+  </main> 
   )
 }
 

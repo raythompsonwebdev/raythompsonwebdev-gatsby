@@ -3265,6 +3265,49 @@ desktop 1440px*/
     /*main-content box*/
     #main-content {
 
+        div.main-text {
+            
+
+            p {
+                font-size: 0.9em;
+                
+            }
+            ul {
+                width: 100%;
+    
+                li {
+                    
+                    font-size: 0.9em;
+                    
+                    div.error{
+                        font-size:0.9em;
+
+                    }
+    
+                    &:before {
+                        
+                        font-size: 0.95em;
+                        
+
+                    }
+                    a {
+                        display: inline-block;
+                        &:hover {
+                            font-weight:bold;
+                            
+                            
+                        }
+                    }
+    
+                }
+            }
+
+            hr {
+                height: 1px;
+                
+            }
+        }
+
         #blogbox{
            
 
@@ -7285,7 +7328,7 @@ desktop 1280px*/
 
                             font-weight: bold;
                         }
-                        &::after {
+                        &:after {
                             font-size: 1.3em;
                             
                         }
@@ -7516,7 +7559,7 @@ desktop 980px*/
         /*Navigation*/
         nav#main-nav {
 
-            margin: 0.5em 0 0 0;
+            
             height: 35px;
             width:100%;
 
@@ -7545,6 +7588,49 @@ desktop 980px*/
     }
     /*main-content box*/
     #main-content {
+
+        div.main-text {
+            
+
+            p {
+                font-size: 0.8em;
+                
+            }
+            ul {
+                width: 100%;
+    
+                li {
+                    
+                    font-size: 0.8em;
+                    
+                    div.error{
+                        font-size:0.8em;
+
+                    }
+    
+                    &:before {
+                        
+                        font-size: 0.9em;
+                        
+
+                    }
+                    a {
+                        display: inline-block;
+                        &:hover {
+                            font-weight:bold;
+                            
+                            
+                        }
+                    }
+    
+                }
+            }
+
+            hr {
+                height: 1px;
+                
+            }
+        }
 
         #blogbox{
            
@@ -7584,7 +7670,7 @@ desktop 980px*/
 
         }
         h3 {
-            font-size: 0.9em;
+            font-size: 1em;
 
         }
         
@@ -9024,17 +9110,17 @@ tablet 800px */
         }
      
         h1 {
-            font-size: 1.3em;
+            font-size: 1.1em;
             line-height:50px;
 
 
         }
         h2 {
-            font-size: 1.2em;
+            font-size: 1em;
 
         }
         h3 {
-            font-size: 1.1em;
+            font-size: 1em;
 
         }
         
@@ -10454,8 +10540,7 @@ tablet 667px*/
 
         /*Navigation*/
         nav#main-nav {
-
-            margin: 0.5em 0 0 0;
+            
             height: 35px;
 
 
@@ -10510,7 +10595,7 @@ tablet 667px*/
         }
      
         h1 {
-            font-size: 1.2em;
+            font-size: 1em;
             line-height:50px;
 
 
@@ -11787,12 +11872,12 @@ tablet 667px*/
 
 /*tablet 536px */
 @media only screen and (max-width: 536px) {
-    .menu-toggle,
+    #menu-toggle,
     .menu-main-container.toggled ul {
         display: block;
     }
 
-    .menu-toggle {
+    #menu-toggle {
         position: fixed;
         z-index: 100;
         top: 0.2em;
@@ -11807,7 +11892,7 @@ tablet 667px*/
         height:60px;
     }
 
-    .menu-toggle.hide {
+    #menu-toggle.hide {
         left: 100vw;
     }
 
@@ -11817,12 +11902,12 @@ tablet 667px*/
 
     /* Make sure the button doesn't hide when menu is open. */
 
-    .toggled .menu-toggle.hide {
+    .toggled #menu-toggle.hide {
         bottom: 1em;
     }
 
-    .menu-toggle:hover,
-    .menu-toggle:focus {
+    #menu-toggle:hover,
+    #menu-toggle:focus {
         text-decoration: underline;
         border: solid 2px $color2;
         cursor:pointer;
@@ -11955,6 +12040,7 @@ tablet 667px*/
             position: fixed;
             top: 5em;
             z-index: 100;
+            //opacity:0;
             left:-250px;
             width: 250px;
             height: auto;
@@ -13268,7 +13354,7 @@ mobile 480px */
 @media only screen and (max-width: 30em) {
     
 
-    .menu-toggle {
+    #menu-toggle {
         
         left: calc(84% - 1vw);
         font-size: 0.9em;
@@ -14751,7 +14837,7 @@ mobile 480px */
 mobile 360px */
 @media only screen and (max-width: 22.5em) {
 
-    .menu-toggle {
+    #menu-toggle {
         
         left: calc(83% - 1vw);
         
@@ -16235,7 +16321,7 @@ mobile 360px */
 mobile 320px */
 @media only screen and (max-width: 20em) {
 
-    .menu-toggle {
+    #menu-toggle {
         
         left: calc(82% - 1vw);
         font-size: 0.8em;

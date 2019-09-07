@@ -10,7 +10,7 @@ const SliderPanel = () => {
   $(document).ready(function($) {
     $(".hero-slider ul a").click(function() {
       //reset all the items
-      $(".customBlock ul a").removeClass("active")
+      $(".hero-slider ul a").removeClass("active")
       //set current item as active
       $(this).addClass("active")
       //scroll it to the right position
@@ -39,6 +39,7 @@ const SliderPanel = () => {
         }
       `}
       render={data => (
+
         <section id="prof_cont-a">
           <h1>Development Courses Taken</h1>
 
@@ -95,7 +96,7 @@ const SliderPanel = () => {
               <div className="slider-body">
                 {data.allSliderpaneltextJson.nodes.map(node => (
                   <article className="panel" key={node.id} id={`panel-${node.id}`}>
-                    <h2>{node.header}</h2>
+                    <h2>{node.title}</h2>
 
                     <figure className="slider-panel">
                       <Link to="" className="fancybox">

@@ -38,7 +38,7 @@ const BlogPost = props => {
 
   
   return (
-   <div>
+    <main id="main-content">
       <SEO title="Blog Post" />
 
       <article className="post group" id="post">
@@ -118,7 +118,7 @@ const BlogPost = props => {
           <p>Text</p>
         </footer>
       </article>
-   </div>
+   </main>
   )
 }
 

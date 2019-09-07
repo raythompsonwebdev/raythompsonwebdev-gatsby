@@ -13,7 +13,7 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const data = graphql`
+const data =  graphql`
     query {
       allWordpressWpMedia {
         edges {
