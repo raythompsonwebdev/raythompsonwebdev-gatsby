@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 
 
-export const post = graphql`
+export const data = graphql`
   query($slug: String!) {
     allWordpressPost(filter: { slug: { eq: $slug } }) {
       nodes {

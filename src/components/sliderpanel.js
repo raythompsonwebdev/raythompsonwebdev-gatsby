@@ -2,10 +2,10 @@ import React from "react"
 import { StaticQuery, Link, graphql } from "gatsby"
 import $ from "jquery"
 
-require("jquery.scrollto")
 
 
 const SliderPanel = () => {
+
   //Hero Slider
   $(document).ready(function($) {
     $(".hero-slider ul a").click(function() {
@@ -29,6 +29,7 @@ const SliderPanel = () => {
               id
               title
               header
+              buttonname
               task1
               task2
               task3
@@ -44,56 +45,20 @@ const SliderPanel = () => {
           <h1>Development Courses Taken</h1>
 
           <article className="hero-slider">
+
             <ul id="list">
+            {data.allSliderpaneltextJson.nodes.map(node => (
               <li>
-                <Link to="#" rel="#panel-1" className="active">
-                  Adobe
+                <Link to="#" rel={`panel-${node.id}`} className="active">
+                {node.buttonname}
                 </Link>
               </li>
-              <li>
-                <Link to="#" rel="#panel-2">
-                  ELATT
-                </Link>
-              </li>
-              <li>
-                <Link to="#" rel="#panel-3">
-                  Udemy
-                </Link>
-              </li>
-              <li>
-                <Link to="#" rel="#panel-4">
-                  FreeCodeCamp
-                </Link>
-              </li>
-              <li>
-                <Link to="#" rel="#panel-5">
-                  Lynda.com
-                </Link>
-              </li>
-              <li>
-                <Link to="#" rel="#panel-6">
-                  Shaw Academy
-                </Link>
-              </li>
-              <li>
-                <Link to="#" rel="#panel-7">
-                  Code Academy
-                </Link>
-              </li>
-              <li>
-                <Link to="#" rel="#panel-8">
-                  Udacity
-                </Link>
-              </li>
-              <li>
-                <Link to="#" rel="#panel-9">
-                  Digital Futures
-                </Link>
-              </li>
+              ))}             
             </ul>
 
             <div className="mask">
               <div className="slider-body">
+                {/*loop*/}
                 {data.allSliderpaneltextJson.nodes.map(node => (
                   <article className="panel" key={node.id} id={`panel-${node.id}`}>
                     <h2>{node.title}</h2>
@@ -118,8 +83,10 @@ const SliderPanel = () => {
                         <div className="clearfix"></div>
                       </figcaption>
                     </figure>
+
                   </article>
                 ))}
+                {/*loop end*/}
               </div>
             </div>
           </article>

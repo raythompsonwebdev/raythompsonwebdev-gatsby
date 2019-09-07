@@ -8,7 +8,8 @@
     "task2": "Identifying Design Elements",
     "task3": "Understanding Photoshop Interface",
     "task4": "Manipulating Images",
-    "task5": "Evaluating Digital Images"
+    "task5": "Evaluating Digital Images",
+    "buttonname": "Adobe"
   },
   {
     "id":"2",
@@ -19,7 +20,8 @@
     "task2": "IT Communication Fundementals",
     "task3": "Adding Content",
     "task4": "IT User fundementals",
-    "task5": "Organizing Content"
+    "task5": "Organizing Content",
+    "buttonname": "ELATT"
   },
   {
     "id":"3",
@@ -30,7 +32,8 @@
     "task2": "Learn Object Oriented PHP",
     "task3": "ES6 Javascript Reloaded",
     "task4": "Learn Complete Wordpress Security",
-    "task5": "Up and Running with NodeJs"
+    "task5": "Up and Running with NodeJs",
+    "buttonname": "Udemy"
   },
   {
     "id":"4",
@@ -41,7 +44,8 @@
     "task2": "Javascript Algorithms And Data Structures",
     "task3": "Basic HTML and HTML5",
     "task4": "Basic JavaScript",
-    "task5": "Responsive Web Design Projects"
+    "task5": "Responsive Web Design Projects",
+    "buttonname": "FreeCodeCamp"
   },
   {
     "id":"5",
@@ -52,7 +56,8 @@
     "task2": "Become a Junior Developer",
     "task3": "Programming Fundementals",
     "task4": "CSS Fundementals",
-    "task5": "Javascript Essentials"
+    "task5": "Javascript Essentials",
+    "buttonname": "Lynda.com"
   },
   {
     "id":"6",
@@ -63,7 +68,8 @@
     "task2": "Designing our App",
     "task3": "User Interfaces with HTML",
     "task4": "Coding Functions",
-    "task5": "Web Hosting/Deploying Apps"
+    "task5": "Web Hosting/Deploying Apps",
+    "buttonname": "Shaw Academy"
   },
   {
     "id":"7",
@@ -74,7 +80,8 @@
     "task2": "HTML",
     "task3": "Javascript Beginners",
     "task4": "",
-    "task5": ""
+    "task5": "",
+    "buttonname": "Code Academy"
   },
   {
     "id":"8",
@@ -85,7 +92,8 @@
     "task2": "Networking for Webdevelopers(HTTP)",
     "task3": "Data Structures & Algorithms in Python",
     "task4": "Website Performance Optimisation",
-    "task5": "Version Control with Git"
+    "task5": "Version Control with Git",
+    "buttonname": "Udacity"
   },
   {
     "id":"9",
@@ -96,7 +104,8 @@
     "task2": "Musical Composition.",
     "task3": "Block programming using Crumble.",
     "task4": "Negotiation skills with CitizenUK.",
-    "task5": "Music creation using Sonic Pi"
+    "task5": "Music creation using Sonic Pi",
+    "buttonname": "Digital Futures"
   }
   
 ]

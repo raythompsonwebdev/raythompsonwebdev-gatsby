@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 
-export const post = graphql`
+export const data = graphql`
   query($slug: String!) {
     allWordpressWpProject(filter: { slug: { eq: $slug } }) {
       edges {

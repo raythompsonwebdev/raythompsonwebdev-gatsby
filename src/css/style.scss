@@ -423,7 +423,6 @@ desktop 1920px*/
                             color: $color4;
                             font-weight: bold;
                             line-height: 35px;
-                            ;
                         }
                         &:active {
                             background-color: $color1;
@@ -12054,7 +12053,6 @@ tablet 667px*/
                 
 
                 li {
-                    height: 45px;
                     list-style: none;
                     width: 100%;
                     display: block;
@@ -12072,11 +12070,9 @@ tablet 667px*/
                         
 
                         &:hover {
-
                             letter-spacing: 0.2em;
                             font-weight: bold;
-                            background-color: $color1;
-                            color: $color4;
+                            line-height: 45px;
                         }
                     }
                 }

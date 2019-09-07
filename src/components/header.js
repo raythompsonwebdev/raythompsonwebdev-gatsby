@@ -1,8 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-//import $ from 'jquery'
-
 
 const ListLink = props => (	
 	<li className="menu-item">
@@ -11,7 +9,7 @@ const ListLink = props => (
 )
 
 const Header = ({ siteTitle, siteDescription}) => (
-  
+		
   	<header>
 	
 		<div className="site-logo">
@@ -38,7 +36,7 @@ const Header = ({ siteTitle, siteDescription}) => (
 					<ListLink to="/contact">Contact</ListLink>
 				</ul>
 			</nav>	
-
+		
 	</header>
     
 )
