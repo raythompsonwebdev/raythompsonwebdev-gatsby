@@ -14,7 +14,7 @@ const sliderPanelText = {
       "task4": "Manipulating Images",
       "task5": "Evaluating Digital Images",
       "buttonname": "Adobe",
-      "bgimage": "../images/large/certificates/Large-Photoshop-Certicate-.jpg"
+      "bgimage": "./images/large/certificates/Large-Photoshop-Certicate-.jpg"
     },
     {
       "id":"2",

@@ -69,7 +69,7 @@ yarn-error.log
 .yarn-integrity
 fonts/
 src/images/
-src/js/**
+src/js/jquery/
 .env
 README.md
 
