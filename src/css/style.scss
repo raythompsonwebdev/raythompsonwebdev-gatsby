@@ -125,6 +125,9 @@ desktop 1920px*/
         font-family: ($FontStyle);
         margin: 0;
         padding: 0;
+        //background-image:url('../images/picjumbo.com_IMG_4892.jpg');
+        //background-repeat: no-repeat;
+        //background-size: 100% 100%;
     }
 
     .socialpics {
@@ -180,6 +183,8 @@ desktop 1920px*/
         font-family: ($FontStyle);
         overflow: hidden;
         clear: both;
+        
+        
         
     }
     
@@ -927,6 +932,9 @@ desktop 1920px*/
             margin: 0 0 1em 0;
             padding: 0;
             
+        
+            
+            
             /*homepage container*/
             div#text-box-front {
                 -webkit-flex: 0 0 auto;
@@ -956,7 +964,7 @@ desktop 1920px*/
                     
                     
                     width:100%;
-                    background-color:$color2;
+                    
                     height:auto;
                     margin:0;
                     padding:0.5em;
@@ -1104,7 +1112,7 @@ desktop 1920px*/
                 width: 85%;
                 height: 300px;
                 font-family: ($FontStyle);
-                background-color:#fff;
+                
                 
                 /*PNG for IE8*/
                 figure#image-6 {
@@ -1259,6 +1267,35 @@ desktop 1920px*/
                         margin: 2% 0;
                     }
                 }
+
+                
+                /* Hide the images by default */
+                
+                                
+                .fade {
+                    -webkit-animation-name: fade;
+                    -webkit-animation-duration: 1.5s;
+                    animation-name: fade;
+                    animation-duration: 1.5s;
+                }
+                
+                @-webkit-keyframes fade {
+                    from {opacity: .4}
+                    to {opacity: 1}
+                }
+                
+                @keyframes fade {
+                    from {opacity: .4}
+                    to {opacity: 1}
+                }
+
+                button.slider-btn{
+                    position:relative;
+                    top: -30px;
+                    width: 50%;
+
+                }
+
                 /*Hero Slider*/
                 .hero-slider {
                     text-align: left;
@@ -1267,81 +1304,89 @@ desktop 1920px*/
                     width: 100%;
                     .mask {
                         display: inline-block;
-                        width: 76%;
+                        width: 100%;
                         height: 420px;
-                        margin: 0 0 0 0.5em;
+                        margin: 0;
                         overflow: hidden;
                         div.slider-body {
                             width: 100%;
-
-                            #panel-1 .slider-panel a.fancybox span {
-                                background-image: url('../images/large/certificates/Large-Photoshop-Certicate-.jpg');
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                            
+                            #panel-1 {
+                                
                                 background-repeat: no-repeat;
                                 background-position: 50% 40%;
                                 //background-size: cover;
                             }
 
-                            #panel-2 .slider-panel a.fancybox span {
-                                background-image: url('../images/large/certificates/ITQ-USERS-LEVEL1-LARGE.jpg');
+                            #panel-2 {
+                                
                                 background-repeat: no-repeat;
                                 background-position: 50% 22%;
                                 //background-size: cover;
                             }
 
-                            #panel-3 .slider-panel a.fancybox span {
-                                background-image: url('../images/large/certificates/Large-Udemy-Certicate-.jpg');
+                            #panel-3 {
+                               
                                 background-repeat: no-repeat;
                                 background-position: 50% 22%;
                                 //background-size: cover;
                             }
 
-                            #panel-4 .slider-panel a.fancybox span {
-                                background-image: url('../images/large/certificates/freecodecamp-org-certification-raythompsonwebdev-responsive-web-design.png');
+                            #panel-4 {
+                                
                                 background-repeat: no-repeat;
                                 background-position: center;
                                 //background-size: cover;
                             }
 
-                            #panel-5 .slider-panel a.fancybox span {
-                                background-image: url('../images/large/certificates/lynda_logo1r-d_72x72.png');
+                            #panel-5 {
+                                
                                 background-repeat: no-repeat;
                                 background-position: center;
                                 //background-size: cover;
                             }
 
-                            #panel-6 .slider-panel a.fancybox span {
-                                background-image: url('../images/large/certificates/Mobile-web-applications-Certificate-Foundation-large.jpg');
+                            #panel-6 {
+                                
                                 background-repeat: no-repeat;
                                 background-position: 50% 31%;
                                 //background-size: cover;
                             }
 
-                            #panel-7 .slider-panel a.fancybox span {
-                                background-image: url('../images/large/certificates/codecademy-users-raythompsonwebdev-achievements-.png');
+                            #panel-7 {
+                                
                                 background-repeat: no-repeat;
                                 background-position: 50% 18%;
                                 //background-size: cover;
                             }
 
-                            #panel-8 .slider-panel a.fancybox span {
-                                background-image: url('../images/large/certificates/Udacity_logo.png');
+                            #panel-8 {
+                                
                                 background-repeat: no-repeat;
                                 background-position: 50% 18%;
                                 //background-size: cover;
                             }
 
-                            #panel-9 .slider-panel a.fancybox span {
-                                background-image: url('../images/large/certificates/Digital-Futures-2017-Certificate-of-Participation-large.jpg');
+                            #panel-9 {
+                                
                                 background-repeat: no-repeat;
                                 background-position: 50% 61%;
                                 //background-size: cover;
                             }
 
-                            .panel {
+                            .slidesPanel {
                                 font-family: ($FontStyle);
                                 width: 100%;
                                 height: 420px;
                                 background-color: $color4;
+                                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+                                transition: all 0.3s linear;
+                                max-width: 100%;
+
 
                                 h2 {
                                     text-transform: uppercase;
@@ -1453,19 +1498,24 @@ desktop 1920px*/
                             height: 44px;
                             margin-bottom: 0.2em;
                             border: 1px solid $color2;
-                            a {
+                            button#sliderBtn {
                                 text-align: center;
                                 display: block;
                                 font-size: 0.8em;
-                                line-height: 40px; // background-color: $color2;
+                                line-height: 40px; 
                                 height: 100%;
+                                width:100%;
+                                outline:none;
+                                border:none;
+                                background-color: $color4;
+                                &:hover {
+                                    background-color: $color1;
+                                    color: $color4;
+                                    font-weight: bold;
+                                    
+                                }
                             }
-                            a:hover {
-                                background-color: $color1;
-                                color: $color4;
-                                font-weight: bold;
-                                line-height: 40px;
-                            }
+                            
                         }
                         /* style */
                     }
@@ -3018,6 +3068,7 @@ desktop 1920px*/
         font-family: ($FontStyle);
         margin-top: 1%;
         clear: both;
+        background-color: $color2;
         .socialpics {
             display: block;
             float: right;
@@ -3739,13 +3790,12 @@ desktop 1440px*/
                     width: 100%;
                     .mask {
 
-                        width: 76%;
                         height: 420px;
 
                         div.slider-body {
                             width: 100%;
 
-                            .panel {
+                            .slidesPanel {
 
                                 height: 420px;
 
@@ -3810,15 +3860,16 @@ desktop 1440px*/
                         li {
                             height: 44px;
 
-                            a {
+                           button#sliderBtn{
 
                                 font-size: 0.75em;
+                                &:hover {
+
+                                    font-weight: bold;
+                                }
 
                             }
-                            a:hover {
-
-                                line-height: 40px;
-                            }
+                           
                         }
                         /* style */
                     }
@@ -5312,13 +5363,13 @@ desktop 1280px*/
                     width: 100%;
                     .mask {
 
-                        width: 76%;
+                        
                         height: 420px;
 
                         div.slider-body {
                             width: 100%;
 
-                            .panel {
+                            .slidesPanel {
 
                                 height: 420px;
 
@@ -5383,15 +5434,16 @@ desktop 1280px*/
                         li {
                             height: 44px;
 
-                            a {
+                            button#sliderBtn{
 
                                 font-size: 0.7em;
+                                &:hover {
+
+                                    font-weight: bold;
+                                }
 
                             }
-                            a:hover {
-
-                                line-height: 40px;
-                            }
+                            
                         }
                         /* style */
                     }
@@ -6615,13 +6667,13 @@ desktop 1280px*/
                     width: 100%;
                     .mask {
 
-                        width: 76%;
+                        
                         height: 420px;
 
                         div.slider-body {
                             width: 100%;
 
-                            .panel {
+                            .slidesPanel {
 
                                 height: 420px;
 
@@ -6686,15 +6738,16 @@ desktop 1280px*/
                         li {
                             height: 44px;
 
-                            a {
+                            button#sliderBtn {
 
                                 font-size: 0.65em;
+                                &:hover {
+
+                                    font-weight: bold;
+                                }
 
                             }
-                            a:hover {
-
-                                line-height: 40px;
-                            }
+                            
                         }
                         /* style */
                     }
@@ -8077,13 +8130,13 @@ desktop 980px*/
                     width: 100%;
                     .mask {
 
-                        width: 76%;
+                        
                         height: 420px;
 
                         div.slider-body {
                             width: 100%;
 
-                            .panel {
+                            .slidesPanel {
 
                                 height: 420px;
 
@@ -8148,15 +8201,16 @@ desktop 980px*/
                         li {
                             height: 44px;
 
-                            a {
+                            button#sliderBtn {
 
                                 font-size: 0.65em;
+                                &:hover {
+
+                                    font-weight: bold;
+                                }
 
                             }
-                            a:hover {
-
-                                line-height: 40px;
-                            }
+                           
                         }
                         /* style */
                     }
@@ -9543,13 +9597,13 @@ tablet 800px */
                     width: 100%;
                     .mask {
 
-                        width: 76%;
+                        
                         height: 420px;
 
                         div.slider-body {
                             width: 100%;
 
-                            .panel {
+                            .slidesPanel {
 
                                 height: 420px;
 
@@ -9613,15 +9667,16 @@ tablet 800px */
                         li {
                             height: 44px;
 
-                            a {
+                            button#sliderBtn{
 
                                 font-size: 0.75em;
+                                &:hover {
+
+                                    font-weight: bold;
+                                }
 
                             }
-                            a:hover {
-
-                                line-height: 40px;
-                            }
+                            
                         }
                         /* style */
                     }
@@ -11017,13 +11072,12 @@ tablet 667px*/
                     width: 100%;
                     .mask {
 
-                        width: 76%;
                         height: 420px;
 
                         div.slider-body {
                             width: 100%;
 
-                            .panel {
+                            .slidesPanel {
 
                                 height: 420px;
 
@@ -11086,15 +11140,16 @@ tablet 667px*/
                         li {
                             height: 44px;
 
-                            a {
+                            button#sliderBtn {
 
                                 font-size: 0.75em;
+                                &:hover {
+
+                                    font-weight: bold;
+                                }
 
                             }
-                            a:hover {
-
-                                line-height: 40px;
-                            }
+                            
                         }
                         /* style */
                     }
@@ -12547,13 +12602,12 @@ tablet 667px*/
                     width: 100%;
                     .mask {
 
-                        width: 76%;
                         height: 420px;
 
                         div.slider-body {
                             width: 100%;
 
-                            .panel {
+                            .slidesPanel {
 
                                 height: 420px;
 
@@ -12616,15 +12670,16 @@ tablet 667px*/
                         li {
                             height: 44px;
 
-                            a {
+                            button#sliderBtn {
 
                                 font-size: 0.7em;
+                                &:hover {
+
+                                    font-weight: bold;
+                                }
 
                             }
-                            a:hover {
-
-                                line-height: 40px;
-                            }
+                            
                         }
                         /* style */
                     }
@@ -13982,14 +14037,13 @@ mobile 480px */
                     
                     width: 100%;
                     .mask {
-                        margin: 0 0 0 0.25em;
-                        width: 74%;
+                        
                         height: 420px;
 
                         div.slider-body {
                             width: 100%;
 
-                            .panel {
+                            .slidesPanel {
 
                                 height: 420px;
 
@@ -14053,15 +14107,16 @@ mobile 480px */
                         li {
                             height: 44px;
 
-                            a {
+                            button#sliderBtn {
 
                                 font-size: 0.6em;
+                                &:hover {
+
+                                    font-weight: bold;
+                                }
 
                             }
-                            a:hover {
-
-                                line-height: 40px;
-                            }
+                            
                         }
                         /* style */
                     }
@@ -15471,13 +15526,12 @@ mobile 360px */
                     width: 100%;
                     .mask {
 
-                        width: 74%;
                         height: 420px;
 
                         div.slider-body {
                             width: 100%;
 
-                            .panel {
+                            .slidesPanel {
 
                                 height: 420px;
 
@@ -15540,15 +15594,16 @@ mobile 360px */
                         li {
                             height: 44px;
 
-                            a {
+                            button#sliderBtn {
 
                                 font-size: 0.55em;
+                                &:hover {
+
+                                    font-weight: bold;
+                                }
 
                             }
-                            a:hover {
-
-                                line-height: 40px;
-                            }
+                            
                         }
                         /* style */
                     }
@@ -16942,13 +16997,13 @@ mobile 320px */
                     width: 100%;
                     .mask {
 
-                        width: 74%;
+                        
                         height: 420px;
 
                         div.slider-body {
                             width: 100%;
 
-                            .panel {
+                            .slidesPanel {
 
                                 height: 420px;
 
@@ -17011,15 +17066,16 @@ mobile 320px */
                         li {
                             height: 44px;
 
-                            a {
+                            button#sliderBtn {
 
                                 font-size: 0.5em;
+                                &:hover {
+
+                                    font-weight: bold;
+                                }
 
                             }
-                            a:hover {
-
-                                line-height: 40px;
-                            }
+                            
                         }
                         /* style */
                     }

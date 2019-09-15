@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import {StaticQuery, graphql} from "gatsby"
 import Img from "gatsby-image"
 
 /*
@@ -13,23 +13,37 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const data =  graphql`
+export const data = graphql`
     query {
-      allWordpressWpMedia {
+      allWordpressPost {
         edges {
           node {
-            source_url
+            featured_media {
+              localFile {
+                childImageSharp {
+                  fixed {
+                    height
+                    src
+                    width
+                    srcSet
+                  }
+                }
+              }
+            }
           }
         }
       }
-    } `
+    }`
 
-const Image = ( {data} ) => {
+  const Image = ({data}) => {
 
-  console.log(data)
-  
-  return <Img  />
-  
-}
+    console.log(data)
+    return() => (
+      <Img fixed={data.featured_media.localFile.childImageSharp.fixed.src}/>
+    )
+  }
+
 
 export default Image
+
+

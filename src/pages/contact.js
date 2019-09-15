@@ -9,6 +9,7 @@ const contactPage = () => (
 
     <h1>Contact</h1>
 
+    
     <div className="error"></div>
 
     <ContactForm />

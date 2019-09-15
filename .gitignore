@@ -71,5 +71,6 @@ fonts/
 src/images/
 src/js/**
 .env
-READE.md
-src/components/transitions.js
+README.md
+
+files/

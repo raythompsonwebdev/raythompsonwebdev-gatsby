@@ -3,10 +3,42 @@ import { Link } from "gatsby"
 import SEO from "../components/seo"
 import SkillsGraph from "../components/skillsgraph"
 import SliderPanel from "../components/sliderpanel"
+import data from '../data/sliderpaneltext'
 
-const AboutPage = () => (
 
-  <main id="main-content">
+class AboutPage extends React.Component{
+
+  constructor(props){
+    super(props)
+    this.state = {
+      properties : data.properties,
+      property: data.properties[0]
+
+    }
+          
+  }
+  
+  nextProperty = () => {
+    const newIndex = this.state.property.index+1;
+    this.setState({
+      property: data.properties[newIndex]
+    })
+  }
+
+  prevProperty = () => {
+    const newIndex = this.state.property.index-1;
+    this.setState({
+      property: data.properties[newIndex]
+    })
+  }
+  
+  render(){
+
+    const {properties, property} = this.state;
+
+    return(
+
+      <main id="main-content">
   
 
     <SEO title="About Page" />
@@ -89,7 +121,36 @@ const AboutPage = () => (
         </p>
       </article>
 
-      <SliderPanel />
+      <section id="prof_cont-a">
+        <h1>Development Courses Taken</h1>
+       
+        <article className="hero-slider">
+        
+          <div className="mask" id="mask" >
+
+              <div className="slider-body" style={{
+                  'transform': `translateY(-${property.index*(100/properties.length)}%)`
+                }}>
+              
+                {properties.map(property => (
+           
+                    <SliderPanel key={property._id} property={property}/>
+                
+                  ))}
+              
+                </div>                    
+          </div>
+
+        </article>
+        <button 
+          className="slider-btn"
+          onClick={() => this.nextProperty()} 
+          disabled={property.index === properties.length-1}>Next</button>
+        <button
+          className="slider-btn" 
+          onClick={() => this.prevProperty()} 
+          disabled={property.index === 0}>Prev</button>
+      </section>
 
     </div>
 
@@ -98,6 +159,9 @@ const AboutPage = () => (
    
 
  </main>
-)
+    
+    )
+  }
+}
 
 export default AboutPage
