@@ -25,6 +25,7 @@ const SliderPanel = ({ property }) => {
       <h2>{title}</h2>
 
       <figure className="slider-panel">
+        
         <Link to="/projects" className="fancybox">
           <span></span>
         </Link>

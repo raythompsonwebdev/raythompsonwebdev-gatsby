@@ -8,10 +8,11 @@ const ProjectPage = ({ data }) => (
   
   <main id="main-content">
     <SEO title="Project Page" />
+    <h1>Projects</h1>
 
     <div id="photocontainer">
       <div className="content">
-        <h1>Projects</h1>
+        
            
 
         {data.allWordpressWpProject.nodes.map((items, i) => (

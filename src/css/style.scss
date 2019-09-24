@@ -35,9 +35,7 @@ desktop 1920px*/
     font-family: ($FontStyle);
     margin: 0;
     padding: 0;
-    //background-image:url('../images/picjumbo.com_IMG_4892.jpg');
-    //background-repeat: no-repeat;
-    //background-size: 100% 100%;
+    
   }
 
   .socialpics {
@@ -70,10 +68,7 @@ desktop 1920px*/
       height: 100%;
     }
 
-    .linkedin-icon span .fa-linkedin,
-    .twitter-icon span .fa-twitter,
-    .facebook-icon span .fa-facebook,
-    .google-icon span .fa-github {
+    .fa-linkedin, .fa-twitter, .fa-facebook, .fa-github{
       width: 100%;
       height: 100%;
       text-align: center;
@@ -230,7 +225,7 @@ desktop 1920px*/
         line-height: 35px;
         color: $color4;
         text-transform: uppercase;
-        text-shadow: 1px 1px $color1;
+        
         letter-spacing: 0.03em;
         text-indent: 0.25em;
 
@@ -335,19 +330,20 @@ desktop 1920px*/
           flex: 0 0 auto;
 
           a {
-            background-color: $color2;
+            
             line-height: 35px;
             font-size: 0.85em;
             display: block;
             letter-spacing: 0.1em;
+            color: $color1;
 
             &:link {
-              background-color: $color2;
+              
               color: $color1;
             }
 
             &:visited {
-              background-color: $color3;
+              background-color: $color1;
               color: $color4;
             }
 
@@ -358,14 +354,14 @@ desktop 1920px*/
 
             &:hover {
               background-color: $color1;
-              color: $color4;
               font-weight: bold;
-              line-height: 35px;
+              
+              color: $color4;
             }
 
             &:active {
               background-color: $color1;
-              color: $color4;
+              color: $color1;
             }
           }
         }
@@ -474,8 +470,8 @@ desktop 1920px*/
           font-size: 1em;
           height: auto;
           text-align: center;
-          background-color: $color3;
-          color: $color1;
+          background-color: $color1;
+          color: $color4;
           margin-bottom: 0.5em;
           line-height: 50px;
         }
@@ -499,35 +495,17 @@ desktop 1920px*/
           margin: 1em auto;
           color: $color4;
           text-align: center;
-
-          &:link {
-            background-color: $color1;
-            color: $color4;
-          }
-
-          &:visited {
-            background-color: $color3;
-            color: $color4;
-          }
-
-          &:focus {
-            background-color: $color1;
-            color: $color4;
-          }
-
+         
           &:hover {
-            background-color: $color2;
-            color: $color4;
+            background-color: $color5;
+            color: $color1;
             font-weight: bold;
-            line-height: 35px;
+            
             cursor: pointer;
 
           }
 
-          &:active {
-            background-color: $color1;
-            color: $color4;
-          }
+          
         }
 
       }
@@ -910,6 +888,11 @@ desktop 1920px*/
       align-items: center;
       margin: 0 0 1em 0;
       padding: 0;
+      
+      //background-image:url('../images/picjumbo.com_IMG_4892.jpg');
+      //background-repeat: no-repeat;
+      //background-size: 100% 100%;
+     
 
 
 
@@ -940,13 +923,9 @@ desktop 1920px*/
 
         /*skills table*/
         section#calltoaction {
-
-
-          width: 100%;
-
           height: auto;
           margin: 0;
-          padding: 0.5em;
+          padding:0;
 
           h1#front-title {
             -webkit-flex: 0 1 auto;
@@ -966,16 +945,17 @@ desktop 1920px*/
             -webkit-flex: 0 1 auto;
             -ms-flex: 0 1 auto;
             flex: 0 1 auto;
-            width: 24.5%;
+            width: 24.6%;
             display: inline-block;
-            background-color: $color11;
+            background-color: $color4;
             height: auto;
-            margin: 0.2em;
+            margin: 0.1em;
             padding: 0;
             @include boredrady (10px);
 
             h1 {
               line-height: 40px;
+              margin:0;
               font-size: 1em;
               height: auto;
               text-align: center;
@@ -1097,9 +1077,11 @@ desktop 1920px*/
         -webkit-order: 0;
         -ms-flex-order: 0;
         order: 0;
-        width: 85%;
-        height: 300px;
+        width: 100%;
+        height: 200px;
         font-family: ($FontStyle);
+        background-color:$color4;
+        
 
 
         /*PNG for IE8*/
@@ -1152,8 +1134,6 @@ desktop 1920px*/
         flex: 0 0 auto;
         width: 53%;
         display: inline-block;
-
-        //float: left;
         margin: 0;
         height: auto;
 
@@ -1196,8 +1176,6 @@ desktop 1920px*/
         flex: 0 0 auto;
         width: 48%;
         display: inline-block;
-
-        //float: left;
         margin: 0;
         height: auto;
 
@@ -1285,8 +1263,9 @@ desktop 1920px*/
           margin-right: 0.25em;
 
           &:hover {
-            background-color: $color2;
+            background-color: $color5;
             color: $color1;
+            font-weight:bold;
           }
 
         }
@@ -1428,8 +1407,8 @@ desktop 1920px*/
                     h3 {
                       font-weight: normal;
                       font-size: 1em;
-                      background-color: $color9;
-                      color: $color4;
+                      background-color: $color5;
+                      color: $color1;
                       text-indent: 0;
                       margin: 0;
                       letter-spacing: 0.01em;
@@ -1458,7 +1437,7 @@ desktop 1920px*/
 
                       li {
                         width: 100%;
-                        background-color: $color2;
+                        background-color: $color4;
                         font-weight: normal;
                         font-size: 0.8em;
                         color: $color1;
@@ -1569,7 +1548,7 @@ desktop 1920px*/
                 height: 100%;
 
                 &:hover {
-                  background: $color2;
+                  background: $color5;
                   cursor: pointer;
 
                   &:after {
@@ -1624,6 +1603,9 @@ desktop 1920px*/
       height: auto;
       font-family: ($FontStyle);
       margin: auto;
+      padding:1%;
+      box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
+      background-color:$color4;
 
       div.content {
         clear: both;
@@ -1644,6 +1626,7 @@ desktop 1920px*/
         -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
         justify-content: flex-start;
+        
 
         nav.menuSwitch {
           text-align: left;
@@ -1700,17 +1683,16 @@ desktop 1920px*/
           position: relative;
           top: 0;
           overflow: hidden;
-          //display: inline-block;
-          //float:left;
           width: 15.5%;
-          -webkit-flex: 0 0 auto;
-          -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+          -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
           margin: 0.4em;
           z-index: 1;
           height: auto;
-          background-color: $color1;
-
+          box-shadow: 0 0.5px 0.5px 0.2px rgba(0, 0, 0, 0.2);
+          
+          
           &:hover {
             cursor: pointer;
           }
@@ -1720,11 +1702,6 @@ desktop 1920px*/
             height: 100%;
             margin: 0;
             position: relative;
-
-            /*-webkit-transform-style: preserve-3d;
-                        -ms-transform-style: preserve-3d;
-                        transform-style: preserve-3d;*/
-
             overflow: hidden;
 
 
@@ -1740,9 +1717,8 @@ desktop 1920px*/
               bottom: -100%;
               height: 50%;
               padding: 1em 0;
-              border: 1px $color2 solid;
               width: 100%;
-              background-color: $color4;
+              background-color: $color10;
               @include Transition(all 1s ease-in-out);
 
 
@@ -1754,14 +1730,16 @@ desktop 1920px*/
                 height: 40px;
                 text-align: center;
                 width: 90%;
-                background-color: $color4;
-                color: $color1;
+                font-weight:bold;
+                background-color: $color1;
+                color: $color4;
+                @include boredrady (10px);
               }
 
               a {
                 height: 35px;
                 background-color: $color1;
-                width: 80%;
+                width: 90%;
                 color: $color4;
                 letter-spacing: 0.1em;
                 border: none;
@@ -1775,8 +1753,8 @@ desktop 1920px*/
                 @include Transition(all 0.2s linear 0s);
 
                 &:hover {
-                  color: $color1;
-                  background-color: $color2;
+                  color: $color4;
+                  background-color: $color5;
                   font-weight: bold;
                   @include boredrady (10px);
                 }
@@ -1936,10 +1914,10 @@ desktop 1920px*/
 
     /*regular Posts*/
     .post {
-      background-color: $color10;
+      background-color: $color4;
       padding: 0 2%;
       width: 100%;
-      margin: 0 1% 1% 0;
+      margin: 0;
       clear: both;
 
       /*seperators*/
@@ -1962,6 +1940,8 @@ desktop 1920px*/
         line-height: 65px;
         height: 65px;
         text-align: center;
+        color:$color4;
+        background-color:$color1;
       }
 
       h2,
@@ -2064,21 +2044,25 @@ desktop 1920px*/
       }
 
       .websiteImage {
-        @include box-sizing($type: border-box);
-        clear: both;
-        height: auto;
-        width: 25%;
-        margin: 0;
-        display: block;
-        float: left;
+        @include box-sizing($type: border-box);           
+        height: 420px;
+        width: 100%;
+        margin: 0 ;
+        display: block;        
         padding: 0;
         @include Transition(all 0.2s linear 0s);
+        img{
+          height:auto;
+          width: 25%;
+          margin: 0 auto;
+          display:block;
+        }
 
       }
 
       .website-text {
-        width: 75%;
-        display: inline-block;
+        width: 100%;
+        display: block;
         padding: 1em;
 
         /*gallery page styles*/
@@ -2195,7 +2179,7 @@ desktop 1920px*/
       .featuredImage {
         clear: both;
         height: auto;
-        width: 80%;
+        width: 98%;
         margin: 1em auto;
         display: block;
 
@@ -2251,8 +2235,8 @@ desktop 1920px*/
         width: 100%;
         margin-bottom: 1em;
         height: auto;
-        background-color: $color2; // border:1px solid $color3;
         color: $color1;
+        background-color:$color4;
         text-align: left;
         padding: 0.5em;
         @include box-sizing($type: border-box);
@@ -2261,7 +2245,7 @@ desktop 1920px*/
         .index-entry-meta {
 
           height: auto;
-          width: 100%; //background-color: $color2;
+          width: 100%; 
           display: block;
           margin: 0 auto;
 
@@ -2298,8 +2282,8 @@ desktop 1920px*/
               font-family: "FontAwesome", ($FontStyle);
               font-size: 0.9em;
               letter-spacing: 0.055em;
-              color: $color8;
-              background-color: $color3;
+              color: $color4;
+              background-color: $color1;
               margin-bottom: 0.2em;
 
 
@@ -2311,23 +2295,18 @@ desktop 1920px*/
                 text-align: center;
                 @include originTran(50% 50%);
                 @include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
+                &:hover {
+                  font-weight: bold;
+                  color: $color4;
+                  margin: 0 auto;
+                  width: auto;
+                  display: inline-block;
+                }
               }
 
-              a:hover {
-                font-weight: bold;
-                color: $color4;
-                margin: 0 auto;
-                width: auto;
-                display: inline-block;
-              }
+              
             }
-
-            span.byline,
-            span.comments-link {
-              width: 100%;
-              background-color: $color3;
-
-            }
+ 
           }
         }
       }
@@ -2355,10 +2334,12 @@ desktop 1920px*/
           height: 100%;
           width: 100%;
           color: $color4;
+          background-color: $color1;
+          @include boredrady (10px);
 
           &:hover {
-            color: $color4;
-            background-color: $color1;
+            color: $color1;
+            background-color: $color5;
             font-weight: bold;
             margin: 2% 0;
             letter-spacing: 0.075em;
@@ -2485,13 +2466,14 @@ desktop 1920px*/
         font-size: 0.9em;
         display: inline-block;
         clear: both;
-        background-color: $color3;
+        background-color: $color1;
 
         p {
           margin: 0;
           display: inline-block;
           padding: 0 0.5em;
           width: auto;
+          color:$color4;
 
         }
 
@@ -2517,16 +2499,17 @@ desktop 1920px*/
             width: auto;
             display: inline-block;
             padding: 0.5%;
+            &:hover {
+              font-size: 0.90em;
+              color: $color3;
+              margin: 0;
+              width: auto;
+              display: inline-block;
+              padding: 0.5%;
+            }
           }
 
-          a:hover {
-            font-size: 0.90em;
-            color: $color3;
-            margin: 0;
-            width: auto;
-            display: inline-block;
-            padding: 0.5%;
-          }
+         
         }
 
         p.right {
@@ -2546,11 +2529,12 @@ desktop 1920px*/
             line-height: 65px;
             width: 100%;
             font-size: 1.3em;
-            background-color: $color2;
+            background-color: $color1;
+            color:$color4;
 
             &:hover {
-              color: $color4;
-              background-color: $color1;
+              color: $color1;
+              background-color: $color5;
               font-weight: bold;
               line-height: 65px;
 
@@ -2782,9 +2766,9 @@ desktop 1920px*/
         padding: 0;
         font-size: 1.3em;
         line-height: 60px;
-        background-color: $color7;
+        background-color: $color1;
         color: $color4;
-        text-indent: 1%;
+        text-indent: 0.5em;
         letter-spacing: 0.1em;
         font-weight: bold;
       }
@@ -3167,7 +3151,7 @@ desktop 1920px*/
   footer {
     width: 100%;
     height: 120px;
-    font-family: ($FontStyle);
+    font-family: "FontAwesome", ($FontStyle);
     margin-top: 1%;
     clear: both;
     background-color: $color2;
@@ -3189,6 +3173,7 @@ desktop 1920px*/
         @include Transition(all 0.2s ease-in 0s);
         height: 100%;
         background-color: $color2;
+        color: $color1;
 
         &:hover {
           background-color: $color1;
@@ -3202,15 +3187,14 @@ desktop 1920px*/
         height: 100%;
       }
 
-      .linkedin-icon span .fa-linkedin,
-      .twitter-icon span .fa-twitter,
-      .facebook-icon span .fa-facebook,
-      .google-icon span .fa-github {
+      .fa-linkedin, .fa-twitter, .fa-facebook, .fa-github{
         width: 100%;
         height: 100%;
         text-align: center;
         font-size: 1.9em;
         line-height: 46px;
+        color:$color1;
+        display:block;
       }
 
     }
@@ -3283,10 +3267,7 @@ desktop 1440px*/
 
     }
 
-    .linkedin-icon span .fa-linkedin,
-    .twitter-icon span .fa-twitter,
-    .facebook-icon span .fa-facebook,
-    .google-icon span .fa-github {
+    .fa-linkedin, .fa-twitter, .fa-facebook, .fa-github{
 
       font-size: 1.8em;
 
@@ -3754,7 +3735,7 @@ desktop 1440px*/
 
           article.frntpgbox {
 
-            width: 24.5%;
+            width: 24.6%;
 
             h1 {
 
@@ -3829,7 +3810,7 @@ desktop 1440px*/
 
       /*front-page image container*/
       div#svg-image-container {
-        width: 85%;
+        width: 100%;
 
 
         /*PNG for IE8*/
@@ -4046,8 +4027,8 @@ desktop 1440px*/
 
         /*chart*/
         #chart {
-          width: 95%;
-          height: 320px;
+          
+          height: 315px;
 
 
           #bars {
@@ -4059,7 +4040,7 @@ desktop 1440px*/
               .bar {
 
                 &:hover {
-                  background: $color2;
+                  
                   cursor: pointer;
 
                   &:after {
@@ -4261,7 +4242,7 @@ desktop 1440px*/
 
     /*regular Posts*/
     .post {
-      padding: 0 2%;
+      padding: 1%;
 
       /*seperators*/
       hr.blog-spacer {
@@ -4336,12 +4317,12 @@ desktop 1440px*/
       }
 
       .websiteImage {
-        width: 25%;
+        width: 100%;
 
       }
 
       .website-text {
-        width: 75%;
+        
         /*gallery page styles*/
 
         h1.post-meta-key {
@@ -4420,7 +4401,7 @@ desktop 1440px*/
       }
 
       .featuredImage {
-        width: 80%;
+        width: 98%;
 
         a {
           display: block;
@@ -4478,17 +4459,10 @@ desktop 1440px*/
 
               }
 
-              a:hover {
-                font-weight: bold;
-
-              }
+             
             }
 
-            span.byline,
-            span.comments-link {
-              width: 100%;
-
-            }
+            
           }
         }
       }
@@ -5037,10 +5011,7 @@ desktop 1280px*/
 
     }
 
-    .linkedin-icon span .fa-linkedin,
-    .twitter-icon span .fa-twitter,
-    .facebook-icon span .fa-facebook,
-    .google-icon span .fa-github {
+    .fa-linkedin, .fa-twitter, .fa-facebook, .fa-github{
 
       font-size: 1.8em;
 
@@ -5056,7 +5027,7 @@ desktop 1280px*/
 
   #wrapper_container {
 
-    width: 94%;
+    width: 96%;
 
 
   }
@@ -5459,7 +5430,7 @@ desktop 1280px*/
 
           article.frntpgbox {
 
-            width: 24%;
+            width: 24.6%;
 
             h1 {
 
@@ -5537,7 +5508,7 @@ desktop 1280px*/
 
       /*front-page image container*/
       div#svg-image-container {
-        width: 90%;
+        width: 100%;
 
         /*PNG for IE8*/
         figure#image-6 {
@@ -5754,8 +5725,8 @@ desktop 1280px*/
 
         /*chart*/
         #chart {
-          width: 95%;
-          height: 320px;
+          
+          height: 310px;
 
 
           #bars {
@@ -5767,7 +5738,7 @@ desktop 1280px*/
               .bar {
 
                 &:hover {
-                  background: $color2;
+                  
                   cursor: pointer;
                 }
 
@@ -5950,7 +5921,7 @@ desktop 1280px*/
 
     /*regular Posts*/
     .post {
-      padding: 0 2%;
+      padding: 1%;
 
       /*seperators*/
       hr.blog-spacer {
@@ -6023,12 +5994,12 @@ desktop 1280px*/
       }
 
       .websiteImage {
-        width: 25%;
+        width: 100%;
 
       }
 
       .website-text {
-        width: 75%;
+        
         /*gallery page styles*/
 
         h1.post-meta-key {
@@ -6103,7 +6074,7 @@ desktop 1280px*/
       }
 
       .featuredImage {
-        width: 80%;
+        width: 98%;
 
         a {
           display: block;
@@ -6163,17 +6134,10 @@ desktop 1280px*/
 
               }
 
-              a:hover {
-                font-weight: bold;
-
-              }
+              
             }
 
-            span.byline,
-            span.comments-link {
-              width: 100%;
-
-            }
+            
           }
         }
       }
@@ -6852,7 +6816,7 @@ desktop 1280px*/
 
           article.frntpgbox {
 
-            width: 24%;
+            width: 24.6%;
 
             h1 {
 
@@ -6930,7 +6894,7 @@ desktop 1280px*/
 
       /*front-page image container*/
       div#svg-image-container {
-        width: 90%;
+        width: 100%;
 
         /*PNG for IE8*/
         figure#image-6 {
@@ -7147,10 +7111,8 @@ desktop 1280px*/
 
         /*chart*/
         #chart {
-          width: 95%;
-          height: 320px;
-
-
+          width: 100%;
+          
           #bars {
 
             li {
@@ -7160,7 +7122,7 @@ desktop 1280px*/
               .bar {
 
                 &:hover {
-                  background: $color2;
+                  
                   cursor: pointer;
 
                   &:after {
@@ -7321,7 +7283,7 @@ desktop 1280px*/
 
     /*regular Posts*/
     .post {
-      padding: 0 2%;
+      padding: 1%;
 
       /*seperators*/
       hr.blog-spacer {
@@ -7395,12 +7357,12 @@ desktop 1280px*/
       }
 
       .websiteImage {
-        width: 25%;
+        width: 100%;
 
       }
 
       .website-text {
-        width: 75%;
+        
         /*gallery page styles*/
 
         h1.post-meta-key {
@@ -7475,7 +7437,7 @@ desktop 1280px*/
       }
 
       .featuredImage {
-        width: 80%;
+        width: 98%;
 
         a {
           display: block;
@@ -7535,17 +7497,10 @@ desktop 1280px*/
 
               }
 
-              a:hover {
-                font-weight: bold;
-
-              }
+              
             }
 
-            span.byline,
-            span.comments-link {
-              width: 100%;
-
-            }
+            
           }
         }
       }
@@ -7940,10 +7895,7 @@ desktop 980px*/
 
     }
 
-    .linkedin-icon span .fa-linkedin,
-    .twitter-icon span .fa-twitter,
-    .facebook-icon span .fa-facebook,
-    .google-icon span .fa-github {
+    .fa-linkedin, .fa-twitter, .fa-facebook, .fa-github{
 
       font-size: 1.6em;
 
@@ -8421,7 +8373,7 @@ desktop 980px*/
 
           article.frntpgbox {
 
-            width: 24%;
+            width: 24.6%;
 
             h1 {
 
@@ -8499,7 +8451,7 @@ desktop 980px*/
 
       /*front-page image container*/
       div#svg-image-container {
-        width: 90%;
+        width: 100%;
 
         /*PNG for IE8*/
         figure#image-6 {
@@ -8717,9 +8669,7 @@ desktop 980px*/
 
         /*chart*/
         #chart {
-          width: 95%;
-          height: 320px;
-
+          width: 100%;
 
           #bars {
 
@@ -8730,7 +8680,7 @@ desktop 980px*/
               .bar {
 
                 &:hover {
-                  background: $color2;
+                  
                   cursor: pointer;
 
                   &:after {
@@ -8881,7 +8831,7 @@ desktop 980px*/
 
     /*regular Posts*/
     .post {
-      padding: 0 2%;
+      padding: 1%;
 
       /*seperators*/
       hr.blog-spacer {
@@ -9035,7 +8985,7 @@ desktop 980px*/
       }
 
       .featuredImage {
-        width: 80%;
+        width: 98%;
 
         a {
           display: block;
@@ -9095,17 +9045,10 @@ desktop 980px*/
 
               }
 
-              a:hover {
-                font-weight: bold;
-
-              }
+              
             }
 
-            span.byline,
-            span.comments-link {
-              width: 100%;
-
-            }
+            
           }
         }
       }
@@ -9539,10 +9482,7 @@ tablet 800px */
 
     }
 
-    .linkedin-icon span .fa-linkedin,
-    .twitter-icon span .fa-twitter,
-    .facebook-icon span .fa-facebook,
-    .google-icon span .fa-github {
+    .fa-linkedin, .fa-twitter, .fa-facebook, .fa-github{
 
       font-size: 1.6em;
 
@@ -10060,8 +10000,9 @@ tablet 800px */
         -webkit-order: 0;
         -ms-flex-order: 0;
         order: 0;
-        width: 94%;
+        width: 100%;
         margin: 1em;
+        
 
         /*PNG for IE8*/
         figure#image-6 {
@@ -10288,8 +10229,7 @@ tablet 800px */
 
         /*chart*/
         #chart {
-          width: 95%;
-          height: 320px;
+          width: 100%;
 
 
           #bars {
@@ -10301,7 +10241,7 @@ tablet 800px */
               .bar {
 
                 &:hover {
-                  background: $color2;
+                  
                   cursor: pointer;
                 }
 
@@ -10476,7 +10416,7 @@ tablet 800px */
 
     /*regular Posts*/
     .post {
-      padding: 0 2%;
+      padding: 1%;
 
       /*seperators*/
       hr.blog-spacer {
@@ -10628,7 +10568,7 @@ tablet 800px */
       }
 
       .featuredImage {
-        width: 90%;
+        width: 98%;
 
         a {
           display: block;
@@ -10688,17 +10628,10 @@ tablet 800px */
 
               }
 
-              a:hover {
-                font-weight: bold;
-
-              }
+              
             }
 
-            span.byline,
-            span.comments-link {
-              width: 100%;
-
-            }
+            
           }
         }
       }
@@ -11131,10 +11064,7 @@ tablet 667px*/
 
     }
 
-    .linkedin-icon span .fa-linkedin,
-    .twitter-icon span .fa-twitter,
-    .facebook-icon span .fa-facebook,
-    .google-icon span .fa-github {
+    .fa-linkedin, .fa-twitter, .fa-facebook, .fa-github{
 
       font-size: 1.6em;
 
@@ -11861,8 +11791,7 @@ tablet 667px*/
 
         /*chart*/
         #chart {
-          width: 80%;
-          height: 320px;
+          width: 100%;
 
 
           #bars {
@@ -11874,7 +11803,7 @@ tablet 667px*/
               .bar {
 
                 &:hover {
-                  background: $color2;
+                  
                   cursor: pointer;
 
                   &:after {
@@ -12038,7 +11967,7 @@ tablet 667px*/
 
     /*regular Posts*/
     .post {
-      padding: 0 2%;
+      padding: 1%;
 
       /*seperators*/
       hr.blog-spacer {
@@ -12191,7 +12120,7 @@ tablet 667px*/
       }
 
       .featuredImage {
-        width: 90%;
+        width: 98%;
 
         a {
           display: block;
@@ -12251,17 +12180,10 @@ tablet 667px*/
 
               }
 
-              a:hover {
-                font-weight: bold;
-
-              }
+              
             }
 
-            span.byline,
-            span.comments-link {
-              width: 100%;
-
-            }
+            
           }
         }
       }
@@ -12732,10 +12654,7 @@ tablet 667px*/
 
     }
 
-    .linkedin-icon span .fa-linkedin,
-    .twitter-icon span .fa-twitter,
-    .facebook-icon span .fa-facebook,
-    .google-icon span .fa-github {
+    .fa-linkedin, .fa-twitter, .fa-facebook, .fa-github{
 
       font-size: 1.6em;
 
@@ -13498,9 +13417,7 @@ tablet 667px*/
 
         /*chart*/
         #chart {
-          width: 90%;
-          height: 320px;
-
+          width: 100%;
 
           #bars {
 
@@ -13511,7 +13428,7 @@ tablet 667px*/
               .bar {
 
                 &:hover {
-                  background: $color2;
+                  
                   cursor: pointer;
                 }
 
@@ -13651,7 +13568,7 @@ tablet 667px*/
 
     /*regular Posts*/
     .post {
-      padding: 0 2%;
+      padding: 1%;
 
       /*seperators*/
       hr.blog-spacer {
@@ -13800,7 +13717,7 @@ tablet 667px*/
       }
 
       .featuredImage {
-        width: 92%;
+        width: 98%;
 
         a {
           display: block;
@@ -13860,17 +13777,10 @@ tablet 667px*/
 
               }
 
-              a:hover {
-                font-weight: bold;
-
-              }
+              
             }
 
-            span.byline,
-            span.comments-link {
-              width: 100%;
-
-            }
+            
           }
         }
       }
@@ -14271,10 +14181,7 @@ mobile 480px */
 
     }
 
-    .linkedin-icon span .fa-linkedin,
-    .twitter-icon span .fa-twitter,
-    .facebook-icon span .fa-facebook,
-    .google-icon span .fa-github {
+    .fa-linkedin, .fa-twitter, .fa-facebook, .fa-github{
 
       font-size: 1.6em;
 
@@ -15028,9 +14935,7 @@ mobile 480px */
 
         /*chart*/
         #chart {
-          width: 90%;
-          height: 320px;
-
+          
 
           #bars {
 
@@ -15041,7 +14946,7 @@ mobile 480px */
               .bar {
 
                 &:hover {
-                  background: $color2;
+                  
                   cursor: pointer;
                 }
 
@@ -15194,7 +15099,7 @@ mobile 480px */
 
     /*regular Posts*/
     .post {
-      padding: 0 2%;
+      padding: 1%;
 
       /*seperators*/
       hr.blog-spacer {
@@ -15342,7 +15247,7 @@ mobile 480px */
       }
 
       .featuredImage {
-        width: 94%;
+        width: 98%;
 
         a {
           display: block;
@@ -15402,17 +15307,10 @@ mobile 480px */
 
               }
 
-              a:hover {
-                font-weight: bold;
-
-              }
+              
             }
 
-            span.byline,
-            span.comments-link {
-              width: 100%;
-
-            }
+            
           }
         }
       }
@@ -15858,10 +15756,7 @@ mobile 360px */
 
     }
 
-    .linkedin-icon span .fa-linkedin,
-    .twitter-icon span .fa-twitter,
-    .facebook-icon span .fa-facebook,
-    .google-icon span .fa-github {
+    .fa-linkedin, .fa-twitter, .fa-facebook, .fa-github{
 
       font-size: 1.6em;
 
@@ -16615,9 +16510,7 @@ mobile 360px */
 
         /*chart*/
         #chart {
-          width: 90%;
-          height: 320px;
-
+          width: 100%;
 
           #bars {
 
@@ -16628,7 +16521,7 @@ mobile 360px */
               .bar {
 
                 &:hover {
-                  background: $color2;
+                  
                   cursor: pointer;
                 }
 
@@ -16782,7 +16675,7 @@ mobile 360px */
 
     /*regular Posts*/
     .post {
-      padding: 0 2%;
+      padding: 1%;
 
       /*seperators*/
       hr.blog-spacer {
@@ -16932,7 +16825,7 @@ mobile 360px */
       }
 
       .featuredImage {
-        width: 94%;
+        width: 98%;
 
         a {
           display: block;
@@ -16992,17 +16885,10 @@ mobile 360px */
 
               }
 
-              a:hover {
-                font-weight: bold;
-
-              }
+              
             }
 
-            span.byline,
-            span.comments-link {
-              width: 100%;
-
-            }
+            
           }
         }
       }
@@ -17443,10 +17329,7 @@ mobile 320px */
 
     }
 
-    .linkedin-icon span .fa-linkedin,
-    .twitter-icon span .fa-twitter,
-    .facebook-icon span .fa-facebook,
-    .google-icon span .fa-github {
+    .fa-linkedin, .fa-twitter, .fa-facebook, .fa-github{
 
       font-size: 1.6em;
 
@@ -18189,9 +18072,7 @@ mobile 320px */
         /*chart*/
         #chart {
           width: 96%;
-          height: 320px;
-
-
+          
           #bars {
 
             li {
@@ -18201,7 +18082,7 @@ mobile 320px */
               .bar {
 
                 &:hover {
-                  background: $color2;
+                  
                   cursor: pointer;
                 }
 
@@ -18358,7 +18239,7 @@ mobile 320px */
 
     /*regular Posts*/
     .post {
-      padding: 0 2%;
+      padding: 1%;
 
       /*seperators*/
       hr.blog-spacer {
@@ -18508,7 +18389,7 @@ mobile 320px */
       }
 
       .featuredImage {
-        width: 96%;
+        width: 98%;
 
         a {
           display: block;
@@ -18568,17 +18449,10 @@ mobile 320px */
 
               }
 
-              a:hover {
-                font-weight: bold;
-
-              }
+              
             }
 
-            span.byline,
-            span.comments-link {
-              width: 100%;
-
-            }
+            
           }
         }
       }

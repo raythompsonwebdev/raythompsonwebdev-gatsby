@@ -41,7 +41,8 @@ class AboutPage extends React.Component {
           <h1>About Me</h1>
 
           <article id="text-box-profile">
-            <div className="introimg"></div>
+
+            <div className="introimg"><img alt="me" src="./src/images/raythompsonwebdev.jpg" /></div>
 
             <p>
               I have a passion for web design and web development and
@@ -61,8 +62,7 @@ class AboutPage extends React.Component {
               <strong>
                 {" "}
                 <Link to="/projects">coding problems</Link>
-              </strong>
-              .
+              </strong>.
             </p>
 
             <p>
@@ -74,8 +74,7 @@ class AboutPage extends React.Component {
             </p>
 
             <p>
-              Since then I have spent as much time as I can learning as much as
-              I can about web development and tech in general.{" "}
+              Since then I have spent as much of my spare time as I can learning as much as I can about web development, building great applications and tech in general.{" "}
             </p>
             <div className="clearfix"></div>
           </article>
@@ -85,7 +84,7 @@ class AboutPage extends React.Component {
           <article id="text-box-profile-a">
             <p>
               {" "}
-              I keep up to date as much as time will allow with the constant
+              I keep up to date with the constant
               changes in web development by following online tutorials and doing
               coding exercises and challenges on websites like{" "}
               <a href="https://site.test/" title="Pic 1">
@@ -102,17 +101,13 @@ class AboutPage extends React.Component {
             </p>
 
             <p>
-              I do like coding websites and web applications from scratch but do
-              use frameworks like Foundation , Bootstrap, Vue, Laravell or
-              Wordpress. Other tools like Grunt, Gulp, Sass and GitHub help me
-              manage and organise workflow and speed up development process.{" "}
+              I do like coding websites and web applications from scratch and also
+              using frameworks like React.js , Gatsby.js, Vue.js, Laravell or Content Management Systems like Wordpress and Joomla. The tools I use to manage and organise workflow and speed up development process include tools like Grunt, Gulp, Sass, Babel, NPM Scripts, Webpack, ESLint, PHPsniffer, Git and GitHub.{" "}
             </p>
 
             <p>
-              Other than web development and my day job i enjoy spending time
-              listeniing to music like 90's Hip Hop and Dancehall, Watching
-              movies (Big Marvel movie fan) and spending time with family and
-              friends.
+              Other than web development and I enjoy spending time
+              listening to music, particularly 90's Hip Hop, Reggae Dancehall, Jungle and RnB, Watching movies (Big Marvel movie fan) and spending time with family and friends.
             </p>
           </article>
 

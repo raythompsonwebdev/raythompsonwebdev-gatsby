@@ -61,8 +61,8 @@ const Layout = ({ children, location }) => {
       <Footer />
 
       <p id="copyr">
-        © {new Date().getFullYear()}, Built with {` `}{" "}
-        <Link to="/google">Gatsby</Link>
+        © {new Date().getFullYear()}, Built by {` `}{" "}
+        <Link to="/index">raythompsonwebdev</Link>
       </p>
     </div>
   )
