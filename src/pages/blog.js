@@ -1,11 +1,12 @@
 import React from "react"
-import { graphql } from "gatsby"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import SEO from "../components/seo"
 
 
 const BlogPage = ({ data }) => (
+
   <main id="main-content">
+    
     <SEO title="Blog Page" />
     
     <h1>Interested in web design and web development</h1>
@@ -23,7 +24,9 @@ const BlogPage = ({ data }) => (
     </div>
 
     <div id="blogbox">
+
       {data.allWordpressPost.edges.map(({ node }, index) => (
+
         <div className="blogboxes" key={index}>
           <h1 dangerouslySetInnerHTML={{ __html: node.title }}></h1>
 
@@ -39,6 +42,7 @@ const BlogPage = ({ data }) => (
 
           <Link to={`/blog/${node.link}`}>Read More..</Link>
         </div>
+      
       ))}
     </div>
 

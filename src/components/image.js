@@ -38,7 +38,9 @@ export const data = graphql`
   const Image = ({data}) => {
 
     console.log(data)
+
     return() => (
+      
       <Img fixed={data.featured_media.localFile.childImageSharp.fixed.src}/>
     )
   }

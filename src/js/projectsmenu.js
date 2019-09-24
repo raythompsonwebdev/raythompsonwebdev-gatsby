@@ -1,4 +1,4 @@
-(function() {
+ const mixer = function () {
 
     let btn = document.getElementsByClassName("menubtn")
     
@@ -15,6 +15,7 @@
       for( let i = 0; i > cont.length; i++){
   
         if (this.ClassList.has(CategoryID) === false){
+
           this.style.display = "none" 
         }
   
@@ -24,4 +25,4 @@
   
     })
   
-  })()
+  }

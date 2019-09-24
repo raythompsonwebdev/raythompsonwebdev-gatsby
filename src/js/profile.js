@@ -3,27 +3,24 @@
 var graphBar = document.getElementsByClassName("bar")
 
 for (var i = 0; i < graphBar.length; i++) {
+  
   //console.log(this)
-
-  var graphItem = graphBar.item(i)
-
-  var percentage = graphBar.item(i).dataset.percentage
-
-  console.log(this.graphItem)
-
-  console.log(this.percentage)
+  
+  //var percentage = graphBar.dataset.percentage
+  
+  //console.log(percentage)
 
   var pos = 0
 
   var id = setInterval(frame, 50)
 
   function frame() {
-    if (pos == this.percentage) {
+    
+    if (pos === percentage) {
       clearInterval(id)
     } else {
       pos++
-
-      this.graphItem.style.width = pos + "%"
+      graphBar.style.width = pos + "%"
     }
   }
 }

@@ -33,7 +33,6 @@
 html[xmlns] .clearfix {
     display: block;
 }
-
 /*Clearfix*/
 
 *.float-divider {
@@ -69,7 +68,6 @@ html[xmlns] .clearfix {
 
 /* end of Clearfix*/
 
-
 /*images*/
 
 img#wpstats {
@@ -101,11 +99,15 @@ img {
 }
 
 a {
+    font-family: ($FontStyleHeader);
+    width: 100%;
+    height: 100%;
     text-decoration: none;
-    margin: 0;
-    padding: 0;
     color: $color1;
-    font-size: 1em;
+    margin: 0;
+    font-weight: normal;
+    @include originTran(50% 50%);
+    @include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
     img {
         border: 0;
         outline: none;
@@ -128,7 +130,9 @@ a {
     &:active {
         color: $color9;
     }
-}
+   
+  }
+
 
 img.centered {
     display: block;
@@ -178,25 +182,63 @@ h3,
 h4 {
     font-family: $FontStyleHeader;
     color: $color1;
-    font-size: 1em;
     padding: 0;
     margin: 0;
     font-weight:bold;
     width: 100%;
 }
 
-p {
-    font-family: $FontStyle;
-    color: $color1;
-    font-size: 1em;
-    padding: 0;
-    margin: 0;
+
+    
+hr {
+    background-color: $color1;
+    height: 1px;
+    margin: 0.5em auto;
+    width: 80%;
+    outline: none;
+    border: none;
 }
 
-ul {
-    padding: 0;
+p {
+    font-size: 1em;
+    font-weight: normal;
+    width: 100%;
     margin: 0;
-}
+    padding: 0;
+    font-family: ($FontStyle);
+    color: $color1;
+    letter-spacing: 0.015em;
+
+  }
+
+ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: ($FontStyle);
+
+    li {
+      color: $color8;
+      list-style-type: none;
+
+      &:before {
+        font-style: normal;
+        font-size: 1em;
+        color: $color8;
+      }
+
+      a {
+        width: auto;
+        display: block;
+
+        &:hover {
+
+          font-weight: bold;
+        }
+      }
+
+    }
+  }
 
 li {
     list-style: none;

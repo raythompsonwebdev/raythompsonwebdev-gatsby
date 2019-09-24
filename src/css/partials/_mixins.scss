@@ -9,8 +9,6 @@
   }
 }
 
-
-
 //Transition
 @mixin Transition( $move... ) {
     -webkit-transition: $move;
