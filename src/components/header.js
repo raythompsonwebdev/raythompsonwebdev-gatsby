@@ -64,14 +64,14 @@ class Header extends React.Component {
   render() {
     const ListLink = props => (
       <li className="menu-item">
-        {console.log(props)}
+        
         <Link to={props.to}>{props.children}</Link>
       </li>
     )
 
     return (
       <header>
-        {console.log(this.sitetitle)}
+        
         <div className="site-logo">
           <Link to="/">R</Link>
         </div>

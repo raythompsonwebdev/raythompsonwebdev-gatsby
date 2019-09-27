@@ -10,19 +10,25 @@ const IndexPage = () => (
     <div id="frontpage_container">
       
       <div id="svg-image-container">
+      <h1>{`Hello, I'm Raymond`}</h1>
+      <h2>{`I build beautiful web applications`}</h2>
+      <button>See Current Projects</button>
+
+
         <figure id="image-7"></figure>
       </div>
 
       <div id="text-box-front">
-        <h1>{`Hello`}</h1>
+        
 
-        <p>{`My name is Raymond. I am a web developer and I create wordPress themes, customise Wordpress themes, create user interfaces and create web applications using latest web technologies. Whether it's for a small business or a personal goal, I can help you achieve your on-line goals with a web application specifically tailored for your needs.`}</p>
-        <p>{`From idea to launch I can help build your project with the focus on simplicity, usability and accessibility for all users. I use clean semantic code and following latest web standards compliances and best practices. I can ensure any website or web application built can be found by most search engines, viewed within in most modern browsers and mobile devices, and have fast page loading for a great user experience. To see a few examples of my work click here.`}</p>
+        <p>{`My name is Raymond. I am a web developer with passion for creating websites, web applications and user interfaces using latest web technologies.  Whether for business or a personal goals, I can help you with any goals you have to get on-line with a website or web application specifically tailored to your on-line needs. `}</p>
+
+        <p>{`From idea to launch I can help build your project with the focus on simplicity, usability and accessibility for all users. I use clean semantic code and following latest web standards compliances and best practices. I can ensure any website or web application built can be found by most search engines, viewed within in most modern browsers and mobile devices, and have fast page loading for a great user experience. `}</p>
         <br />
         
         <section id="calltoaction">
           <article className="frntpgbox">
-            <h1>Wordpress</h1>
+            <h1>Current Projects</h1>
             <ul>
               <li>Text 1</li>
               <li>Text 1</li>
@@ -32,7 +38,7 @@ const IndexPage = () => (
           </article>
 
           <article className="frntpgbox">
-            <h1>PHP</h1>
+            <h1>Blogs</h1>
             <ul>
               <li>Text 1</li>
               <li>Text 1</li>
@@ -42,7 +48,7 @@ const IndexPage = () => (
           </article>
 
           <article className="frntpgbox">
-            <h1>React</h1>
+            <h1>Contact Me</h1>
             <ul>
               <li>Text 1</li>
               <li>Text 1</li>
@@ -51,15 +57,7 @@ const IndexPage = () => (
             </ul>
           </article>
 
-          <article className="frntpgbox">
-            <h1>Maintanence</h1>
-            <ul>
-              <li>Text 1</li>
-              <li>Text 1</li>
-              <li>Text 1</li>
-              <li>Text 1</li>
-            </ul>
-          </article>
+          
         </section>
       
       </div>

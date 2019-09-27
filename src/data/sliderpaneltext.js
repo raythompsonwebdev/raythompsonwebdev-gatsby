@@ -13,8 +13,7 @@ const sliderPanelText = {
       "task3": "Understanding Photoshop Interface",
       "task4": "Manipulating Images",
       "task5": "Evaluating Digital Images",
-      "buttonname": "Adobe",
-      "bgimage": "./images/large/certificates/Large-Photoshop-Certicate-.jpg"
+      "buttonname": "Adobe"
     },
     {
       "id":"2",
@@ -27,8 +26,7 @@ const sliderPanelText = {
       "task3": "Adding Content",
       "task4": "IT User fundementals",
       "task5": "Organizing Content",
-      "buttonname": "ELATT",
-      "bgimage": "./images/large/certificates/ITQ-USERS-LEVEL1-LARGE.jpg"
+      "buttonname": "ELATT"
     },
     {
       "id":"3",
@@ -41,8 +39,7 @@ const sliderPanelText = {
       "task3": "ES6 Javascript Reloaded",
       "task4": "Learn Complete Wordpress Security",
       "task5": "Up and Running with NodeJs",
-      "buttonname": "Udemy",
-      "bgimage": "../images/large/certificates/Large-Udemy-Certicate-.jpg"
+      "buttonname": "Udemy"
     },
     {
       "id":"4",
@@ -55,8 +52,7 @@ const sliderPanelText = {
       "task3": "Basic HTML and HTML5",
       "task4": "Basic JavaScript",
       "task5": "Responsive Web Design Projects",
-      "buttonname": "FreeCodeCamp",
-      "bgimage": "../images/large/certificates/freecodecamp-org-certification-raythompsonwebdev-responsive-web-design.png"
+      "buttonname": "FreeCodeCamp"
     },
     {
       "id":"5",
@@ -69,8 +65,7 @@ const sliderPanelText = {
       "task3": "Programming Fundementals",
       "task4": "CSS Fundementals",
       "task5": "Javascript Essentials",
-      "buttonname": "Lynda.com",
-      "bgimage": "../images/large/certificates/lynda_logo1r-d_72x72.png"
+      "buttonname": "Lynda.com"
     },
     {
       "id":"6",
@@ -83,8 +78,7 @@ const sliderPanelText = {
       "task3": "User Interfaces with HTML",
       "task4": "Coding Functions",
       "task5": "Web Hosting/Deploying Apps",
-      "buttonname": "Shaw Academy",
-      "bgimage": "../images/large/certificates/Mobile-web-applications-Certificate-Foundation-large.jpg"
+      "buttonname": "Shaw Academy"
     },
     {
       "id":"7",
@@ -97,8 +91,7 @@ const sliderPanelText = {
       "task3": "Javascript Beginners",
       "task4": "",
       "task5": "",
-      "buttonname": "Code Academy",
-      "bgimage": "../images/large/certificates/codecademy-users-raythompsonwebdev-achievements-.png"
+      "buttonname": "Code Academy"
     },
     {
       "id":"8",
@@ -111,8 +104,7 @@ const sliderPanelText = {
       "task3": "Data Structures & Algorithms in Python",
       "task4": "Website Performance Optimisation",
       "task5": "Version Control with Git",
-      "buttonname": "Udacity",
-      "bgimage": "../images/large/certificates/Udacity_logo.png"
+      "buttonname": "Udacity"
     },
     {
       "id":"9",
@@ -125,8 +117,7 @@ const sliderPanelText = {
       "task3": "Block programming using Crumble.",
       "task4": "Negotiation skills with CitizenUK.",
       "task5": "Music creation using Sonic Pi",
-      "buttonname": "Digital Futures",
-      "bgimage": "../images/large/certificates/Digital-Futures-2017-Certificate-of-Participation-large.jpg"
+      "buttonname": "Digital Futures"
     }
   
   ]

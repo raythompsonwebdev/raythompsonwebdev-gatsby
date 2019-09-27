@@ -16,15 +16,7 @@ export const useSiteMetadata = () => {
             task3
             task4
             task5
-            bgimage {
-              childImageSharp {
-                fixed {
-                  src
-                  width
-                  height
-                }
-              }
-            }
+            
           }
         }
       }

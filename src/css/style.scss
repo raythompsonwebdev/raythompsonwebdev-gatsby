@@ -344,12 +344,12 @@ desktop 1920px*/
 
             &:visited {
               background-color: $color1;
-              color: $color4;
+              color: $color1;
             }
 
             &:focus {
               background-color: $color1;
-              color: $color4;
+              color: $color1;
             }
 
             &:hover {
@@ -705,7 +705,7 @@ desktop 1920px*/
               border: 1px solid rgba(204, 211, 222, 1);
             }
 
-            input[type="submit"] {
+            button#submit {
               height: 35px;
               list-style: none;
               width: 25%;
@@ -889,9 +889,9 @@ desktop 1920px*/
       margin: 0 0 1em 0;
       padding: 0;
       
-      //background-image:url('../images/picjumbo.com_IMG_4892.jpg');
-      //background-repeat: no-repeat;
-      //background-size: 100% 100%;
+      background-image:url('../images/desk-electronics-from-above-238118.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
      
 
 
@@ -945,7 +945,7 @@ desktop 1920px*/
             -webkit-flex: 0 1 auto;
             -ms-flex: 0 1 auto;
             flex: 0 1 auto;
-            width: 24.6%;
+            width: 33%;
             display: inline-block;
             background-color: $color4;
             height: auto;
@@ -1077,12 +1077,35 @@ desktop 1920px*/
         -webkit-order: 0;
         -ms-flex-order: 0;
         order: 0;
-        width: 100%;
-        height: 200px;
+        width: 96%;
+        height: 250px;
         font-family: ($FontStyle);
-        background-color:$color4;
+        padding-top: 3%;
+        //background-color:$color4;
         
+        h1{
+          font-size:4em;
+          color:$color4;
+          margin:0;
+          padding:0;
+          line-height:60px;
+          display:block;
+        
+        }
+        h2{
+          font-size:2em;
+          color:$color4;
+          margin:0;
+          padding:0;
+        }
 
+        button{
+          line-height:60px;
+          border:5px solid white; 
+          width:300px;
+          float:right;
+
+        }
 
         /*PNG for IE8*/
         figure#image-6 {
@@ -1293,63 +1316,63 @@ desktop 1920px*/
               transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
               #panel-1 {
-                background-image: url("../images/large/certificates/Large-Photoshop-Certicate-.jpg");
+                background-image: url("../images/certificates/Large-Photoshop-Certicate-.jpg");
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
                 background-size: cover;
               }
 
               #panel-2 {
-                background-image: url("../images/large/certificates/ITQ-USERS-LEVEL1-LARGE.jpg");
+                background-image: url("../images/certificates/ITQ-USERS-LEVEL1-LARGE.jpg");
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
                 background-size: cover;
               }
 
               #panel-3 {
-                background-image: url("../images/large/certificates/Large-Udemy-Certicate-.jpg");
+                background-image: url("../images/certificates/Large-Udemy-Certicate-.jpg");
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
                 background-size: cover;
               }
 
               #panel-4 {
-                background-image: url("../images/large/certificates/freecodecamp-org-certification-raythompsonwebdev-responsive-web-design.png");
+                background-image: url("../images/certificates/freecodecamp-org-certification-raythompsonwebdev-responsive-web-design.png");
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
                 background-size: cover;
               }
 
               #panel-5 {
-                background-image: url("../images/large/certificates/CertificateOfCompletion_Learning Git And Github.jpg");
+                background-image: url("../images/certificates/CertificateOfCompletion_Learning Git And Github.jpg");
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
                 background-size: cover;
               }
 
               #panel-6 {
-                background-image: url("../images/large/certificates/Mobile-web-applications-Certificate-Foundation-large.jpg");
+                background-image: url("../images/certificates/Mobile-web-applications-Certificate-Foundation-large.jpg");
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
                 background-size: cover;
               }
 
               #panel-7 {
-                background-image: url("../images/large/certificates/codecademy-users-raythompsonwebdev-achievements-.png");
+                background-image: url("../images/certificates/codecademy-users-raythompsonwebdev-achievements-.png");
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
                 background-size: cover;
               }
 
               #panel-8 {
-                background-image: url("../images/large/certificates/Udacity_logo.png");
+                background-image: url("../images/certificates/Udacity_logo.png");
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
                 background-size: cover;
               }
 
               #panel-9 {
-                background-image: url("../images/large/certificates/Digital-Futures-2017-Certificate-of-Participation-large.jpg");
+                background-image: url("../images/certificates/Digital-Futures-2017-Certificate-of-Participation-large.jpg");
                 background-repeat: no-repeat;
                 background-position: 50% 61%;
                 background-size: cover;
@@ -1605,7 +1628,7 @@ desktop 1920px*/
       margin: auto;
       padding:1%;
       box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
-      background-color:$color4;
+      border:5px solid $color4;
 
       div.content {
         clear: both;
@@ -1929,7 +1952,6 @@ desktop 1920px*/
         border: 0;
       }
 
-      /*global*/
       h1,
       h1.page-title {
         font-size: 1.4em;
@@ -1940,109 +1962,11 @@ desktop 1920px*/
         line-height: 65px;
         height: 65px;
         text-align: center;
-        color:$color4;
-        background-color:$color1;
+        color:$color1;
+        
       }
 
-      h2,
-      h2.entry-title {
-        text-indent: 0;
-        font-size: 1.3em;
-        margin: 0 auto;
-        padding: 0;
-        letter-spacing: 0.04em;
-        width: 100%;
-        color: $color1;
-        line-height: 55px;
-        height: 55px;
-        text-align: left;
-
-        a {
-          display: block;
-          text-align: center;
-          width: 100%;
-          color: $color1;
-          height: 100%;
-
-          &:hover {
-            font-weight: normal;
-          }
-        }
-      }
-
-      h3 {
-        margin: 0 auto;
-        height: 40px;
-        line-height: 40px;
-        font-size: 1.15em;
-        text-indent: 0;
-        width: 100%;
-        text-align: left;
-        color: $color1;
-
-        a {
-          padding-left: 0;
-          height: 100%;
-        }
-      }
-
-      p {
-        width: 100%;
-        margin: 0;
-        font-size: 0.95em;
-        color: $color8;
-        font-weight: normal;
-        line-height: 2.1em;
-        letter-spacing: 0.02em;
-        margin-bottom: 2%;
-      }
-
-      ul {
-        line-height: 1.5em;
-        text-indent: 0;
-        width: 94%;
-        margin: 1em auto;
-        display: block;
-
-        li {
-          width: 100%;
-          margin: 0.5em auto;
-          display: block;
-
-          a {
-            width: 100%;
-            margin-left: 0;
-            text-align: center;
-            display: inline-block;
-            font-size: 0.9em;
-            height: 100%;
-            background-color: $color2;
-            line-height: 35px;
-            @include originTran(50% 50%);
-            @include Transition(color 0.2s linear 0s, color 0.2s linear 0s);
-
-            &:hover {
-              
-              margin-left: 0;
-              display: block;
-              font-weight: bold;
-              width: 100%;
-
-            }
-          }
-
-        }
-      }
-
-      ul.post-list {
-        width: 90%;
-
-        li {
-          font-size: 0.9em;
-          margin: 0.5em auto;
-        }
-      }
-
+                        
       .websiteImage {
         @include box-sizing($type: border-box);           
         height: 420px;
@@ -2155,7 +2079,6 @@ desktop 1920px*/
 
       }
 
-
       /*post images*/
       div.postimg {
         width: 20%;
@@ -2192,25 +2115,7 @@ desktop 1920px*/
           display: block;
         }
       }
-
-      /*featured image*/
-      .featuredImageSearch {
-        clear: both;
-        height: auto;
-        width: 20%;
-        margin: 1em auto;
-        display: block;
-
-        a {
-          display: block;
-        }
-
-        img {
-          margin: 0 auto;
-          display: block;
-        }
-      }
-
+    
       /*code*/
       pre {
         border: solid 1px blue;
@@ -2434,7 +2339,6 @@ desktop 1920px*/
         }
       }
 
-
       /*post*/
       .entry {
         padding: 1%;
@@ -2442,6 +2346,96 @@ desktop 1920px*/
         width: 100%;
         margin: 0 auto;
         background-color: $color4;
+
+        p {
+          width: 100%;
+          margin: 0;
+          font-size: 0.95em;
+          color: $color8;
+          font-weight: normal;
+          line-height: 2.1em;
+          letter-spacing: 0.02em;
+          margin-bottom: 2%;
+        }
+
+        ul.post-list {
+          line-height: 1.5em;
+          text-indent: 0;
+          width: 94%;
+          margin: 1em auto;
+          display: block;
+  
+          li {
+            width: 100%;
+            margin: 0.5em auto;
+            display: block;
+  
+            a {
+              width: 100%;
+              margin-left: 0;
+              text-align: center;
+              display: inline-block;
+              font-size: 0.9em;
+              height: 100%;
+              background-color: $color2;
+              line-height: 35px;
+              @include originTran(50% 50%);
+              @include Transition(color 0.2s linear 0s, color 0.2s linear 0s);
+  
+              &:hover {
+                
+                margin-left: 0;
+                display: block;
+                font-weight: bold;
+                width: 100%;
+  
+              }
+            }
+  
+          }
+        }
+
+        /*global*/
+        
+
+        h1 {
+          font-size: 1.2em;
+          margin: 0;
+          padding: 0;
+          letter-spacing: 0.04em;
+          width: 100%;
+          line-height: 60px;
+          height: 60px;
+          text-align: left;
+          color:$color4;
+          background-color:$color1;
+        }
+
+        h2 {
+          text-indent: 0;
+          font-size: 1.1em;
+          margin: 0 auto;
+          padding: 0;
+          letter-spacing: 0.04em;
+          width: 100%;
+          color: $color1;
+          line-height: 55px;
+          height: 55px;
+          text-align: left;
+         
+        }
+
+        h3 {
+          margin: 0 auto;
+          height: 45px;
+          line-height: 45px;
+          font-size: 1em;
+          text-indent: 0;
+          width: 100%;
+          text-align: left;
+          color: $color1;
+            
+        }
 
       }
 
@@ -3597,7 +3591,7 @@ desktop 1440px*/
           }
 
 
-          input[type="submit"] {
+          button#submit {
 
             font-size: 1.1em;
 
@@ -3735,7 +3729,7 @@ desktop 1440px*/
 
           article.frntpgbox {
 
-            width: 24.6%;
+            width: 33%;
 
             h1 {
 
@@ -3810,9 +3804,7 @@ desktop 1440px*/
 
       /*front-page image container*/
       div#svg-image-container {
-        width: 100%;
-
-
+        
         /*PNG for IE8*/
         figure#image-6 {
           margin: 0;
@@ -4253,68 +4245,7 @@ desktop 1440px*/
         height: 1%;
       }
 
-      /*global*/
-      h1,
-      h1.page-title {
-        font-size: 1.3em;
-      }
-
-      h2,
-      h2.entry-title {
-
-        font-size: 1.2em;
-
-        a {
-          display: block;
-
-          &:hover {
-            color: $color4;
-          }
-        }
-      }
-
-      h3 {
-        font-size: 1.1em;
-
-        a {
-          padding-left: 0;
-        }
-      }
-
-      p {
-        font-size: 0.95em;
-
-      }
-
-      /*gallery page styles*/
-      ul.post-list {
-
-        li {
-          font-size: 0.9em;
-
-        }
-      }
-
-      ul {
-
-        width: 94%;
-
-        li {
-
-          
-          a {
-
-            font-size: 0.9em;
-
-            &:hover {
-              font-weight: bold;
-
-
-            }
-          }
-
-        }
-      }
+      
 
       .websiteImage {
         width: 100%;
@@ -4540,6 +4471,49 @@ desktop 1440px*/
       /*post*/
       .entry {
         padding: 1%;
+        /*global*/
+      h1 {
+        font-size: 1.2em;
+      }
+
+      h2 {
+
+        font-size: 1.1em;
+        
+      }
+
+      h3 {
+        font-size: 1em;
+
+        
+      }
+
+      p {
+        font-size: 0.95em;
+
+      }
+
+      
+      ul.post-list  {
+
+        width: 94%;
+
+        li {
+
+          
+          a {
+
+            font-size: 0.9em;
+
+            &:hover {
+              font-weight: bold;
+
+
+            }
+          }
+
+        }
+      }
 
       }
 
@@ -5294,7 +5268,7 @@ desktop 1280px*/
           }
 
 
-          input[type="submit"] {
+          button#submit {
 
             font-size: 1.1em;
 
@@ -5430,7 +5404,7 @@ desktop 1280px*/
 
           article.frntpgbox {
 
-            width: 24.6%;
+            width: 33%;
 
             h1 {
 
@@ -5508,8 +5482,7 @@ desktop 1280px*/
 
       /*front-page image container*/
       div#svg-image-container {
-        width: 100%;
-
+        
         /*PNG for IE8*/
         figure#image-6 {
           margin: 0;
@@ -5932,67 +5905,7 @@ desktop 1280px*/
         height: 1%;
       }
 
-      /*global*/
-      h1,
-      h1.page-title {
-        font-size: 1.3em;
-      }
-
-      h2,
-      h2.entry-title {
-
-        font-size: 1.2em;
-
-        a {
-          display: block;
-
-          &:hover {
-            color: $color4;
-          }
-        }
-      }
-
-      h3 {
-        font-size: 1.1em;
-
-        a {
-          padding-left: 0;
-        }
-      }
-
-      p {
-        font-size: 0.9em;
-
-      }
-
-      /*gallery page styles*/
-      ul.post-list {
-
-        li {
-          font-size: 0.9em;
-        }
-      }
-
-      ul {
-
-        width: 94%;
-
-        li {
-
-          
-          a {
-
-            line-height: 35px;
-
-            &:hover {
-              font-weight: bold;
-
-            }
-          }
-
-        }
-      }
-
+      
       .websiteImage {
         width: 100%;
 
@@ -6215,6 +6128,47 @@ desktop 1280px*/
       /*post*/
       .entry {
         padding: 1%;
+        /*global*/
+      h1 {
+        font-size: 1.15em;
+      }
+
+      h2{
+
+        font-size: 1.05em;
+        
+      }
+
+      h3 {
+        font-size: 1em;
+        
+      }
+
+      p {
+        font-size: 0.9em;
+
+      }
+
+      
+      ul.post-list {
+
+        width: 94%;
+
+        li {
+
+          
+          a {
+
+            line-height: 35px;
+
+            &:hover {
+              font-weight: bold;
+
+            }
+          }
+
+        }
+      }
 
       }
 
@@ -6677,7 +6631,7 @@ desktop 1280px*/
             }
 
 
-            input[type="submit"] {
+            button#submit {
 
               font-size: 1.1em;
 
@@ -6816,7 +6770,7 @@ desktop 1280px*/
 
           article.frntpgbox {
 
-            width: 24.6%;
+            width: 33%;
 
             h1 {
 
@@ -6894,8 +6848,7 @@ desktop 1280px*/
 
       /*front-page image container*/
       div#svg-image-container {
-        width: 100%;
-
+        
         /*PNG for IE8*/
         figure#image-6 {
           margin: 0;
@@ -7293,69 +7246,7 @@ desktop 1280px*/
       .seperator {
         height: 1%;
       }
-
-      /*global*/
-      h1,
-      h1.page-title {
-        font-size: 1.3em;
-      }
-
-      h2,
-      h2.entry-title {
-
-        font-size: 1.15em;
-
-        a {
-          display: block;
-
-          &:hover {
-            color: $color4;
-          }
-        }
-      }
-
-      h3 {
-        font-size: 1.05em;
-
-        a {
-          padding-left: 0;
-        }
-      }
-
-      p {
-        font-size: 0.8em;
-
-      }
-
-      /*gallery page styles*/
-      ul.post-list {
-
-        li {
-          font-size: 0.8em;
-        }
-      }
-
-      ul {
-
-        width: 94%;
-
-        li {
-
-          
-          a {
-
-            font-size: 0.8em;
-
-
-            &:hover {
-              font-weight: bold;
-
-            }
-          }
-
-        }
-      }
-
+      
       .websiteImage {
         width: 100%;
 
@@ -7578,6 +7469,49 @@ desktop 1280px*/
       /*post*/
       .entry {
         padding: 1%;
+        /*global*/
+        h1 {
+          font-size: 1.1em;
+        }
+
+        h2 {
+
+          font-size: 1.05em;
+
+          
+        }
+
+        h3 {
+          font-size: 1em;
+          
+        }
+
+        p {
+          font-size: 0.85em;
+
+        }
+
+        
+        ul.post-list {
+
+          width: 94%;
+
+          li {
+
+            
+            a {
+
+              font-size: 0.8em;
+
+
+              &:hover {
+                font-weight: bold;
+
+              }
+            }
+
+          }
+        }
       }
 
       /*attachment page image*/
@@ -8235,7 +8169,7 @@ desktop 980px*/
             }
 
 
-            input[type="submit"] {
+            button#submit {
 
               font-size: 1.1em;
 
@@ -8373,7 +8307,7 @@ desktop 980px*/
 
           article.frntpgbox {
 
-            width: 24.6%;
+            width: 33%;
 
             h1 {
 
@@ -8451,8 +8385,7 @@ desktop 980px*/
 
       /*front-page image container*/
       div#svg-image-container {
-        width: 100%;
-
+        
         /*PNG for IE8*/
         figure#image-6 {
           margin: 0;
@@ -8841,64 +8774,7 @@ desktop 980px*/
       .seperator {
         height: 1%;
       }
-
-      /*global*/
-      h1,
-      h1.page-title {
-        font-size: 1.3em;
-      }
-
-      h2,
-      h2.entry-title {
-
-        font-size: 1.1em;
-
-        a {
-          display: block;
-
-          &:hover {
-            color: $color4;
-          }
-        }
-      }
-
-      h3 {
-        font-size: 1em;
-
-        a {
-          padding-left: 0;
-        }
-      }
-
-      p {
-        font-size: 0.8em;
-
-      }
-
-      /*gallery page styles*/
-      ul.post-list {
-
-        li {
-          font-size: 0.8em;
-        }
-      }
-
-      ul {
-
-        width: 94%;
-
-        li {
-
-          
-          a {
-
-            font-size: 0.8em;
-
-          }
-
-        }
-      }
-
+      
       .websiteImage {
         width: 35%;
         float: none;
@@ -9127,6 +9003,42 @@ desktop 980px*/
       /*post*/
       .entry {
         padding: 1%;
+        /*global*/
+        h1 {
+          font-size: 1.15em;
+        }
+
+        h2 {
+
+          font-size: 1em;
+          
+        }
+
+        h3 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 0.85em;
+
+        }
+        
+
+        ul.post-list {
+
+          width: 94%;
+
+          li {
+
+            
+            a {
+
+              font-size: 0.8em;
+
+            }
+
+          }
+        }
       }
 
       /*attachment page image*/
@@ -9777,7 +9689,7 @@ tablet 800px */
             }
 
 
-            input[type="submit"] {
+            button#submit {
 
               font-size: 1.1em;
 
@@ -10000,7 +9912,7 @@ tablet 800px */
         -webkit-order: 0;
         -ms-flex-order: 0;
         order: 0;
-        width: 100%;
+        width: 96%;
         margin: 1em;
         
 
@@ -10427,63 +10339,7 @@ tablet 800px */
         height: 1%;
       }
 
-      /*global*/
-      h1,
-      h1.page-title {
-        font-size: 1.4em;
-      }
-
-      h2,
-      h2.entry-title {
-
-        font-size: 1.3em;
-
-        a {
-          display: block;
-
-          &:hover {
-            color: $color4;
-          }
-        }
-      }
-
-      h3 {
-        font-size: 1.2em;
-
-        a {
-          padding-left: 0;
-        }
-      }
-
-      p {
-        font-size: 0.85em;
-
-      }
-
-      /*gallery page styles*/
-      ul.post-list {
-
-        li {
-          font-size: 0.8em;
-        }
-      }
-
-      ul {
-
-        width: 94%;
-
-        li {
-
-          
-          a {
-
-            font-size: 0.8em;
-
-          }
-
-        }
-      }
-
+      
       .websiteImage {
         width: 35%;
         float: none;
@@ -10711,6 +10567,43 @@ tablet 800px */
       /*post*/
       .entry {
         padding: 1%;
+        /*global*/
+        h1 {
+          font-size: 1.4em;
+        }
+
+        h2 {
+
+          font-size: 1.3em;
+          
+        }
+
+        h3 {
+          font-size: 1.2em;
+          
+        }
+
+        p {
+          font-size: 0.85em;
+
+        }
+
+        ul.post-list {
+
+          width: 94%;
+
+          li {
+
+            
+            a {
+
+              font-size: 0.8em;
+
+            }
+
+          }
+        }
+
       }
 
       /*attachment page image*/
@@ -11356,7 +11249,7 @@ tablet 667px*/
             }
 
 
-            input[type="submit"] {
+            button#submit {
 
               font-size: 1.1em;
 
@@ -11575,10 +11468,7 @@ tablet 667px*/
 
       /*front-page image container*/
       div#svg-image-container {
-        -webkit-order: 0;
-        -ms-flex-order: 0;
-        order: 0;
-        width: 94%;
+               
         margin: 1em;
 
         /*PNG for IE8*/
@@ -11978,66 +11868,7 @@ tablet 667px*/
         height: 1%;
       }
 
-      /*global*/
-      h1,
-      h1.page-title {
-        font-size: 1.3em;
-      }
-
-      h2,
-      h2.entry-title {
-
-        font-size: 1.2em;
-
-        a {
-          display: block;
-
-          &:hover {
-            color: $color4;
-          }
-        }
-      }
-
-      h3 {
-        font-size: 1.1em;
-
-        a {
-          padding-left: 0;
-        }
-      }
-
-      p {
-        font-size: 0.8em;
-
-      }
-
-      /*gallery page styles*/
-      ul.post-list {
-        width: 85%;
-
-        li {
-          font-size: 0.8em;
-          list-style-type: circle;
-        }
-      }
-
-      ul {
-
-        width: 94%;
-
-        li {
-
-          
-          a {
-
-            font-size: 0.8em;
-
-
-          }
-
-        }
-      }
-
+      
       .websiteImage {
         width: 45%;
 
@@ -12266,6 +12097,44 @@ tablet 667px*/
       /*post*/
       .entry {
         padding: 1%;
+        /*global*/
+        h1{
+          font-size: 1.2em;
+        }
+
+        h2 {
+
+          font-size: 1.1em;
+          
+        }
+
+        h3 {
+          font-size: 1em;
+         
+        }
+
+        p {
+          font-size: 0.85em;
+
+        }
+        
+        ul.post-list {
+
+          width: 94%;
+
+          li {
+
+            
+            a {
+
+              font-size: 0.8em;
+
+
+            }
+
+          }
+        }
+
       }
 
       /*attachment page image*/
@@ -12973,7 +12842,7 @@ tablet 667px*/
             }
 
 
-            input[type="submit"] {
+            button#submit {
 
               font-size: 1.1em;
 
@@ -13201,12 +13070,7 @@ tablet 667px*/
 
       /*front-page image container*/
       div#svg-image-container {
-        -webkit-order: 0;
-        -ms-flex-order: 0;
-        order: 0;
-        width: 94%;
-
-
+        
         /*PNG for IE8*/
         figure#image-6 {
           margin: 0;
@@ -13579,64 +13443,7 @@ tablet 667px*/
         height: 1%;
       }
 
-      /*global*/
-      h1,
-      h1.page-title {
-        font-size: 1.2em;
-      }
-
-      h2,
-      h2.entry-title {
-
-        font-size: 1.1em;
-
-        a {
-          display: block;
-
-          &:hover {
-            color: $color4;
-          }
-        }
-      }
-
-      h3 {
-        font-size: 1em;
-
-        a {
-          padding-left: 0;
-        }
-      }
-
-      p {
-        font-size: 0.8em;
-
-      }
-
-      /*gallery page styles*/
-      ul.post-list {
-
-        li {
-          font-size: 0.8em;
-        }
-      }
-
-      ul {
-
-        width: 94%;
-
-        li {
-
-          
-          a {
-
-            font-size: 0.8em;
-
-
-          }
-
-        }
-      }
-
+      
       .websiteImage {
         width: 45%;
 
@@ -13860,6 +13667,44 @@ tablet 667px*/
       /*post*/
       .entry {
         padding: 1%;
+        /*global*/
+        h1 {
+          font-size: 1.2em;
+        }
+
+        h2 {
+
+          font-size: 1.1em;
+         
+        }
+
+        h3 {
+          font-size: 1em;
+          
+        }
+
+        p {
+          font-size: 0.8em;
+
+        }
+        
+        ul.post-list {
+
+          width: 94%;
+
+          li {
+
+            
+            a {
+
+              font-size: 0.8em;
+
+
+            }
+
+          }
+        }
+
       }
 
       /*attachment page image*/
@@ -14490,7 +14335,7 @@ mobile 480px */
             }
 
 
-            input[type="submit"] {
+            button#submit {
 
               font-size: 1.1em;
 
@@ -15110,63 +14955,7 @@ mobile 480px */
         height: 1%;
       }
 
-      /*global*/
-      h1,
-      h1.page-title {
-        font-size: 1.2em;
-      }
-
-      h2,
-      h2.entry-title {
-        font-size: 1.1em;
-
-        a {
-          display: block;
-
-          &:hover {
-            color: $color4;
-          }
-        }
-      }
-
-      h3 {
-        font-size: 1em;
-
-        a {
-          padding-left: 0;
-        }
-      }
-
-      p {
-        font-size: 0.8em;
-
-      }
-
-      /*gallery page styles*/
-      ul.post-list {
-
-        li {
-          font-size: 0.8em;
-        }
-      }
-
-      ul {
-
-        width: 94%;
-
-        li {
-
-          
-          a {
-
-            font-size: 0.8em;
-
-
-          }
-
-        }
-      }
-
+      
       .websiteImage {
         width: 50%;
 
@@ -15392,6 +15181,43 @@ mobile 480px */
       /*post*/
       .entry {
         padding: 1%;
+        /*global*/
+        h1 {
+          font-size: 1.1em;
+        }
+
+        h2 {
+          font-size: 1.05em;
+          
+        }
+
+        h3 {
+          font-size: 1em;
+          
+        }
+
+        p {
+          font-size: 0.85em;
+
+        }
+      
+        ul.post-list {
+
+          width: 94%;
+
+          li {
+
+            
+            a {
+
+              font-size: 0.8em;
+
+
+            }
+
+          }
+        }
+
       }
 
       /*attachment page image*/
@@ -16063,7 +15889,7 @@ mobile 360px */
             }
 
 
-            input[type="submit"] {
+            button#submit {
 
               font-size: 1.1em;
 
@@ -16686,64 +16512,7 @@ mobile 360px */
         height: 1%;
       }
 
-      /*global*/
-      h1,
-      h1.page-title {
-        font-size: 1.1em;
-      }
-
-      h2,
-      h2.entry-title {
-
-        font-size: 1em;
-
-        a {
-          display: block;
-
-          &:hover {
-            color: $color4;
-          }
-        }
-      }
-
-      h3 {
-        font-size: 1em;
-
-        a {
-          padding-left: 0;
-        }
-      }
-
-      p {
-        font-size: 0.8em;
-
-      }
-
-      /*gallery page styles*/
-      ul.post-list {
-
-        li {
-          font-size: 0.8em;
-        }
-      }
-
-      ul {
-
-        width: 94%;
-
-        li {
-
-          
-          a {
-
-            font-size: 0.8em;
-
-
-          }
-
-        }
-      }
-
+      
       .websiteImage {
         width: 50%;
 
@@ -16972,6 +16741,44 @@ mobile 360px */
       /*post*/
       .entry {
         padding: 1%;
+        /*global*/
+        h1 {
+          font-size: 1.1em;
+        }
+
+        h2 {
+
+          font-size: 1em;
+          
+        }
+
+        h3 {
+          font-size: 1em;
+          
+        }
+
+        p {
+          font-size: 0.8em;
+
+        }
+
+        
+        ul.post-list {
+
+          width: 94%;
+
+          li {
+
+            
+            a {
+
+              font-size: 0.8em;
+
+
+            }
+
+          }
+        }
       }
 
       /*attachment page image*/
@@ -17625,7 +17432,7 @@ mobile 320px */
             }
 
 
-            input[type="submit"] {
+            button#submit {
 
               font-size: 1.1em;
 
@@ -18249,65 +18056,7 @@ mobile 320px */
       .seperator {
         height: 1%;
       }
-
-      /*global*/
-      h1,
-      h1.page-title {
-        font-size: 1em;
-      }
-
-      h2,
-      h2.entry-title {
-
-        font-size: 0.9em;
-
-        a {
-          display: block;
-
-          &:hover {
-            color: $color4;
-          }
-        }
-      }
-
-      h3 {
-        font-size: 0.85em;
-
-        a {
-          padding-left: 0;
-        }
-      }
-
-      p {
-        font-size: 0.75em;
-
-      }
-
-      /*gallery page styles*/
-      ul.post-list {
-
-        li {
-          font-size: 0.75em;
-        }
-      }
-
-      ul {
-
-        width: 94%;
-
-        li {
-
-          
-          a {
-
-            font-size: 0.75em;
-
-
-          }
-
-        }
-      }
-
+      
       .websiteImage {
         width: 45%;
 
@@ -18533,6 +18282,44 @@ mobile 320px */
       /*post*/
       .entry {
         padding: 1%;
+        /*global*/
+        h1 {
+          font-size: 1em;
+        }
+
+        h2 {
+
+          font-size: 0.9em;
+          
+        }
+
+        h3 {
+          font-size: 0.85em;
+          
+        }
+
+        p {
+          font-size: 0.8em;
+
+        }
+        
+        ul.post-list {
+
+          width: 94%;
+
+          li {
+
+            
+            a {
+
+              font-size: 0.75em;
+
+
+            }
+
+          }
+        }
+
       }
 
       /*attachment page image*/
@@ -18671,8 +18458,6 @@ mobile 320px */
           line-height: 45px;
         }
       }
-
-
     }
 
     /*post navigation*/

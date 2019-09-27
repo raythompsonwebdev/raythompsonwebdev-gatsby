@@ -4,16 +4,66 @@ import SEO from "../components/seo"
 import SkillsGraph from "../components/skillsgraph"
 import SliderPanel from "../components/sliderpanel"
 import data from "../data/sliderpaneltext"
+import $ from "jquery"
 
 class AboutPage extends React.Component {
-  
   constructor(props) {
     super(props)
-    
+
     this.state = {
       properties: data.properties,
       property: data.properties[0],
     }
+
+    this.bars = {
+      bar: [
+        {
+          id: 1,
+          name: "HTML",
+          percentage: "85",
+          classnam: "bar",
+        },
+        {
+          id: 2,
+          name: "CSS",
+          percentage: "70",
+          classnam: "bar",
+        },
+        {
+          id: 3,
+          name: "PHP/MYSQL",
+          percentage: "90",
+          classnam: "bar",
+        },
+        {
+          id: 4,
+          name: "JAVASCRIPT",
+          percentage: "80",
+          classnam: "bar",
+        },
+        {
+          id: 5,
+          name: "PYTHON",
+          percentage: "65",
+          classnam: "bar",
+        },
+      ],
+    }
+  }
+
+  componentDidMount() {
+    // Jquery here $(...)...
+    //graph
+    $("li .bar").each(function() {
+      var percentage = $(this).data("percentage")
+
+      $(this).animate(
+        {
+          width: percentage + "%",
+        },
+        1000
+      )
+    })
   }
 
   nextProperty = () => {
@@ -32,6 +82,7 @@ class AboutPage extends React.Component {
 
   render() {
     const { properties, property } = this.state
+    const { bar } = this.bars
 
     return (
       <main id="main-content">
@@ -41,8 +92,9 @@ class AboutPage extends React.Component {
           <h1>About Me</h1>
 
           <article id="text-box-profile">
-
-            <div className="introimg"><img alt="me" src="./src/images/raythompsonwebdev.jpg" /></div>
+            <div className="introimg">
+              <img alt="me" src="./src/images/raythompsonwebdev.jpg" />
+            </div>
 
             <p>
               I have a passion for web design and web development and
@@ -62,7 +114,8 @@ class AboutPage extends React.Component {
               <strong>
                 {" "}
                 <Link to="/projects">coding problems</Link>
-              </strong>.
+              </strong>
+              .
             </p>
 
             <p>
@@ -74,19 +127,31 @@ class AboutPage extends React.Component {
             </p>
 
             <p>
-              Since then I have spent as much of my spare time as I can learning as much as I can about web development, building great applications and tech in general.{" "}
+              Since then I have spent as much of my spare time as I can learning
+              as much as I can about web development, building great
+              applications and tech in general.{" "}
             </p>
             <div className="clearfix"></div>
           </article>
 
-          <SkillsGraph />
+          <section id="prof_cont">
+            <h1>Skill Level</h1>
+
+            <article id="chart">
+              <SkillsGraph 
+                key={bar.id} 
+                bar={bar} 
+                ref={el => this.el = el}
+              />
+            </article>
+          </section>
 
           <article id="text-box-profile-a">
             <p>
               {" "}
-              I keep up to date with the constant
-              changes in web development by following online tutorials and doing
-              coding exercises and challenges on websites like{" "}
+              I keep up to date with the constant changes in web development by
+              following online tutorials and doing coding exercises and
+              challenges on websites like{" "}
               <a href="https://site.test/" title="Pic 1">
                 FreeCode Camp
               </a>{" "}
@@ -101,13 +166,19 @@ class AboutPage extends React.Component {
             </p>
 
             <p>
-              I do like coding websites and web applications from scratch and also
-              using frameworks like React.js , Gatsby.js, Vue.js, Laravell or Content Management Systems like Wordpress and Joomla. The tools I use to manage and organise workflow and speed up development process include tools like Grunt, Gulp, Sass, Babel, NPM Scripts, Webpack, ESLint, PHPsniffer, Git and GitHub.{" "}
+              I do like coding websites and web applications from scratch and
+              also using frameworks like React.js , Gatsby.js, Vue.js, Laravell
+              or Content Management Systems like Wordpress and Joomla. The tools
+              I use to manage and organise workflow and speed up development
+              process include tools like Grunt, Gulp, Sass, Babel, NPM Scripts,
+              Webpack, ESLint, PHPsniffer, Git and GitHub.{" "}
             </p>
 
             <p>
-              Other than web development and I enjoy spending time
-              listening to music, particularly 90's Hip Hop, Reggae Dancehall, Jungle and RnB, Watching movies (Big Marvel movie fan) and spending time with family and friends.
+              Other than web development and I enjoy spending time listening to
+              music, particularly 90's Hip Hop, Reggae Dancehall, Jungle and
+              RnB, Watching movies (Big Marvel movie fan) and spending time with
+              family and friends.
             </p>
           </article>
 
