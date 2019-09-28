@@ -200,6 +200,7 @@ class AboutPage extends React.Component {
                 </div>
               </div>
             </article>
+            {/* Buttons */}
             <button
               className="slider-btn"
               onClick={() => this.nextProperty()}
@@ -214,6 +215,7 @@ class AboutPage extends React.Component {
             >
               Prev
             </button>
+          
           </section>
         </div>
 

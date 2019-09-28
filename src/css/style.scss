@@ -889,7 +889,7 @@ desktop 1920px*/
       margin: 0 0 1em 0;
       padding: 0;
       
-      background-image:url('../images/desk-electronics-from-above-238118.jpg');
+      background-image:url('../images/raythompsonwebdev_banner-1.0.1.png');
       background-repeat: no-repeat;
       background-size: 100% 100%;
      
@@ -937,7 +937,8 @@ desktop 1920px*/
             line-height: 60px;
             text-align: left;
             text-indent: 0.2em;
-            font-family: "FontAwesome", ($FontStyleHeader);
+            font-family: ($FontStyleHeader);
+            margin:0 0 0.5em 0;
 
           }
 
@@ -950,8 +951,23 @@ desktop 1920px*/
             background-color: $color4;
             height: auto;
             margin: 0.1em;
-            padding: 0;
-            @include boredrady (10px);
+            padding: 0 0 0.5em 0;
+            
+            span{
+              height:auto;
+              width:100%;
+
+              i{
+                line-height:100px;
+                height:100px;
+                display:block;
+                color:$color1;
+                text-align:center;
+                width:100%;
+                font-size:4em;
+              }
+              
+            }
 
             h1 {
               line-height: 40px;
@@ -961,26 +977,21 @@ desktop 1920px*/
               text-align: center;
               color: $color4;
               background-color: $color1;
-              @include boredrady (10px 10px 0 0);
+              font-weight:bold;
+             
 
 
             }
 
-            ul {
-              width: 90%;
-              margin: 0 auto;
+            p{
+              display: block;
+              width: 96%;
+              line-height: 25px;
+              color: $color1;
+              font-size: 0.9em;
+              margin:auto;
+              text-align: left;
 
-              li {
-
-                display: block;
-                width: 100%;
-                line-height: 35px;
-                color: $color1;
-                font-size: 0.9em;
-                height: 40px;
-                text-align: center;
-
-              }
             }
           }
         }
@@ -1099,11 +1110,22 @@ desktop 1920px*/
           padding:0;
         }
 
-        button{
+        a#projectLink{
           line-height:60px;
+          display:block;
+          height:auto;
           border:5px solid white; 
           width:300px;
           float:right;
+          text-align:center;
+          font-size:1.2em;
+          background-color:$color1;
+          color:$color4;
+          &:hover{
+            background-color:$color4;
+            color:$color1;
+
+          }
 
         }
 
@@ -1117,17 +1139,7 @@ desktop 1920px*/
             opacity: 0;
           }
         }
-
-        /*SVG*/
-        figure#image-7 {
-          margin: 0;
-          padding: 0;
-
-          #image-4 {
-            width: 100%;
-          }
-
-        }
+       
       }
 
 
@@ -3728,29 +3740,29 @@ desktop 1440px*/
           }
 
           article.frntpgbox {
-
-            width: 33%;
+                       
+            span{
+              height:auto;
+              
+              i{
+                
+                font-size:4em;
+              }
+              
+            }
 
             h1 {
-
-
-
-              &::before {
-                font-size: 1em;
-
-              }
-
+              
+              margin:0;
+              
             }
 
-            ul {
-              width: 90%;
-
-              li {
-                line-height: 35px;
-
-
-              }
+            p{
+              
+              font-size: 0.9em;
+              
             }
+            
           }
         }
 
@@ -5403,32 +5415,29 @@ desktop 1280px*/
           }
 
           article.frntpgbox {
-
-            width: 33%;
+                       
+            span{
+              height:auto;
+              
+              i{
+                
+                font-size:4em;
+              }
+              
+            }
 
             h1 {
-
-              font-size: 0.9em;
-
-              &::before {
-                font-size: 1em;
-
-              }
-
+              
+              margin:0;
+              
             }
 
-            ul {
-              width: 90%;
-              margin: 0 auto;
-
-              li {
-
-                font-size: 0.85em;
-
-
-
-              }
+            p{
+              
+              font-size: 0.85em;
+              
             }
+            
           }
         }
 
@@ -6769,32 +6778,29 @@ desktop 1280px*/
           }
 
           article.frntpgbox {
-
-            width: 33%;
+                       
+            span{
+              height:auto;
+              
+              i{
+                
+                font-size:4em;
+              }
+              
+            }
 
             h1 {
+              
+              margin:0;
+              
+            }
 
+            p{
+              
               font-size: 0.85em;
-
-              &::before {
-                font-size: 1em;
-
-              }
-
+              
             }
-
-            ul {
-              width: 90%;
-              margin: 0 auto;
-
-              li {
-
-                font-size: 0.85em;
-
-
-
-              }
-            }
+            
           }
         }
 
@@ -8306,32 +8312,29 @@ desktop 980px*/
           }
 
           article.frntpgbox {
-
-            width: 33%;
+                       
+            span{
+              height:auto;
+              
+              i{
+                
+                font-size:4em;
+              }
+              
+            }
 
             h1 {
-
-
-
-              &::before {
-                font-size: 0.9em;
-
-              }
-
+              
+              margin:0;
+              
             }
 
-            ul {
-              width: 90%;
-              margin: 0 auto;
-
-              li {
-
-                font-size: 0.8em;
-
-
-
-              }
+            p{
+              
+              font-size: 0.85em;
+              
             }
+            
           }
         }
 
@@ -9832,30 +9835,29 @@ tablet 800px */
           }
 
           article.frntpgbox {
-
-            width: 48%;
+              width:48%;         
+            span{
+              height:auto;
+              
+              i{
+                
+                font-size:4em;
+              }
+              
+            }
 
             h1 {
-
-
-              &::before {
-                font-size: 1em;
-
-              }
-
+              
+              margin:0;
+              
             }
 
-            ul {
-              width: 90%;
-
-
-              li {
-
-                font-size: 0.8em;
-
-
-              }
+            p{
+              
+              font-size: 0.85em;
+              
             }
+            
           }
         }
 

@@ -10,6 +10,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
+import "../fonts/fontawesome/css/font-awesome.css"
 import "../css/style.scss"
 import posed, { PoseGroup } from "react-pose"
 

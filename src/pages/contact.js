@@ -20,10 +20,11 @@ class contactPage extends React.Component {
     }
 
     //this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+    //this.handleSubmit = this.handleSubmit.bind(this)
+    //when using arrow function binding not needed for methods using setState.
   }
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     event.preventDefault()
 
     console.log("submitted")
