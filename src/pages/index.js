@@ -33,25 +33,25 @@ const IndexPage = () => (
 
             <span><i className="fa fa-wordpress"></i></span>
             <h1>WordPress</h1>
-            <p>Theme development and customisation,</p> 
-            <p> Plugin development and customisation Maintenance, </p>
-              <p>Installation,</p>
+            <p>Theme development and customisation.</p> 
+            <p> Plugin development and customisation.</p>
+              <p>Maintenance, Installation,</p>
           </article>
 
           <article className="frntpgbox">
           <span><i className="fa fa-laptop"></i></span>
             <h1>Responsive Web Design</h1>
-            <p>PSD to HTML/CSS website, HTML/CSS Debugging</p>
-            <p> Image Optimisation, Website Creation</p>
-              <p> Website updates and maintenance </p>
+            <p>PSD to HTML/CSS website</p>
+            <p> Image Optimisation, Website Creation.</p>
+              <p> Website updates and maintenance.</p>
           </article>
 
           <article className="frntpgbox">
           <span><i className="fa fa-wrench"></i></span>
             <h1>Web Development</h1>
-            <p>Website customisation, API integration,</p>
-            <p>Javascript Debugging,  Web App Creation,</p> 
-            <p>Video/Audio Optimisation</p>
+            <p>Website customisation, API integration.</p>
+            <p>Debugging,  Web App Creation.</p> 
+            <p>Video & Audio Optimisation.</p>
           </article>
 
           

@@ -87,7 +87,15 @@ const ProjectSingle = props => {
             Link
           </a>
         </div>
-        <footer className="byline"></footer>
+        <footer className="byline">
+        <p className="right">
+            <Link to="/" className="comments-count">
+              Link
+            </Link>
+          </p>
+
+          <p>Text</p>
+        </footer>
       </article>
   </main> 
   )
