@@ -76,29 +76,7 @@ module.exports.createPages = ({ graphql, actions }) => {
         
       }
 
-      /*    
-            // Create blog-list pages
-      createPaginatedPages({
-        edges: result.data.allWordpressPost.edges,
-        createPage: createPage,
-        pageTemplate: 'src/templates/blog-post-template.js',
-        pageLength: 5, // This is optional and defaults to 10 if not used
-        pathPrefix: '/blogpag/', // This is optional and defaults to an empty string if not used
-        context: {}, // This is optional and defaults to an empty object if not used
-        buildPath: (index, pathPrefix) => index > 1 ? `${pathPrefix}/${index}` : `/${pathPrefix}`, // This is optional and this is the default
-    
-      })
-      result.data.allWordpressPost.edges.map(({ node }) => {
-        createPage({
-          path: `/blogpag/${node.slug}`,
-          component: path.resolve('./src/templates/blog-post-template.js'),
-          context: {
-            slug: node.slug,
-          },
-        })
-      })
-          
-*/
+     //posts
       result.data.allWordpressPost.edges.forEach(({ node }) => {
           
           createPage({
@@ -111,7 +89,6 @@ module.exports.createPages = ({ graphql, actions }) => {
           },
           })
       })
-
 
       //custom posts
       result.data.allWordpressWpProject.edges.forEach(({ node }) => {
@@ -126,7 +103,7 @@ module.exports.createPages = ({ graphql, actions }) => {
           slug: node.slug,
         },
         })
-    })
+      })
 
 
 

@@ -21,7 +21,7 @@ const IndexPage = () => (
 
       <div id="text-box-front">
         
-<br />
+
       <p>{`My name is Raymond. I am a web developer with passion for creating websites, web applications and user interfaces using latest web technologies.  Whether for business or a personal goals, I can help you with any goals you have to get on-line with a website or web application specifically tailored to your on-line needs. `}</p>
 
         <p>{`From idea to launch I can help build your project with the focus on simplicity, usability and accessibility for all users. I use clean semantic code and following latest web standards compliances and best practices. I can ensure any website or web application built can be found by most search engines, viewed within in most modern browsers and mobile devices, and have fast page loading for a great user experience. `}</p>

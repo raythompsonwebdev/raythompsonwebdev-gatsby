@@ -890,7 +890,7 @@ desktop 1920px*/
       
       background-image:url('../images/raythompsonwebdev_banner-1.0.1.png');
       background-repeat: no-repeat;
-      background-size: 100% 100%;
+      background-size: 100% auto;
      
 
 
@@ -5788,8 +5788,8 @@ desktop 1440px*/
 
     /*frontpage-page-panel */
     #frontpage_container {
-
-
+      background-image:url('../images/raythompsonwebdev_banner-1280.png');
+      
 
       /*homepage container*/
       div#text-box-front {
@@ -7506,7 +7506,7 @@ desktop 1280px*/
 
     /*frontpage-page-panel */
     #frontpage_container {
-
+      background-image:url('../images/raythompsonwebdev_banner-1024.png');
       /*homepage container*/
       div#text-box-front {
         width: 100%;
@@ -8061,19 +8061,20 @@ desktop 1280px*/
         /*gallery page styles*/
 
         h1.post-meta-key {
-
+          font-size: 1.1em;
           margin-bottom: 0.5em;
 
         }
 
         p.websitetext {
           margin-bottom: 0.5em;
+          font-size:0.9em;
         }
 
         a.webformats {
 
           line-height: 40px;
-
+          font-size:0.9em;
           &:hover {
             color: $color1;
 
@@ -8889,7 +8890,7 @@ desktop 1280px*/
     /*frontpage-page-panel */
     #frontpage_container {
 
-
+      background-image:url('../images/raythompsonwebdev_banner-980.png');
       /*homepage container*/
       div#text-box-front {
         width: 100%;
@@ -10438,7 +10439,7 @@ desktop 980px*/
 
     /*frontpage-page-panel */
     #frontpage_container {
-
+      background-image:url('../images/raythompsonwebdev_banner-800.png');
       /*homepage container*/
       div#text-box-front {
         width: 100%;
@@ -10966,6 +10967,9 @@ desktop 980px*/
         float: none;
         margin: auto;
         display: block;
+        img{
+          width:100%;
+        }
 
       }
 
@@ -11999,8 +12003,8 @@ tablet 800px */
 
     /*frontpage-page-panel */
     #frontpage_container {
-
-
+      background-image:url('../images/raythompsonwebdev_banner-667.png');
+      
       /*homepage container*/
       div#text-box-front {
         width: 100%;
@@ -12544,6 +12548,13 @@ tablet 800px */
 
       .seperator {
         height: 1%;
+      }
+
+      h1,
+      h1.page-title {
+        font-size: 1em;
+        
+        
       }
 
       
@@ -13581,7 +13592,7 @@ tablet 667px*/
 
     /*frontpage-page-panel */
     #frontpage_container {
-
+      background-image:url('../images/raythompsonwebdev_banner-536.png');
 
       /*homepage container*/
       div#text-box-front {
@@ -13688,15 +13699,15 @@ tablet 667px*/
     
     /*front-page image container*/
     div#svg-image-container {
-      
+      height: 240px;
       
       h1{
-        font-size:2.6em;
+        font-size:2.5em;
         
       
       }
       h2{
-        font-size:1.4em;
+        font-size:1.3em;
         
       }
 
@@ -14111,7 +14122,7 @@ tablet 667px*/
         /*gallery page styles*/
 
         h1.post-meta-key {
-
+          font-size: 1em;
           margin-bottom: 0.5em;
 
         }
@@ -14124,7 +14135,7 @@ tablet 667px*/
         a.webformats {
 
           line-height: 40px;
-
+          font-size:0.8em;
           &:hover {
             color: $color1;
 
@@ -14731,7 +14742,7 @@ tablet 667px*/
     position: fixed;
     z-index: 100;
     top: 0.2em;
-    left: calc(86% - 1vw);
+    left: 86%;
     padding: 0.7em;
     font-size: 1em;
     text-transform: uppercase;
@@ -15191,7 +15202,7 @@ tablet 667px*/
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center;
-
+      
 
       /*homepage container*/
       div#text-box-front {
@@ -15298,15 +15309,15 @@ tablet 667px*/
       /*front-page image container*/
       div#svg-image-container {
       
-        
+        height: 230px;
         
         h1{
-          font-size:2.4em;
+          font-size:2.2em;
           
         
         }
         h2{
-          font-size:1.3em;
+          font-size:1.2em;
           
         }
 
@@ -15682,6 +15693,13 @@ tablet 667px*/
         height: 1%;
       }
 
+      h1,
+      h1.page-title {
+        font-size: 0.9em;
+        
+        
+      }
+
       
       .websiteImage {
         width: 45%;
@@ -15693,7 +15711,7 @@ tablet 667px*/
         /*gallery page styles*/
 
         h1.post-meta-key {
-
+          font-size: 0.9em;
           margin-bottom: 0.5em;
 
         }
@@ -16267,9 +16285,10 @@ mobile 480px */
 
   #menu-toggle {
 
-    left: calc(84% - 1vw);
+    left: 86%;
     font-size: 0.9em;
-    top: 3em;
+    top: 2.6em;
+    
 
   }
 
@@ -16358,7 +16377,7 @@ mobile 480px */
 
       h1#logo {
 
-        font-size: 1.15em;
+        font-size: 1.2em;
 
 
 
@@ -16701,16 +16720,8 @@ mobile 480px */
 
     /*frontpage-page-panel */
     #frontpage_container {
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-      align-items: flex-start;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
+      
+      background-image:url('../images/raythompsonwebdev_banner-480.png');
 
 
       /*homepage container*/
@@ -16763,7 +16774,7 @@ mobile 480px */
 
             p{
               
-              font-size: 0.8em;
+              font-size: 0.75em;
               
             }
             
@@ -16823,18 +16834,22 @@ mobile 480px */
       div#svg-image-container {
       
         h1{
-          font-size:2.3em;
+          font-size:2.1em;
+          text-align:center;
           
         
         }
         h2{
-          font-size:1.3em;
+          font-size:1.1em;
+          text-align:center;
           
         }
 
         a#projectLink{
           
           font-size:1.2em;
+          float:none;
+          margin:auto;
           
           &:hover{
             background-color:$color4;
@@ -17243,7 +17258,7 @@ mobile 480px */
 
         p.websitetext {
           margin-bottom: 0.5em;
-
+          font-size: 0.75em;
         }
 
         a.webformats {
@@ -17852,7 +17867,7 @@ mobile 360px */
 
   #menu-toggle {
 
-    left: calc(82% - 1vw);
+    left: 82%;
 
   }
 
@@ -18286,16 +18301,7 @@ mobile 360px */
 
     /*frontpage-page-panel */
     #frontpage_container {
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-      align-items: flex-start;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
+      background-image:url('../images/raythompsonwebdev_banner-360.png');
 
 
       /*homepage container*/
@@ -18348,7 +18354,7 @@ mobile 360px */
 
             p{
               
-              font-size: 0.8em;
+              font-size: 0.75em;
               
             }
             
@@ -18408,12 +18414,12 @@ mobile 360px */
       
         
         h1{
-          font-size:2.2em;
+          font-size:2em;
           
         
         }
         h2{
-          font-size:1.2em;
+          font-size:1em;
           
         }
 
@@ -18929,7 +18935,7 @@ mobile 360px */
             .comments-link,
             .date,
             .posted-on {
-              font-size: 0.75em;
+              font-size: 0.7em;
 
               a {
 
@@ -19418,7 +19424,7 @@ mobile 320px */
 
   #menu-toggle {
 
-    left: calc(81% - 1vw);
+    
     font-size: 0.8em;
 
   }
@@ -19841,17 +19847,8 @@ mobile 320px */
 
     /*frontpage-page-panel */
     #frontpage_container {
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-      align-items: flex-start;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-
+      
+      background-image:url('../images/raythompsonwebdev_banner-320.png');
 
       /*homepage container*/
       div#text-box-front {
@@ -19903,7 +19900,7 @@ mobile 320px */
 
             p{
               
-              font-size: 0.8em;
+              font-size: 0.7em;
               
             }
             
@@ -19963,18 +19960,18 @@ mobile 320px */
       
                 
         h1{
-          font-size:2.1em;
+          font-size:1.8em;
           
         
         }
         h2{
-          font-size:1.1em;
+          font-size:1em;
           
         }
 
         a#projectLink{
           
-          font-size:1.2em;
+          font-size:1.1em;
           
           &:hover{
             background-color:$color4;

@@ -16,11 +16,11 @@ const BlogPost = ({ pageContext , props }) => {
   const previousUrl = index - 1 == 1 ? "/" : (index - 1).toString()
   const nextUrl = (index + 1).toString()
   
-
   return (
    <div>
       <SEO title="Blog Post" />
     {group.map(({ node }) => (
+      
       <article className="post group" id="post">
         <h1 className="page-title">
           {node.title}
@@ -100,6 +100,7 @@ const BlogPost = ({ pageContext , props }) => {
         </footer>
       </article>
     ))}
+
       <div className="previousLink">
         <NavLink test={first} url={previousUrl} text="Go to Previous Page" />
       </div>

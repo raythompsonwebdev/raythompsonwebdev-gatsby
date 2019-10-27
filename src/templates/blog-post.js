@@ -35,7 +35,6 @@ export const data = graphql`
 `
 
 const BlogPost = props => {
-
   
   return (
     <main id="main-content">
@@ -118,6 +117,7 @@ const BlogPost = props => {
           <p>Text</p>
         </footer>
       </article>
+   
    </main>
   )
 }
