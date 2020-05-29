@@ -10,15 +10,7 @@ export const data = graphql`
           id
           slug
           title
-          featured_media {
-            localFile {
-              childImageSharp {
-                fixed {
-                  src
-                }
-              }
-            }
-          }
+          
 
           meta {
             project_code
@@ -33,19 +25,21 @@ export const data = graphql`
 `
 
 const ProjectSingle = props => {
+  
   return (
+    
   <main id="main-content">
       <SEO title="Single Project Page" />
-
+{console.log(props)}
       <article className="post group">
         <h1> {props.data.allWordpressWpProject.edges[0].node.title} </h1>
         <figure className="websiteImage">
           <Link to="" className="fancybox" title="">
             <img
-              src={
-                props.data.allWordpressWpProject.edges[0].node.featured_media
-                  .localFile.childImageSharp.fixed.src
-              }
+              // src={
+              //   props.data.allWordpressWpProject.edges[0].node.featured_media
+              //     .localFile.childImageSharp.fixed.src
+              // }
               alt=""
             />
           </Link>

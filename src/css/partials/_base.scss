@@ -16,7 +16,7 @@
 *,
 *:after,
 *:before {
-    @include box-sizing($type: border-box);
+    @include box-sizing($type: inherit);
 }
 
 * html {
@@ -24,15 +24,9 @@
     margin: 0;
     padding: 0;
     outline: none;
+    @include box-sizing($type: border-box);
 }
 
-* html .clearfix {
-    height: 1%;
-}
-
-html[xmlns] .clearfix {
-    display: block;
-}
 /*Clearfix*/
 
 *.float-divider {
@@ -106,29 +100,41 @@ a {
     color: $color1;
     margin: 0;
     font-weight: normal;
+    cursor: pointer;
     @include originTran(50% 50%);
     @include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
+
     img {
         border: 0;
         outline: none;
     }
+    
     &:link {
-        color: $color1;
         
+        color: $color1;
+
     }
+
     &:visited {
-        color: $color7;
-        font-weight:bold;
+        
+        color: $color1;
     }
+
     &:focus {
-        color: $color7;
+        //background-color: $color1;
+        outline: 1px dotted $color4;
+        color: $color1;
     }
+
     &:hover {
-        color: $color5;
+        background-color: $color1;
         font-weight: bold;
+        color: $color4;
     }
+
     &:active {
-        color: $color9;
+        background-color: $color1;
+        color: $color4;
     }
    
   }

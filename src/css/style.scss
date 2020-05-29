@@ -1,23 +1,3 @@
-/*
-Theme Name: raythompsonwebdev-single
-Theme URI: 
-Description: Custom Template
-Version: 1.1
-Author: Raymond Thompson
-Author URI: http://www.raythompsonwebdev.co.uk
-License: GNU General Public License v2.0 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags:left-sidebar, flexible-header, custom-background, custom-header, editor-style, custom-logo, featured-images, custom-menu, portfolio 
-Text Domain: raythompsonwebdev-single
-Domain Path: /language
-
-raythompsonwebdev-single WordPress Theme, Copyright 2016 WordPress.org
-
-raythompsonwebdev-single is based on Underscores http://underscores.me/, 
-(C) 2012-2017 Automattic, Inc. 
-License: GNU General Public License v2 or later
-
-*/
 
 @import "partials/base";
 @import "partials/variables";
@@ -118,9 +98,7 @@ desktop 1920px*/
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
-
-
-
+    
     /*Site Logo*/
     .site-logo {
       position: relative;
@@ -128,9 +106,9 @@ desktop 1920px*/
       left: 0;
       width: 5%;
       height: 55px;
-      -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+      -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
 
       a {
         position: absolute;
@@ -141,7 +119,7 @@ desktop 1920px*/
         background: $color1;
         color: $color4;
         text-decoration: none;
-        line-height: 50px;
+        line-height: normal;
         width: 100%;
         height: 100%;
         @include originTran(50% 50%);
@@ -211,9 +189,9 @@ desktop 1920px*/
     hgroup {
       width: 49%;
       height: auto;
-      -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+      -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
 
       h1#logo {
         margin: 0;
@@ -221,7 +199,7 @@ desktop 1920px*/
         width: 100%;
         height: 35px;
         font-weight: bold;
-        line-height: 35px;
+        line-height: 1.5;
         color: $color4;
         text-transform: uppercase;
         
@@ -249,7 +227,7 @@ desktop 1920px*/
         font-size: 1.5em;
         height: 35px;
         font-weight: bold;
-        line-height: 35x;
+        line-height: 1.5;
         color: $color4;
         text-shadow: 2px 1px $color1;
         text-indent: 0.5em;
@@ -276,12 +254,13 @@ desktop 1920px*/
         display: block;
         width: 100%;
         letter-spacing: 0.1em;
-        line-height: 20px;
+        line-height: 1.5;
         font-size: 0.75em;
         font-weight: normal;
         padding: 0;
         clear: left;
         text-indent: 0.5em;
+        height:20px;
       }
 
       #title {
@@ -301,9 +280,9 @@ desktop 1920px*/
 
       margin: 0.5em 0 0 0;
       height: 35px;
-      -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+      -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
 
       ul {
         height: 35px;
@@ -311,12 +290,15 @@ desktop 1920px*/
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
+        -webkit-flex-flow: row ;
+        -ms-flex-flow: row;
+        flex-flow: row;
         -webkit-align-items: flex-start;
         -ms-flex-align: start;
         align-items: flex-start;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
 
 
         li {
@@ -324,9 +306,9 @@ desktop 1920px*/
           height: 35px;
           margin-right: 0.2em;
           text-align: center;
-          -webkit-flex: 0 0 auto;
-          -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+          -webkit-flex: 1 0 auto;
+          -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 
           a {
             
@@ -334,34 +316,14 @@ desktop 1920px*/
             font-size: 0.85em;
             display: block;
             letter-spacing: 0.1em;
-            color: $color1;
-
-            &:link {
-              
-              color: $color1;
-            }
+            color: $color4;
 
             &:visited {
               background-color: $color1;
-              color: $color1;
-            }
+              color: $color7;
+          }
 
-            &:focus {
-              background-color: $color1;
-              color: $color1;
-            }
-
-            &:hover {
-              background-color: $color1;
-              font-weight: bold;
-              
-              color: $color4;
-            }
-
-            &:active {
-              background-color: $color1;
-              color: $color1;
-            }
+            
           }
         }
       }
@@ -390,7 +352,7 @@ desktop 1920px*/
 
       p {
         font-size: 0.9em;
-        line-height: 1.9em;
+        line-height: 1.5;
         background-color: $color4;
         padding: 0.5em;
       }
@@ -401,8 +363,9 @@ desktop 1920px*/
         li {
 
           font-size: 0.9em;
-          line-height: 35px;
+          line-height: 1.5;
           display: block;
+          height:35px;
 
           div.error {
             font-size: 0.9em;
@@ -415,12 +378,13 @@ desktop 1920px*/
             color: $color1;
             content: "\f19d";
             margin: 0 1%;
-            line-height: 1.5em;
+            line-height: 1.5;
 
           }
 
           a {
             display: inline-block;
+            background-color:unset;
 
             &:hover {
               font-weight: bold;
@@ -430,9 +394,7 @@ desktop 1920px*/
           }
 
         }
-      }
-
-     
+      }     
     }
 
     #blogbox {
@@ -467,17 +429,17 @@ desktop 1920px*/
 
         h1 {
           font-size: 1em;
-          height: auto;
+          height: 50px;
           text-align: center;
           background-color: $color1;
           color: $color4;
           margin-bottom: 0.5em;
-          line-height: 50px;
+          line-height: 1.5;
         }
 
         p {
           font-size: 0.9em;
-          line-height: 1.9em;
+          line-height: 1.5em;
           background-color: $color4;
           padding: 0.5em;
           margin-top: 0.5em;
@@ -485,7 +447,7 @@ desktop 1920px*/
 
         a {
           background-color: $color1;
-          line-height: 35px;
+          line-height: 1.5;
           height: 35px;
           font-size: 0.85em;
           display: block;
@@ -499,8 +461,7 @@ desktop 1920px*/
             background-color: $color5;
             color: $color1;
             font-weight: bold;
-            
-            cursor: pointer;
+                        
 
           }
 
@@ -513,23 +474,23 @@ desktop 1920px*/
     h1 {
       font-size: 1.4em;
       letter-spacing: 0.05em;
-      line-height: 60px;
-      height: auto;
+      line-height: 1.5;
+      height: 60px;
 
     }
 
     h2 {
       font-size: 1.3em;
       letter-spacing: 0.05em;
-      line-height: 50px;
-      height: auto;
+      line-height: 1.5;
+      height: 50px;
     }
 
     h3 {
       font-size: 1.2em;
       letter-spacing: 0.05em;
-      line-height: 40px;
-      height: auto;
+      line-height: 1.5;
+      height: 40px;
     }
 
     /*Search Box*/
@@ -558,7 +519,7 @@ desktop 1920px*/
 
           display: block;
           float: left;
-          line-height: 30px;
+          line-height: 1.5;
           height: 30px;
           padding: 0;
           color: $color1;
@@ -576,7 +537,7 @@ desktop 1920px*/
           padding: 0;
           display: inline-block;
           border: none;
-          line-height: 30px;
+          line-height: 1.5;
         }
 
         input[type="submit"] {
@@ -593,7 +554,8 @@ desktop 1920px*/
           font-size: 0.9em;
           border: none;
           font-family: ($FontStyle);
-          line-height: 30px;
+          height: 30px;
+          line-height: 1.5;
 
           &:hover {
             color: $color4;
@@ -619,7 +581,7 @@ desktop 1920px*/
       width: 91%;
       margin: 1.8% auto;
       color: $color1;
-      line-height: 1.8em;
+      line-height: 1.8;
       font-style: italic;
       letter-spacing: 0.05em;
       font-size: 0.9em;
@@ -638,7 +600,7 @@ desktop 1920px*/
 
       p {
 
-        line-height: 1.6em;
+        line-height: 1.6;
       }
 
     }
@@ -670,7 +632,7 @@ desktop 1920px*/
 
             label {
               height: 30px;
-              line-height: 30px;
+              line-height: 1.5;
               font-size: 1em;
             }
 
@@ -755,123 +717,99 @@ desktop 1920px*/
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+
+    address.contact-details {
       margin: 2em 0;
       width: 45%;
       display: block;
       float: left;
 
-      li {
-        font-size: 1em;
-        font-family: "FontAwesome", ($FontStyle);
-
-        &:before {
-          font-family: 'FontAwesome';
-          content: "\f0e0";
-          font-style: normal;
-          display: block;
-          line-height: 40px;
-          height: 40px;
-          width: 45px;
-          text-align: center;
-          font-size: 1.4em;
-          float: left;
-        }
-
-        a {
-          width: auto;
-          display: inline-block;
+      ul{
+        margin:0;
+        padding:0;
+        li {
           font-size: 1em;
-          line-height: 40px;
+          list-style:none;
+          height:auto;
 
-          &:hover {
-            color: $color4;
-            font-weight: normal;
-            cursor: pointer;
+                          
+          a {
+            width: auto;
+            display: inline-block;
+            font-size: 1em;
+            line-height: 40px;
+            font-family: "FontAwesome", $FontStyle;
+
+            &:hover {
+              font-weight: bold;
+              background-color:unset;
+            }
           }
-        }
 
-      }
-
-      li:nth-of-type(2) {
-        font-size: 1em;
-        font-family: "FontAwesome";
-
-        &:before {
-          content: "\f39e";
-          font-size: 1.4em;
-        }
-
-        a {
-          width: auto;
-          font-size: 1em;
-
-          &:hover {
-            font-weight: normal;
+          a[href^="mailto"]:before {          
+            content: "\f0e0";
+            font-style: normal;
+            display: block;
+            line-height: 40px;
+            height: 40px;
+            width: 45px;
+            text-align: center;
+            font-size: 1.4em;
+            float: left;
           }
-        }
 
-      }
+          a[href^="https://www.facebook.com"]:before {
+            content: "\f39e";
+            font-size: 1.4em;
+            font-style: normal;
+            display: block;
+            line-height: 40px;
+            height: 40px;
+            width: 45px;
+            text-align: center;
+            font-size: 1.4em;
+            float: left;
+          } 
+          
+          a[href^="https://twitter.com"]:before {
+            content: "\f099";
+            font-style: normal;
+            display: block;
+            line-height: 40px;
+            height: 40px;
+            width: 45px;
+            text-align: center;
+            font-size: 1.4em;
+            float: left;
+          }  
 
-      li:nth-of-type(3) {
-        font-size: 1em;
-        font-family: "FontAwesome";
-
-        &:before {
-          content: "\f099";
-          font-size: 1.4em;
-        }
-
-        a {
-          width: auto;
-          font-size: 1em;
-
-          &:hover {
-            font-weight: normal;
+          a[href^="https://www.linkedin.com"]:before {
+            content: "\f0e1";
+            font-style: normal;
+            display: block;
+            line-height: 40px;
+            height: 40px;
+            width: 45px;
+            text-align: center;
+            font-size: 1.4em;
+            float: left;
+          }   
+        
+          a[href^="https://github.com"]:before {
+            content: "\f09b";
+            font-style: normal;
+            display: block;
+            line-height: 40px;
+            height: 40px;
+            width: 45px;
+            text-align: center;
+            font-size: 1.4em;
+            float: left;
           }
-        }
 
+        }
       }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-        font-family: "FontAwesome";
-
-        &:before {
-          content: "\f0e1";
-          font-size: 1.4em;
-        }
-
-        a {
-          width: auto;
-          font-size: 1em;
-
-          &:hover {
-            font-weight: normal;
-          }
-        }
-
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-        font-family: "FontAwesome";
-
-        &:before {
-          content: "\f09b";
-          font-size: 1.4em;
-        }
-
-        a {
-          width: auto;
-          font-size: 1em;
-
-          &:hover {
-            font-weight: normal;
-          }
-        }
-
-      }
+      
     }
 
     /*frontpage-page-panel */
@@ -891,11 +829,8 @@ desktop 1920px*/
       background-image:url('../images/raythompsonwebdev_banner-1.0.1.png');
       background-repeat: no-repeat;
       background-size: 100% auto;
-     
-
-
-
-
+ 
+    
       /*homepage container*/
       div#text-box-front {
         -webkit-flex: 0 0 auto;
@@ -937,7 +872,7 @@ desktop 1920px*/
             text-align: left;
             text-indent: 0.2em;
             font-family: ($FontStyleHeader);
-            margin:0 0 0.5em 0;
+            margin:0 ;
 
           }
 
@@ -1018,7 +953,7 @@ desktop 1920px*/
 
             a {
               width: 100%;
-
+              background-color:unset;
               &:hover {
                 width: 100%;
                 color: $color4;
@@ -1080,7 +1015,7 @@ desktop 1920px*/
       }
 
       /*front-page image container*/
-      div#svg-image-container {
+      section#banner-container {
         -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
         flex: 0 0 auto;
@@ -1109,6 +1044,7 @@ desktop 1920px*/
           margin:0 0 1em 0;
           padding:0;
           text-align: left;
+          line-height:40px;
         }
 
         a#projectLink{
@@ -1156,21 +1092,24 @@ desktop 1920px*/
       -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
       flex-flow: row wrap;
-      -webkit-justify-content: space-evenly;
-      -ms-flex-pack: space-evenly;
-      justify-content: space-evenly;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-align-contents: flex-start;
+      -ms-align-contents: start;
+      align-content: flex-start;
       /*first text block*/
 
       #text-box-profile {
         -webkit-order: 0;
         -ms-flex-order: 0;
         order: 0;
-        -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
-        width: 53%;
+        -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+        width: 45%;
         display: inline-block;
-        margin: 0;
+        margin: 0 0.5em 0 0;
         height: auto;
 
         h1 {
@@ -1186,6 +1125,7 @@ desktop 1920px*/
           margin-bottom: 0.25em;
           background-color: $color4;
           padding: 0.5em;
+          width:98%;
         }
 
         .introimg {
@@ -1207,12 +1147,12 @@ desktop 1920px*/
         -webkit-order: 4;
         -ms-flex-order: 4;
         order: 4;
-        -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
-        width: 48%;
+        -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+        width: 45%;
         display: inline-block;
-        margin: 0;
+        margin-left: 0.5em;
         height: auto;
 
         h1 {
@@ -1222,10 +1162,10 @@ desktop 1920px*/
         }
 
         p {
-          width: 100%;
+          width: 98%;
           line-height: 1.9em;
           font-size: 0.9em;
-          margin-bottom: 0.25em;
+          margin:0 0 0.25em 0;
           padding: 0.5em;
           background-color: $color4;
         }
@@ -1249,9 +1189,9 @@ desktop 1920px*/
         -webkit-order: 3;
         -ms-flex-order: 3;
         order: 3;
-        -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
         width: 50%;
         height: 500px;
         display: block;
@@ -1289,19 +1229,20 @@ desktop 1920px*/
         button.slider-btn {
           position: relative;
           top: -50px;
-          width: 49%;
+          width: 48%;
           line-height: 40px;
           height: 40px;
           background-color: $color1;
           color: $color4;
           outline: none;
           border: none;
-          margin-right: 0.25em;
+          
 
           &:hover {
             background-color: $color5;
             color: $color1;
             font-weight:bold;
+            cursor:pointer;
           }
 
         }
@@ -1513,9 +1454,9 @@ desktop 1920px*/
         -webkit-order: 2;
         -ms-flex-order: 2;
         order: 2;
-        -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
         width: 45%;
         height: 420px;
         display: block;
@@ -1790,8 +1731,8 @@ desktop 1920px*/
                 @include Transition(all 0.2s linear 0s);
 
                 &:hover {
-                  color: $color4;
-                  background-color: $color5;
+                  color: $color1;
+                  background-color: $color3;
                   font-weight: bold;
                   @include boredrady (10px);
                 }
@@ -1999,7 +1940,7 @@ desktop 1920px*/
       }
 
       .website-text {
-        width: 100%;
+        width: 96%;
         display: block;
         padding: 1em;
         height:auto;
@@ -2034,6 +1975,7 @@ desktop 1920px*/
           text-align: left;
           display: block;
           height: auto;
+          background-color:unset;
           color: $color1;
           margin-bottom: 1em;
           @include originTran(50% 50%);
@@ -2124,6 +2066,7 @@ desktop 1920px*/
 
         a {
           display: block;
+          background-color:unset;
         }
 
         img {
@@ -2216,6 +2159,7 @@ desktop 1920px*/
                 text-align: center;
                 @include originTran(50% 50%);
                 @include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
+                background-color:unset;
                 &:hover {
                   font-weight: bold;
                   color: $color4;
@@ -2260,7 +2204,7 @@ desktop 1920px*/
 
           &:hover {
             color: $color1;
-            background-color: $color5;
+            background-color: $color3;
             font-weight: bold;
             margin: 2% 0;
             letter-spacing: 0.075em;
@@ -2392,7 +2336,7 @@ desktop 1920px*/
               text-align: center;
               display: inline-block;
               height: 100%;
-              background-color: $color2;
+              background-color:unset;
               line-height: 35px;
               @include originTran(50% 50%);
               @include Transition(color 0.2s linear 0s, color 0.2s linear 0s);
@@ -2503,6 +2447,7 @@ desktop 1920px*/
 
           a {
             font-size: 0.90em;
+            background-color:unset;
             color: $color1;
             margin: 0;
             width: auto;
@@ -2510,8 +2455,7 @@ desktop 1920px*/
             padding: 0.5%;
             &:hover {
               font-size: 0.90em;
-              color: $color3;
-              margin: 0;
+              font-weight:bold;
               width: auto;
               display: inline-block;
               padding: 0.5%;
@@ -2543,7 +2487,7 @@ desktop 1920px*/
 
             &:hover {
               color: $color1;
-              background-color: $color5;
+              background-color: $color3;
               font-weight: bold;
               line-height: 65px;
 
@@ -3183,7 +3127,7 @@ desktop 1920px*/
         color: $color1;
 
         &:hover {
-          background-color: $color1;
+          background-color: $color2;
           color: $color4;
         }
       }
@@ -3206,16 +3150,7 @@ desktop 1920px*/
 
     }
 
-    p#copyr {
-      color: $color1;
-      text-align: right;
-      font-size: 10px;
-      width: 48%;
-      margin: 0;
-      float: right;
-      display: block;
-      padding-top: 3%;
-    }
+    
 
     ul {
       width: 45%;
@@ -3236,6 +3171,7 @@ desktop 1920px*/
         a {
 
           text-decoration: none;
+          background-color:unset;
           color: $color1;
           margin: 0;
           padding: 0;
@@ -3246,13 +3182,29 @@ desktop 1920px*/
           @include originTran(50% 50%);
           @include Transition(all 0.2s ease-in-out);
 
+
+
           &:hover {
-            color: $color4;
+            color: $color1;
+            font-weight:bold;
             margin: 0;
-            font-weight: bold;
+            
           }
         }
       }
+    }
+  }
+
+  p#copyr {
+    color: $color1;
+    text-align: right;
+    font-size: 10px;
+    width: 48%;
+    margin: 0;
+    display: block;
+    padding-top: 3%;
+    a{
+      background-color:unset;
     }
   }
 }
@@ -3709,114 +3661,62 @@ desktop 1920px*/
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address.contact-details {
       
       width: 45%;
       
-
-      li {
-        font-size: 1em;
-        
-
-        &:before {
-          
-          text-align: center;
-          font-size: 1.4em;
-          
-        }
-
-        a {
-          
+      ul{
+        li {
           font-size: 1em;
-          
+          list-style:none;
+                          
+          a {
+            
+            font-size: 1em;
+            
 
-          &:hover {
-            color: $color4;
+            &:hover {
+              font-weight: bold;
+              
+            }
+          }
+
+          a[href^="mailto"]:before {          
+            content: "\f0e0";
+            
+            font-size: 1.4em;
             
           }
-        }
 
-      }
-
-      li:nth-of-type(2) {
-        font-size: 1em;
-        
-
-        &:before {
+          // a[href^="https://twitter.com"]:before {
+          //   content: "\f39e";
+          //   font-size: 1.4em;
+          // } 
           
-          font-size: 1.4em;
-        }
+          a[href^="https://twitter.com"]:before {
+            content: "\f099";
+            
+            font-size: 1.4em;
+            
+          }  
 
-        a {
-          
-          font-size: 1em;
-
-          &:hover {
-            font-weight: normal;
-          }
-        }
-
-      }
-
-      li:nth-of-type(3) {
-        font-size: 1em;
+          a[href^="https://www.linkedin.com"]:before {
+            content: "\f0e1";
+            
+            font-size: 1.4em;
+            
+          }   
         
-
-        &:before {
-          content: "\f099";
-          font-size: 1.4em;
-        }
-
-        a {
-          width: auto;
-          font-size: 1em;
-
-          &:hover {
-            font-weight: normal;
+          a[href^="https://github.com"]:before {
+            content: "\f09b";
+            
+            font-size: 1.4em;
+            
           }
-        }
 
+        }
       }
 
-      li:nth-of-type(4) {
-        font-size: 1em;
-        
-
-        &:before {
-          content: "\f0e1";
-          font-size: 1.4em;
-        }
-
-        a {
-          width: auto;
-          font-size: 1em;
-
-          &:hover {
-            font-weight: normal;
-          }
-        }
-
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-        
-
-        &:before {
-          content: "\f09b";
-          font-size: 1.4em;
-        }
-
-        a {
-          width: auto;
-          font-size: 1em;
-
-          &:hover {
-            font-weight: normal;
-          }
-        }
-
-      }
     }
 
     /*frontpage-page-panel */
@@ -3929,7 +3829,7 @@ desktop 1920px*/
       }
 
       /*front-page image container*/
-      div#svg-image-container {
+      section#banner-container {
         
         height: 250px;
         
@@ -3980,7 +3880,7 @@ desktop 1920px*/
 
       #text-box-profile {
         
-        width: 53%;
+        width: 45%;
         
 
         h1 {
@@ -4062,7 +3962,7 @@ desktop 1920px*/
 
         button.slider-btn {
           
-          width: 49%;
+          width: 48%;
          
 
           &:hover {
@@ -4504,7 +4404,7 @@ desktop 1920px*/
       }
 
       .website-text {
-        width: 100%;
+        width: 96%;
         
 
         /*gallery page styles*/
@@ -5303,12 +5203,7 @@ desktop 1920px*/
 
     }
 
-    p#copyr {
-      
-      font-size: 10px;
-      width: 48%;
-      
-    }
+   
 
     ul {
       width: 45%;
@@ -5333,6 +5228,12 @@ desktop 1920px*/
         }
       }
     }
+  }
+
+  p#copyr {
+      
+    width: 48%;
+    
   }
 }
 
@@ -5700,90 +5601,60 @@ desktop 1440px*/
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address.contact-details {
 
+      ul{
+        li {
+          font-size: 1em;
+          list-style:none;
+                          
+          a {
+            
+            font-size: 1em;
+            
 
-      li {
-        font-size: 0.9em;
-        font-family: "FontAwesome", ($FontStyle);
+            &:hover {
+              font-weight: bold;
+              
+            }
+          }
 
-        &:before {
+          a[href^="mailto"]:before {          
+            content: "\f0e0";
+            
+            font-size: 1.4em;
+            
+          }
 
-          font-size: 1.3em;
+          // a[href^="https://twitter.com"]:before {
+          //   content: "\f39e";
+          //   font-size: 1.4em;
+          // } 
+          
+          a[href^="https://twitter.com"]:before {
+            content: "\f099";
+            
+            font-size: 1.4em;
+            
+          }  
+
+          a[href^="https://www.linkedin.com"]:before {
+            content: "\f0e1";
+            
+            font-size: 1.4em;
+            
+          }   
+        
+          a[href^="https://github.com"]:before {
+            content: "\f09b";
+            
+            font-size: 1.4em;
+            
+          }
 
         }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
       }
-
-      li:nth-of-type(2) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
-
-      li:nth-of-type(3) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
+      
     }
 
     /*frontpage-page-panel */
@@ -5891,7 +5762,7 @@ desktop 1440px*/
 
       /*front-page image container*/
       /*front-page image container*/
-      div#svg-image-container {
+      section#banner-container {
         
         height: 250px;
         
@@ -5944,12 +5815,9 @@ desktop 1440px*/
 
       #text-box-profile {
 
-        width: 53%;
+        width: 45%;
 
 
-        //float: left;
-        margin: 0;
-        height: auto;
 
         h1 {
           font-size: 1.05em;
@@ -5973,12 +5841,10 @@ desktop 1440px*/
       /*second text block*/
       #text-box-profile-a {
 
-        width: 48%;
+        width: 45%;
 
 
-        //float: left;
-        margin: 0;
-        height: auto;
+    
 
         h1 {
           font-size: 1em;
@@ -6011,6 +5877,19 @@ desktop 1440px*/
 
           font-size: 1.2em;
 
+
+        }
+
+        button.slider-btn {
+          
+          width: 47%;
+          top: -20px;
+         
+
+          &:hover {
+            
+            font-weight:bold;
+          }
 
         }
 
@@ -7073,12 +6952,7 @@ desktop 1440px*/
 
     }
 
-    p#copyr {
-
-      width: 48%;
-
-      padding-top: 3%;
-    }
+    
 
     ul {
       width: 45%;
@@ -7099,6 +6973,12 @@ desktop 1440px*/
         }
       }
     }
+  }
+  p#copyr {
+
+    width: 48%;
+
+   
   }
 }
 
@@ -7418,90 +7298,60 @@ desktop 1280px*/
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address.contact-details {
 
+      ul{
+        li {
+          font-size: 1em;
+          list-style:none;
+                          
+          a {
+            
+            font-size: 1em;
+            
 
-      li {
-        font-size: 0.9em;
-        font-family: "FontAwesome", ($FontStyle);
+            &:hover {
+              font-weight: bold;
+              
+            }
+          }
 
-        &:before {
+          a[href^="mailto"]:before {          
+            content: "\f0e0";
+            
+            font-size: 1.4em;
+            
+          }
 
-          font-size: 1.3em;
+          // a[href^="https://twitter.com"]:before {
+          //   content: "\f39e";
+          //   font-size: 1.4em;
+          // } 
+          
+          a[href^="https://twitter.com"]:before {
+            content: "\f099";
+            
+            font-size: 1.4em;
+            
+          }  
+
+          a[href^="https://www.linkedin.com"]:before {
+            content: "\f0e1";
+            
+            font-size: 1.4em;
+            
+          }   
+        
+          a[href^="https://github.com"]:before {
+            content: "\f09b";
+            
+            font-size: 1.4em;
+            
+          }
 
         }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
       }
 
-      li:nth-of-type(2) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
-
-      li:nth-of-type(3) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
     }
 
     /*frontpage-page-panel */
@@ -7607,7 +7457,7 @@ desktop 1280px*/
 
       /*front-page image container*/
       /*front-page image container*/
-      div#svg-image-container {
+      section#banner-container {
         
         height: 250px;
         
@@ -7659,13 +7509,7 @@ desktop 1280px*/
       /*first text block*/
 
       #text-box-profile {
-
-        width: 53%;
-
-
-        //float: left;
-        margin: 0;
-        height: auto;
+        width: 45%;
 
         h1 {
           font-size: 1em;
@@ -7689,12 +7533,7 @@ desktop 1280px*/
       /*second text block*/
       #text-box-profile-a {
 
-        width: 48%;
-
-
-        //float: left;
-        margin: 0;
-        height: auto;
+        width: 45%;
 
         h1 {
           font-size: 1em;
@@ -7743,7 +7582,7 @@ desktop 1280px*/
         .hero-slider {
           text-align: left;
           margin: 0;
-
+          
           width: 100%;
 
           .mask {
@@ -8594,12 +8433,7 @@ desktop 1280px*/
     height: 120px;
 
 
-    p#copyr {
-
-      width: 48%;
-
-      padding-top: 3%;
-    }
+    
 
     ul {
       width: 45%;
@@ -8620,6 +8454,12 @@ desktop 1280px*/
         }
       }
     }
+  }
+  p#copyr {
+
+    width: 48%;
+
+    
   }
 
 }
@@ -8801,90 +8641,60 @@ desktop 1280px*/
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address.contact-details {
 
+      ul{
+        li {
+          font-size: 1em;
+          list-style:none;
+                          
+          a {
+            
+            font-size: 1em;
+            
 
-      li {
-        font-size: 0.9em;
-        font-family: "FontAwesome", ($FontStyle);
+            &:hover {
+              font-weight: bold;
+              
+            }
+          }
 
-        &:before {
+          a[href^="mailto"]:before {          
+            content: "\f0e0";
+            
+            font-size: 1.4em;
+            
+          }
 
-          font-size: 1.3em;
+          // a[href^="https://twitter.com"]:before {
+          //   content: "\f39e";
+          //   font-size: 1.4em;
+          // } 
+          
+          a[href^="https://twitter.com"]:before {
+            content: "\f099";
+            
+            font-size: 1.4em;
+            
+          }  
+
+          a[href^="https://www.linkedin.com"]:before {
+            content: "\f0e1";
+            
+            font-size: 1.4em;
+            
+          }   
+        
+          a[href^="https://github.com"]:before {
+            content: "\f09b";
+            
+            font-size: 1.4em;
+            
+          }
 
         }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
       }
 
-      li:nth-of-type(2) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
-
-      li:nth-of-type(3) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
     }
 
     /*frontpage-page-panel */
@@ -8991,7 +8801,7 @@ desktop 1280px*/
 
       /*front-page image container*/
       /*front-page image container*/
-      div#svg-image-container {
+      section#banner-container {
         
         height: 250px;
         
@@ -9044,12 +8854,8 @@ desktop 1280px*/
 
       #text-box-profile {
 
-        width: 48%;
+        width: 45%;
 
-
-        //float: left;
-        margin: 0;
-        height: auto;
 
         h1 {
           font-size: 1em;
@@ -9073,12 +8879,8 @@ desktop 1280px*/
       /*second text block*/
       #text-box-profile-a {
 
-        width: 45%;
+        width: 46%;
 
-
-        //float: left;
-        margin: 0;
-        height: auto;
 
         h1 {
           font-size: 1em;
@@ -9104,7 +8906,7 @@ desktop 1280px*/
       /*profile-page_container - hero-slider*/
       section#prof_cont-a {
 
-        width: 53%;
+        width: 50%;
         padding: 0.5em;
 
         h1 {
@@ -10351,90 +10153,60 @@ desktop 980px*/
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address.contact-details {
 
+      ul{
+        li {
+          font-size: 1em;
+          list-style:none;
+                          
+          a {
+            
+            font-size: 1em;
+            
 
-      li {
-        font-size: 0.9em;
-        font-family: "FontAwesome", ($FontStyle);
+            &:hover {
+              font-weight: bold;
+              
+            }
+          }
 
-        &:before {
+          a[href^="mailto"]:before {          
+            content: "\f0e0";
+            
+            font-size: 1.4em;
+            
+          }
 
-          font-size: 1.3em;
+          // a[href^="https://twitter.com"]:before {
+          //   content: "\f39e";
+          //   font-size: 1.4em;
+          // } 
+          
+          a[href^="https://twitter.com"]:before {
+            content: "\f099";
+            
+            font-size: 1.4em;
+            
+          }  
+
+          a[href^="https://www.linkedin.com"]:before {
+            content: "\f0e1";
+            
+            font-size: 1.4em;
+            
+          }   
+        
+          a[href^="https://github.com"]:before {
+            content: "\f09b";
+            
+            font-size: 1.4em;
+            
+          }
 
         }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
       }
 
-      li:nth-of-type(2) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
-
-      li:nth-of-type(3) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
     }
 
     /*frontpage-page-panel */
@@ -10540,7 +10312,7 @@ desktop 980px*/
 
       /*front-page image container*/
       /*front-page image container*/
-      div#svg-image-container {
+      section#banner-container {
         
         height: 250px;
         
@@ -10593,12 +10365,8 @@ desktop 980px*/
 
       #text-box-profile {
 
-        width: 48%;
+        width: 45%;
 
-
-        //float: left;
-        margin: 0;
-        height: auto;
 
         h1 {
           font-size: 0.95em;
@@ -10622,12 +10390,8 @@ desktop 980px*/
       /*second text block*/
       #text-box-profile-a {
 
-        width: 40%;
+        width: 45%;
 
-
-        //float: left;
-        margin: 0;
-        height: auto;
 
         h1 {
           font-size: 1em;
@@ -10653,14 +10417,14 @@ desktop 980px*/
       /*profile-page_container - hero-slider*/
       section#prof_cont-a {
 
-        width: 56%;
+        width: 50%;
         height: 500px;
         padding: 0.5em;
 
         button.slider-btn {
           
-          width: 48.5%;
-         
+          width: 46%;
+          top: -15px;
 
           &:hover {
             
@@ -10974,7 +10738,9 @@ desktop 980px*/
       }
 
       .website-text {
-        width: 100%;
+        width: 97%;
+        display: block;
+        padding: 0.5em;
         /*gallery page styles*/
 
         h1.post-meta-key {
@@ -11558,12 +11324,7 @@ desktop 980px*/
 
     }
 
-    p#copyr {
-
-      width: 48%;
-
-      padding-top: 3%;
-    }
+    
 
     ul {
       width: 45%;
@@ -11586,6 +11347,13 @@ desktop 980px*/
     }
   }
 
+  p#copyr {
+
+    width: 48%;
+    padding-top: 2%;
+
+   
+  }
 }
 
 
@@ -11912,93 +11680,61 @@ tablet 800px */
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address.contact-details {
       width: 100%;
 
-      li {
-        font-size: 0.9em;
-        font-family: "FontAwesome", ($FontStyle);
+      ul{
+        li {
+          font-size: 1em;
+          list-style:none;
+                          
+          a {
+            
+            font-size: 1em;
+            
 
-        &:before {
-
-          font-size: 1.3em;
-
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
-
-      li:nth-of-type(2) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-          &:hover {
-            font-size: inherit;
+            &:hover {
+              font-weight: bold;
+              
+            }
           }
-        }
 
+          a[href^="mailto"]:before {          
+            content: "\f0e0";
+            
+            font-size: 1.4em;
+            
+          }
+
+          // a[href^="https://twitter.com"]:before {
+          //   content: "\f39e";
+          //   font-size: 1.4em;
+          // } 
+          
+          a[href^="https://twitter.com"]:before {
+            content: "\f099";
+            
+            font-size: 1.4em;
+            
+          }  
+
+          a[href^="https://www.linkedin.com"]:before {
+            content: "\f0e1";
+            
+            font-size: 1.4em;
+            
+          }   
+        
+          a[href^="https://github.com"]:before {
+            content: "\f09b";
+            
+            font-size: 1.4em;
+            
+          }
+
+        }
       }
 
-      li:nth-of-type(3) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
     }
 
     /*frontpage-page-panel */
@@ -12108,7 +11844,7 @@ tablet 800px */
       }
 
       /*front-page image container*/
-      div#svg-image-container {
+      section#banner-container {
         -webkit-order: 0;
         -ms-flex-order: 0;
         order: 0;
@@ -12171,11 +11907,6 @@ tablet 800px */
         order: 0;
         width: 100%;
 
-
-        //float: left;
-        margin: 0;
-        height: auto;
-
         h1 {
           font-size: 1em;
 
@@ -12203,10 +11934,6 @@ tablet 800px */
         width: 100%;
 
 
-        //float: left;
-        margin: 0;
-        height: auto;
-
         h1 {
           font-size: 1em;
           line-height: 25px;
@@ -12233,9 +11960,9 @@ tablet 800px */
         -webkit-order: 3;
         -ms-flex-order: 3;
         order: 3;
-        width: 80%;
+        width: 96%;
         height: 500px;
-        margin: 1em;
+        margin: 0.5em;
 
         h1 {
 
@@ -12251,6 +11978,18 @@ tablet 800px */
             width: 100%;
 
           }
+        }
+
+        button.slider-btn {
+          
+          width: 48%;
+          top: -15px;
+
+          &:hover {
+            
+            font-weight:bold;
+          }
+
         }
 
         /*Hero Slider*/
@@ -12335,8 +12074,8 @@ tablet 800px */
         -webkit-order: 1;
         -ms-flex-order: 1;
         order: 1;
-        width: 75%;
-        margin: 1em;
+        width: 96%;
+        margin: 0.5em;
 
         h1 {
 
@@ -12567,7 +12306,7 @@ tablet 800px */
       }
 
       .website-text {
-        width: 100%;
+        width: 97%;
         /*gallery page styles*/
 
         h1.post-meta-key {
@@ -13145,12 +12884,7 @@ tablet 800px */
 
     }
 
-    p#copyr {
-
-      width: 48%;
-
-      padding-top: 3%;
-    }
+    
 
     ul {
       width: 45%;
@@ -13172,7 +12906,12 @@ tablet 800px */
       }
     }
   }
+  p#copyr {
 
+    width: 48%;
+
+    
+  }
 
 }
 
@@ -13503,91 +13242,60 @@ tablet 667px*/
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address.contact-details {
+      
+      ul{
+        li {
+          font-size: 1em;
+          list-style:none;
+                          
+          a {
+            
+            font-size: 1em;
+            
 
-
-      li {
-        font-family: "FontAwesome", ($FontStyle);
-
-        &:before {
-
-          font-size: 1.3em;
-
-        }
-
-        a {
-          font-size: 0.9em;
-
-        }
-
-      }
-
-      li:nth-of-type(2) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-          &:hover {
-            font-size: inherit;
+            &:hover {
+              font-weight: bold;
+              
+            }
           }
-        }
 
+          a[href^="mailto"]:before {          
+            content: "\f0e0";
+            
+            font-size: 1.4em;
+            
+          }
+
+          // a[href^="https://twitter.com"]:before {
+          //   content: "\f39e";
+          //   font-size: 1.4em;
+          // } 
+          
+          a[href^="https://twitter.com"]:before {
+            content: "\f099";
+            
+            font-size: 1.4em;
+            
+          }  
+
+          a[href^="https://www.linkedin.com"]:before {
+            content: "\f0e1";
+            
+            font-size: 1.4em;
+            
+          }   
+        
+          a[href^="https://github.com"]:before {
+            content: "\f09b";
+            
+            font-size: 1.4em;
+            
+          }
+
+        }
       }
 
-      li:nth-of-type(3) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.3em;
-        }
-
-        a {
-
-          font-size: 0.9em;
-
-        }
-
-      }
     }
 
     /*frontpage-page-panel */
@@ -13698,7 +13406,7 @@ tablet 667px*/
 
     
     /*front-page image container*/
-    div#svg-image-container {
+    section#banner-container {
       height: 240px;
       
       h1{
@@ -13750,11 +13458,6 @@ tablet 667px*/
 
         width: 100%;
 
-
-        //float: left;
-        margin: 0;
-        height: auto;
-
         h1 {
           font-size: 1em;
 
@@ -13778,11 +13481,7 @@ tablet 667px*/
       #text-box-profile-a {
 
         width: 100%;
-
-
-        //float: left;
-        margin: 0;
-        height: auto;
+   
 
         h1 {
           font-size: 1em;
@@ -13814,6 +13513,18 @@ tablet 667px*/
 
           font-size: 1.1em;
 
+
+        }
+
+        button.slider-btn {
+          
+          width: 46%;
+          top: -15px;
+
+          &:hover {
+            
+            font-weight:bold;
+          }
 
         }
 
@@ -14118,7 +13829,7 @@ tablet 667px*/
       }
 
       .website-text {
-        width: 100%;
+        width: 97%;
         /*gallery page styles*/
 
         h1.post-meta-key {
@@ -14672,14 +14383,7 @@ tablet 667px*/
 
     height: 120px;
 
-
-    p#copyr {
-
-      width: 48%;
-
-      padding-top: 3%;
-    }
-
+    
     .socialpics {
             
 
@@ -14725,6 +14429,13 @@ tablet 667px*/
         }
       }
     }
+  }
+
+  p#copyr {
+
+    width: 48%;
+
+    
   }
 
 }
@@ -15103,91 +14814,60 @@ tablet 667px*/
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address.contact-details {
 
+      ul{
+        li {
+          font-size: 1em;
+          list-style:none;
+                          
+          a {
+            
+            font-size: 1em;
+            
 
-      li {
-        font-family: "FontAwesome", ($FontStyle);
-
-        &:before {
-
-          font-size: 1.2em;
-
-        }
-
-        a {
-          font-size: 0.8em;
-
-        }
-
-      }
-
-      li:nth-of-type(2) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.2em;
-        }
-
-        a {
-
-          font-size: 0.8em;
-
-          &:hover {
-            font-size: inherit;
+            &:hover {
+              font-weight: bold;
+              
+            }
           }
-        }
 
+          a[href^="mailto"]:before {          
+            content: "\f0e0";
+            
+            font-size: 1.4em;
+            
+          }
+
+          // a[href^="https://twitter.com"]:before {
+          //   content: "\f39e";
+          //   font-size: 1.4em;
+          // } 
+          
+          a[href^="https://twitter.com"]:before {
+            content: "\f099";
+            
+            font-size: 1.4em;
+            
+          }  
+
+          a[href^="https://www.linkedin.com"]:before {
+            content: "\f0e1";
+            
+            font-size: 1.4em;
+            
+          }   
+        
+          a[href^="https://github.com"]:before {
+            content: "\f09b";
+            
+            font-size: 1.4em;
+            
+          }
+
+        }
       }
 
-      li:nth-of-type(3) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.2em;
-        }
-
-        a {
-
-          font-size: 0.8em;
-
-        }
-
-      }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.2em;
-        }
-
-        a {
-
-          font-size: 0.8em;
-
-        }
-
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.2em;
-        }
-
-        a {
-
-          font-size: 0.8em;
-
-        }
-
-      }
     }
 
     /*frontpage-page-panel */
@@ -15307,7 +14987,7 @@ tablet 667px*/
       }
 
       /*front-page image container*/
-      div#svg-image-container {
+      section#banner-container {
       
         height: 230px;
         
@@ -15361,10 +15041,6 @@ tablet 667px*/
         width: 100%;
 
 
-        //float: left;
-        margin: 0;
-        height: auto;
-
         h1 {
           font-size: 1em;
 
@@ -15388,11 +15064,6 @@ tablet 667px*/
       #text-box-profile-a {
 
         width: 100%;
-
-
-        //float: left;
-        margin: 0;
-        height: auto;
 
         h1 {
           font-size: 1em;
@@ -15424,6 +15095,18 @@ tablet 667px*/
 
           font-size: 1.1em;
 
+
+        }
+
+        button.slider-btn {
+          
+          width: 46%;
+          top: -15px;
+
+          &:hover {
+            
+            font-weight:bold;
+          }
 
         }
 
@@ -15707,7 +15390,7 @@ tablet 667px*/
       }
 
       .website-text {
-        width: 100%;
+        width: 97%;
         /*gallery page styles*/
 
         h1.post-meta-key {
@@ -16247,12 +15930,7 @@ tablet 667px*/
       }
 
     }
-    p#copyr {
-
-      width: 48%;
-      font-size :0.8em;
-      padding-top: 3%;
-    }
+    
 
     ul {
       width: 35%;
@@ -16273,6 +15951,12 @@ tablet 667px*/
         }
       }
     }
+  }
+  p#copyr {
+
+    width: 100%;
+    padding-top: 1%;
+
   }
 
 }
@@ -16631,91 +16315,60 @@ mobile 480px */
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address.contact-details {
 
+      ul{
+        li {
+          font-size: 1em;
+          list-style:none;
+                          
+          a {
+            
+            font-size: 1em;
+            
 
-      li {
-        font-family: "FontAwesome", ($FontStyle);
-
-        &:before {
-
-          font-size: 1.2em;
-
-        }
-
-        a {
-          font-size: 0.8em;
-
-        }
-
-      }
-
-      li:nth-of-type(2) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.2em;
-        }
-
-        a {
-
-          font-size: 0.8em;
-
-          &:hover {
-            font-size: inherit;
+            &:hover {
+              font-weight: bold;
+              
+            }
           }
-        }
 
+          a[href^="mailto"]:before {          
+            content: "\f0e0";
+            
+            font-size: 1.4em;
+            
+          }
+
+          // a[href^="https://twitter.com"]:before {
+          //   content: "\f39e";
+          //   font-size: 1.4em;
+          // } 
+          
+          a[href^="https://twitter.com"]:before {
+            content: "\f099";
+            
+            font-size: 1.4em;
+            
+          }  
+
+          a[href^="https://www.linkedin.com"]:before {
+            content: "\f0e1";
+            
+            font-size: 1.4em;
+            
+          }   
+        
+          a[href^="https://github.com"]:before {
+            content: "\f09b";
+            
+            font-size: 1.4em;
+            
+          }
+
+        }
       }
 
-      li:nth-of-type(3) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.2em;
-        }
-
-        a {
-
-          font-size: 0.8em;
-
-        }
-
-      }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.2em;
-        }
-
-        a {
-
-          font-size: 0.8em;
-
-        }
-
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.2em;
-        }
-
-        a {
-
-          font-size: 0.8em;
-
-        }
-
-      }
     }
 
     /*frontpage-page-panel */
@@ -16831,7 +16484,7 @@ mobile 480px */
       }
 
       /*front-page image container*/
-      div#svg-image-container {
+      section#banner-container {
       
         h1{
           font-size:2.1em;
@@ -16887,10 +16540,6 @@ mobile 480px */
         width: 100%;
 
 
-        //float: left;
-        margin: 0;
-        height: auto;
-
         h1 {
           font-size: 1em;
 
@@ -16914,11 +16563,6 @@ mobile 480px */
       #text-box-profile-a {
 
         width: 100%;
-
-
-        //float: left;
-        margin: 0;
-        height: auto;
 
         h1 {
           font-size: 1em;
@@ -16949,6 +16593,18 @@ mobile 480px */
 
           font-size: 1.05em;
 
+
+        }
+
+        button.slider-btn {
+          
+          width: 46%;
+          top: -15px;
+
+          &:hover {
+            
+            font-weight:bold;
+          }
 
         }
 
@@ -17247,7 +16903,7 @@ mobile 480px */
       }
 
       .website-text {
-        width: 100%;
+        width: 97%;
         /*gallery page styles*/
 
         h1.post-meta-key {
@@ -17830,12 +17486,7 @@ mobile 480px */
 
     }
 
-    p#copyr {
-
-      width: 48%;
-
-      padding-top: 3%;
-    }
+    
 
     ul {
       width: 45%;
@@ -17856,6 +17507,12 @@ mobile 480px */
         }
       }
     }
+  }
+
+  p#copyr {
+
+    width: 100%;
+    
   }
 
 }
@@ -18212,91 +17869,60 @@ mobile 360px */
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address.contact-details {
 
+      ul{
+        li {
+          font-size: 1em;
+          list-style:none;
+                          
+          a {
+            
+            font-size: 1em;
+            
 
-      li {
-        font-family: "FontAwesome", ($FontStyle);
-
-        &:before {
-
-          font-size: 1.2em;
-
-        }
-
-        a {
-          font-size: 0.7em;
-
-        }
-
-      }
-
-      li:nth-of-type(2) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.2em;
-        }
-
-        a {
-
-          font-size: 0.7em;
-
-          &:hover {
-            font-size: inherit;
+            &:hover {
+              font-weight: bold;
+              
+            }
           }
-        }
 
+          a[href^="mailto"]:before {          
+            content: "\f0e0";
+            
+            font-size: 1.4em;
+            
+          }
+
+          // a[href^="https://twitter.com"]:before {
+          //   content: "\f39e";
+          //   font-size: 1.4em;
+          // } 
+          
+          a[href^="https://twitter.com"]:before {
+            content: "\f099";
+            
+            font-size: 1.4em;
+            
+          }  
+
+          a[href^="https://www.linkedin.com"]:before {
+            content: "\f0e1";
+            
+            font-size: 1.4em;
+            
+          }   
+        
+          a[href^="https://github.com"]:before {
+            content: "\f09b";
+            
+            font-size: 1.4em;
+            
+          }
+
+        }
       }
 
-      li:nth-of-type(3) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.2em;
-        }
-
-        a {
-
-          font-size: 0.7em;
-
-        }
-
-      }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.2em;
-        }
-
-        a {
-
-          font-size: 0.7em;
-
-        }
-
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.2em;
-        }
-
-        a {
-
-          font-size: 0.7em;
-
-        }
-
-      }
     }
 
     /*frontpage-page-panel */
@@ -18410,7 +18036,7 @@ mobile 360px */
       }
 
       /*front-page image container*/
-      div#svg-image-container {
+      section#banner-container {
       
         
         h1{
@@ -18462,11 +18088,6 @@ mobile 360px */
 
         width: 100%;
 
-
-        //float: left;
-        margin: 0;
-        height: auto;
-
         h1 {
           font-size: 1em;
 
@@ -18490,11 +18111,6 @@ mobile 360px */
       #text-box-profile-a {
 
         width: 100%;
-
-
-        //float: left;
-        margin: 0;
-        height: auto;
 
         h1 {
           font-size: 1em;
@@ -18808,7 +18424,7 @@ mobile 360px */
       }
 
       .website-text {
-        width: 100%;
+        width: 97%;
         /*gallery page styles*/
 
         h1.post-meta-key {
@@ -19362,12 +18978,7 @@ mobile 360px */
     height: 120px;
 
 
-    p#copyr {
-
-      width: 48%;
-
-      padding-top: 3%;
-    }
+    
 
     .socialpics {
             
@@ -19415,7 +19026,11 @@ mobile 360px */
       }
     }
   }
+  p#copyr {
 
+    
+    width: 100%;
+  }
 }
 
 /*
@@ -19758,91 +19373,60 @@ mobile 320px */
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address.contact-details {
 
+      ul{
+        li {
+          font-size: 1em;
+          list-style:none;
+                          
+          a {
+            
+            font-size: 1em;
+            
 
-      li {
-        font-family: "FontAwesome", ($FontStyle);
-
-        &:before {
-
-          font-size: 1.2em;
-
-        }
-
-        a {
-          font-size: 0.7em;
-
-        }
-
-      }
-
-      li:nth-of-type(2) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.2em;
-        }
-
-        a {
-
-          font-size: 0.7em;
-
-          &:hover {
-            font-size: inherit;
+            &:hover {
+              font-weight: bold;
+              
+            }
           }
-        }
 
+          a[href^="mailto"]:before {          
+            content: "\f0e0";
+            
+            font-size: 1.4em;
+            
+          }
+
+          // a[href^="https://twitter.com"]:before {
+          //   content: "\f39e";
+          //   font-size: 1.4em;
+          // } 
+          
+          a[href^="https://twitter.com"]:before {
+            content: "\f099";
+            
+            font-size: 1.4em;
+            
+          }  
+
+          a[href^="https://www.linkedin.com"]:before {
+            content: "\f0e1";
+            
+            font-size: 1.4em;
+            
+          }   
+        
+          a[href^="https://github.com"]:before {
+            content: "\f09b";
+            
+            font-size: 1.4em;
+            
+          }
+
+        }
       }
 
-      li:nth-of-type(3) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.2em;
-        }
-
-        a {
-
-          font-size: 0.7em;
-
-        }
-
-      }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.2em;
-        }
-
-        a {
-
-          font-size: 0.7em;
-
-        }
-
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-
-          font-size: 1.2em;
-        }
-
-        a {
-
-          font-size: 0.7em;
-
-        }
-
-      }
     }
 
     /*frontpage-page-panel */
@@ -19956,7 +19540,7 @@ mobile 320px */
       }
 
       /*front-page image container*/
-      div#svg-image-container {
+      section#banner-container {
       
                 
         h1{
@@ -20008,11 +19592,6 @@ mobile 320px */
 
         width: 100%;
 
-
-        //float: left;
-        margin: 0;
-        height: auto;
-
         h1 {
           font-size: 1em;
 
@@ -20036,11 +19615,6 @@ mobile 320px */
       #text-box-profile-a {
 
         width: 100%;
-
-
-        //float: left;
-        margin: 0;
-        height: auto;
 
         h1 {
           font-size: 1em;
@@ -20356,7 +19930,7 @@ mobile 320px */
       }
 
       .website-text {
-        width: 100%;
+        width: 97%;
         /*gallery page styles*/
 
         h1.post-meta-key {
@@ -20904,14 +20478,6 @@ mobile 320px */
 
     height: 120px;
 
-
-    p#copyr {
-
-      width: 48%;
-
-      padding-top: 3%;
-    }
-
     ul {
       width: 45%;
       height: 100%;
@@ -20931,6 +20497,12 @@ mobile 320px */
         }
       }
     }
+  }
+
+  p#copyr {
+
+    
+    width: 100%;
   }
 
 

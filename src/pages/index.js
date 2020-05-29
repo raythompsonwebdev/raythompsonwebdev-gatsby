@@ -10,14 +10,14 @@ const IndexPage = () => (
     
     <div id="frontpage_container">
       
-      <div id="svg-image-container">
+      <section id="banner-container">
       <h1>{`Hello, I'm Raymond`}</h1>
       <h2>{`I build beautiful web applications`}</h2>
       <Link id="projectLink" to="/projects">See Current Projects</Link>
 
 
         <figure id="image-7"></figure>
-      </div>
+      </section>
 
       <div id="text-box-front">
         
@@ -29,6 +29,7 @@ const IndexPage = () => (
         <br/>
         
         <section id="calltoaction">
+          <h1 id="front-title">What I can Do !</h1>
           <article className="frntpgbox">
 
             <span><i className="fa fa-wordpress"></i></span>
@@ -53,8 +54,7 @@ const IndexPage = () => (
             <p>Debugging,  Web App Creation.</p> 
             <p>Video & Audio Optimisation.</p>
           </article>
-
-          
+         
         </section>
       
       

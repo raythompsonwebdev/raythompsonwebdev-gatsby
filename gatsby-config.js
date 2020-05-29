@@ -17,11 +17,22 @@ module.exports = {
     `gatsby-plugin-sass`,
 
     {
+      //works with gatsby-wpgraphql-inline-images not gatsby-source-wordpress
+      resolve: "gatsby-source-graphql",
+      options: {
+        // This type will contain remote schema Query type
+        typeName: "SWAPI",
+        // This is the field under which it's accessible
+        fieldName: "swapi",
+        // URL to query from
+        url: "https://api.graphcms.com/simple/v1/swapi",
+      },
+    },
+
+    {
       resolve: "gatsby-source-wordpress",
       options: {
         excludedRoutes:['/wp/v2/users/**', '/wp/v2/settings*'],
-        
-        
         baseUrl: "raythompsonwebdevlocal.com/wordpress",
         protocol: "https",
         hostingWPCOM: false,
@@ -62,10 +73,33 @@ module.exports = {
         component: require.resolve(`./src/components/layout`),
       },
     },
+
+    //get images to show in posts
+    {
+      resolve: 'gatsby-wpgraphql-inline-images',
+      options: {
+        wordPressUrl: 'https://raythompsonwebdevlocal.com/wordpress/',
+        uploadsUrl: 'https://raythompsonwebdevlocal.com/wordpress/wp-content/uploads/',
+        processPostTypes: ['Page', 'Post', 'CustomPost'],
+        graphqlTypeName: 'WPGraphQL',
+        httpHeaders: {
+          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        }
+      },
+    },
     
                                        
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 75,
+        pngQuality: 75,
+      },
+    },
     
 
     `gatsby-transformer-remark`,

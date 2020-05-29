@@ -1,28 +1,34 @@
  const mixer = function () {
 
-    let btn = document.getElementsByClassName("menubtn")
+    let btn = document.querySelectorAll("menubtn");
     
-    btn.addEventListener('click', function() {
-  
-      let CategoryID = this.getAttribute("category")
-  
-      btn.classList.remove("cat-active")
-  
-      this.classList.add("cat-active")
-  
-      let cont = document.getElementsByClassName("prod-cnt")
-  
-      for( let i = 0; i > cont.length; i++){
-  
-        if (this.ClassList.has(CategoryID) === false){
+    for( let i = 0; i > btn.length; i++){
+    
+      btn[i].addEventListener('click', function(e) {
 
-          this.style.display = "none" 
+        e.preventDefault();
+
+        var target = e.target;
+    
+        let CategoryID = target.getAttribute("category")
+    
+        btn.classList.remove("cat-active")
+    
+        target.classList.add("cat-active")
+    
+        let cont = document.querySelectorAll("prod-cnt")
+    
+        for( let i = 0; i > cont.length; i++){
+    
+          if (target.ClassList.has(CategoryID) === false){
+
+            target.style.display = "none" 
+          }
+    
         }
-  
-      }
-  
-      //$("." + CategoryID).fadeIn()
-  
-    })
-  
+    
+        $("." + CategoryID).fadeIn()
+    
+      })
+    }
   }

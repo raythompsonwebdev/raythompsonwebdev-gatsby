@@ -30,14 +30,14 @@ const BlogPage = ({ data }) => (
         <div className="blogboxes" key={index}>
           <h1 dangerouslySetInnerHTML={{ __html: node.title }}></h1>
 
-          {node.featured_media &&
-            node.featured_media.localFile.childImageSharp.fixed && (
+          { node.featured_media == null ? ( <p>No Image</p> ) : (
               <img
-                src={node.featured_media.localFile.childImageSharp.fixed.src}
+                src={node.featured_media.localFile.childImageSharp.resolutions.src}
                 alt=""
               />
-            )}
-
+            ) 
+          }    
+         
           <div dangerouslySetInnerHTML={{ __html: node.excerpt }}></div>
 
           <Link to={`/blog/${node.link}`}>Read More..</Link>
@@ -71,7 +71,7 @@ export const pageQuery = graphql`
           featured_media {
             localFile {
               childImageSharp {
-                fixed {
+                resolutions {
                   src
                 }
               }

@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 const SliderPanel = ({ property }) => {
+  
   const {
     id,    
     title,

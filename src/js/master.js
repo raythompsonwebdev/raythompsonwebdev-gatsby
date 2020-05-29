@@ -9,13 +9,13 @@ window.scroll(function() {
   if (this.scrollTop() >= position) {
     direction = "down"
     if (direction !== previous) {
-      menuToggle.addClass("hide")
+      menuToggle.classList.add("hide")
       previous = direction
     }
   } else {
     direction = "up"
     if (direction !== previous) {
-      menuToggle.removeClass("hide")
+      menuToggle.classList.remove("hide")
       previous = direction
     }
   }
@@ -25,11 +25,12 @@ window.scroll(function() {
 
 // sliding menu mobile
 menuToggle.addEventListener("click", function(event) {
+
   event.preventDefault()
 
   // create menu variables
-  var slideoutMenu = document.getElementById("main-menu ")
-  var slideoutMenuWidth = document.getElementById("main-menu").style.width
+  var slideoutMenu = document.querySelector("main-menu ");
+  var slideoutMenuWidth = document.querySelector("main-menu").style.width;
   
   // toggle open class
   slideoutMenu.toggleClass("open")

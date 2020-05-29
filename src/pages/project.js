@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import ProjectItem from "../components/projectitem"
 
-
 const ProjectPage = ({ data }) => (
   
   <main id="main-content">
@@ -11,8 +10,7 @@ const ProjectPage = ({ data }) => (
     <h1>Projects</h1>
 
     <div id="photocontainer">
-      <div className="content">
-        
+      <div className="content">       
            
 
         {data.allWordpressWpProject.nodes.map((items, i) => (
@@ -40,7 +38,7 @@ export const data = graphql`
         featured_media {
           localFile {
             childImageSharp {
-              fixed(width: 341, height: 550) {
+              resolutions {
                 src
               }
             }

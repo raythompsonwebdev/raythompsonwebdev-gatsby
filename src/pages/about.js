@@ -8,13 +8,14 @@ import $ from "jquery"
 
 class AboutPage extends React.Component {
   constructor(props) {
+
     super(props)
 
     this.state = {
       properties: data.properties,
       property: data.properties[0],
     }
-
+    
     this.bars = {
       bar: [
         {
@@ -140,8 +141,7 @@ class AboutPage extends React.Component {
             <article id="chart">
               <SkillsGraph 
                 key={bar.id} 
-                bar={bar} 
-                ref={el => this.el = el}
+                bar={bar}                 
               />
             </article>
           </section>

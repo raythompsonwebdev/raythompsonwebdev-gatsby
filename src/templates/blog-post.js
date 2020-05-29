@@ -1,32 +1,36 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
-
+import contentParser from 'gatsby-wpgraphql-inline-images';
 
 export const data = graphql`
   query($slug: String!) {
     allWordpressPost(filter: { slug: { eq: $slug } }) {
-      nodes {
-        content
-        title
-        date(formatString: "Y:MM:DD")
-        featured_media {
-          localFile {
-            childImageSharp {
-              fixed {
-                src
-                width
-                height
+      edges {
+        node {
+          featured_media {
+            localFile {
+              childImageSharp {
+                resolutions {
+                  src                  
+                }
               }
+              url
             }
           }
-        }
-        author {
-          name
-          avatar_urls {
-            wordpress_24
-            wordpress_48
-            wordpress_96
+          title
+          slug
+          content
+          date(formatString: "Y:MM:DD")
+          author {
+            avatar_urls {
+              wordpress_24
+              wordpress_48
+              wordpress_96
+            }
+            name
+            slug
+            link
           }
         }
       }
@@ -35,14 +39,15 @@ export const data = graphql`
 `
 
 const BlogPost = props => {
-  
+   
   return (
     <main id="main-content">
       <SEO title="Blog Post" />
 
       <article className="post group" id="post">
         <h1 className="page-title">
-          {props.data.allWordpressPost.nodes[0].title}
+         {props.data.allWordpressPost.edges[0].node.title}
+
         </h1>
 
         <header className="byline">
@@ -52,7 +57,7 @@ const BlogPost = props => {
                 <Link className="url fn n" to="">
                   <img
                     src={
-                      props.data.allWordpressPost.nodes[0].author.avatar_urls
+                      props.data.allWordpressPost.edges[0].node.author.avatar_urls
                         .wordpress_96
                     }
                     alt="Blog"
@@ -63,13 +68,13 @@ const BlogPost = props => {
               <Link to="" rel="bookmark"></Link>
 
               <span className="byline">
-                Posted By : {props.data.allWordpressPost.nodes[0].author.name}{" "}
+                Posted By : {props.data.allWordpressPost.edges[0].node.author.name}{" "}
               </span>
               <span className="posted-on">
                 Posted on :
                 <time className="entry-date published">
                   {" "}
-                  {props.data.allWordpressPost.nodes[0].date}
+                  {props.data.allWordpressPost.edges[0].node.date}
                 </time>
               </span>
               <span className="byline">
@@ -85,22 +90,31 @@ const BlogPost = props => {
 
         <Link to="" title="Permanent Link to">
           <figure className="featuredImage">
-            <img
-              src={
-                props.data.allWordpressPost.nodes[0].featured_media.localFile
-                  .childImageSharp.fixed.src
-              }
-              alt="Blog"
-            />
+          { props.data.allWordpressPost.edges[0].node.featured_media == null ?            
+            (
+              <p>No Image</p>
+            ) 
+            :
+            (
+              <img
+                src={props.data.allWordpressPost.edges[0].node.featured_media.localFile.childImageSharp.resolutions.src}
+                alt=""
+              />
+            )            
+
+          }            
           </figure>
         </Link>
 
         <div className="entry">
+        
           <div
-            dangerouslySetInnerHTML={{
-              __html: props.data.allWordpressPost.nodes[0].content,
-            }}
+             dangerouslySetInnerHTML={{
+             __html: props.data.allWordpressPost.edges[0].node.content,
+             }}
+            
           ></div>
+
         </div>
 
         <div className="continue-reading">
