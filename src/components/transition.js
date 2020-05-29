@@ -10,9 +10,7 @@ class Transition extends React.PureComponent {
   render() {
 
     const { children, location } = this.props
-
-    console.log(children)
-
+    
     const RoutesContainer = posed.div({
       
       enter: {

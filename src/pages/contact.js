@@ -26,7 +26,6 @@ class contactPage extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-
     console.log("submitted")
   }
 

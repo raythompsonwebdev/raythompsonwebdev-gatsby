@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
-import contentParser from 'gatsby-wpgraphql-inline-images';
+
 
 export const data = graphql`
   query($slug: String!) {
@@ -100,6 +100,7 @@ const BlogPost = props => {
                 src={props.data.allWordpressPost.edges[0].node.featured_media.localFile.childImageSharp.resolutions.src}
                 alt=""
               />
+              
             )            
 
           }            

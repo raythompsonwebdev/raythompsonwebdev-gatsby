@@ -14,34 +14,33 @@ import Img from "gatsby-image"
  */
 
 export const data = graphql`
-    query {
-      allWordpressPost {
-        edges {
-          node {
-            featured_media {
-              localFile {
-                childImageSharp {
-                  fixed {
-                    height
-                    src
-                    width
-                    srcSet
-                  }
+  query($slug: String!) {
+    allWordpressPost(filter: { slug: { eq: $slug } }) {
+      edges {
+        node {
+          featured_media {
+            localFile {
+              childImageSharp {
+                fixed {
+                  height
+                  src
+                  width
+                  srcSet                  
                 }
-              }
+              }              
             }
-          }
+          }          
         }
       }
-    }`
+    }
+  }
+`
 
   const Image = ({data}) => {
-
-    console.log(data)
-
+    
     return() => (
       
-      <Img fixed={data.featured_media.localFile.childImageSharp.fixed.src}/>
+      <Img fixed={data.featured_media.localFile.childImageSharp.fixed}/>
     )
   }
 

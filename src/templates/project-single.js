@@ -3,20 +3,27 @@ import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 
 export const data = graphql`
-  query($slug: String!) {
-    allWordpressWpProject(filter: { slug: { eq: $slug } }) {
+  query ($slug: String!) {
+    allWordpressWpProject(filter: {slug: {eq: $slug}}) {
       edges {
         node {
           id
           slug
           title
-          
-
           meta {
             project_code
             project_description
             project_name
             project_url
+          }
+          featured_media {
+            localFile {
+              childImageSharp {
+                fixed {
+                  src
+                }
+              }
+            }
           }
         }
       }
@@ -30,16 +37,15 @@ const ProjectSingle = props => {
     
   <main id="main-content">
       <SEO title="Single Project Page" />
-{console.log(props)}
       <article className="post group">
         <h1> {props.data.allWordpressWpProject.edges[0].node.title} </h1>
         <figure className="websiteImage">
           <Link to="" className="fancybox" title="">
             <img
-              // src={
-              //   props.data.allWordpressWpProject.edges[0].node.featured_media
-              //     .localFile.childImageSharp.fixed.src
-              // }
+              src={
+                 props.data.allWordpressWpProject.edges[0].node.featured_media
+                   .localFile.childImageSharp.fixed.src
+              }
               alt=""
             />
           </Link>
