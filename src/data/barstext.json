@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "HTML",
+    "percentage": "85",
+    "classnam": "bar"
+  },
+  {
+    "id": 2,
+    "name": "CSS",
+    "percentage": "70",
+    "classnam": "bar"
+  },
+  {
+    "id": 3,
+    "name": "PHP/MYSQL",
+    "percentage": "90",
+    "classnam": "bar"
+  },
+  {
+    "id": 4,
+    "name": "JAVASCRIPT",
+    "percentage": "80",
+    "classnam": "bar"
+  },
+  {
+    "id": 5,
+    "name": "RUBY",
+    "percentage": "65",
+    "classnam": "bar"
+  }
+]
