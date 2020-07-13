@@ -5,7 +5,10 @@
   "version": "0.1.0",
   "author": "Ray Thompson <webdesignbully@gmail.com>",
   "dependencies": {
+    "@types/webpack": "^4.41.21",
+    "acorn": "^6.4.1",
     "babel-plugin-styled-components": "^1.10.6",
+    "bufferutil": "^4.0.1",
     "env-cmd": "^9.0.3",
     "gatsby": "^2.21.33",
     "gatsby-cli": "^2.12.21",
@@ -35,10 +38,15 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
+    "react-refresh": "^0.8.3",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-transition-group": "^1.2.1",
-    "styled-components": "^4.3.2"
+    "sockjs-client": "^1.4.0",
+    "styled-components": "^4.3.2",
+    "type-fest": "^0.13.1",
+    "utf-8-validate": "^5.0.2",
+    "webpack-plugin-serve": "^0.12.1"
   },
   "devDependencies": {
     "gsap": "^2.1.3",
