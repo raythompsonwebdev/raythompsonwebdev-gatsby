@@ -1,104 +1,104 @@
-import React from "react";
-import { Link } from "gatsby";
-import SEO from "../components/seo";
-import SkillsGraph from "../components/skillsgraph";
-import SliderPanel from "../components/sliderpanel";
+import React from "react"
+import { Link } from "gatsby"
+import SEO from "../components/seo"
+import SkillsGraph from "../components/skillsgraph"
+import SliderPanel from "../components/sliderpanel"
 
 class AboutPage extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       bars: [],
       panels: [],
       lastIndex: 0,
       cert: [],
-    };
+    }
 
-    this.responsiveGraph = this.responsiveGraph.bind(this);
+    this.responsiveGraph = this.responsiveGraph.bind(this)
   }
 
   componentDidMount() {
     fetch("./data/barstext.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const bars = data.map((bar) => {
-          bar.barId = this.state.lastIndex;
-          this.setState({ lastIndex: this.state.lastIndex + 1 });
-          return bar;
-        });
+      .then(response => response.json())
+      .then(data => {
+        const bars = data.map(bar => {
+          bar.barId = this.state.lastIndex
+          this.setState({ lastIndex: this.state.lastIndex + 1 })
+          return bar
+        })
         this.setState({
           bars: bars,
-        });
+        })
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch(error => {
+        console.log(error)
+      })
 
     fetch("./data/sliderpaneltext.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const panels = data.map((panel) => {
-          panel.panelId = this.state.lastIndex;
+      .then(response => response.json())
+      .then(data => {
+        const panels = data.map(panel => {
+          panel.panelId = this.state.lastIndex
 
-          this.setState({ lastIndex: this.state.lastIndex + 1 });
+          this.setState({ lastIndex: this.state.lastIndex + 1 })
 
-          return panel;
-        });
+          return panel
+        })
 
         this.setState({
           panels: panels,
           cert: panels[0],
-        });
+        })
       })
-      .catch((error) => {
-        console.error(error);
-      });
+      .catch(error => {
+        console.error(error)
+      })
   }
 
   responsiveGraph = () => {
-    var chartBar = document.querySelectorAll(".bar");
+    var chartBar = document.querySelectorAll(".bar")
 
     chartBar.forEach(function(key) {
-      var percentage = 0;
+      var percentage = 0
 
-      var percentageMaxWidth = key.dataset.percentage;
+      var percentageMaxWidth = key.dataset.percentage
 
-      var id = setInterval(frame, 2000);
+      var id = setInterval(frame, 2000)
 
       function frame() {
         if (percentage === percentageMaxWidth) {
-          clearInterval(id);
+          clearInterval(id)
         } else {
-          percentage++;
+          percentage++
 
           //key.style.width = `${percentageMaxWidth}%`;
-          key.style.width = "".concat(percentageMaxWidth, "%");
+          key.style.width = "".concat(percentageMaxWidth, "%")
         }
       }
-    });
-  };
+    })
+  }
 
   nextProperty = () => {
-    const newIndex = this.state.cert.imageindex + 1;
+    const newIndex = this.state.cert.imageindex + 1
 
-    console.log(newIndex);
+    console.log(newIndex)
 
     this.setState({
       cert: this.state.panels[newIndex],
-    });
-  };
+    })
+  }
 
   prevProperty = () => {
-    const newIndex = this.state.cert.imageindex - 1;
+    const newIndex = this.state.cert.imageindex - 1
 
     this.setState({
       cert: this.state.panels[newIndex],
-    });
-  };
+    })
+  }
 
   render() {
-    const { bars, panels, cert } = this.state;
+    const { bars, panels, cert } = this.state
 
     return (
       <main id="main-content">
@@ -122,21 +122,27 @@ class AboutPage extends React.Component {
 
             <p>
               {" "}
-              I spent the following years learning coding languages, practising
-              coding, <strong><Link to="/projects">web applications</Link></strong>
+              I spent the following years learning coding languages, practicing
+              coding,{" "}
+              <strong>
+                <Link to="/projects"> Web Applications </Link>
+              </strong>
               helping others with their websites in my spare time while working
-              full-time. 
-              </p>
-              <p>I became more interested in programming around 2016
-              after taking computer science fundementals courses on
+              full-time.
+            </p>
+            <p>
+              I became more interested in programming around 2016 after taking
+              computer science fundementals courses on
               <strong>
                 {" "}
                 <Link to="http://www.linkedin.com/in/raymond-thompson-1b42b7b8">
-                  Lynda.com.
+                  Lynda.com
                 </Link>
-              </strong>.that year and have since then found it easier to understand how
+              </strong>{" "}
+              that year and have since then found it easier to understand how
               and why coding languages like Javascipt, PHP and Ruby work the way
-              they do.</p>
+              they do.
+            </p>
 
             <p>
               Keeping up with changes in web development and self teaching web
@@ -161,20 +167,17 @@ class AboutPage extends React.Component {
               I have gained some experience working with others interested in
               web development at events and on projects. I took part in a
               project called{" "}
-              <a href="https://vimeo.com/232481032" title="Pic 1">
-                {" "}
+              <Link to="https://vimeo.com/232481032">
                 Digital Futures 2017{" "}
-              </a>
+                </Link>              
               in Waterloo where I worked with other student to enhance a dance
               performance with coreographed lights and music using Ruby and
               Python
             </p>
             <p>
-              I also attended{" "}
-              <a href="https://2018.london.wordcamp.org/attendees/">
-                WordCamp 2018
-              </a>{" "}
-              in London as a volunteer helping visitors find there way around
+              I also attended {" "}
+              <Link to="https://2018.london.wordcamp.org/attendees/">
+                WordCamp 2018 </Link> in London as a volunteer helping visitors find there way around
               the venue, putting out sinage. I also attended contributors day
               and even reviewed a wordpress theme for the theme review team
             </p>
@@ -206,7 +209,7 @@ class AboutPage extends React.Component {
                       (100 / panels.length)}%)`,
                   }}
                 >
-                  {panels.map((panel) => (
+                  {panels.map(panel => (
                     <SliderPanel key={panel.panelId} panel={panel} />
                   ))}
                 </div>
@@ -232,8 +235,8 @@ class AboutPage extends React.Component {
 
         <div className="clearfix"></div>
       </main>
-    );
+    )
   }
 }
 
-export default AboutPage;
+export default AboutPage

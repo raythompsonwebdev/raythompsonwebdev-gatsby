@@ -43,7 +43,7 @@ const BlogPage = ({ data }) => (
           }    
          
           <div dangerouslySetInnerHTML={{ __html: node.excerpt }}></div>
-          <Link to={`/blog/blog-post/`}>Link</Link>
+          <Link to={`/blog/${node.slug}`}>Link</Link>
 
         </div>
       

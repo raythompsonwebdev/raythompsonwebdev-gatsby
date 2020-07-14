@@ -350,8 +350,8 @@ desktop 1920px*/
       padding: 0.5em;
 
       p {
-        font-size: 0.9em;
-        line-height: 1.5;
+        font-size: 1em;
+        line-height: 1.8em;
         background-color: $color4;
         padding: 0.5em;
       }
@@ -433,7 +433,7 @@ desktop 1920px*/
           background-color: $color1;
           color: $color4;
           margin-bottom: 0.5em;
-          line-height: 1.5;
+          line-height: 50px;
         }
 
         p {
@@ -446,9 +446,9 @@ desktop 1920px*/
 
         a {
           background-color: $color1;
-          line-height: 1.5;
+          line-height: 35px;
           height: 35px;
-          font-size: 0.85em;
+          font-size: 1em;
           display: block;
           letter-spacing: 0.1em;
           width: 70%;
@@ -1129,10 +1129,18 @@ desktop 1920px*/
           height: 50px;
           display: block;
         }
+        a{
+          background-color:unset;
+          color:$color1;
+          font-weight:bold;
+          
+          &:hover{
+            font-weight:bold;
+            cursor:pointer;
 
-        a:hover {
-          font-weight: normal;
+          }
         }
+        
 
       }
 
@@ -1172,8 +1180,16 @@ desktop 1920px*/
           display: block;
         }
 
-        a:hover {
-          font-weight: normal;
+        a{
+          background-color:unset;
+          color:$color1;
+          font-weight:bold;
+          
+          &:hover{
+            font-weight:bold;
+            cursor:pointer;
+
+          }
         }
 
       }
@@ -1569,7 +1585,7 @@ desktop 1920px*/
 
     /*gallery container*/
     div#photocontainer {
-      width: 100%;
+      width: 94%;
       height: auto;
       font-family: ($FontStyle);
       margin: auto;
@@ -1885,7 +1901,6 @@ desktop 1920px*/
     /*regular Posts*/
     .post {
       background-color: $color4;
-      padding: 0 2%;
       width: 100%;
       margin: 0;
       clear: both;
@@ -1901,7 +1916,7 @@ desktop 1920px*/
 
       h1,
       h1.page-title {
-        font-size: 1.4em;
+        font-size: 1.6em;
         margin: 0;
         padding: 0;
         letter-spacing: 0.05em;
@@ -2052,7 +2067,7 @@ desktop 1920px*/
       .featuredImage {
         clear: both;
         height: auto;
-        width: 98%;
+        width: 90%;
         margin: 1em auto;
         display: block;
 
@@ -2088,8 +2103,9 @@ desktop 1920px*/
 
       
       header.byline {
-        width: 100%;
-        margin-bottom: 1em;
+        width: 90%;
+        display:block;
+        margin: 0 auto;
         height: auto;
         color: $color1;
         background-color:$color4;
@@ -2116,11 +2132,12 @@ desktop 1920px*/
             width: 100%;
 
             .author-avatar {
-              width: 4.5em;
+              width: 15%;
               display: block;
-              float: none;
-              margin: 1em auto;
-              border: 1px solid $color3;
+              float: left;
+              margin: 0;
+              padding:1em;
+              
             }
 
             .byline,
@@ -2130,17 +2147,18 @@ desktop 1920px*/
             .comments-link,
             .date,
             .posted-on {
-              width: 100%;
+              width: 85%;
               display: inline-block;
               height: auto;
               line-height: 30px;
-              text-align: center;
+              text-align: left;
               font-family: "FontAwesome", ($FontStyle);
               font-size: 0.9em;
               letter-spacing: 0.055em;
               color: $color4;
               background-color: $color1;
               margin-bottom: 0.2em;
+              text-indent:0.25em;
 
 
               a {
@@ -3401,7 +3419,7 @@ desktop 1920px*/
       padding: 0.5em;
 
       p {
-        font-size: 0.9em;
+        font-size: 1em;
         
       }
 
@@ -3467,7 +3485,7 @@ desktop 1920px*/
 
         a {
           
-          font-size: 0.85em;
+          font-size: 1em;
           
          
           &:hover {
@@ -4180,7 +4198,7 @@ desktop 1920px*/
 
    
     div#photocontainer {
-      width: 100%;
+      width: 94%;
      
       div.content {
         clear: both;
@@ -4376,7 +4394,7 @@ desktop 1920px*/
 
       h1,
       h1.page-title {
-        font-size: 1.35em;
+        font-size: 1.5em;
         
         
       }
@@ -4499,9 +4517,7 @@ desktop 1920px*/
 
       
       header.byline {
-        
-        margin-bottom: 1em;
-        
+              
 
         .entry-meta,
         .index-entry-meta {
@@ -4519,7 +4535,7 @@ desktop 1920px*/
             width: 100%;
 
             .author-avatar {
-              width: 4.5em;
+              width: 15%;
               
             }
 
@@ -5394,7 +5410,7 @@ desktop 1440px*/
 
 
       p {
-        font-size: 0.85em;
+        font-size: 0.9em;
 
       }
 
@@ -5447,18 +5463,18 @@ desktop 1440px*/
 
 
         h1 {
-          font-size: 0.95em;
+          font-size: 1em;
 
         }
 
         p {
-          font-size: 0.85em;
+          font-size: 0.9em;
 
         }
 
         a {
 
-          font-size: 0.8em;
+          font-size: 1em;
 
 
         }
@@ -6204,7 +6220,7 @@ desktop 1440px*/
 
     
     .post {
-      padding: 1%;
+      
 
       
       hr.blog-spacer {
@@ -6217,7 +6233,7 @@ desktop 1440px*/
 
       h1,
       h1.page-title {
-        font-size: 1.3em;
+        font-size: 1.5em;
         
         
       }
@@ -6307,7 +6323,7 @@ desktop 1440px*/
       }
 
       .featuredImage {
-        width: 98%;
+        
 
         a {
           display: block;
@@ -6332,8 +6348,7 @@ desktop 1440px*/
 
       /*blog post header*/
       header.byline {
-        padding: 0.5em;
-
+        
         .entry-meta,
         .index-entry-meta {
 
@@ -6346,7 +6361,7 @@ desktop 1440px*/
             width: 100%;
 
             .author-avatar {
-              width: 4.5em;
+              width: 15%;
 
             }
 
@@ -7141,18 +7156,18 @@ desktop 1280px*/
 
 
         h1 {
-          font-size: 0.9em;
+          font-size: 1em;
 
         }
 
         p {
-          font-size: 0.8em;
+          font-size: 0.9em;
 
         }
 
         a {
 
-          font-size: 0.8em;
+          font-size: 1em;
 
 
         }
@@ -7864,7 +7879,7 @@ desktop 1280px*/
 
     
     .post {
-      padding: 1%;
+      
 
       
       hr.blog-spacer {
@@ -7877,7 +7892,7 @@ desktop 1280px*/
 
       h1,
       h1.page-title {
-        font-size: 1.25em;
+        font-size: 1.5em;
         
         
       }
@@ -7964,7 +7979,7 @@ desktop 1280px*/
       }
 
       .featuredImage {
-        width: 98%;
+        
 
         a {
           display: block;
@@ -7989,8 +8004,7 @@ desktop 1280px*/
 
       
       header.byline {
-        padding: 0.5em;
-
+        
         .entry-meta,
         .index-entry-meta {
 
@@ -8005,7 +8019,7 @@ desktop 1280px*/
             width: 100%;
 
             .author-avatar {
-              width: 4.5em;
+              width: 15%;
 
             }
 
@@ -8475,16 +8489,17 @@ desktop 1280px*/
         h1 {
           font-size: 0.9em;
           line-height: 45px;
+          height: 45px;
         }
 
         p {
-          font-size: 0.8em;
+          font-size: 0.85em;
 
         }
 
         a {
 
-          font-size: 0.8em;
+          font-size: 0.9em;
 
 
         }
@@ -9188,7 +9203,7 @@ desktop 1280px*/
 
     
     .post {
-      padding: 1%;
+      
 
       
       hr.blog-spacer {
@@ -9200,7 +9215,7 @@ desktop 1280px*/
       }
       h1,
       h1.page-title {
-        font-size: 1.2em;
+        font-size: 1.4em;
         
         
       }
@@ -9286,7 +9301,7 @@ desktop 1280px*/
       }
 
       .featuredImage {
-        width: 98%;
+        
 
         a {
           display: block;
@@ -9311,8 +9326,7 @@ desktop 1280px*/
 
       
       header.byline {
-        padding: 0.5em;
-
+        
         .entry-meta,
         .index-entry-meta {
 
@@ -9327,7 +9341,7 @@ desktop 1280px*/
             width: 100%;
 
             .author-avatar {
-              width: 4.5em;
+              width: 15%;
 
             }
 
@@ -9934,7 +9948,7 @@ desktop 980px*/
 
 
       p {
-        font-size: 0.8em;
+        font-size: 0.9em;
 
       }
 
@@ -9985,18 +9999,18 @@ desktop 980px*/
         padding: 0.25em;
 
         h1 {
-          font-size: 0.8em;
+          font-size: 0.9em;
 
         }
 
         p {
-          font-size: 0.75em;
+          font-size: 0.85em;
 
         }
 
         a {
 
-          font-size: 0.8em;
+          font-size: 0.9em;
 
 
         }
@@ -10701,7 +10715,7 @@ desktop 980px*/
 
     
     .post {
-      padding: 1%;
+      
 
       
       hr.blog-spacer {
@@ -10713,7 +10727,7 @@ desktop 980px*/
       }
       h1,
       h1.page-title {
-        font-size: 1.15em;
+        font-size: 1.4em;
         
         
       }
@@ -10809,7 +10823,7 @@ desktop 980px*/
       }
 
       .featuredImage {
-        width: 98%;
+        
 
         a {
           display: block;
@@ -10834,8 +10848,7 @@ desktop 980px*/
 
       
       header.byline {
-        padding: 0.5em;
-
+        
         .entry-meta,
         .index-entry-meta {
 
@@ -10850,7 +10863,7 @@ desktop 980px*/
             width: 100%;
 
             .author-avatar {
-              width: 4.5em;
+              width: 15%;
 
             }
 
@@ -12376,7 +12389,7 @@ tablet 800px */
       }
 
       .featuredImage {
-        width: 98%;
+        
 
         a {
           display: block;
@@ -12401,7 +12414,7 @@ tablet 800px */
 
       
       header.byline {
-        padding: 0.5em;
+        
 
         .entry-meta,
         .index-entry-meta {
@@ -12417,7 +12430,7 @@ tablet 800px */
             width: 100%;
 
             .author-avatar {
-              width: 4.5em;
+              width: 15%;
 
             }
 
@@ -13897,7 +13910,7 @@ tablet 667px*/
       }
 
       .featuredImage {
-        width: 98%;
+        
 
         a {
           display: block;
@@ -13938,7 +13951,7 @@ tablet 667px*/
             width: 100%;
 
             .author-avatar {
-              width: 4.5em;
+              width: 15%;
 
             }
 
@@ -15456,7 +15469,7 @@ tablet 667px*/
       }
 
       .featuredImage {
-        width: 98%;
+        
 
         a {
           display: block;
@@ -16969,8 +16982,7 @@ mobile 480px */
       }
 
       .featuredImage {
-        width: 98%;
-
+        
         a {
           display: block;
         }
@@ -18491,7 +18503,7 @@ mobile 360px */
       }
 
       .featuredImage {
-        width: 98%;
+        
 
         a {
           display: block;
@@ -19997,7 +20009,7 @@ mobile 320px */
       }
 
       .featuredImage {
-        width: 98%;
+        
 
         a {
           display: block;
