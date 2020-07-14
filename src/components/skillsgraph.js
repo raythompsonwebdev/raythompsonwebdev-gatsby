@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 function SkillsGraph (props) {
   
@@ -27,5 +28,10 @@ function SkillsGraph (props) {
     )
   
 }
+
+SkillsGraph.propTypes = {
+  bars: PropTypes.any,
+  responsiveGraph: PropTypes.func
+};
 
 export default SkillsGraph

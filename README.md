@@ -2,7 +2,7 @@
 
 ## raythompsonwebdev.co.uk 
 
-Self taught web developer portfolio website. built using gatsby. 
+Web developer portfolio website.  
 
 
 Contributors: Raymond Thompson

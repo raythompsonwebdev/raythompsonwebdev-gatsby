@@ -105,10 +105,12 @@ class Header extends React.Component {
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  siteDescription: PropTypes.string
 }
 
 Header.defaultProps = {
   siteTitle: ``,
+  siteDescription: ``
 }
 
 export default Header

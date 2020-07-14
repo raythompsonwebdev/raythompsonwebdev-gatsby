@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import PropTypes from "prop-types"
 
 const ProjectItem = ({ items, i }) => (
 
@@ -21,5 +22,10 @@ const ProjectItem = ({ items, i }) => (
     </figure>
   </div>
 )
+
+ProjectItem.propTypes = {
+  i: PropTypes.any,
+  items: PropTypes.any
+};
 
 export default ProjectItem

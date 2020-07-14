@@ -1,42 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
+import PropTypes from "prop-types"
 
-
-export const data = graphql`
-  query($slug: String!) {
-    allWordpressPost(filter: { slug: { eq: $slug } }) {
-      edges {
-        node {
-          featured_media {
-            localFile {
-              childImageSharp {
-                resolutions {
-                  src                  
-                }
-              }
-              url
-            }
-          }
-          title
-          slug
-          content
-          date(formatString: "Y:MM:DD")
-          author {
-            avatar_urls {
-              wordpress_24
-              wordpress_48
-              wordpress_96
-            }
-            name
-            slug
-            link
-          }
-        }
-      }
-    }
-  }
-`
 
 const BlogPost = props => {
    
@@ -137,4 +103,43 @@ const BlogPost = props => {
   )
 }
 
+BlogPost.propTypes = {  
+  data: PropTypes.any
+};
+
 export default BlogPost
+
+export const data = graphql`
+  query($slug: String!) {
+    allWordpressPost(filter: { slug: { eq: $slug } }) {
+      edges {
+        node {
+          featured_media {
+            localFile {
+              childImageSharp {
+                resolutions {
+                  src                  
+                }
+              }
+              url
+            }
+          }
+          title
+          slug
+          content
+          date(formatString: "Y:MM:DD")
+          author {
+            avatar_urls {
+              wordpress_24
+              wordpress_48
+              wordpress_96
+            }
+            name
+            slug
+            link
+          }
+        }
+      }
+    }
+  }
+`

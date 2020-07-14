@@ -1,11 +1,10 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import SEO from "../components/seo"
+import PropTypes from "prop-types"
 
 
 const BlogPage = ({ data }) => (
-
-  
 
   <main id="main-content">
     
@@ -61,6 +60,10 @@ const BlogPage = ({ data }) => (
 )
 
 export default BlogPage
+
+BlogPage.propTypes = {
+  data: PropTypes.node,
+};
 
 export const pageQuery = graphql`
   query {

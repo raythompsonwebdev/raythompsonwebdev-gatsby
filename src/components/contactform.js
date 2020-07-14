@@ -1,9 +1,10 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 const ContactForm = (props) => {
 
     return (
-      <div id="contactform" onsubmit={props.handleSubmit} >
+      <div id="contactform" onSubmit={props.handleSubmit} >
         <form action="" method="" id="contact-form">
           {/* free email tool  https://formspree.io/email@domain.tld*/}
           <ul>
@@ -78,5 +79,10 @@ const ContactForm = (props) => {
 
   
 }
+
+ContactForm.propTypes = {
+  data: PropTypes.any,
+  handleSubmit: PropTypes.func.isRequired
+};
 
 export default ContactForm

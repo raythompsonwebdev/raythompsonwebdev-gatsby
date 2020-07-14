@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
+import PropTypes from "prop-types"
 
 const NavLink = (props) => {
     if (!props.test) {
@@ -109,6 +110,12 @@ const BlogPost = ({ pageContext , props }) => {
    </div>
   )
 }
+
+BlogPost.propTypes = {
+  pageContext: PropTypes.any,
+  props: PropTypes.any,
+  data: PropTypes.any
+};
 
 export default BlogPost
 

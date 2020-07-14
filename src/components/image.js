@@ -1,6 +1,7 @@
 import React from "react"
-import {StaticQuery, graphql} from "gatsby"
+import graphql from "gatsby"
 import Img from "gatsby-image"
+import PropTypes from "prop-types"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -38,12 +39,15 @@ export const data = graphql`
 
   const Image = ({data}) => {
     
-    return() => (
+    return (
       
       <Img fixed={data.featured_media.localFile.childImageSharp.fixed}/>
     )
   }
 
+  Image.propTypes = {
+    data: PropTypes.any
+  };
 
 export default Image
 

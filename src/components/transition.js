@@ -1,7 +1,8 @@
 //Import necessary dependencies 
 
 import React from "react"
-import posed, { PoseGroup } from "react-pose";
+import posed, { PoseGroup } from "react-pose"
+import PropTypes from "prop-types"
 
 const timeout = 0
 
@@ -37,4 +38,10 @@ class Transition extends React.PureComponent {
     )
   }
 }
+
+Transition.propTypes = {
+  children: PropTypes.node.isRequired,
+  location: PropTypes.node.isRequired
+};
+
 export default Transition

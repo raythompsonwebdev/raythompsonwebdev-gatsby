@@ -64,7 +64,7 @@ class AboutPage extends React.Component {
 
       var percentageMaxWidth = key.dataset.percentage
 
-      var id = setInterval(frame, 2000)
+      var id = setInterval(frame, 1000)
 
       function frame() {
         if (percentage === percentageMaxWidth) {

@@ -1,19 +1,19 @@
 import React from "react"
 import SEO from "../components/seo"
+import { Link } from "gatsby"
 
 
 const PrivacyPage = () => (
-
     
     <main id="main-content">
     <SEO title="Privacy Page" />
 
-    <div class="main-text">
+    <div className="main-text">
       <h1>Privacy Policy</h1>
 
       <p>
         The policy: This privacy policy is for this website;
-        [www.raythompsonwebdev.co.uk] and served by [1&amp;1 Internet Ltd.
+        [www.raythompsonwebdev.co.uk] and served by [1 &amp; 1 Internet Ltd.
         Discovery House, 154 Southgate Street, Gloucester, GL1 2EX United
         Kingdom] and governs the privacy of its users who choose to use it.
       </p>
@@ -50,7 +50,7 @@ const PrivacyPage = () => (
         We and this website complies to the DPA (Data Protection Act 1998) and
         already complies to the GDPR (General Data Protection Regulation) which
         comes into affect from May 2018. We will update this policy accordingly
-        after the completion of the UK\'s exit from the European Union.
+        after the completion of the UK&apos;s exit from the European Union.
       </p>
 
       <br />
@@ -124,8 +124,8 @@ const PrivacyPage = () => (
       </p>
 
       <p>
-        What are cookies? Cookies are small files saved to the user\'s computers
-        hard drive that track, save and store information about the user\'s
+        What are cookies? Cookies are small files saved to the user&apos;s computers
+        hard drive that track, save and store information about the user&apos;s
         interactions and usage of the website. This allows the website, through
         its server to provide the users with a tailored experience within this
         website.
@@ -220,7 +220,7 @@ const PrivacyPage = () => (
         Where we have clearly stated and made you aware of the fact, and where
         you have given your express permission, we may use your details to send
         you products/services information through a mailing list system. This is
-        done in accordance with the regulations named in "The policy" above.
+        done in accordance with the regulations named in &quot;The policy&quot; above.
       </p>
 
       <br />
@@ -241,10 +241,10 @@ const PrivacyPage = () => (
       </p>
 
       <p>
-        Shortened URL's; URL shortening is a technique used on the web to
-        shorten URL's (Uniform Resource Locators) to something substantially
+        Shortened URL&apos;s; URL shortening is a technique used on the web to
+        shorten URL&apos;s (Uniform Resource Locators) to something substantially
         shorter. This technique is especially used in social media and looks
-        similar to this (example: bit.ly/zyVUBo', 'https. Users should take
+        similar to this (example: https://bit.ly/zyVUBo). Users should take
         caution before clicking on shortened URL links and verify their
         authenticity before proceeding.
       </p>
@@ -282,13 +282,14 @@ const PrivacyPage = () => (
       <br />
       <ul>
         <li>
-          <a
-            href="https://ico.org.uk/media/for-organisations/data-protection-reform/overview-of-the-gdpr-1-13.pdf"
-            alt="Overview of the GDPR - General Data Protection Regulation"
+          <Link
+            className="social-icon linkedin-icon"
+            to="https://ico.org.uk/media/for-organisations/data-protection-reform/overview-of-the-gdpr-1-13.pdf"
             target="new"
-          >
+            title="Overview of the GDPR - General Data Protection Regulation"
+          >          
             Overview of the GDPR - General Data Protection Regulation
-          </a>
+          </Link>
         </li>
 
         <li>

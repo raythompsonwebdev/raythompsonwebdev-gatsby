@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import ProjectItem from "../components/projectitem"
+import PropTypes from "prop-types"
 
 const ProjectPage = ({ data }) => (
   
@@ -26,6 +27,10 @@ const ProjectPage = ({ data }) => (
   </main>
 
 )
+
+ProjectPage.propTypes = {
+  data: PropTypes.node,
+};
 
 export default ProjectPage
 

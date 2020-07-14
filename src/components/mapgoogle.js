@@ -1,5 +1,6 @@
 import React from "react"
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { Map, GoogleApiWrapper } from 'google-maps-react'
+import PropTypes from "prop-types"
 
 const mapStyles = {
   width: '100%',
@@ -24,7 +25,9 @@ class MapContainer extends React.Component {
     }
   }
 
-
+  MapContainer.propTypes = {
+    google: PropTypes.any
+  };
 
   export default GoogleApiWrapper({
     apiKey: ''

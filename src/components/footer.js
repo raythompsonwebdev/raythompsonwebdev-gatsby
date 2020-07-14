@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import PropTypes from "prop-types"
 
 const ListLink = props => (
   <li className="menu-item">
@@ -60,5 +61,10 @@ const Footer = () => (
     </div>
   </footer>
 )
+
+ListLink.propTypes = {
+  to: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
+};
 
 export default Footer
