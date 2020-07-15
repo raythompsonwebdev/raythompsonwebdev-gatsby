@@ -24,7 +24,6 @@ class contactPage extends React.Component {
     this.handleEmail = this.handleEmail.bind(this);
     //when using arrow function binding not needed for methods using setState.
   }
-
   
   handleName(e) {
     this.setState({

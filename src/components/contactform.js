@@ -2,8 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const ContactForm = props => {
-  console.log(props)
-
+  
   const {
     handleSubmit,
     handleEmail,

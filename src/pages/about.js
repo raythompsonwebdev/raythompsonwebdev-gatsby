@@ -103,6 +103,8 @@ class AboutPage extends React.Component {
 
     return (
       <main id="main-content">
+
+        {console.log(panels[0])}
         <SEO title="About Page" />
 
         <div id="profile_container">

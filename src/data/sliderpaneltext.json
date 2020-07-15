@@ -8,7 +8,7 @@
     "task3": "Understanding Photoshop Interface",
     "task4": "Manipulating Images",
     "task5": "Evaluating Digital Images",
-    "buttonname": "Adobe"
+    "imageindex": 0
   },
   {
     "title": "ELATT",
@@ -19,7 +19,7 @@
     "task3": "Adding Content",
     "task4": "IT User fundementals",
     "task5": "Organizing Content",
-    "buttonname": "ELATT"
+    "imageindex": 1
   },
   {
     "title": "Udemy",
@@ -30,7 +30,7 @@
     "task3": "ES6 Javascript Reloaded",
     "task4": "Learn Complete Wordpress Security",
     "task5": "Up and Running with NodeJs",
-    "buttonname": "Udemy"
+    "imageindex": 2
   },
   {
     "title": "FreeCodeCamp",
@@ -41,7 +41,7 @@
     "task3": "Basic HTML and HTML5",
     "task4": "Basic JavaScript",
     "task5": "Responsive Web Design Projects",
-    "buttonname": "FreeCodeCamp"    
+    "imageindex": 3    
   },
   {
     "title": "Lynda.com",
@@ -52,7 +52,7 @@
     "task3": "Programming Fundementals",
     "task4": "CSS Fundementals",
     "task5": "Javascript Essentials",
-    "buttonname": "Lynda.com"
+    "imageindex": 4
   },
   {
     "title": "Mobile App Development",
@@ -63,7 +63,7 @@
     "task3": "User Interfaces with HTML",
     "task4": "Coding Functions",
     "task5": "Web Hosting/Deploying Apps",
-    "buttonname": "Shaw Academy"
+    "imageindex": 5
   },
   {
     "title": "Code Academy",
@@ -74,7 +74,7 @@
     "task3": "Javascript Beginners",
     "task4": "",
     "task5": "",
-    "buttonname": "Code Academy"
+    "imageindex": 6
   },
   {
     "title": "Udacity",
@@ -85,7 +85,7 @@
     "task3": "Data Structures & Algorithms in Python",
     "task4": "Website Performance Optimisation",
     "task5": "Version Control with Git",
-    "buttonname": "Udacity"
+    "imageindex": 7
   },
   {
     "title": "Digital Futures 2017",
@@ -96,6 +96,6 @@
     "task3": "Block programming using Crumble.",
     "task4": "Negotiation skills with CitizenUK.",
     "task5": "Music creation using Sonic Pi",
-    "buttonname": "Digital Futures"
+    "imageindex": 8
   }
 ]
