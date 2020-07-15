@@ -26,29 +26,23 @@ export const data = graphql`
                   height
                   src
                   width
-                  srcSet                  
+                  srcSet
                 }
-              }              
+              }
             }
-          }          
+          }
         }
       }
     }
   }
 `
 
-  const Image = ({data}) => {
-    
-    return (
-      
-      <Img fixed={data.featured_media.localFile.childImageSharp.fixed}/>
-    )
-  }
+const Image = ({ data }) => {
+  return <Img fixed={data.featured_media.localFile.childImageSharp.fixed} />
+}
 
-  Image.propTypes = {
-    data: PropTypes.any
-  };
+Image.propTypes = {
+  data: PropTypes.any,
+}
 
 export default Image
-
-

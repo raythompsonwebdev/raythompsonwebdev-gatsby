@@ -3,9 +3,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
 const ProjectItem = ({ items, i }) => (
-
   <div id="panel" className={`prod-cnt ${items.slug}`} key={i}>
-    
     <figure className="showcase-container" id="showcaseimg1">
       <div className="showcase-img">
         <img
@@ -25,7 +23,7 @@ const ProjectItem = ({ items, i }) => (
 
 ProjectItem.propTypes = {
   i: PropTypes.any,
-  items: PropTypes.any
-};
+  items: PropTypes.any,
+}
 
 export default ProjectItem

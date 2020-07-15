@@ -2,10 +2,8 @@ import React from "react"
 import SEO from "../components/seo"
 import { Link } from "gatsby"
 
-
 const PrivacyPage = () => (
-    
-    <main id="main-content">
+  <main id="main-content">
     <SEO title="Privacy Page" />
 
     <div className="main-text">
@@ -124,11 +122,11 @@ const PrivacyPage = () => (
       </p>
 
       <p>
-        What are cookies? Cookies are small files saved to the user&apos;s computers
-        hard drive that track, save and store information about the user&apos;s
-        interactions and usage of the website. This allows the website, through
-        its server to provide the users with a tailored experience within this
-        website.
+        What are cookies? Cookies are small files saved to the user&apos;s
+        computers hard drive that track, save and store information about the
+        user&apos;s interactions and usage of the website. This allows the
+        website, through its server to provide the users with a tailored
+        experience within this website.
       </p>
 
       <br />
@@ -220,7 +218,8 @@ const PrivacyPage = () => (
         Where we have clearly stated and made you aware of the fact, and where
         you have given your express permission, we may use your details to send
         you products/services information through a mailing list system. This is
-        done in accordance with the regulations named in &quot;The policy&quot; above.
+        done in accordance with the regulations named in &quot;The policy&quot;
+        above.
       </p>
 
       <br />
@@ -242,10 +241,10 @@ const PrivacyPage = () => (
 
       <p>
         Shortened URL&apos;s; URL shortening is a technique used on the web to
-        shorten URL&apos;s (Uniform Resource Locators) to something substantially
-        shorter. This technique is especially used in social media and looks
-        similar to this (example: https://bit.ly/zyVUBo). Users should take
-        caution before clicking on shortened URL links and verify their
+        shorten URL&apos;s (Uniform Resource Locators) to something
+        substantially shorter. This technique is especially used in social media
+        and looks similar to this (example: https://bit.ly/zyVUBo). Users should
+        take caution before clicking on shortened URL links and verify their
         authenticity before proceeding.
       </p>
 
@@ -287,7 +286,7 @@ const PrivacyPage = () => (
             to="https://ico.org.uk/media/for-organisations/data-protection-reform/overview-of-the-gdpr-1-13.pdf"
             target="new"
             title="Overview of the GDPR - General Data Protection Regulation"
-          >          
+          >
             Overview of the GDPR - General Data Protection Regulation
           </Link>
         </li>
@@ -388,10 +387,7 @@ const PrivacyPage = () => (
         v.3.0 November 2017 Edited &amp; customised by:RAYTHOMPSONWEBDEV.CO.UK
       </p>
     </div>
-    
-   </main>
-  
-  
+  </main>
 )
 
 export default PrivacyPage

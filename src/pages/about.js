@@ -21,8 +21,7 @@ class AboutPage extends React.Component {
   componentDidMount() {
     fetch("./data/barstext.json")
       .then(response => response.json())
-      .then(data => {       
-        
+      .then(data => {
         const bars = data.map(bar => {
           bar.barId = this.state.lastIndex
           this.setState({ lastIndex: this.state.lastIndex + 1 })
@@ -103,7 +102,6 @@ class AboutPage extends React.Component {
 
     return (
       <main id="main-content">
-
         {console.log(panels[0])}
         <SEO title="About Page" />
 
@@ -172,15 +170,17 @@ class AboutPage extends React.Component {
               project called{" "}
               <Link to="https://vimeo.com/232481032">
                 Digital Futures 2017{" "}
-                </Link>              
+              </Link>
               in Waterloo where I worked with other student to enhance a dance
               performance with coreographed lights and music using Ruby and
               Python
             </p>
             <p>
-              I also attended {" "}
+              I also attended{" "}
               <Link to="https://2018.london.wordcamp.org/attendees/">
-                WordCamp 2018 </Link> in London as a volunteer helping visitors find there way around
+                WordCamp 2018{" "}
+              </Link>{" "}
+              in London as a volunteer helping visitors find there way around
               the venue, putting out sinage. I also attended contributors day
               and even reviewed a wordpress theme for the theme review team
             </p>

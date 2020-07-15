@@ -14,10 +14,7 @@ import "../fonts/fontawesome/css/font-awesome.css"
 import "../css/style.scss"
 import posed, { PoseGroup } from "react-pose"
 
-
 const Layout = ({ children, location }) => {
-  
-
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -32,19 +29,18 @@ const Layout = ({ children, location }) => {
   const timeout = 0
 
   const RoutesContainer = posed.div({
-    
     enter: {
       opacity: 1,
       x: 0,
       delay: timeout,
-      delayChildren: timeout
+      delayChildren: timeout,
     },
     exit: {
       opacity: 0,
       transition: `opacity ${timeout}ms ease-in-out`,
-      x: 30
-    }
-  });  
+      x: 30,
+    },
+  })
 
   return (
     <div id="wrapper_container">
@@ -54,10 +50,8 @@ const Layout = ({ children, location }) => {
       />
 
       <PoseGroup>
-          <RoutesContainer key={location.pathname}>
-              {children}
-          </RoutesContainer>
-       </PoseGroup>
+        <RoutesContainer key={location.pathname}>{children}</RoutesContainer>
+      </PoseGroup>
 
       <Footer />
 
@@ -71,7 +65,7 @@ const Layout = ({ children, location }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  location: PropTypes.any
+  location: PropTypes.any,
 }
 
 export default Layout

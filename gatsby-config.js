@@ -13,7 +13,7 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-                   
+
     `gatsby-plugin-sass`,
 
     {
@@ -32,7 +32,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        excludedRoutes:['/wp/v2/users/**', '/wp/v2/settings*'],
+        excludedRoutes: ["/wp/v2/users/**", "/wp/v2/settings*"],
         baseUrl: "localhost/wordpress",
         protocol: "http",
         hostingWPCOM: false,
@@ -43,28 +43,25 @@ module.exports = {
           sourceUrl: "http://localhost/wordpress",
           replacementUrl: "",
         },
-      }
+      },
     },
 
     `gatsby-plugin-styled-components`,
     {
-      resolve: 'gatsby-plugin-prefetch-google-fonts',
-      options:{
+      resolve: "gatsby-plugin-prefetch-google-fonts",
+      options: {
         fonts: [
           {
-            family: 'Cabin',
-            variants: ['200','300', '400', '500', '600', '700' ],
+            family: "Cabin",
+            variants: ["200", "300", "400", "500", "600", "700"],
           },
           {
-            family: 'PT Sans',
-            variants: ['200','300', '400', '500', '600', '700' ],
-          }
+            family: "PT Sans",
+            variants: ["200", "300", "400", "500", "600", "700"],
+          },
         ],
-        "formats": [
-          "woff",
-          "woff2"
-        ]
-      }
+        formats: ["woff", "woff2"],
+      },
     },
 
     {
@@ -76,19 +73,17 @@ module.exports = {
 
     //get images to show in posts
     {
-      resolve: 'gatsby-wpgraphql-inline-images',
+      resolve: "gatsby-wpgraphql-inline-images",
       options: {
-        wordPressUrl: 'http://localhost/wordpress/',
-        uploadsUrl: 'http://localhost/wordpress/wp-content/uploads/',
-        processPostTypes: ['Page', 'Post', 'CustomPost'],
-        graphqlTypeName: 'WPGraphQL',
-        
+        wordPressUrl: "http://localhost/wordpress/",
+        uploadsUrl: "http://localhost/wordpress/wp-content/uploads/",
+        processPostTypes: ["Page", "Post", "CustomPost"],
+        graphqlTypeName: "WPGraphQL",
       },
     },
-    
-                                       
+
     `gatsby-transformer-sharp`,
-    
+
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -98,7 +93,6 @@ module.exports = {
         pngQuality: 75,
       },
     },
-    
 
     `gatsby-transformer-remark`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -110,7 +104,6 @@ module.exports = {
       options: {
         path: `./src/data/`,
       },
-    }
-    
+    },
   ],
 }

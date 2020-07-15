@@ -3,21 +3,17 @@ import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
 
-
 const BlogPost = props => {
+  const {
+    data: { allWordpressPost },
+  } = props
 
-  const{ data: {allWordpressPost} } = props
-   
   return (
-    
     <main id="main-content">
-
       <SEO title="Blog Post" />
 
       <article className="post group" id="post">
-        <h1 className="page-title">
-         {allWordpressPost.edges[0].node.title}
-        </h1>
+        <h1 className="page-title">{allWordpressPost.edges[0].node.title}</h1>
 
         <header className="byline">
           <div className="entry-meta">
@@ -31,7 +27,7 @@ const BlogPost = props => {
                     }
                     alt="Blog"
                   />
-                </Link>                
+                </Link>
               </div>
 
               <Link to="" rel="bookmark"></Link>
@@ -59,32 +55,26 @@ const BlogPost = props => {
 
         <Link to="" title="Permanent Link to">
           <figure className="featuredImage">
-          { allWordpressPost.edges[0].node.featured_media == null ?            
-            (
+            {allWordpressPost.edges[0].node.featured_media == null ? (
               <p>No Image</p>
-            ) 
-            :
-            (
+            ) : (
               <img
-                src={allWordpressPost.edges[0].node.featured_media.localFile.childImageSharp.resolutions.src}
+                src={
+                  allWordpressPost.edges[0].node.featured_media.localFile
+                    .childImageSharp.resolutions.src
+                }
                 alt=""
               />
-              
-            )            
-
-          }            
+            )}
           </figure>
         </Link>
 
         <div className="entry">
-        
           <div
-             dangerouslySetInnerHTML={{
-             __html: allWordpressPost.edges[0].node.content,
-             }}
-            
+            dangerouslySetInnerHTML={{
+              __html: allWordpressPost.edges[0].node.content,
+            }}
           ></div>
-
         </div>
 
         <div className="continue-reading">
@@ -92,9 +82,7 @@ const BlogPost = props => {
         </div>
 
         <footer className="byline">
-          
           <p className="right">
-
             <Link to="/" className="comments-count">
               Link
             </Link>
@@ -103,14 +91,13 @@ const BlogPost = props => {
           <p>Text</p>
         </footer>
       </article>
-   
-   </main>
+    </main>
   )
 }
 
-BlogPost.propTypes = {  
-  data: PropTypes.any
-};
+BlogPost.propTypes = {
+  data: PropTypes.any,
+}
 
 export default BlogPost
 
@@ -123,7 +110,7 @@ export const data = graphql`
             localFile {
               childImageSharp {
                 resolutions {
-                  src                  
+                  src
                 }
               }
               url

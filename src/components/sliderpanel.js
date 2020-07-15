@@ -2,13 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-const SliderPanel = (props) => {  
-  
-  const {panel} = props
-      
-  return (
+const SliderPanel = props => {
+  const { panel } = props
 
-    <article          
+  return (
+    <article
       className="slidesPanel"
       key={panel.panelId}
       id={`panel-${panel.panelId}`}
@@ -16,7 +14,6 @@ const SliderPanel = (props) => {
       <h2>{panel.title}</h2>
 
       <figure className="slider-panel">
-        
         <Link to="/projects" className="fancybox">
           <span></span>
         </Link>
@@ -37,7 +34,6 @@ const SliderPanel = (props) => {
         </figcaption>
       </figure>
     </article>
-        
   )
 }
 

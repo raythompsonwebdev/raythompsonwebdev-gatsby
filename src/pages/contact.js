@@ -2,56 +2,55 @@ import React from "react"
 import SEO from "../components/seo"
 import ContactForm from "../components/contactform"
 import MapContainer from "../components/mapgoogle"
+import { Link } from "gatsby"
 
 const mapCover = {
-  position: 'relative'
-};
+  position: "relative",
+}
 
 class contactPage extends React.Component {
-  
   constructor() {
     super()
     this.state = {
-      name: ' ',
-      comments: ' ',
-      email: ' ',      
+      name: " ",
+      comments: " ",
+      email: " ",
       //isFriendly = false
     }
 
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleName = this.handleName.bind(this);
-    this.handleComments = this.handleComments.bind(this);
-    this.handleEmail = this.handleEmail.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleName = this.handleName.bind(this)
+    this.handleComments = this.handleComments.bind(this)
+    this.handleEmail = this.handleEmail.bind(this)
     //when using arrow function binding not needed for methods using setState.
   }
-  
+
   handleName(e) {
     this.setState({
-      name: e.target.value
-    });
+      name: e.target.value,
+    })
   }
 
   handleComments(e) {
     this.setState({
-      comments: e.target.value
-    });
+      comments: e.target.value,
+    })
   }
 
   handleEmail(e) {
     this.setState({
-      email: e.target.value
-    });
+      email: e.target.value,
+    })
   }
 
-  handleSubmit (e) {
-
-    let url = 'https://formspree.io/email@domain.tld';
+  handleSubmit(e) {
+    let url = "https://formspree.io/email@domain.tld"
 
     console.log(
-      `Details : ${this.state.name}, ${this.state.email}, ${this.state.comments}`,
-    );
+      `Details : ${this.state.name}, ${this.state.email}, ${this.state.comments}`
+    )
 
-    e.preventDefault();
+    e.preventDefault()
   }
 
   /*
@@ -65,10 +64,8 @@ class contactPage extends React.Component {
 */
 
   render() {
-    
     return (
       <main id="main-content">
-        
         <SEO title="Contact Page" />
 
         <h1>Contact</h1>
@@ -87,25 +84,37 @@ class contactPage extends React.Component {
         <div id="map_container" style={mapCover}>
           <MapContainer />
         </div>
-       
-        <address className="contact-details" >
+
+        <address className="contact-details">
           <ul>
             <li>
-              <a href="mailto:ray@ray.com">{`raymond.thompson@raythompsonwebdev.co.uk`}</a>
+              <Link to="mailto:ray@ray.com">{`raymond.thompson@raythompsonwebdev.co.uk`}</Link>
             </li>
             <li>
-              <a href="https://www.facebook.com/raythompsonwebdeveloper/">
+              <Link
+                to="https://www.facebook.com/raythompsonwebdeveloper/"
+                target="new"
+              >
                 {"www.facebook.com/raythompsonwebdeveloper/"}
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://twitter.com/RayThompWeb/">{`@RayThompWeb`}</a>
+              <Link
+                to="https://twitter.com/RayThompWeb/"
+                target="new"
+              >{`@RayThompWeb`}</Link>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/raymond-t-1b42b7b8/">{`www.aedin.com/in/raymond-t-1b42b7b8/`}</a>
+              <Link
+                to="https://www.linkedin.com/in/raymond-t-1b42b7b8/"
+                target="new"
+              >{`www.aedin.com/in/raymond-t-1b42b7b8/`}</Link>
             </li>
             <li>
-              <a href="https://github.com/raythompsonwebdev">{`github.com/raythompsonwebdev`}</a>
+              <a
+                to="https://github.com/raythompsonwebdev"
+                target="new"
+              >{`github.com/raythompsonwebdev`}</a>
             </li>
           </ul>
         </address>

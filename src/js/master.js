@@ -5,7 +5,6 @@ var position, direction, previous
 let menuToggle = document.getElementById("menu-toggle")
 
 window.scroll(function() {
-	  
   if (this.scrollTop() >= position) {
     direction = "down"
     if (direction !== previous) {
@@ -20,18 +19,16 @@ window.scroll(function() {
     }
   }
   position = this.scrollTop()
-  
 })
 
 // sliding menu mobile
 menuToggle.addEventListener("click", function(event) {
-
   event.preventDefault()
 
   // create menu variables
-  var slideoutMenu = document.querySelector("main-menu ");
-  var slideoutMenuWidth = document.querySelector("main-menu").style.width;
-  
+  var slideoutMenu = document.querySelector("main-menu ")
+  var slideoutMenuWidth = document.querySelector("main-menu").style.width
+
   // toggle open class
   slideoutMenu.toggleClass("open")
 
@@ -42,5 +39,3 @@ menuToggle.addEventListener("click", function(event) {
     slideoutMenuslideoutMenu.style.left = -slideoutMenuWidth
   }
 })
-
-

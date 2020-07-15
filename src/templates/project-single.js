@@ -4,8 +4,8 @@ import SEO from "../components/seo"
 import PropTypes from "prop-types"
 
 export const data = graphql`
-  query ($slug: String!) {
-    allWordpressWpProject(filter: {slug: {eq: $slug}}) {
+  query($slug: String!) {
+    allWordpressWpProject(filter: { slug: { eq: $slug } }) {
       edges {
         node {
           id
@@ -33,10 +33,8 @@ export const data = graphql`
 `
 
 const ProjectSingle = props => {
-  
   return (
-    
-  <main id="main-content">
+    <main id="main-content">
       <SEO title="Single Project Page" />
       <article className="post group">
         <h1> {props.data.allWordpressWpProject.edges[0].node.title} </h1>
@@ -44,8 +42,8 @@ const ProjectSingle = props => {
           <Link to="" className="fancybox" title="">
             <img
               src={
-                 props.data.allWordpressWpProject.edges[0].node.featured_media
-                   .localFile.childImageSharp.fixed.src
+                props.data.allWordpressWpProject.edges[0].node.featured_media
+                  .localFile.childImageSharp.fixed.src
               }
               alt=""
             />
@@ -89,7 +87,7 @@ const ProjectSingle = props => {
           </a>
         </div>
         <footer className="byline">
-        <p className="right">
+          <p className="right">
             <Link to="/" className="comments-count">
               Link
             </Link>
@@ -98,12 +96,12 @@ const ProjectSingle = props => {
           <p>Text</p>
         </footer>
       </article>
-  </main> 
+    </main>
   )
 }
 
 ProjectSingle.propTypes = {
-  data: PropTypes.any
-};
+  data: PropTypes.any,
+}
 
 export default ProjectSingle

@@ -5,53 +5,39 @@ import ProjectItem from "../components/projectitem"
 import PropTypes from "prop-types"
 
 class ProjectPage extends React.Component {
-
   constructor(props) {
     super(props)
 
     this.state = {
-      data : props
-    }   
+      data: props,
+    }
   }
 
+  render() {
+    const {
+      data: { allWordpressWpProject },
+    } = this.state.data
 
-
-  render(){
-
-    const{ data : {allWordpressWpProject} } = this.state.data
-
-    return(      
-
+    return (
       <main id="main-content">
-        
-      <SEO title="Project Page" />
-      <h1>Projects</h1>
-  
-      <div id="photocontainer">
-        <div className="content">       
-             
-  
-          {allWordpressWpProject.nodes.map((items, i) => (
-          
-            <ProjectItem  items={items} key={i}/>
-          
-          ))}
-  
-  
-        </div>
-      </div>
-    
-    </main>
-  
+        <SEO title="Project Page" />
+        <h1>Projects</h1>
 
+        <div id="photocontainer">
+          <div className="content">
+            {allWordpressWpProject.nodes.map((items, i) => (
+              <ProjectItem items={items} key={i} />
+            ))}
+          </div>
+        </div>
+      </main>
     )
-  }  
- 
+  }
 }
 
 ProjectPage.propTypes = {
-  data: PropTypes.any,
-};
+  data: PropTypes.object,
+}
 
 export default ProjectPage
 
@@ -69,7 +55,7 @@ export const projectQuery = graphql`
               }
             }
           }
-        }        
+        }
       }
     }
   }

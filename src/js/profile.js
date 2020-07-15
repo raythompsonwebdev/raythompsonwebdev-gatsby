@@ -13,29 +13,26 @@
 //   })
 // })(jQuery)
 
-
 // Responsive chart
-(function responsiveGraph() {
-  var chartBar = document.querySelectorAll(".bar");
+;(function responsiveGraph() {
+  var chartBar = document.querySelectorAll(".bar")
 
   chartBar.forEach(function(key) {
-    var percentage = 0;
+    var percentage = 0
 
-    var percentageMaxWidth = key.dataset.percentage;
+    var percentageMaxWidth = key.dataset.percentage
 
-    var id = setInterval(frame, 1500);
+    var id = setInterval(frame, 1500)
 
     function frame() {
       if (percentage == percentageMaxWidth) {
-        clearInterval(id);
+        clearInterval(id)
       } else {
-        percentage++;
+        percentage++
 
         //key.style.width = `${percentageMaxWidth}%`;
-        key.style.width = "".concat(percentageMaxWidth, "%");
+        key.style.width = "".concat(percentageMaxWidth, "%")
       }
     }
-  });
-})();
-
-
+  })
+})()
