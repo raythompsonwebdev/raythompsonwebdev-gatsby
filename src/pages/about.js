@@ -21,7 +21,8 @@ class AboutPage extends React.Component {
   componentDidMount() {
     fetch("./data/barstext.json")
       .then(response => response.json())
-      .then(data => {
+      .then(data => {       
+        
         const bars = data.map(bar => {
           bar.barId = this.state.lastIndex
           this.setState({ lastIndex: this.state.lastIndex + 1 })

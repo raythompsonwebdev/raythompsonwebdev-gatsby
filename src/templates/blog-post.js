@@ -5,15 +5,18 @@ import PropTypes from "prop-types"
 
 
 const BlogPost = props => {
+
+  const{ data: {allWordpressPost} } = props
    
   return (
+    
     <main id="main-content">
+
       <SEO title="Blog Post" />
 
       <article className="post group" id="post">
         <h1 className="page-title">
-         {props.data.allWordpressPost.edges[0].node.title}
-
+         {allWordpressPost.edges[0].node.title}
         </h1>
 
         <header className="byline">
@@ -23,24 +26,24 @@ const BlogPost = props => {
                 <Link className="url fn n" to="">
                   <img
                     src={
-                      props.data.allWordpressPost.edges[0].node.author.avatar_urls
+                      allWordpressPost.edges[0].node.author.avatar_urls
                         .wordpress_96
                     }
                     alt="Blog"
                   />
-                </Link>
+                </Link>                
               </div>
 
               <Link to="" rel="bookmark"></Link>
 
               <span className="byline">
-                Posted By : {props.data.allWordpressPost.edges[0].node.author.name}{" "}
+                Posted By : {allWordpressPost.edges[0].node.author.name}{" "}
               </span>
               <span className="posted-on">
                 Posted on :
                 <time className="entry-date published">
                   {" "}
-                  {props.data.allWordpressPost.edges[0].node.date}
+                  {allWordpressPost.edges[0].node.date}
                 </time>
               </span>
               <span className="byline">
@@ -56,14 +59,14 @@ const BlogPost = props => {
 
         <Link to="" title="Permanent Link to">
           <figure className="featuredImage">
-          { props.data.allWordpressPost.edges[0].node.featured_media == null ?            
+          { allWordpressPost.edges[0].node.featured_media == null ?            
             (
               <p>No Image</p>
             ) 
             :
             (
               <img
-                src={props.data.allWordpressPost.edges[0].node.featured_media.localFile.childImageSharp.resolutions.src}
+                src={allWordpressPost.edges[0].node.featured_media.localFile.childImageSharp.resolutions.src}
                 alt=""
               />
               
@@ -77,7 +80,7 @@ const BlogPost = props => {
         
           <div
              dangerouslySetInnerHTML={{
-             __html: props.data.allWordpressPost.edges[0].node.content,
+             __html: allWordpressPost.edges[0].node.content,
              }}
             
           ></div>
@@ -89,7 +92,9 @@ const BlogPost = props => {
         </div>
 
         <footer className="byline">
+          
           <p className="right">
+
             <Link to="/" className="comments-count">
               Link
             </Link>

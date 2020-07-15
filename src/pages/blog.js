@@ -4,10 +4,24 @@ import SEO from "../components/seo"
 import PropTypes from "prop-types"
 
 
-const BlogPage = ({ data }) => (
+class BlogPage extends React.Component {
 
-  <main id="main-content">
-    
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      data : props
+    }   
+  }
+  
+  render(){
+
+    const{ data : {allWordpressPost} } = this.state.data
+
+    return (
+
+      <main id="main-content">
+        
     <SEO title="Blog Page" />
     
     <h1>Interested in web design and web development</h1>
@@ -25,10 +39,8 @@ const BlogPage = ({ data }) => (
     </div>
 
     <div id="blogbox">
-
-      {console.log(data.allWordpressPost.edges)}
-
-      {data.allWordpressPost.edges.map(({ node }, index) => (        
+      
+      {allWordpressPost.edges.map(({ node }, index) => (        
 
         <div className="blogboxes" key={index}>
           <h1 dangerouslySetInnerHTML={{ __html: node.title }}></h1>
@@ -57,12 +69,17 @@ const BlogPage = ({ data }) => (
     </section>
     
  </main>
-)
+
+
+    )
+  }
+
+}
 
 export default BlogPage
 
 BlogPage.propTypes = {
-  data: PropTypes.node,
+  data: PropTypes.object,
 };
 
 export const pageQuery = graphql`

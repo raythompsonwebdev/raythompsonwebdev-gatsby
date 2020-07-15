@@ -4,37 +4,58 @@ import SEO from "../components/seo"
 import ProjectItem from "../components/projectitem"
 import PropTypes from "prop-types"
 
-const ProjectPage = ({ data }) => (
+class ProjectPage extends React.Component {
+
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      data : props
+    }   
+  }
+
+
+
+  render(){
+
+    const{ data : {allWordpressWpProject} } = this.state.data
+
+    return(      
+
+      <main id="main-content">
+        
+      <SEO title="Project Page" />
+      <h1>Projects</h1>
   
-  <main id="main-content">
-    <SEO title="Project Page" />
-    <h1>Projects</h1>
-
-    <div id="photocontainer">
-      <div className="content">       
-           
-
-        {data.allWordpressWpProject.nodes.map((items, i) => (
-        
-          <ProjectItem  items={items} key={i}/>
-        
-        ))}
-
-
+      <div id="photocontainer">
+        <div className="content">       
+             
+  
+          {allWordpressWpProject.nodes.map((items, i) => (
+          
+            <ProjectItem  items={items} key={i}/>
+          
+          ))}
+  
+  
+        </div>
       </div>
-    </div>
+    
+    </main>
   
-  </main>
 
-)
+    )
+  }  
+ 
+}
 
 ProjectPage.propTypes = {
-  data: PropTypes.node,
+  data: PropTypes.any,
 };
 
 export default ProjectPage
 
-export const data = graphql`
+export const projectQuery = graphql`
   query SiteCustomQuery {
     allWordpressWpProject {
       nodes {

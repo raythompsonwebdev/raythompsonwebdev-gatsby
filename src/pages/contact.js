@@ -12,21 +12,47 @@ class contactPage extends React.Component {
   constructor() {
     super()
     this.state = {
-      firstName: "",
-      email: "",
-      text: "",
-      selectQuery: "",
+      name: ' ',
+      comments: ' ',
+      email: ' ',      
       //isFriendly = false
     }
 
-    //this.handleChange = this.handleChange.bind(this)
-    //this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleName = this.handleName.bind(this);
+    this.handleComments = this.handleComments.bind(this);
+    this.handleEmail = this.handleEmail.bind(this);
     //when using arrow function binding not needed for methods using setState.
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault()
-    console.log("submitted")
+  
+  handleName(e) {
+    this.setState({
+      name: e.target.value
+    });
+  }
+
+  handleComments(e) {
+    this.setState({
+      comments: e.target.value
+    });
+  }
+
+  handleEmail(e) {
+    this.setState({
+      email: e.target.value
+    });
+  }
+
+  handleSubmit (e) {
+
+    let url = 'https://formspree.io/email@domain.tld';
+
+    console.log(
+      `Details : ${this.state.name}, ${this.state.email}, ${this.state.comments}`,
+    );
+
+    e.preventDefault();
   }
 
   /*
@@ -40,6 +66,7 @@ class contactPage extends React.Component {
 */
 
   render() {
+    
     return (
       <main id="main-content">
         
@@ -51,6 +78,9 @@ class contactPage extends React.Component {
 
         <ContactForm
           handleSubmit={this.handleSubmit}
+          handleComments={this.handleComments}
+          handleEmail={this.handleEmail}
+          handleName={this.handleName}
           data={this.state}
           //{...this.state}
         />

@@ -30,7 +30,7 @@ function SkillsGraph (props) {
 }
 
 SkillsGraph.propTypes = {
-  bars: PropTypes.any,
+  bars: PropTypes.object,
   responsiveGraph: PropTypes.func
 };
 

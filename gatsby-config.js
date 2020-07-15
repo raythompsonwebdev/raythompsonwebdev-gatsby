@@ -34,7 +34,7 @@ module.exports = {
       options: {
         excludedRoutes:['/wp/v2/users/**', '/wp/v2/settings*'],
         baseUrl: "localhost/wordpress",
-        protocol: "https",
+        protocol: "http",
         hostingWPCOM: false,
         useACF: false,
         verboseOutput: true,
