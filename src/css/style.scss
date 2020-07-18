@@ -223,9 +223,7 @@ desktop 1920px*/
     nav#main-nav {
       padding: 0;
       font-family: ($FontStyle);
-
       width: 45%;
-
       margin: 0.5em 0 0 0;
       height: 35px;
       -webkit-flex: 1 0 auto;
@@ -774,7 +772,7 @@ desktop 1920px*/
             -webkit-flex: 1 0 auto;
             -ms-flex: 1 0 auto;
             flex: 1 0 auto;
-            width: 24%;
+            width: 24.5%;
             display: inline-block;
             background-color: $color4;
             height: auto;
@@ -785,6 +783,7 @@ desktop 1920px*/
               height: auto;
               width: 100%;
               display: block;
+              padding: 0.5em 0;
 
               .fa-wordpress,
               .fa-code,
@@ -912,13 +911,13 @@ desktop 1920px*/
         -ms-flex-order: 0;
         order: 0;
         width: 96%;
-        height: 400px;
+        height: auto;
         font-family: ($FontStyle);
         padding-top: 3%;
         //background-color:$color4;
 
         h1 {
-          font-size: 4em;
+          font-size: 3.5em;
           color: $color4;
           margin: 0;
           padding: 0;
@@ -927,12 +926,13 @@ desktop 1920px*/
           text-align: left;
         }
         h2 {
-          font-size: 2em;
+          font-size: 1.9em;
           color: $color4;
           margin: 0 0 1em 0;
           padding: 0;
           text-align: left;
           line-height: 40px;
+          height:auto;
         }
 
         p {
@@ -953,7 +953,7 @@ desktop 1920px*/
           display: block;
           height: auto;
           border: 5px solid white;
-          width: 300px;
+          width: 25%;
           float: right;
           text-align: center;
           font-size: 1.2em;
@@ -2936,7 +2936,7 @@ desktop 1920px*/
       display: block;
       float: right;
       margin: 0;
-      width: 20%;
+      width: 15%;
       display: flex;
       flex-flow: row;
       align-items: center;
@@ -3476,10 +3476,10 @@ desktop 1920px*/
 
       section#banner-container {
         h1 {
-          font-size: 3.4em;
+          font-size: 3.1em;
         }
         h2 {
-          font-size: 1.9em;
+          font-size: 1.8em;
         }
 
         p {
@@ -4877,10 +4877,10 @@ desktop 1440px*/
 
       section#banner-container {
         h1 {
-          font-size: 3.2em;
+          font-size: 3em;
         }
         h2 {
-          font-size: 1.8em;
+          font-size: 1.6em;
         }
 
         p {
@@ -5802,7 +5802,7 @@ desktop 1440px*/
     height: 120px;
 
     .socialpics {
-      width: 20%;
+      width: 18%;
 
       .social-icon {
         &:hover {
@@ -6201,11 +6201,12 @@ desktop 1280px*/
           font-size: 3.1em;
         }
         h2 {
-          font-size: 1.7em;
+          font-size: 1.5em;
         }
 
         p {
           font-size: 0.9em;
+          
         }
 
         a#projectLink {
@@ -7248,11 +7249,12 @@ desktop 1280px*/
           font-size: 3em;
         }
         h2 {
-          font-size: 1.6em;
+          font-size: 1.5em;
         }
 
         p {
           font-size: 0.9em;
+          
         }
 
         a#projectLink {
@@ -8338,7 +8340,7 @@ desktop 980px*/
           }
 
           section.frntpgbox {
-            width: 32.8%;
+            width: 24.5%;
             span {
               height: auto;
 
@@ -8347,6 +8349,8 @@ desktop 980px*/
               .fa-wrench,
               .fa-laptop {
                 height: auto;
+                width: 23%;
+                margin: 0.5em auto;
               }
             }
 
@@ -8403,11 +8407,12 @@ desktop 980px*/
           font-size: 2.9em;
         }
         h2 {
-          font-size: 1.5em;
+          font-size: 1.4em;
         }
 
         p {
           font-size: 0.9em;
+          
         }
 
         a#projectLink {
@@ -9529,7 +9534,7 @@ tablet 800px */
           }
 
           section.frntpgbox {
-            width: 80%;
+            width: 50%;
             margin: 1em auto;
             display: block;
             span {
@@ -9540,15 +9545,20 @@ tablet 800px */
               .fa-wrench,
               .fa-laptop {
                 height: auto;
+                width:30%;
+              
               }
             }
 
             h1 {
               margin: 0;
+              font-size:1.2em;
+              line-height: 45px;
             }
 
             p {
-              font-size: 0.85em;
+              font-size: 1em;
+              line-height: 40px;
             }
           }
         }
@@ -9599,20 +9609,28 @@ tablet 800px */
         margin: 0;
 
         h1 {
-          font-size: 2.8em;
+          font-size: 2.7em;
         }
         h2 {
-          font-size: 1.5em;
+          font-size: 1.3em;
         }
 
         p {
           font-size: 1em;
+          float:none;
+          width:96%;
+          display:block;
+          margin:auto;
+          padding:0.5em;
         }
 
         a#projectLink {
-          font-size: 1.1em;
-          width: 250px;
+          font-size: 1.4em;          
           border: 2.5px solid white;
+          width:60%;
+          float:none;
+          display:block;
+          margin:1em auto;
 
           &:hover {
             background-color: $color4;
@@ -10750,8 +10768,7 @@ tablet 667px*/
           }
 
           section.frntpgbox {
-            width: 85%;
-
+            
             span {
               height: auto;
 
@@ -10759,16 +10776,17 @@ tablet 667px*/
               .fa-code,
               .fa-wrench,
               .fa-laptop {
-                font-size: 4em;
+                width:30%;
               }
             }
 
             h1 {
               margin: 0;
+              font-size:1em;
             }
 
             p {
-              font-size: 0.8em;
+              font-size: 0.85em;
             }
           }
         }
@@ -11635,9 +11653,9 @@ tablet 667px*/
   #menu-toggle {
     position: fixed;
     z-index: 100;
-    top: 0.2em;
-    left: 86%;
-    padding: 0.7em;
+    top: 0.5em;
+    left: 80%;
+    padding: 0.5em;
     font-size: 1em;
     text-transform: uppercase;
     background-color: $color1;
@@ -11645,6 +11663,7 @@ tablet 667px*/
     border: none;
     transition: all ease-out 400ms;
     height: 60px;
+    width:15%;
   }
 
   #menu-toggle.hide {
@@ -11748,12 +11767,12 @@ tablet 667px*/
     nav#main-nav {
       position: fixed;
       top: 5em;
-      z-index: 100;
-      //opacity:0;
+      z-index: 100;     
       left: -250px;
       width: 250px;
       height: auto;
       background-color: $color4;
+      @include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
       ul {
         height: 15.5em;
         -webkit-flex-flow: column;
@@ -11765,11 +11784,11 @@ tablet 667px*/
           width: 100%;
           display: block;
           background-color: $color2;
-          height: 45px;
+          height: 55px;
           margin-bottom: 0.25em;
 
           a {
-            line-height: 45px;
+            line-height: 55px;
             margin: 0;
             letter-spacing: 0.1em;
             font-size: 1em;
@@ -11779,7 +11798,7 @@ tablet 667px*/
             &:hover {
               letter-spacing: 0.2em;
               font-weight: bold;
-              line-height: 45px;
+              line-height: 55px;
             }
           }
         }
@@ -12009,17 +12028,15 @@ tablet 667px*/
           }
 
           section.frntpgbox {
-            width: 85%;
+            width: 55%;
 
             .fa-wordpress,
             .fa-code,
             .fa-wrench,
             .fa-laptop {
               height: auto;
-
-              i {
-                font-size: 4em;
-              }
+              width:35%;
+              
             }
 
             h1 {
@@ -12027,7 +12044,7 @@ tablet 667px*/
             }
 
             p {
-              font-size: 0.8em;
+              font-size: 0.85em;
             }
           }
         }
@@ -12826,9 +12843,9 @@ tablet 667px*/
 mobile 480px */
 @media only screen and (max-width: 30em) {
   #menu-toggle {
-    left: 86%;
+    left: 80%;
     font-size: 0.9em;
-    top: 2.6em;
+    top: 2.5em;
   }
 
   .seperator {
@@ -12841,7 +12858,7 @@ mobile 480px */
 
   /*Header*/
   header {
-    height: 100px;
+    height: 85px;
 
     /*Site Logo*/
     .site-logo {
@@ -13147,8 +13164,8 @@ mobile 480px */
           }
 
           section.frntpgbox {
-            width: 85%;
-
+            
+            
             span {
               height: auto;
 
@@ -13156,7 +13173,7 @@ mobile 480px */
               .fa-code,
               .fa-wrench,
               .fa-laptop {
-                font-size: 4em;
+                width:40%;
               }
             }
 
@@ -13165,7 +13182,11 @@ mobile 480px */
             }
 
             p {
-              font-size: 0.75em;
+              font-size: 0.9em;
+            }
+
+            a#projectLink{
+              margin: 0.5em auto;
             }
           }
         }
@@ -13222,7 +13243,7 @@ mobile 480px */
         a#projectLink {
           font-size: 1.2em;
           float: none;
-          margin: auto;
+          margin: 0.5em auto;
 
           &:hover {
             background-color: $color4;
@@ -14341,7 +14362,7 @@ mobile 360px */
           }
 
           section.frntpgbox {
-            width: 90%;
+            width: 55%;
 
             span {
               height: auto;
@@ -15509,7 +15530,7 @@ mobile 320px */
           }
 
           section.frntpgbox {
-            width: 85%;
+            
 
             span {
               height: auto;
