@@ -1,10 +1,36 @@
-import React from "react"
+import React, {useEffect} from "react"
 import PropTypes from "prop-types"
 
-function SkillsGraph(props) {
-  const { bars, responsiveGraph } = props
 
-  responsiveGraph()
+const responsiveGraph = () => {
+  var chartBar = document.querySelectorAll(".bar")
+
+  chartBar.forEach(function(key) {
+    var percentage = 0
+
+    var percentageMaxWidth = key.dataset.percentage
+
+    var id = setInterval(frame, 1000)
+
+    function frame() {
+      if (percentage === percentageMaxWidth) {
+        clearInterval(id)
+      } else {
+        percentage++
+
+        //key.style.width = `${percentageMaxWidth}%`;
+        key.style.width = "".concat(percentageMaxWidth, "%")
+      }
+    }
+  })
+}
+function SkillsGraph(props) {
+
+  const { bars} = props
+  
+  useEffect(() => {    // Update the document title using the browser API
+    responsiveGraph()  
+  });
 
   return (
     <ul id="bars">

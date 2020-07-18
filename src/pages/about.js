@@ -15,10 +15,11 @@ class AboutPage extends React.Component {
       cert: [],
     }
 
-    this.responsiveGraph = this.responsiveGraph.bind(this)
+    //this.responsiveGraph = this.responsiveGraph.bind(this)
   }
 
   componentDidMount() {
+
     fetch("./data/barstext.json")
       .then(response => response.json())
       .then(data => {
@@ -53,31 +54,11 @@ class AboutPage extends React.Component {
       })
       .catch(error => {
         console.error(error)
-      })
-  }
-
-  responsiveGraph = () => {
-    var chartBar = document.querySelectorAll(".bar")
-
-    chartBar.forEach(function(key) {
-      var percentage = 0
-
-      var percentageMaxWidth = key.dataset.percentage
-
-      var id = setInterval(frame, 1000)
-
-      function frame() {
-        if (percentage === percentageMaxWidth) {
-          clearInterval(id)
-        } else {
-          percentage++
-
-          //key.style.width = `${percentageMaxWidth}%`;
-          key.style.width = "".concat(percentageMaxWidth, "%")
-        }
-      }
-    })
-  }
+      })      
+    
+  } 
+  
+  // Similar to componentDidMount and componentDidUpdate:
 
   nextProperty = () => {
     const newIndex = this.state.cert.imageindex + 1
@@ -159,7 +140,7 @@ class AboutPage extends React.Component {
             <h1>Skill Level</h1>
 
             <article id="chart">
-              <SkillsGraph bars={bars} responsiveGraph={this.responsiveGraph} />
+              <SkillsGraph bars={bars} /*responsiveGraph={this.responsiveGraph}*/ />
             </article>
           </section>
 

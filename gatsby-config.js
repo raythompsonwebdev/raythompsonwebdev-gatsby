@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: '.env',
+});
+
 module.exports = {
   siteMetadata: {
     title: `Raythompsonwebdev.com`,
@@ -15,7 +19,6 @@ module.exports = {
     },
 
     `gatsby-plugin-sass`,
-
     {
       //works with gatsby-wpgraphql-inline-images not gatsby-source-wordpress
       resolve: "gatsby-source-graphql",
@@ -25,7 +28,7 @@ module.exports = {
         // This is the field under which it's accessible
         fieldName: "swapi",
         // URL to query from
-        url: "https://api.graphcms.com/simple/v1/swapi",
+        url: "https://swapi-graphql.netlify.app/.netlify/functions/index",
       },
     },
 
@@ -35,14 +38,27 @@ module.exports = {
         excludedRoutes: ["/wp/v2/users/**", "/wp/v2/settings*"],
         baseUrl: "localhost/wordpress",
         protocol: "http",
+        restApiRoutePrefix: "wp-json",
         hostingWPCOM: false,
-        useACF: false,
+        useACF: false,        
         verboseOutput: true,
         // Search and Replace Urls across WordPress content.
         searchAndReplaceContentUrls: {
           sourceUrl: "http://localhost/wordpress",
           replacementUrl: "",
         },
+        // Set how many simultaneous requests are sent at once.
+        concurrentRequests: 10,
+        // Set WP REST API routes whitelists
+        // and blacklists using glob patterns.
+        // Defaults to whitelist the routes shown
+        // in the example below.
+        // See: https://github.com/isaacs/minimatch
+        // Example:  `["/*/*/comments", "/yoast/**"]`
+        // ` will either include or exclude routes ending in `comments` and
+        // all routes that begin with `yoast` from fetch.
+        // Whitelisted routes using glob patterns
+        
       },
     },
 
@@ -77,7 +93,7 @@ module.exports = {
       options: {
         wordPressUrl: "http://localhost/wordpress/",
         uploadsUrl: "http://localhost/wordpress/wp-content/uploads/",
-        processPostTypes: ["Page", "Post", "CustomPost"],
+        processPostTypes: ["page", "post", "project"],
         graphqlTypeName: "WPGraphQL",
       },
     },
@@ -95,9 +111,6 @@ module.exports = {
     },
 
     `gatsby-transformer-remark`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,

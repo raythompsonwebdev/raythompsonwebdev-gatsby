@@ -25,7 +25,6 @@ const ContactForm = props => {
               value={name}
               onChange={handleName}
               pattern="[A-Za-z0-9]+"
-              autoFocus
               placeholder="Firstname"
               required
             />{" "}
@@ -40,7 +39,6 @@ const ContactForm = props => {
               value={email}
               onChange={handleEmail}
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-              autoFocus
               placeholder="***@***.com"
               required
             />
@@ -59,13 +57,12 @@ const ContactForm = props => {
             </li> */}
 
           <li>
-            <label htmlFor="text">Message</label>
+            <label htmlFor="comment">Message</label>
 
             <textarea
               value={comments}
               onChange={handleComments}
-              name="text"
-              autoFocus
+              name="comment"
             ></textarea>
           </li>
 
