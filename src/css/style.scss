@@ -257,7 +257,7 @@ desktop 1920px*/
 
           a {
             line-height: 35px;
-            font-size: 0.85em;
+            font-size: 0.9em;
             display: block;
             letter-spacing: 0.1em;
             color: $color4;
@@ -374,6 +374,7 @@ desktop 1920px*/
           background-color: $color4;
           padding: 0.5em;
           margin-top: 0.5em;
+          width: 95%;
         }
 
         a {
@@ -1448,11 +1449,11 @@ desktop 1920px*/
               position: absolute;
               left: 0;
               height: auto;
-              text-align: left;
+              text-align: center;
               line-height: 60px;
               font-size: 1em;
-              background-color: $color4;
-              color: $color1;
+              
+              color: $color4;
               z-index: 3;
               text-indent: 0;
               border-right: 2px solid #fff;
@@ -3129,7 +3130,7 @@ desktop 1920px*/
           width: 19%;
 
           a {
-            font-size: 0.85em;
+            font-size: 0.9em;
           }
         }
       }
@@ -3553,7 +3554,7 @@ desktop 1920px*/
       }
 
       section#prof_cont-a {
-        height: 500px;
+       
 
         h1 {
           font-size: 1.3em;
@@ -3568,7 +3569,7 @@ desktop 1920px*/
         }
 
         button.slider-btn {
-          width: 48%;
+          width: 47%;
 
           &:hover {
             font-weight: bold;
@@ -4448,6 +4449,7 @@ desktop 1920px*/
     width: 100%;
 
     .socialpics {
+      
       .social-icon {
         &:hover {
           cursor: pointer;
@@ -4577,7 +4579,7 @@ desktop 1440px*/
           width: 19%;
 
           a {
-            font-size: 0.85em;
+            font-size: 0.9em;
           }
         }
       }
@@ -4952,14 +4954,12 @@ desktop 1440px*/
 
       section#prof_cont-a {
         width: 50%;
-        height: 500px;
-
+        
         h1 {
           font-size: 1.2em;
         }
 
         button.slider-btn {
-          width: 48%;
           top: -20px;
 
           &:hover {
@@ -5802,7 +5802,7 @@ desktop 1440px*/
     height: 120px;
 
     .socialpics {
-      width: 18%;
+      
 
       .social-icon {
         &:hover {
@@ -5934,7 +5934,7 @@ desktop 1280px*/
           width: 19%;
 
           a {
-            font-size: 0.7em;
+            font-size: 0.9em;
           }
         }
       }
@@ -6273,8 +6273,7 @@ desktop 1280px*/
 
       section#prof_cont-a {
         width: 50%;
-        height: 500px;
-
+        
         h1 {
           font-size: 1.1em;
         }
@@ -6329,7 +6328,7 @@ desktop 1280px*/
                       padding: 0.1em;
 
                       li {
-                        font-size: 0.75em;
+                        font-size: 0.85em;
 
                         &:before {
                           font-size: 0.85em;
@@ -6376,7 +6375,6 @@ desktop 1280px*/
 
             span {
               width: 16.5%;
-
               font-size: 0.9em;
             }
           }
@@ -7255,6 +7253,7 @@ desktop 1280px*/
         p {
           font-size: 0.9em;
           
+          
         }
 
         a#projectLink {
@@ -7360,7 +7359,7 @@ desktop 1280px*/
 
                   a.fancybox {
                     span {
-                      height: 17vh;
+                      height: 12vh;
                     }
                   }
 
@@ -7379,7 +7378,7 @@ desktop 1280px*/
                       padding: 0.1em;
 
                       li {
-                        font-size: 0.75em;
+                        font-size: 0.85em;
 
                         &:before {
                           font-size: 0.9em;
@@ -8092,7 +8091,7 @@ desktop 980px*/
           width: 19%;
 
           a {
-            font-size: 0.8em;
+            font-size: 0.9em;
           }
         }
       }
@@ -8412,11 +8411,12 @@ desktop 980px*/
 
         p {
           font-size: 0.9em;
+          width: 68%;
           
         }
 
         a#projectLink {
-          font-size: 1.2em;
+          font-size: 1.1em;
 
           &:hover {
             background-color: $color4;
@@ -8479,13 +8479,11 @@ desktop 980px*/
 
       section#prof_cont-a {
         width: 50%;
-        height: 500px;
-        padding: 0.5em;
+        
 
         button.slider-btn {
-          width: 48%;
           top: -15px;
-
+          width: 46.5%;
           &:hover {
             font-weight: bold;
           }
@@ -8519,7 +8517,7 @@ desktop 980px*/
                 height: 420px;
 
                 h2 {
-                  font-size: 0.75em;
+                  font-size: 0.9em;
                 }
 
                 figure.slider-panel {
@@ -8528,7 +8526,7 @@ desktop 980px*/
 
                   a.fancybox {
                     span {
-                      height: 17vh;
+                      height: 12vh;
                     }
                   }
 
@@ -8536,18 +8534,18 @@ desktop 980px*/
                     margin: auto;
 
                     h3 {
-                      font-size: 0.9em;
+                      font-size: 1em;
                     }
 
                     h4 {
-                      font-size: 0.8em;
+                      font-size: 0.9em;
                     }
 
                     ul {
                       padding: 0.1em;
 
                       li {
-                        font-size: 0.75em;
+                        font-size: 0.85em;
 
                         &:before {
                           font-size: 0.85em;
@@ -8599,8 +8597,7 @@ desktop 980px*/
 
             span {
               width: 20%;
-
-              font-size: 0.9em;
+              font-size: 0.85em;
             }
           }
         }
@@ -9181,6 +9178,7 @@ desktop 980px*/
     height: 120px;
 
     .socialpics {
+      width: 20%;
       .social-icon {
         &:hover {
           cursor: pointer;
@@ -9310,7 +9308,7 @@ tablet 800px */
           width: 19%;
 
           a {
-            font-size: 0.8em;
+            font-size: 0.85em;
           }
         }
       }
@@ -9326,14 +9324,10 @@ tablet 800px */
   #main-content {
     #blogbox {
       .blogboxes {
-        width: 48%;
-
-        margin: 0.25em;
-        padding: 0.25em;
+        width: 48%; 
 
         h1 {
           font-size: 0.9em;
-          line-height: 35px;
         }
 
         p {
@@ -9531,6 +9525,8 @@ tablet 800px */
 
           h1#front-title {
             text-indent: 0.2em;
+            font-size: 1.5em;
+            text-align:center;
           }
 
           section.frntpgbox {
@@ -9545,7 +9541,7 @@ tablet 800px */
               .fa-wrench,
               .fa-laptop {
                 height: auto;
-                width:30%;
+                width:26%;
               
               }
             }
@@ -9558,7 +9554,7 @@ tablet 800px */
 
             p {
               font-size: 1em;
-              line-height: 40px;
+              line-height: 45px;
             }
           }
         }
@@ -9625,7 +9621,7 @@ tablet 800px */
         }
 
         a#projectLink {
-          font-size: 1.4em;          
+          font-size: 1.3em;          
           border: 2.5px solid white;
           width:60%;
           float:none;
@@ -9702,7 +9698,6 @@ tablet 800px */
         -ms-flex-order: 3;
         order: 3;
         width: 96%;
-        height: 500px;
         margin: 0.5em;
 
         h1 {
@@ -9718,8 +9713,8 @@ tablet 800px */
         }
 
         button.slider-btn {
-          width: 48%;
           top: -15px;
+          width: 47.5%;
 
           &:hover {
             font-weight: bold;
@@ -9742,7 +9737,7 @@ tablet 800px */
                 height: 420px;
 
                 h2 {
-                  font-size: 0.7em;
+                  font-size: 0.9em;
                 }
 
                 figure.slider-panel {
@@ -9750,24 +9745,24 @@ tablet 800px */
 
                   a.fancybox {
                     span {
-                      height: 19vh;
+                      height: 10vh;
                     }
                   }
 
                   figcaption {
                     h3 {
-                      font-size: 0.9em;
+                      font-size: 1em;
                     }
 
                     h4 {
-                      font-size: 0.85em;
+                      font-size: 0.9em;
                     }
 
                     ul {
                       padding: 0.1em;
 
                       li {
-                        font-size: 0.7em;
+                        font-size: 0.85em;
 
                         &:before {
                           font-size: 0.9em;
@@ -9817,7 +9812,6 @@ tablet 800px */
             span {
               width: 16.5%;
 
-              font-size: 0.9em;
             }
           }
         }
@@ -10419,6 +10413,7 @@ tablet 800px */
     height: 120px;
 
     .socialpics {
+      width:30%;
       .social-icon {
         &:hover {
           cursor: pointer;
@@ -10442,14 +10437,16 @@ tablet 800px */
       height: 100%;
 
       li {
-        height: 25px;
+        height: 35px;
         font-size: 1em;
 
         a {
-          font-size: 0.85em;
+          font-size: 1em;
 
           &:hover {
             font-weight: bold;
+            background-color:unset;
+            cursor:pointer;
           }
         }
       }
@@ -10554,7 +10551,7 @@ tablet 667px*/
           width: 19%;
 
           a {
-            font-size: 0.75em;
+            font-size: 0.85em;
           }
         }
       }
@@ -10571,15 +10568,15 @@ tablet 667px*/
     #blogbox {
       .blogboxes {
         h1 {
-          font-size: 0.85em;
+          font-size: 0.9em;
         }
 
         p {
-          font-size: 0.75em;
+          font-size: 0.8em;
         }
 
         a {
-          font-size: 0.75em;
+          font-size: 0.8em;
         }
       }
     }
@@ -10765,6 +10762,7 @@ tablet 667px*/
 
           h1#front-title {
             text-indent: 0.2em;
+            
           }
 
           section.frntpgbox {
@@ -10776,17 +10774,17 @@ tablet 667px*/
               .fa-code,
               .fa-wrench,
               .fa-laptop {
-                width:30%;
+                width:28%;
               }
             }
 
             h1 {
               margin: 0;
-              font-size:1em;
+              font-size:1.1em;
             }
 
             p {
-              font-size: 0.85em;
+              font-size: 1em;
             }
           }
         }
@@ -10839,7 +10837,7 @@ tablet 667px*/
         }
 
         a#projectLink {
-          font-size: 1.2em;
+          font-size: 1.3em;
 
           &:hover {
             background-color: $color4;
@@ -10902,16 +10900,15 @@ tablet 667px*/
       }
 
       section#prof_cont-a {
-        width: 90%;
-        height: 500px;
+        width: 96%;
 
         h1 {
           font-size: 1.1em;
         }
 
         button.slider-btn {
-          width: 48%;
           top: -15px;
+          
 
           &:hover {
             font-weight: bold;
@@ -10950,27 +10947,27 @@ tablet 667px*/
 
                   a.fancybox {
                     span {
-                      height: 20vh;
+                      height: 10vh;
                     }
                   }
 
                   figcaption {
                     h3 {
-                      font-size: 0.9em;
+                      font-size: 1em;
                     }
 
                     h4 {
-                      font-size: 0.85em;
+                      font-size: 0.9em;
                     }
 
                     ul {
                       padding: 0.1em;
 
                       li {
-                        font-size: 0.7em;
+                        font-size: 0.85em;
 
                         &:before {
-                          font-size: 0.9em;
+                          font-size: 0.85em;
                         }
                       }
                     }
@@ -10983,7 +10980,7 @@ tablet 667px*/
       }
 
       section#prof_cont {
-        width: 80%;
+        width: 96%;
 
         h1 {
           font-size: 1.1em;
@@ -11017,6 +11014,7 @@ tablet 667px*/
 
             span {
               width: 16.5%;
+              font-size: 0.85em;
             }
           }
         }
@@ -11599,7 +11597,7 @@ tablet 667px*/
     height: 120px;
 
     .socialpics {
-      width: 25%;
+      width: 35%;
 
       .social-icon {
         &:hover {
@@ -11624,11 +11622,11 @@ tablet 667px*/
       height: 100%;
 
       li {
-        height: 25px;
+
         font-size: 1em;
 
         a {
-          font-size: 0.85em;
+          font-size: 1em;
 
           &:hover {
             font-weight: bold;
@@ -11821,15 +11819,15 @@ tablet 667px*/
         width: 80%;
 
         h1 {
-          font-size: 0.85em;
+          font-size: 0.9em;
         }
 
         p {
-          font-size: 0.75em;
+          font-size: 0.8em;
         }
 
         a {
-          font-size: 0.75em;
+          font-size: 0.8em;
           width: 60%;
         }
       }
@@ -12030,13 +12028,15 @@ tablet 667px*/
           section.frntpgbox {
             width: 55%;
 
-            .fa-wordpress,
-            .fa-code,
-            .fa-wrench,
-            .fa-laptop {
+            span {
               height: auto;
-              width:35%;
-              
+
+              .fa-wordpress,
+              .fa-code,
+              .fa-wrench,
+              .fa-laptop {
+                width:30%;
+              }
             }
 
             h1 {
@@ -12044,7 +12044,7 @@ tablet 667px*/
             }
 
             p {
-              font-size: 0.85em;
+              font-size: 0.9em;
             }
           }
         }
@@ -12161,14 +12161,12 @@ tablet 667px*/
 
       section#prof_cont-a {
         width: 98%;
-        height: 500px;
 
         h1 {
           font-size: 1.1em;
         }
 
         button.slider-btn {
-          width: 48%;
           top: -15px;
 
           &:hover {
@@ -12208,7 +12206,7 @@ tablet 667px*/
 
                   a.fancybox {
                     span {
-                      height: 20vh;
+                      height: 10vh;
                     }
                   }
 
@@ -12225,7 +12223,8 @@ tablet 667px*/
                       padding: 0.1em;
 
                       li {
-                        font-size: 0.7em;
+                        font-size: 0.85em;
+                        line-height: 30px;
 
                         &:before {
                           font-size: 0.9em;
@@ -12270,8 +12269,6 @@ tablet 667px*/
 
             span {
               width: 18.5%;
-
-              font-size: 0.85em;
             }
           }
         }
@@ -12843,9 +12840,10 @@ tablet 667px*/
 mobile 480px */
 @media only screen and (max-width: 30em) {
   #menu-toggle {
-    left: 80%;
+    left: 74%;
     font-size: 0.9em;
     top: 2.5em;
+    width:20%;
   }
 
   .seperator {
@@ -12955,20 +12953,18 @@ mobile 480px */
   #main-content {
     #blogbox {
       .blogboxes {
-        margin: 0;
-        padding: 0;
         width: 90%;
 
         h1 {
-          font-size: 0.8em;
+          font-size: 0.9em;
         }
 
         p {
-          font-size: 0.7em;
+          font-size: 0.8em;
         }
 
         a {
-          font-size: 0.75em;
+          font-size: 0.8em;
           width: 60%;
         }
       }
@@ -13164,7 +13160,7 @@ mobile 480px */
           }
 
           section.frntpgbox {
-            
+            width: 65%;
             
             span {
               height: auto;
@@ -13173,7 +13169,7 @@ mobile 480px */
               .fa-code,
               .fa-wrench,
               .fa-laptop {
-                width:40%;
+                width:35%;
               }
             }
 
@@ -13187,6 +13183,7 @@ mobile 480px */
 
             a#projectLink{
               margin: 0.5em auto;
+              width:75%;
             }
           }
         }
@@ -13238,6 +13235,7 @@ mobile 480px */
         h2 {
           font-size: 1.1em;
           text-align: center;
+          line-height: 30px;
         }
 
         a#projectLink {
@@ -13313,8 +13311,8 @@ mobile 480px */
         }
 
         button.slider-btn {
-          width: 48%;
           top: -15px;
+          width: 46%;
 
           &:hover {
             font-weight: bold;
@@ -13353,24 +13351,24 @@ mobile 480px */
 
                   a.fancybox {
                     span {
-                      height: 12vh;
+                      height: 9vh;
                     }
                   }
 
                   figcaption {
                     h3 {
-                      font-size: 0.85em;
+                      font-size: 0.9em;
                     }
 
                     h4 {
-                      font-size: 0.8em;
+                      font-size: 0.85em;
                     }
 
                     ul {
                       padding: 0.1em;
 
                       li {
-                        line-height: 35px;
+                        line-height: 30px;
 
                         &:before {
                           font-size: 0.9em;
@@ -13415,6 +13413,7 @@ mobile 480px */
 
             span {
               width: 22.5%;
+              font-size: 0.8em;
             }
           }
         }
@@ -13999,6 +13998,7 @@ mobile 480px */
     height: 120px;
 
     .socialpics {
+      width: 40%;
       .social-icon {
         &:hover {
           cursor: pointer;
@@ -14045,7 +14045,7 @@ mobile 480px */
 mobile 360px */
 @media only screen and (max-width: 22.5em) {
   #menu-toggle {
-    left: 82%;
+    left: 80;
   }
 
   .fixed-side-social-container {
@@ -14062,8 +14062,7 @@ mobile 360px */
 
   /*Header*/
   header {
-    height: 80px;
-
+    
     /*Site Logo*/
     .site-logo {
       a {
@@ -14157,20 +14156,18 @@ mobile 360px */
   #main-content {
     #blogbox {
       .blogboxes {
-        margin: 0.5em;
-        padding: 0.5em;
-        width: 97%;
+       
 
         h1 {
-          font-size: 0.75em;
+          font-size: 0.9em;
         }
 
         p {
-          font-size: 0.7em;
+          font-size: 0.8em;
         }
 
         a {
-          font-size: 0.75em;
+          font-size: 0.8em;
           width: 60%;
         }
       }
@@ -14362,7 +14359,7 @@ mobile 360px */
           }
 
           section.frntpgbox {
-            width: 55%;
+            width: 65%;
 
             span {
               height: auto;
@@ -14371,7 +14368,7 @@ mobile 360px */
               .fa-code,
               .fa-wrench,
               .fa-laptop {
-                font-size: 4em;
+                width:35%;
               }
             }
 
@@ -14380,7 +14377,7 @@ mobile 360px */
             }
 
             p {
-              font-size: 0.75em;
+              font-size: 0.9em;
             }
           }
         }
@@ -14497,7 +14494,6 @@ mobile 360px */
 
       section#prof_cont-a {
         width: 100%;
-        height: 500px;
         margin: 0.5em;
 
         h1 {
@@ -14536,24 +14532,24 @@ mobile 360px */
 
                   a.fancybox {
                     span {
-                      height: 12vh;
+                      height: 9vh;
                     }
                   }
 
                   figcaption {
                     h3 {
-                      font-size: 0.8em;
+                      font-size: 0.9em;
                     }
 
                     h4 {
-                      font-size: 0.8em;
+                      font-size: 0.85em;
                     }
 
                     ul {
                       padding: 0.1em;
 
                       li {
-                        font-size: 0.7em;
+                        font-size: 0.85em;
 
                         &:before {
                           font-size: 0.9em;
@@ -14601,8 +14597,7 @@ mobile 360px */
 
             span {
               width: 23.5%;
-
-              font-size: 0.8em;
+              font-size: 0.7em;
             }
           }
         }
@@ -15170,6 +15165,7 @@ mobile 360px */
     height: 120px;
 
     .socialpics {
+      width: 45%;
       .social-icon {
         &:hover {
           cursor: pointer;
@@ -15215,7 +15211,7 @@ mobile 360px */
 mobile 320px */
 @media only screen and (max-width: 20em) {
   #menu-toggle {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 
   .fixed-side-social-container {
@@ -15232,7 +15228,7 @@ mobile 320px */
 
   /*Header*/
   header {
-    height: 95px;
+    
 
     /*Site Logo*/
     .site-logo {
@@ -15325,20 +15321,18 @@ mobile 320px */
   #main-content {
     #blogbox {
       .blogboxes {
-        margin: 0.5em;
-        padding: 0.5em;
-        width: 97%;
+        
 
         h1 {
-          font-size: 0.75em;
+          font-size: 0.9em;
         }
 
         p {
-          font-size: 0.7em;
+          font-size: 0.8em;
         }
 
         a {
-          font-size: 0.75em;
+          font-size: 0.8em;
           width: 60%;
         }
       }
@@ -15529,8 +15523,8 @@ mobile 320px */
             text-indent: 0.2em;
           }
 
-          section.frntpgbox {
-            
+          section.frntpgbox { 
+            width:70%;           
 
             span {
               height: auto;
@@ -15539,7 +15533,7 @@ mobile 320px */
               .fa-code,
               .fa-wrench,
               .fa-laptop {
-                font-size: 4em;
+                width:35%;
               }
             }
 
@@ -15548,7 +15542,7 @@ mobile 320px */
             }
 
             p {
-              font-size: 0.7em;
+              font-size: 0.9em;
             }
           }
         }
@@ -15667,6 +15661,14 @@ mobile 320px */
       section#prof_cont-a {
         width: 100%;
 
+        button.slider-btn {
+          width: 45.5%;
+
+          &:hover {
+            font-weight: bold;
+          }
+        }
+
         h1 {
           font-size: 1em;
         }
@@ -15703,24 +15705,24 @@ mobile 320px */
 
                   a.fancybox {
                     span {
-                      height: 12vh;
+                      height: 8vh;
                     }
                   }
 
                   figcaption {
                     h3 {
-                      font-size: 0.7em;
+                      font-size: 0.9em;
                     }
 
                     h4 {
-                      font-size: 0.7em;
+                      font-size: 0.85em;
                     }
 
                     ul {
                       padding: 0.1em;
 
                       li {
-                        font-size: 0.7em;
+                        font-size: 0.85em;
 
                         &:before {
                           font-size: 0.9em;
@@ -15768,6 +15770,7 @@ mobile 320px */
 
             span {
               width: 23.5%;
+              font-size: 0.65em;
             }
           }
         }
@@ -16330,6 +16333,26 @@ mobile 320px */
 
   footer {
     height: 120px;
+
+    .socialpics {
+      width: 45%;
+      .social-icon {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      span {
+        width: 100%;
+      }
+
+      .fa-linkedin,
+      .fa-twitter,
+      .fa-facebook,
+      .fa-github {
+        font-size: 1.2em;
+      }
+    }
 
     ul {
       width: 45%;

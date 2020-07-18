@@ -35,7 +35,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        excludedRoutes: ["/wp/v2/users/**", "/wp/v2/settings*"],
+        excludedRoutes: ["/wp/v2/users/**", "/wp/v2/settings*", "/jetpack/v4/**", "contact-form-7/v1/**", "yoast/v1/**"],
         baseUrl: "localhost/wordpress",
         protocol: "http",
         restApiRoutePrefix: "wp-json",
@@ -49,15 +49,7 @@ module.exports = {
         },
         // Set how many simultaneous requests are sent at once.
         concurrentRequests: 10,
-        // Set WP REST API routes whitelists
-        // and blacklists using glob patterns.
-        // Defaults to whitelist the routes shown
-        // in the example below.
-        // See: https://github.com/isaacs/minimatch
-        // Example:  `["/*/*/comments", "/yoast/**"]`
-        // ` will either include or exclude routes ending in `comments` and
-        // all routes that begin with `yoast` from fetch.
-        // Whitelisted routes using glob patterns
+        
         
       },
     },

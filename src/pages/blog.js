@@ -21,15 +21,15 @@ class BlogPage extends React.Component {
       <main id="main-content">
         <SEO title="Blog Page" />
 
-        <h1>Interested in web design and web development</h1>
+        <h1>{`Interested in web design and web development`}</h1>
 
         <div className="main-text">
           <p>
-            Whether you are just beginning to learn or are alreading building
+            {`Whether you are just beginning to learn or are alreading building
             websites I would like to share what I have learnt so far about web
             design and web development through the tons of valuable web
             development and web design related resources I have read, watched
-            and listened to over the past few years&#46; content like
+            and listened to over the past few years, content like`}
           </p>
           <br />
           <br />

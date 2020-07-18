@@ -24,45 +24,45 @@ const IndexPage = () => (
 
       <div id="text-box-front">
         <section id="calltoaction">
-          <h1 id="front-title">What I Do !</h1>
+          <h1 id="front-title">{`Things I Do`}</h1>
           <section className="frntpgbox">
             <span>
               <FaLaptopCode className="fa fa-code" />
             </span>
-            <h1>Code</h1>
-            <p>HTML &amp; CSS</p>
-            <p> PHP &amp; MYSQL</p>
-            <p>Javascript ES5/ES6</p>
+            <h1>{`Code`}</h1>
+            <p>{`HTML & CSS`}</p>
+            <p> {`PHP & MYSQL`}</p>
+            <p>{`Javascript`}</p>
           </section>
 
           <section className="frntpgbox">
             <span>
               <FaLaptop className="fa fa-laptop" />
             </span>
-            <h1>Optimisation</h1>
-            <p>SQL Database</p>
-            <p> On-Site SEO</p>
-            <p> Video, Audio, Image</p>
+            <h1>{`Optimisation`}</h1>
+            <p>{`Relational Databases`}</p>
+            <p> {`On-Site SEO`}</p>
+            <p> {`Video, Audio, Image`}</p>
           </section>
 
           <section className="frntpgbox">
             <span>
               <FaWordpress className="fa fa-wordpress" />
             </span>
-            <h1>WordPress</h1>
-            <p>Set Up &amp; Installation</p>
-            <p>Themes &amp; Plugins</p>
-            <p>Gutenberg Blocks</p>
+            <h1>{`WordPress`}</h1>
+            <p>{`Set Up & Installation`}</p>
+            <p>{`Themes & Plugins`}</p>
+            <p>{`Gutenberg Blocks`}</p>
           </section>
 
           <section className="frntpgbox">
             <span>
               <FaWrench className="fa fa-wrench" />
             </span>
-            <h1>Maintenance</h1>
-            <p>Web Security</p>
-            <p>Database</p>
-            <p>Code Debugging</p>
+            <h1>{`Maintenance`}</h1>
+            <p>{`Web Security`}</p>
+            <p>{`Server`}</p>
+            <p>{`Code Debugging`}</p>
           </section>
         </section>
       </div>

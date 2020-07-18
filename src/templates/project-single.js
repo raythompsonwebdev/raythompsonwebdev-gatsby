@@ -79,12 +79,12 @@ const ProjectSingle = props => {
 
           <h1 className="post-meta-key">Project Source Code</h1>
 
-          <a
+          <Link
             className="webformats"
             href={`https://github.com/raythompsonwebdev/${props.data.allWordpressWpProject.edges[0].node.slug}`}
           >
             Link
-          </a>
+          </Link>
         </div>
         <footer className="byline">
           <p className="right">

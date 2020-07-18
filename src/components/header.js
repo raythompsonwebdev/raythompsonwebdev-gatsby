@@ -17,6 +17,7 @@ class Header extends React.Component {
     let menuToggle = document.getElementById("menu-toggle")
 
     window.scroll(function() {
+      
       if (this.scrollTop() >= position) {
         direction = "down"
         if (direction !== previous) {
@@ -41,8 +42,7 @@ class Header extends React.Component {
       let slideoutMenu = document.querySelector("#main-nav ")
       let slideoutMenuWidth = slideoutMenu.style.width
 
-      console.log(slideoutMenuWidth)
-
+      
       // toggle open class
       slideoutMenu.classList.toggle("open")
 

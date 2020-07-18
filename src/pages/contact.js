@@ -88,7 +88,11 @@ class contactPage extends React.Component {
         <address className="contact-details">
           <ul>
             <li>
-              <Link to="mailto:ray@ray.com">{`raymond.thompson@raythompsonwebdev.co.uk`}</Link>
+              <Link 
+                to="mailto:ray@ray.com"
+              >
+                {`raymond.thompson@raythompsonwebdev.co.uk`}
+              </Link>
             </li>
             <li>
               <Link
