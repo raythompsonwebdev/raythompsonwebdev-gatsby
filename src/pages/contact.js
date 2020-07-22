@@ -2,7 +2,7 @@ import React from "react"
 import SEO from "../components/seo"
 import ContactForm from "../components/contactform"
 import MapContainer from "../components/mapgoogle"
-import { Link } from "gatsby"
+
 
 const mapCover = {
   position: "relative",
@@ -88,35 +88,35 @@ class contactPage extends React.Component {
         <address className="contact-details">
           <ul>
             <li>
-              <Link 
-                to="mailto:ray@ray.com"
+              <a
+                href="mailto:ray@ray.com"
               >
                 {`raymond.thompson@raythompsonwebdev.co.uk`}
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="https://www.facebook.com/raythompsonwebdeveloper/"
-                target="new"
-              >
-                {"www.facebook.com/raythompsonwebdeveloper/"}
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="https://twitter.com/RayThompWeb/"
-                target="new"
-              >{`@RayThompWeb`}</Link>
-            </li>
-            <li>
-              <Link
-                to="https://www.linkedin.com/in/raymond-t-1b42b7b8/"
-                target="new"
-              >{`www.aedin.com/in/raymond-t-1b42b7b8/`}</Link>
+              </a>
             </li>
             <li>
               <a
-                to="https://github.com/raythompsonwebdev"
+                href="https://www.facebook.com/raythompsonwebdeveloper/"
+                target="new"
+              >
+                {"www.facebook.com/raythompsonwebdeveloper/"}
+              </a>
+            </li>
+            <li>
+              <a
+                to="https://twitter.com/RayThompWeb/"
+                target="new"
+              >{`@RayThompWeb`}</a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/raymond-t-1b42b7b8/"
+                target="new"
+              >{`www.aedin.com/in/raymond-t-1b42b7b8/`}</a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/raythompsonwebdev"
                 target="new"
               >{`github.com/raythompsonwebdev`}</a>
             </li>

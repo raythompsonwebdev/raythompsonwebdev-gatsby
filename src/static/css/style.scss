@@ -344,17 +344,15 @@ desktop 1920px*/
       align-items: flex-start;
       .blogboxes {
         width: 31%;
-        -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
-        display: inline-block;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
         margin: 0.5em;
-        padding: 0.5em;
         @include Transition(all 0.2s ease-in-out 0s);
-        box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
 
         &:hover {
-          @include TransScale(scale(1.1));
+          @include TransScale(scale(1.025));
+          box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
           cursor: pointer;
         }
 
@@ -401,14 +399,14 @@ desktop 1920px*/
     h1 {
       font-size: 1.4em;
       letter-spacing: 0.05em;
-      line-height: 1.5;
+      line-height: 60px;
       height: 60px;
     }
 
     h2 {
       font-size: 1.3em;
       letter-spacing: 0.05em;
-      line-height: 1.5;
+      line-height: 50px;
       height: 50px;
     }
 
@@ -1468,13 +1466,13 @@ desktop 1920px*/
 
     /*gallery container*/
     div#photocontainer {
-      width: 94%;
+      width: 100%;
       height: auto;
       font-family: ($FontStyle);
       margin: auto;
       padding: 1%;
       box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
-      border: 5px solid $color4;
+
 
       div.content {
         clear: both;
@@ -1970,51 +1968,61 @@ desktop 1920px*/
         padding: 0.5em;
         @include box-sizing($type: border-box);
 
-        .entry-meta,
-        .index-entry-meta {
+        .entry-meta
+         {
           height: auto;
           width: 100%;
           display: block;
           margin: 0 auto;
 
-          .has-avatar {
-            display: inline-block;
-            text-align: left;
-            width: 20%;
-          }
-
+          
           .meta-content {
             height: auto;
             width: 100%;
+            display: grid;
+            grid-template-columns: 120px 4fr;
+            grid-template-rows: minmax(25px, 35px) minmax(25px, 35px) minmax(25px, 35px) minmax(25px, 35px) minmax(25px, 35px);
+            gap: 1px 1px;
+            grid-template-areas: "Avatar postedby" "Avatar postedon" "Avatar updated" "Avatar commentslink" "Avatar tagslist";
 
-            .author-avatar {
-              width: 15%;
-              display: block;
-              float: left;
-              margin: 0;
-              padding: 1em;
+            
+            .author-avatar { 
+              grid-area: Avatar; 
+              padding: 0.5em 0.5em;
+              a{
+                display:block;
+                margin: auto;
+                height: auto;
+                img{
+                  width:100%;
+                }
+              }
+
             }
+            
+            .posted-by { grid-area: postedby; }
+            
+            .posted-on { grid-area: postedon; }
+            
+            .updated { grid-area: updated; }
+            
+            .comments-link { grid-area: commentslink; }
+            
+            .tagslist { grid-area: tagslist; }
+                      
 
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
+            .updated,
+            .posted-by,
+            .taglist,
             .comments-link,
-            .date,
             .posted-on {
-              width: 85%;
-              display: inline-block;
-              height: auto;
-              line-height: 30px;
+              line-height: 35px;
               text-align: left;
-              font-family: "FontAwesome", ($FontStyle);
               font-size: 0.9em;
               letter-spacing: 0.055em;
               color: $color4;
               background-color: $color1;
-              margin-bottom: 0.2em;
               text-indent: 0.25em;
-
               a {
                 color: $color1;
                 margin: 0 auto;
@@ -2161,6 +2169,7 @@ desktop 1920px*/
         background-color: $color4;
 
         p {
+          display:block;
           width: 100%;
           margin: 0;
           font-size: 0.95em;
@@ -2270,7 +2279,6 @@ desktop 1920px*/
         p {
           margin: 0;
           display: inline-block;
-          padding: 0 0.5em;
           width: auto;
           color: $color4;
         }
@@ -2377,9 +2385,7 @@ desktop 1920px*/
 
         p {
           margin: 0;
-          display: inline-block;
-          padding: 0 1em;
-          width: auto;
+
         }
 
         a {
@@ -3188,7 +3194,6 @@ desktop 1920px*/
         width: 31%;
 
         &:hover {
-          @include TransScale(scale(1.1));
           cursor: pointer;
         }
 
@@ -3349,7 +3354,7 @@ desktop 1920px*/
       ul {
         li {
           font-size: 1em;
-          list-style: none;
+
 
           a {
             font-size: 1em;
@@ -3730,7 +3735,7 @@ desktop 1920px*/
     }
 
     div#photocontainer {
-      width: 94%;
+      width: 100%;
 
       div.content {
         clear: both;
@@ -3961,38 +3966,16 @@ desktop 1920px*/
       }
 
       header.byline {
-        .entry-meta,
-        .index-entry-meta {
+        .entry-meta
+         {
           height: auto;
 
-          .has-avatar {
-            width: 20%;
-          }
+          
 
           .meta-content {
             width: 100%;
 
-            .author-avatar {
-              width: 15%;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
-            .comments-link,
-            .date,
-            .posted-on {
-              font-size: 0.9em;
-
-              a {
-                color: $color1;
-
-                &:hover {
-                  font-weight: bold;
-                }
-              }
-            }
+            
           }
         }
       }
@@ -4055,7 +4038,7 @@ desktop 1920px*/
       }
 
       .entry {
-        padding: 1%;
+        
 
         p {
           font-size: 0.95em;
@@ -4158,7 +4141,7 @@ desktop 1920px*/
 
       footer.byline {
         font-size: 0.9em;
-        d p {
+        p {
           margin: 0;
         }
 
@@ -4630,9 +4613,7 @@ desktop 1440px*/
     #blogbox {
       .blogboxes {
         width: 31%;
-
-        margin: 0.5em;
-        padding: 0.5em;
+        
 
         h1 {
           font-size: 1em;
@@ -4651,6 +4632,7 @@ desktop 1440px*/
     h1 {
       font-size: 1.3em;
       line-height: 50px;
+      height:50px;
     }
 
     h2 {
@@ -4754,7 +4736,7 @@ desktop 1440px*/
       ul {
         li {
           font-size: 1em;
-          list-style: none;
+
 
           a {
             font-size: 1em;
@@ -5318,32 +5300,14 @@ desktop 1440px*/
 
       /*blog post header*/
       header.byline {
-        .entry-meta,
-        .index-entry-meta {
-          .has-avatar {
-            width: 20%;
-          }
+        .entry-meta
+         {
+          
 
           .meta-content {
             width: 100%;
 
-            .author-avatar {
-              width: 15%;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
-            .comments-link,
-            .date,
-            .posted-on {
-              font-size: 0.9em;
-
-              a {
-                margin: 0 auto;
-              }
-            }
+            
           }
         }
       }
@@ -5404,7 +5368,7 @@ desktop 1440px*/
       }
 
       .entry {
-        padding: 1%;
+        
         /*global*/
         h1 {
           font-size: 1.2em;
@@ -5450,7 +5414,7 @@ desktop 1440px*/
         font-size: 0.9em;
 
         p {
-          padding: 0 1em;
+          margin: 0;
         }
 
         a {
@@ -5508,7 +5472,7 @@ desktop 1440px*/
         font-size: 0.85em;
 
         p {
-          padding: 0 1em;
+          margin: 0;
         }
 
         a {
@@ -5968,7 +5932,7 @@ desktop 1280px*/
 
     h1 {
       font-size: 1.2em;
-      line-height: 50px;
+
     }
 
     h2 {
@@ -6071,11 +6035,10 @@ desktop 1280px*/
     address.contact-details {
       ul {
         li {
-          font-size: 1em;
-          list-style: none;
+
 
           a {
-            font-size: 1em;
+            font-size: 0.9em;
 
             &:hover {
               font-weight: bold;
@@ -6610,32 +6573,14 @@ desktop 1280px*/
       }
 
       header.byline {
-        .entry-meta,
-        .index-entry-meta {
-          .has-avatar {
-            width: 20%;
-          }
+        .entry-meta
+         {
+          
 
           .meta-content {
             width: 100%;
 
-            .author-avatar {
-              width: 15%;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
-            .comments-link,
-            .date,
-            .posted-on {
-              font-size: 0.85em;
-
-              a {
-                margin: 0 auto;
-              }
-            }
+            
           }
         }
       }
@@ -6697,8 +6642,8 @@ desktop 1280px*/
       }
 
       .entry {
-        padding: 1%;
-        /*global*/
+        
+        
         h1 {
           font-size: 1.15em;
         }
@@ -6744,7 +6689,7 @@ desktop 1280px*/
         font-size: 0.9em;
 
         p {
-          padding: 0 1em;
+          margin: 0;
         }
 
         a {
@@ -7005,7 +6950,7 @@ desktop 1280px*/
 
     h1 {
       font-size: 1.1em;
-      line-height: 50px;
+
     }
 
     h2 {
@@ -7123,7 +7068,7 @@ desktop 1280px*/
           list-style: none;
 
           a {
-            font-size: 1em;
+            font-size: 0.9em;
 
             &:hover {
               font-weight: bold;
@@ -7632,32 +7577,14 @@ desktop 1280px*/
       }
 
       header.byline {
-        .entry-meta,
-        .index-entry-meta {
-          .has-avatar {
-            width: 20%;
-          }
+        .entry-meta
+         {
+          
 
           .meta-content {
             width: 100%;
 
-            .author-avatar {
-              width: 15%;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
-            .comments-link,
-            .date,
-            .posted-on {
-              font-size: 0.8em;
-
-              a {
-                margin: 0 auto;
-              }
-            }
+            
           }
         }
       }
@@ -7719,8 +7646,7 @@ desktop 1280px*/
       }
 
       .entry {
-        padding: 1%;
-        /*global*/
+        
         h1 {
           font-size: 1.1em;
         }
@@ -7763,7 +7689,7 @@ desktop 1280px*/
 
       footer.byline {
         p {
-          padding: 0 1em;
+          margin: 0;
         }
 
         a {
@@ -7819,7 +7745,7 @@ desktop 1280px*/
 
       footer.byline {
         p {
-          padding: 0 1em;
+          margin: 0;
         }
 
         a {
@@ -8141,9 +8067,8 @@ desktop 980px*/
 
     #blogbox {
       .blogboxes {
-        width: 32%;
-        margin: 0.25em;
-        padding: 0.25em;
+        width: 31%;
+
 
         h1 {
           font-size: 0.9em;
@@ -8161,7 +8086,7 @@ desktop 980px*/
 
     h1 {
       font-size: 1.1em;
-      line-height: 50px;
+
     }
 
     h2 {
@@ -8279,7 +8204,7 @@ desktop 980px*/
           list-style: none;
 
           a {
-            font-size: 1em;
+            font-size: 0.9em;
 
             &:hover {
               font-weight: bold;
@@ -8806,25 +8731,16 @@ desktop 980px*/
       }
 
       header.byline {
-        .entry-meta,
-        .index-entry-meta {
-          .has-avatar {
-            width: 20%;
-          }
-
+        .entry-meta
+         {
+          
           .meta-content {
             width: 100%;
-
-            .author-avatar {
-              width: 15%;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
+            
+            .updated,
+            .posted-by,
+            .taglist,
             .comments-link,
-            .date,
             .posted-on {
               font-size: 0.8em;
 
@@ -8894,8 +8810,7 @@ desktop 980px*/
       }
 
       .entry {
-        padding: 1%;
-        /*global*/
+        
         h1 {
           font-size: 1.15em;
         }
@@ -8933,7 +8848,7 @@ desktop 980px*/
 
       footer.byline {
         p {
-          padding: 0 1em;
+          margin: 0;
         }
 
         a {
@@ -8989,7 +8904,7 @@ desktop 980px*/
 
       footer.byline {
         p {
-          padding: 0 1em;
+          margin: 0;
         }
 
         a {
@@ -9342,7 +9257,7 @@ tablet 800px */
 
     h1 {
       font-size: 1.1em;
-      line-height: 50px;
+
     }
 
     h2 {
@@ -9461,10 +9376,10 @@ tablet 800px */
       ul {
         li {
           font-size: 1em;
-          list-style: none;
+
 
           a {
-            font-size: 1em;
+            font-size: 0.85em;
 
             &:hover {
               font-weight: bold;
@@ -10045,27 +9960,22 @@ tablet 800px */
       }
 
       header.byline {
-        .entry-meta,
-        .index-entry-meta {
-          .has-avatar {
-            width: 20%;
-          }
+        .entry-meta
+         {
+          
 
           .meta-content {
             width: 100%;
-
-            .author-avatar {
-              width: 15%;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
+            grid-template-columns: 100px 4fr;
+            grid-template-rows: minmax(25px, 30px) minmax(25px, 30px) minmax(25px, 30px) minmax(25px, 30px) minmax(25px, 30px);
+            
+            .updated,
+            .posted-by,
+            .taglist,
             .comments-link,
-            .date,
             .posted-on {
-              font-size: 0.8em;
+              font-size: 0.75em;
+              line-height:30px;
 
               a {
                 margin: 0 auto;
@@ -10135,8 +10045,8 @@ tablet 800px */
       }
 
       .entry {
-        padding: 1%;
-        /*global*/
+        padding: 0.5%;
+
         h1 {
           font-size: 1.2em;
         }
@@ -10174,7 +10084,7 @@ tablet 800px */
 
       footer.byline {
         p {
-          padding: 0 1em;
+          margin: 0;
         }
 
         a {
@@ -10230,7 +10140,7 @@ tablet 800px */
 
       footer.byline {
         p {
-          padding: 0 1em;
+          margin: 0;
         }
 
         a {
@@ -10583,7 +10493,6 @@ tablet 667px*/
 
     h1 {
       font-size: 1em;
-      line-height: 50px;
       text-align: center;
     }
 
@@ -10698,10 +10607,10 @@ tablet 667px*/
       ul {
         li {
           font-size: 1em;
-          list-style: none;
+
 
           a {
-            font-size: 1em;
+            font-size: 0.85em;
 
             &:hover {
               font-weight: bold;
@@ -11014,7 +10923,7 @@ tablet 667px*/
 
             span {
               width: 16.5%;
-              font-size: 0.85em;
+              font-size: 0.8em;
             }
           }
         }
@@ -11226,29 +11135,23 @@ tablet 667px*/
       }
 
       header.byline {
-        padding: 0.5em;
+        padding: 0.25em;
+        width:94%;
 
-        .entry-meta,
-        .index-entry-meta {
-          .has-avatar {
-            width: 20%;
-          }
+        .entry-meta
+         {
+          
 
           .meta-content {
             width: 100%;
 
-            .author-avatar {
-              width: 15%;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
+            
+            .updated,
+            .posted-by,
+            .taglist,
             .comments-link,
-            .date,
             .posted-on {
-              font-size: 0.8em;
+              font-size: 0.75em;
 
               a {
                 margin: 0 auto;
@@ -11319,10 +11222,10 @@ tablet 667px*/
       }
 
       .entry {
-        padding: 1%;
-        /*global*/
+
         h1 {
           font-size: 1.15em;
+          height:auto;
         }
 
         h2 {
@@ -11358,7 +11261,7 @@ tablet 667px*/
 
       footer.byline {
         p {
-          padding: 0 1em;
+          margin: 0;
         }
 
         a {
@@ -11415,7 +11318,7 @@ tablet 667px*/
 
       footer.byline {
         p {
-          padding: 0 1em;
+          margin: 0;
         }
 
         a {
@@ -11782,11 +11685,11 @@ tablet 667px*/
           width: 100%;
           display: block;
           background-color: $color2;
-          height: 55px;
+          height: 45px;
           margin-bottom: 0.25em;
 
           a {
-            line-height: 55px;
+            line-height: 45px;
             margin: 0;
             letter-spacing: 0.1em;
             font-size: 1em;
@@ -11796,7 +11699,7 @@ tablet 667px*/
             &:hover {
               letter-spacing: 0.2em;
               font-weight: bold;
-              line-height: 55px;
+              line-height: 45px;
             }
           }
         }
@@ -11816,7 +11719,7 @@ tablet 667px*/
       align-items: center;
 
       .blogboxes {
-        width: 80%;
+        width: 85%;
 
         h1 {
           font-size: 0.9em;
@@ -11835,12 +11738,15 @@ tablet 667px*/
 
     h1 {
       font-size: 1.1em;
-      line-height: 30px;
+      line-height: 40px;
+      height:40px;
       text-align: center;
     }
 
     h2 {
       font-size: 1em;
+      line-height: 40px;
+      height:40px;
     }
 
     h3 {
@@ -11950,10 +11856,10 @@ tablet 667px*/
       ul {
         li {
           font-size: 1em;
-          list-style: none;
+
 
           a {
-            font-size: 1em;
+            font-size: 0.8em;
 
             &:hover {
               font-weight: bold;
@@ -12466,29 +12372,21 @@ tablet 667px*/
       }
 
       header.byline {
-        padding: 0.5em;
+        
 
-        .entry-meta,
-        .index-entry-meta {
-          .has-avatar {
-            width: 20%;
-          }
+        .entry-meta
+         {
+          
 
           .meta-content {
             width: 100%;
-
-            .author-avatar {
-              width: 4.5em;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
+            
+            .updated,
+            .posted-by,
+            .taglist,
             .comments-link,
-            .date,
             .posted-on {
-              font-size: 0.8em;
+              font-size: 0.75em;
 
               a {
                 margin: 0 auto;
@@ -12555,10 +12453,9 @@ tablet 667px*/
       }
 
       .entry {
-        padding: 1%;
-        /*global*/
+
         h1 {
-          font-size: 1.15em;
+          font-size: 1.1em;
         }
 
         h2 {
@@ -12594,7 +12491,7 @@ tablet 667px*/
 
       footer.byline {
         p {
-          padding: 0 1em;
+          padding: 0 0.5em;
         }
 
         a {
@@ -12650,7 +12547,7 @@ tablet 667px*/
 
       footer.byline {
         p {
-          padding: 0 1em;
+          padding: 0 0.5em;
         }
 
         a {
@@ -12972,8 +12869,7 @@ mobile 480px */
 
     h1 {
       font-size: 1em;
-      line-height: 30px;
-      text-align: center;
+
     }
 
     h2 {
@@ -13089,10 +12985,10 @@ mobile 480px */
       ul {
         li {
           font-size: 1em;
-          list-style: none;
+
 
           a {
-            font-size: 1em;
+            font-size: 0.75em;
 
             &:hover {
               font-weight: bold;
@@ -13413,7 +13309,7 @@ mobile 480px */
 
             span {
               width: 22.5%;
-              font-size: 0.8em;
+              font-size: 0.7em;
             }
           }
         }
@@ -13629,29 +13525,24 @@ mobile 480px */
       }
 
       header.byline {
-        padding: 0.5em;
+        
 
-        .entry-meta,
-        .index-entry-meta {
-          .has-avatar {
-            width: 20%;
-          }
+        .entry-meta
+         {
+          
 
           .meta-content {
             width: 100%;
-
-            .author-avatar {
-              width: 4.5em;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
+            grid-template-columns: 80px 4fr;
+            grid-template-rows: minmax(25px, 25px) minmax(25px, 25px) minmax(25px, 25px) minmax(25px, 25px) minmax(25px, 25px);
+           
+            .updated,
+            .posted-by,
+            .taglist,
             .comments-link,
-            .date,
             .posted-on {
-              font-size: 0.75em;
+              font-size: 0.7em;
+              line-height:25px;
 
               a {
                 margin: 0 auto;
@@ -13722,18 +13613,19 @@ mobile 480px */
       }
 
       .entry {
-        padding: 1%;
-        /*global*/
-        h1 {
-          font-size: 1.1em;
-        }
 
-        h2 {
+        h1 {
           font-size: 1.05em;
         }
 
-        h3 {
+        h2 {
           font-size: 1em;
+          height:auto;
+          line-height:30px;
+        }
+
+        h3 {
+          font-size: 0.9em;
         }
 
         p {
@@ -13761,7 +13653,7 @@ mobile 480px */
 
       footer.byline {
         p {
-          padding: 0 1em;
+          margin: 0;
         }
 
         a {
@@ -14288,10 +14180,9 @@ mobile 360px */
       ul {
         li {
           font-size: 1em;
-          list-style: none;
 
           a {
-            font-size: 1em;
+            font-size: 0.75em;
 
             &:hover {
               font-weight: bold;
@@ -14792,32 +14683,27 @@ mobile 360px */
         font-size: 0.8em;
       }
 
-      header.byline {
-        padding: 0.5em;
+      header.byline {        
+        
 
-        .entry-meta,
-        .index-entry-meta {
+        .entry-meta
+         {
           width: 100%; //background-color: $color2;
 
-          .has-avatar {
-            width: 20%;
-          }
-
+          
           .meta-content {
             width: 100%;
+            grid-template-columns: 70px 4fr;
+            grid-template-rows: minmax(20px, 20px) minmax(20px, 20px) minmax(20px, 20px) minmax(20px, 20px) minmax(20px, 20px);
 
-            .author-avatar {
-              width: 4.5em;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
+            
+            .updated,
+            .posted-by,
+            .taglist,
             .comments-link,
-            .date,
             .posted-on {
-              font-size: 0.7em;
+              font-size: 0.65em;
+              line-height:20px;
 
               a {
                 margin: 0 auto;
@@ -14888,18 +14774,18 @@ mobile 360px */
       }
 
       .entry {
-        padding: 1%;
-        /*global*/
+
         h1 {
-          font-size: 1.05em;
+          font-size: 1em;
         }
 
         h2 {
-          font-size: 1em;
+          font-size: 0.95em;
+          
         }
 
         h3 {
-          font-size: 1em;
+          font-size: 0.9em;
         }
 
         p {
@@ -15456,7 +15342,7 @@ mobile 320px */
           list-style: none;
 
           a {
-            font-size: 1em;
+            font-size: 0.7em;
 
             &:hover {
               font-weight: bold;
@@ -15973,29 +15859,21 @@ mobile 320px */
       header.byline {
         padding: 0.5em;
 
-        .entry-meta,
-        .index-entry-meta {
+        .entry-meta
+         {
           width: 100%; //background-color: $color2;
 
-          .has-avatar {
-            width: 20%;
-          }
-
+          
           .meta-content {
             width: 100%;
 
-            .author-avatar {
-              width: 4.5em;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
+            
+            .updated,
+            .posted-by,
+            .taglist,
             .comments-link,
-            .date,
             .posted-on {
-              font-size: 0.7em;
+              font-size: 0.65em;
 
               a {
                 margin: 0 auto;
@@ -16065,14 +15943,13 @@ mobile 320px */
       }
 
       .entry {
-        padding: 1%;
-        /*global*/
+
         h1 {
-          font-size: 1.05em;
+          font-size: 1em;
         }
 
         h2 {
-          font-size: 0.95em;
+          font-size: 0.9em;
         }
 
         h3 {

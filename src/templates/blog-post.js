@@ -17,7 +17,8 @@ const BlogPost = props => {
 
         <header className="byline">
           <div className="entry-meta">
-            <div className="meta-content has-avatar">
+            <div className="meta-content">
+              
               <div className="author-avatar">
                 <Link className="url fn n" to="">
                   <img
@@ -30,9 +31,8 @@ const BlogPost = props => {
                 </Link>
               </div>
 
-              <Link to="" rel="bookmark"></Link>
-
-              <span className="byline">
+             
+              <span className="posted-by">
                 Posted By : {allWordpressPost.edges[0].node.author.name}{" "}
               </span>
               <span className="posted-on">
@@ -42,11 +42,11 @@ const BlogPost = props => {
                   {allWordpressPost.edges[0].node.date}
                 </time>
               </span>
-              <span className="byline">
-                Updated: <time className="updated"></time>
+              <span className="updated">
+                Updated: <time></time>
               </span>
               <span className="comments-link">comments-link</span>
-              <span className="byline">
+              <span className="taglist">
                 <time className="entry-date published updated">Tags-link</time>
               </span>
             </div>

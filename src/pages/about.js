@@ -113,13 +113,14 @@ class AboutPage extends React.Component {
             </p>
             <p>
               {`I became more interested in programming around 2016 after taking
-              computer science fundementals courses on`}
+              computer science fundementals courses on `}
               <strong>
                 {" "}
-                <Link to="http://www.linkedin.com/in/raymond-thompson-1b42b7b8">
-                  Lynda.com
-                </Link>
-              </strong>{`that year and have since then found it easier to understand how
+                <a 
+                href="http://www.linkedin.com/in/raymond-thompson-1b42b7b8"
+                target="new"
+                >Lynda.com </a>
+              </strong>{` that year and have since then found it easier to understand how
               and why coding languages like Javascipt, PHP and Ruby work the way
               they do.`}
             </p>            
@@ -145,20 +146,26 @@ class AboutPage extends React.Component {
             <p>
               {`I have gained some experience working with others interested in
               web development at events and on projects. I took part in a
-              project called`}
-              <Link to="https://vimeo.com/232481032">
+              project called `}
+              <a 
+                href="https://vimeo.com/232481032"
+                target="new"
+              >
                 Digital Futures 2017{" "}
-              </Link>
-              {`in Waterloo where I worked with other student to enhance a dance
+              </a>
+              {` in Waterloo where I worked with other student to enhance a dance
               performance with coreographed lights and music using Ruby and
               Python`}
             </p>
             <p>
-              {`I also attended`}
-              <Link to="https://2018.london.wordcamp.org/attendees/">
+              {`I also attended `}
+              <a 
+                href="https://2018.london.wordcamp.org/attendees/"
+                target="new"
+              >
                 WordCamp 2018{" "}
-              </Link>{" "}
-              {`in London as a volunteer helping visitors find there way around
+              </a>{" "}
+              {` in London as a volunteer helping visitors find there way around
               the venue, putting out sinage. I also attended contributors day
               and even reviewed a wordpress theme for the theme review team`}
             </p>

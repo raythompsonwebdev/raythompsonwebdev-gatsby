@@ -1,6 +1,7 @@
-import { Link } from "gatsby"
+
 import React from "react"
 import PropTypes from "prop-types"
+import { Link } from "gatsby"
 import {
   FaFacebookSquare,
   FaGithubAlt,
@@ -21,49 +22,49 @@ const Footer = () => (
     </ul>
 
     <div className="socialpics">
-      <Link
+      <a
         className="social-icon linkedin-icon"
-        to="https://www.linkedin.com/in/raymond-t-1b42b7b8/"
+        href="https://www.linkedin.com/in/raymond-t-1b42b7b8/"
         target="new"
         title="linkedin"
       >
         <span>
           <FaLinkedinIn className="fa fa-linkedin" />
         </span>
-      </Link>
+      </a>
 
-      <Link
+      <a
         className="social-icon twitter-icon"
-        to="https://twitter.com/RayThompWeb/"
+        href="https://twitter.com/RayThompWeb/"
         target="new"
         title="twitter"
       >
         <span>
           <FaTwitter className="fa fa-twitter" />
         </span>
-      </Link>
+      </a>
 
-      <Link
+      <a
         className="social-icon facebook-icon"
-        to="https://www.facebook.com/raythompsonwebdeveloper/"
+        href="https://www.facebook.com/raythompsonwebdeveloper/"
         target="new"
         title="facebook"
       >
         <span>
           <FaFacebookSquare className="fa fa-facebook" />
         </span>
-      </Link>
+      </a>
 
-      <Link
+      <a
         className="social-icon github-icon"
-        to="https://github.com/raythompsonwebdev"
+        href="https://github.com/raythompsonwebdev"
         target="new"
         title="github"
       >
         <span>
           <FaGithubAlt className="fa fa-github" />
         </span>
-      </Link>
+      </a>
     </div>
   </footer>
 )
