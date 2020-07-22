@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import SEO from "../components/seo"
 import SkillsGraph from "../components/skillsgraph"
 import SliderPanel from "../components/sliderpanel"
@@ -13,9 +12,7 @@ class AboutPage extends React.Component {
       panels: [],
       lastIndex: 0,
       cert: [],
-    }
-
-    //this.responsiveGraph = this.responsiveGraph.bind(this)
+    }    
   }
 
   componentDidMount() {
@@ -57,9 +54,7 @@ class AboutPage extends React.Component {
       })      
     
   } 
-  
-  // Similar to componentDidMount and componentDidUpdate:
-
+   
   nextProperty = () => {
     const newIndex = this.state.cert.imageindex + 1
 
@@ -91,7 +86,7 @@ class AboutPage extends React.Component {
 
           <article id="text-box-profile">
             <div className="introimg">
-              <img alt="me" src="./src/images/raythompsonwebdev.jpg" />
+              <img alt="me" src="/src/static/images/raythompsonwebdev.jpg" />
             </div>
 
             <p>
@@ -106,7 +101,7 @@ class AboutPage extends React.Component {
               {`I spent the following years learning coding languages, practicing
               coding,`}
               <strong>
-                <Link to="/projects"> Web Applications </Link>
+                <a href="/projects"> {`Web Applications`} </a>
               </strong>
               {`helping others with their websites in my spare time while working
               full-time.`}
@@ -116,10 +111,10 @@ class AboutPage extends React.Component {
               computer science fundementals courses on`}
               <strong>
                 {" "}
-                <Link to="http://www.linkedin.com/in/raymond-thompson-1b42b7b8">
-                  Lynda.com
-                </Link>
-              </strong>{`that year and have since then found it easier to understand how
+                <a href="http://www.alinkedin.com/in/raymond-thompson-1b42b7b8">
+                  {`Lynda.com`}
+                </a>
+              </strong>{`that year and have since then found it easier a understand how
               and why coding languages like Javascipt, PHP and Ruby work the way
               they do.`}
             </p>            
@@ -128,7 +123,7 @@ class AboutPage extends React.Component {
           </article>
 
           <section id="prof_cont">
-            <h1>Skill Level</h1>
+            <h1>{`Skill Level`}</h1>
 
             <article id="chart">
               <SkillsGraph bars={bars} />
@@ -146,18 +141,18 @@ class AboutPage extends React.Component {
               {`I have gained some experience working with others interested in
               web development at events and on projects. I took part in a
               project called`}
-              <Link to="https://vimeo.com/232481032">
+              <a to="https://vimeo.com/232481032">
                 Digital Futures 2017{" "}
-              </Link>
+              </a>
               {`in Waterloo where I worked with other student to enhance a dance
               performance with coreographed lights and music using Ruby and
               Python`}
             </p>
             <p>
               {`I also attended`}
-              <Link to="https://2018.london.wordcamp.org/attendees/">
+              <a to="https://2018.london.wordcamp.org/attendees/">
                 WordCamp 2018{" "}
-              </Link>{" "}
+              </a>{" "}
               {`in London as a volunteer helping visitors find there way around
               the venue, putting out sinage. I also attended contributors day
               and even reviewed a wordpress theme for the theme review team`}
@@ -209,7 +204,7 @@ class AboutPage extends React.Component {
               onClick={() => this.prevProperty()}
               disabled={cert.imageindex === 0}
             >
-              Prev
+              Previous
             </button>
           </section>
         </div>

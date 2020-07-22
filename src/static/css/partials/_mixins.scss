@@ -49,7 +49,6 @@
     -o-border-radius: $bordrady;
     border-radius: $bordrady;
 }
-
 //Transform Origin
 @mixin originTran( $origin... ) {
     -webkit-transform-origin: $origin;

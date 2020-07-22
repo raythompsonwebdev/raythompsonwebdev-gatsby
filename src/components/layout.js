@@ -9,8 +9,8 @@ import PropTypes from "prop-types"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
-import "../fonts/fontawesome/css/font-awesome.css"
-import "../css/style.scss"
+//import "../fonts/fontawesome/css/font-awesome.css"
+import "../static/css/style.scss"
 import posed, { PoseGroup } from "react-pose"
 
 const Layout = ({ children, location }) => {
@@ -58,6 +58,7 @@ const Layout = ({ children, location }) => {
         © {new Date().getFullYear()}, Built by {` `}{" "}
         <Link to="/index">raythompsonwebdev</Link>
       </p>
+
     </div>
   )
 }

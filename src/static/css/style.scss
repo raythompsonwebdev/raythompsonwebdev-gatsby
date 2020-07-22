@@ -1,6 +1,6 @@
 @import "partials/base";
 @import "partials/variables";
-@import "partials/normalize";
+//@import "partials/normalize";
 @import "partials/mixins";
 
 /*
@@ -17,6 +17,11 @@ desktop 1920px*/
     display: block;
     height: 100px;
     clear: both;
+  }
+
+  #menu-toggle{
+    display:none;
+    
   }
 
   #wrapper_container {
@@ -122,16 +127,7 @@ desktop 1920px*/
     .site-logo a:focus,
     .site-logo a:hover {
       outline: 2px solid $color4;
-    }
-
-    /*Header*/
-    .site-logo a:focus .site-firstletter,
-    .site-logo a:hover .site-firstletter {
-      background: $color4;
-      color: $color8;
-      font-weight: normal;
-      text-align: center;
-    }
+    }    
 
     /*Header Title*/
     hgroup {
@@ -274,7 +270,7 @@ desktop 1920px*/
     /*Mobile-Navigation*/
     nav#mobile-nav {
       display: none;
-    }
+    }    
   }
 
   /*main-content box*/
@@ -347,9 +343,7 @@ desktop 1920px*/
         -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
         flex: 0 0 auto;
-        display: inline-block;
-        margin: 0.5em;
-        padding: 0.5em;
+        padding: 0.25em;
         @include Transition(all 0.2s ease-in-out 0s);
         box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
 
@@ -401,15 +395,15 @@ desktop 1920px*/
     h1 {
       font-size: 1.4em;
       letter-spacing: 0.05em;
-      line-height: 1.5;
-      height: 60px;
+      line-height: 60px;
+      height: auto;
     }
 
     h2 {
       font-size: 1.3em;
       letter-spacing: 0.05em;
-      line-height: 1.5;
-      height: 50px;
+      line-height: 50px;
+      height:auto;
     }
 
     /*Search Box*/
@@ -919,21 +913,24 @@ desktop 1920px*/
 
         h1 {
           font-size: 3.5em;
-          color: $color4;
+          color: $color1;
           margin: 0;
           padding: 0;
           line-height: 60px;
           display: block;
           text-align: left;
+          height:60px;
+          text-shadow: 1px 1px $color4;
         }
         h2 {
           font-size: 1.9em;
-          color: $color4;
+          color: $color1;
           margin: 0 0 1em 0;
           padding: 0;
           text-align: left;
           line-height: 40px;
           height:auto;
+          text-shadow: 1px 1px $color4;
         }
 
         p {
@@ -1474,7 +1471,6 @@ desktop 1920px*/
       margin: auto;
       padding: 1%;
       box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
-      border: 5px solid $color4;
 
       div.content {
         clear: both;
@@ -1988,11 +1984,16 @@ desktop 1920px*/
             width: 100%;
 
             .author-avatar {
-              width: 15%;
-              display: block;
-              float: left;
+              width: 10%;
               margin: 0;
-              padding: 1em;
+              padding: 0 0.25em 1.5em 0.25em;
+              display:block;
+              float:left;
+              height:100%;
+              a{
+                display:block;
+                
+              }
             }
 
             .byline,
@@ -2002,10 +2003,10 @@ desktop 1920px*/
             .comments-link,
             .date,
             .posted-on {
-              width: 85%;
-              display: inline-block;
+              display:inline-block;
+              width: 90%;
               height: auto;
-              line-height: 30px;
+              line-height: 25px;
               text-align: left;
               font-family: "FontAwesome", ($FontStyle);
               font-size: 0.9em;
@@ -2052,7 +2053,7 @@ desktop 1920px*/
         letter-spacing: 0.05em;
         display: block;
         text-align: center;
-        margin: 2% 0;
+        margin: 1.5em auto;
         @include boredrady(10px);
 
         a {
@@ -2153,15 +2154,15 @@ desktop 1920px*/
       }
 
       /*post*/
-      .entry {
-        padding: 1%;
+      .entry {        
         height: auto;
         width: 100%;
         margin: 0 auto;
         background-color: $color4;
 
         p {
-          width: 100%;
+          padding:0.75em;
+          width: 98%;
           margin: 0;
           font-size: 0.95em;
           color: $color8;
@@ -2213,7 +2214,6 @@ desktop 1920px*/
           letter-spacing: 0.04em;
           width: 100%;
           line-height: 60px;
-          height: 60px;
           text-align: left;
           color: $color4;
           background-color: $color1;
@@ -2228,7 +2228,6 @@ desktop 1920px*/
           width: 100%;
           color: $color1;
           line-height: 55px;
-          height: 55px;
           text-align: left;
         }
 
@@ -2259,20 +2258,19 @@ desktop 1920px*/
 
       /*post footer*/
       footer.byline {
-        width: 100%;
-        margin: 1% auto;
+        width: 100%;        
         height: auto;
-        font-size: 0.9em;
+        font-size: 1em;
         display: inline-block;
         clear: both;
         background-color: $color1;
 
         p {
           margin: 0;
-          display: inline-block;
-          padding: 0 0.5em;
+          display: inline-block;          
           width: auto;
           color: $color4;
+          line-height: 35px;
         }
 
         a {
@@ -2281,7 +2279,6 @@ desktop 1920px*/
           margin: auto;
           width: auto;
           display: inline-block;
-          padding: 0 0.25em;
         }
 
         .bylinecat {
@@ -3365,10 +3362,10 @@ desktop 1920px*/
             font-size: 1.4em;
           }
 
-          // a[href^="https://twitter.com"]:before {
-          //   content: "\f39e";
-          //   font-size: 1.4em;
-          // }
+          a[href^="https://twitter.com"]:before {
+            content: "\f39e";
+            font-size: 1.4em;
+          }
 
           a[href^="https://twitter.com"]:before {
             content: "\f099";
@@ -3973,7 +3970,7 @@ desktop 1920px*/
             width: 100%;
 
             .author-avatar {
-              width: 15%;
+              width: 10%;
             }
 
             .byline,
@@ -4055,8 +4052,7 @@ desktop 1920px*/
       }
 
       .entry {
-        padding: 1%;
-
+       
         p {
           font-size: 0.95em;
         }
@@ -4631,9 +4627,6 @@ desktop 1440px*/
       .blogboxes {
         width: 31%;
 
-        margin: 0.5em;
-        padding: 0.5em;
-
         h1 {
           font-size: 1em;
         }
@@ -4651,6 +4644,7 @@ desktop 1440px*/
     h1 {
       font-size: 1.3em;
       line-height: 50px;
+      height:50px;
     }
 
     h2 {
@@ -4770,10 +4764,10 @@ desktop 1440px*/
             font-size: 1.4em;
           }
 
-          // a[href^="https://twitter.com"]:before {
-          //   content: "\f39e";
-          //   font-size: 1.4em;
-          // }
+          a[href^="https://twitter.com"]:before {
+            content: "\f39e";
+            font-size: 1.4em;
+          }
 
           a[href^="https://twitter.com"]:before {
             content: "\f099";
@@ -5328,7 +5322,7 @@ desktop 1440px*/
             width: 100%;
 
             .author-avatar {
-              width: 15%;
+              width: 12%;
             }
 
             .byline,
@@ -5338,6 +5332,7 @@ desktop 1440px*/
             .comments-link,
             .date,
             .posted-on {
+              width: 85%;
               font-size: 0.9em;
 
               a {
@@ -5404,14 +5399,14 @@ desktop 1440px*/
       }
 
       .entry {
-        padding: 1%;
+        
         /*global*/
         h1 {
           font-size: 1.2em;
         }
 
         h2 {
-          font-size: 1.1em;
+          font-size: 1em;
         }
 
         h3 {
@@ -5934,7 +5929,7 @@ desktop 1280px*/
           width: 19%;
 
           a {
-            font-size: 0.9em;
+            font-size: 0.85em;
           }
         }
       }
@@ -5950,7 +5945,7 @@ desktop 1280px*/
   #main-content {
     #blogbox {
       .blogboxes {
-        width: 31%;
+        width: 32%;
 
         h1 {
           font-size: 1em;
@@ -5968,7 +5963,6 @@ desktop 1280px*/
 
     h1 {
       font-size: 1.2em;
-      line-height: 50px;
     }
 
     h2 {
@@ -6088,10 +6082,10 @@ desktop 1280px*/
             font-size: 1.4em;
           }
 
-          // a[href^="https://twitter.com"]:before {
-          //   content: "\f39e";
-          //   font-size: 1.4em;
-          // }
+          a[href^="https://twitter.com"]:before {
+            content: "\f39e";
+            font-size: 1.4em;
+          }
 
           a[href^="https://twitter.com"]:before {
             content: "\f099";
@@ -6375,7 +6369,7 @@ desktop 1280px*/
 
             span {
               width: 16.5%;
-              font-size: 0.9em;
+              font-size: 0.85em;
             }
           }
         }
@@ -6536,7 +6530,7 @@ desktop 1280px*/
       .website-text {
         h1.post-meta-key {
           font-size: 1.1em;
-          margin-bottom: 0.5em;
+
         }
 
         p.websitetext {
@@ -6620,7 +6614,7 @@ desktop 1280px*/
             width: 100%;
 
             .author-avatar {
-              width: 15%;
+              width: 12%;
             }
 
             .byline,
@@ -6697,7 +6691,7 @@ desktop 1280px*/
       }
 
       .entry {
-        padding: 1%;
+        
         /*global*/
         h1 {
           font-size: 1.15em;
@@ -6985,7 +6979,6 @@ desktop 1280px*/
   #main-content {
     #blogbox {
       .blogboxes {
-        width: 31%;
 
         h1 {
           font-size: 0.9em;
@@ -7005,7 +6998,7 @@ desktop 1280px*/
 
     h1 {
       font-size: 1.1em;
-      line-height: 50px;
+
     }
 
     h2 {
@@ -7136,10 +7129,10 @@ desktop 1280px*/
             font-size: 1.4em;
           }
 
-          // a[href^="https://twitter.com"]:before {
-          //   content: "\f39e";
-          //   font-size: 1.4em;
-          // }
+          a[href^="https://twitter.com"]:before {
+            content: "\f39e";
+            font-size: 1.4em;
+          }
 
           a[href^="https://twitter.com"]:before {
             content: "\f099";
@@ -7428,7 +7421,7 @@ desktop 1280px*/
             }
 
             span {
-              font-size: 0.9em;
+              font-size: 0.85em;
             }
           }
         }
@@ -7642,7 +7635,7 @@ desktop 1280px*/
             width: 100%;
 
             .author-avatar {
-              width: 15%;
+              width: 14%;
             }
 
             .byline,
@@ -7719,7 +7712,7 @@ desktop 1280px*/
       }
 
       .entry {
-        padding: 1%;
+        
         /*global*/
         h1 {
           font-size: 1.1em;
@@ -8091,7 +8084,7 @@ desktop 980px*/
           width: 19%;
 
           a {
-            font-size: 0.9em;
+            font-size: 0.8em;
           }
         }
       }
@@ -8141,9 +8134,7 @@ desktop 980px*/
 
     #blogbox {
       .blogboxes {
-        width: 32%;
-        margin: 0.25em;
-        padding: 0.25em;
+
 
         h1 {
           font-size: 0.9em;
@@ -8160,8 +8151,8 @@ desktop 980px*/
     }
 
     h1 {
-      font-size: 1.1em;
-      line-height: 50px;
+      font-size: 1.05em;
+
     }
 
     h2 {
@@ -8292,10 +8283,10 @@ desktop 980px*/
             font-size: 1.4em;
           }
 
-          // a[href^="https://twitter.com"]:before {
-          //   content: "\f39e";
-          //   font-size: 1.4em;
-          // }
+          a[href^="https://twitter.com"]:before {
+            content: "\f39e";
+            font-size: 1.4em;
+          }
 
           a[href^="https://twitter.com"]:before {
             content: "\f099";
@@ -8816,7 +8807,7 @@ desktop 980px*/
             width: 100%;
 
             .author-avatar {
-              width: 15%;
+              width: 16%;
             }
 
             .byline,
@@ -8826,6 +8817,7 @@ desktop 980px*/
             .comments-link,
             .date,
             .posted-on {
+              width:83%;
               font-size: 0.8em;
 
               a {
@@ -8894,7 +8886,7 @@ desktop 980px*/
       }
 
       .entry {
-        padding: 1%;
+        
         /*global*/
         h1 {
           font-size: 1.15em;
@@ -9308,7 +9300,7 @@ tablet 800px */
           width: 19%;
 
           a {
-            font-size: 0.85em;
+            font-size: 0.75em;
           }
         }
       }
@@ -9340,17 +9332,54 @@ tablet 800px */
       }
     }
 
+    div.main-text {
+      
+
+      p {
+        font-size: 0.85em;
+        
+      }
+
+      ul {
+        width: 100%;
+
+        li {
+          font-size: 0.85em;
+          
+          div.error {
+            font-size: 0.85em;
+          }
+
+          &:before {
+            
+            font-size: 0.9em;
+            
+          }
+
+          a {
+            display: inline-block;
+
+
+            &:hover {
+              font-weight: bold;
+
+            }
+          }
+        }
+      }
+    }
+
     h1 {
-      font-size: 1.1em;
-      line-height: 50px;
+      font-size: 1em;
+
     }
 
     h2 {
-      font-size: 1em;
+      font-size: 0.9em;
     }
 
     h3 {
-      font-size: 1em;
+      font-size: 0.9em;
     }
 
     /*Search Box*/
@@ -9477,10 +9506,10 @@ tablet 800px */
             font-size: 1.4em;
           }
 
-          // a[href^="https://twitter.com"]:before {
-          //   content: "\f39e";
-          //   font-size: 1.4em;
-          // }
+          a[href^="https://twitter.com"]:before {
+            content: "\f39e";
+            font-size: 1.4em;
+          }
 
           a[href^="https://twitter.com"]:before {
             content: "\f099";
@@ -9524,9 +9553,10 @@ tablet 800px */
           width: 100%;
 
           h1#front-title {
-            text-indent: 0.2em;
+            text-indent: 0;
             font-size: 1.5em;
             text-align:center;
+            line-height:50px;
           }
 
           section.frntpgbox {
@@ -9957,7 +9987,7 @@ tablet 800px */
 
       h1,
       h1.page-title {
-        font-size: 1em;
+        font-size: 1.4em;
       }
 
       .websiteImage {
@@ -10055,7 +10085,7 @@ tablet 800px */
             width: 100%;
 
             .author-avatar {
-              width: 15%;
+              width: 19%;
             }
 
             .byline,
@@ -10065,6 +10095,7 @@ tablet 800px */
             .comments-link,
             .date,
             .posted-on {
+              width:78%;
               font-size: 0.8em;
 
               a {
@@ -10135,14 +10166,14 @@ tablet 800px */
       }
 
       .entry {
-        padding: 1%;
+        
         /*global*/
         h1 {
           font-size: 1.2em;
         }
 
         h2 {
-          font-size: 1.05em;
+          font-size: 1em;
         }
 
         h3 {
@@ -10551,7 +10582,7 @@ tablet 667px*/
           width: 19%;
 
           a {
-            font-size: 0.85em;
+            font-size: 0.75em;
           }
         }
       }
@@ -10583,16 +10614,15 @@ tablet 667px*/
 
     h1 {
       font-size: 1em;
-      line-height: 50px;
       text-align: center;
     }
 
     h2 {
-      font-size: 1.1em;
+      font-size: 0.9em;
     }
 
     h3 {
-      font-size: 1em;
+      font-size: 0.9em;
     }
 
     /*Search Box*/
@@ -10714,10 +10744,10 @@ tablet 667px*/
             font-size: 1.4em;
           }
 
-          // a[href^="https://twitter.com"]:before {
-          //   content: "\f39e";
-          //   font-size: 1.4em;
-          // }
+          a[href^="https://twitter.com"]:before {
+            content: "\f39e";
+            font-size: 1.4em;
+          }
 
           a[href^="https://twitter.com"]:before {
             content: "\f099";
@@ -10761,7 +10791,7 @@ tablet 667px*/
           width: 100%;
 
           h1#front-title {
-            text-indent: 0.2em;
+            font-size: 1.4em;
             
           }
 
@@ -10831,9 +10861,16 @@ tablet 667px*/
       section#banner-container {
         h1 {
           font-size: 2.5em;
+          height:50px;
+          line-height:50px;
         }
         h2 {
           font-size: 1.3em;
+        }
+
+        p {
+          font-size: 0.9em;
+          
         }
 
         a#projectLink {
@@ -11014,7 +11051,7 @@ tablet 667px*/
 
             span {
               width: 16.5%;
-              font-size: 0.85em;
+              font-size: 0.8em;
             }
           }
         }
@@ -11144,7 +11181,7 @@ tablet 667px*/
       }
 
       .websiteImage {
-        width: 45%;
+        width: 35%;
       }
 
       .website-text {
@@ -11238,7 +11275,7 @@ tablet 667px*/
             width: 100%;
 
             .author-avatar {
-              width: 15%;
+              width: 24%;
             }
 
             .byline,
@@ -11248,6 +11285,7 @@ tablet 667px*/
             .comments-link,
             .date,
             .posted-on {
+              width:75%;
               font-size: 0.8em;
 
               a {
@@ -11319,14 +11357,14 @@ tablet 667px*/
       }
 
       .entry {
-        padding: 1%;
+        
         /*global*/
         h1 {
-          font-size: 1.15em;
+          font-size: 1.1em;
         }
 
         h2 {
-          font-size: 1.05em;
+          font-size: 1em;
         }
 
         h3 {
@@ -11643,11 +11681,7 @@ tablet 667px*/
 
 /*tablet 536px */
 @media only screen and (max-width: 536px) {
-  #menu-toggle,
-  .menu-main-container.toggled ul {
-    display: block;
-  }
-
+  
   #menu-toggle {
     position: fixed;
     z-index: 100;
@@ -11660,8 +11694,11 @@ tablet 667px*/
     color: $color2;
     border: none;
     transition: all ease-out 400ms;
-    height: 60px;
+    height: 45px;
     width:15%;
+    display: block;
+    outline:none;
+    text-decoration:none;
   }
 
   #menu-toggle.hide {
@@ -11782,11 +11819,11 @@ tablet 667px*/
           width: 100%;
           display: block;
           background-color: $color2;
-          height: 55px;
+          height: 45px;
           margin-bottom: 0.25em;
 
           a {
-            line-height: 55px;
+            line-height: 45px;
             margin: 0;
             letter-spacing: 0.1em;
             font-size: 1em;
@@ -11796,7 +11833,6 @@ tablet 667px*/
             &:hover {
               letter-spacing: 0.2em;
               font-weight: bold;
-              line-height: 55px;
             }
           }
         }
@@ -11811,6 +11847,43 @@ tablet 667px*/
 
   /*main-content box*/
   #main-content {
+
+    div.main-text {
+      
+
+      p {
+        font-size: 0.8em;
+        
+      }
+
+      ul {
+        width: 100%;
+
+        li {
+          font-size: 0.8em;
+          
+          div.error {
+            font-size: 0.8em;
+          }
+
+          &:before {
+            
+            font-size: 0.9em;
+            
+          }
+
+          a {
+            display: inline-block;
+
+
+            &:hover {
+              font-weight: bold;
+
+            }
+          }
+        }
+      }
+    }
     #blogbox {
       flex-flow: column;
       align-items: center;
@@ -11834,17 +11907,17 @@ tablet 667px*/
     }
 
     h1 {
-      font-size: 1.1em;
-      line-height: 30px;
-      text-align: center;
+      font-size:1em;
+      line-height: 40px;
+      height:40px;
     }
 
     h2 {
-      font-size: 1em;
+      font-size: 0.9em;
     }
 
     h3 {
-      font-size: 1em;
+      font-size: 0.9em;
     }
 
     /*Search Box*/
@@ -11966,10 +12039,10 @@ tablet 667px*/
             font-size: 1.4em;
           }
 
-          // a[href^="https://twitter.com"]:before {
-          //   content: "\f39e";
-          //   font-size: 1.4em;
-          // }
+          a[href^="https://twitter.com"]:before {
+            content: "\f39e";
+            font-size: 1.4em;
+          }
 
           a[href^="https://twitter.com"]:before {
             content: "\f099";
@@ -12022,7 +12095,7 @@ tablet 667px*/
           width: 100%;
 
           h1#front-title {
-            text-indent: 0.2em;
+            font-size: 1.3em;
           }
 
           section.frntpgbox {
@@ -12269,6 +12342,7 @@ tablet 667px*/
 
             span {
               width: 18.5%;
+              font-size: 0.75em;
             }
           }
         }
@@ -12381,11 +12455,11 @@ tablet 667px*/
 
       h1,
       h1.page-title {
-        font-size: 0.9em;
+        font-size: 1.3em;
       }
 
       .websiteImage {
-        width: 45%;
+        width: 40%;
       }
 
       .website-text {
@@ -12478,7 +12552,7 @@ tablet 667px*/
             width: 100%;
 
             .author-avatar {
-              width: 4.5em;
+              width: 24%;
             }
 
             .byline,
@@ -12488,7 +12562,7 @@ tablet 667px*/
             .comments-link,
             .date,
             .posted-on {
-              font-size: 0.8em;
+              font-size: 0.75em;
 
               a {
                 margin: 0 auto;
@@ -12555,14 +12629,14 @@ tablet 667px*/
       }
 
       .entry {
-        padding: 1%;
+        
         /*global*/
         h1 {
-          font-size: 1.15em;
+          font-size: 1.05em;
         }
 
         h2 {
-          font-size: 1.05em;
+          font-size: 0.95em;
         }
 
         h3 {
@@ -12842,7 +12916,7 @@ mobile 480px */
   #menu-toggle {
     left: 74%;
     font-size: 0.9em;
-    top: 2.5em;
+    top: 2.4em;
     width:20%;
   }
 
@@ -12856,7 +12930,7 @@ mobile 480px */
 
   /*Header*/
   header {
-    height: 85px;
+    height: 65px;
 
     /*Site Logo*/
     .site-logo {
@@ -12971,19 +13045,18 @@ mobile 480px */
     }
 
     h1 {
-      font-size: 1em;
-      line-height: 30px;
-      text-align: center;
+      font-size:1em;
+
     }
 
     h2 {
       font-size: 0.9em;
-      text-align: center;
+
     }
 
     h3 {
       font-size: 0.85em;
-      text-align: center;
+;
     }
 
     /*Search Box*/
@@ -13105,10 +13178,10 @@ mobile 480px */
             font-size: 1.4em;
           }
 
-          // a[href^="https://twitter.com"]:before {
-          //   content: "\f39e";
-          //   font-size: 1.4em;
-          // }
+          a[href^="https://twitter.com"]:before {
+            content: "\f39e";
+            font-size: 1.4em;
+          }
 
           a[href^="https://twitter.com"]:before {
             content: "\f099";
@@ -13156,7 +13229,7 @@ mobile 480px */
           width: 100%;
 
           h1#front-title {
-            text-indent: 0.2em;
+            font-size: 1.2em;
           }
 
           section.frntpgbox {
@@ -13238,8 +13311,13 @@ mobile 480px */
           line-height: 30px;
         }
 
+        p {
+          font-size: 0.85em;
+          
+        }
+
         a#projectLink {
-          font-size: 1.2em;
+          font-size: 1.1em;
           float: none;
           margin: 0.5em auto;
 
@@ -13413,7 +13491,7 @@ mobile 480px */
 
             span {
               width: 22.5%;
-              font-size: 0.8em;
+              font-size: 0.7em;
             }
           }
         }
@@ -13546,9 +13624,13 @@ mobile 480px */
       .seperator {
         height: 1%;
       }
+      h1,
+      h1.page-title {
+        font-size: 1.2em;
+      }
 
       .websiteImage {
-        width: 50%;
+        width: 45%;
       }
 
       .website-text {
@@ -13641,7 +13723,8 @@ mobile 480px */
             width: 100%;
 
             .author-avatar {
-              width: 4.5em;
+              width: 29%;
+              padding: 0 0.25em 2.2em 0.25em;
             }
 
             .byline,
@@ -13651,7 +13734,8 @@ mobile 480px */
             .comments-link,
             .date,
             .posted-on {
-              font-size: 0.75em;
+              width:70%;
+              font-size: 0.7em;
 
               a {
                 margin: 0 auto;
@@ -13722,14 +13806,14 @@ mobile 480px */
       }
 
       .entry {
-        padding: 1%;
+        
         /*global*/
         h1 {
-          font-size: 1.1em;
+          font-size: 1.05em;
         }
 
         h2 {
-          font-size: 1.05em;
+          font-size: 0.95em;
         }
 
         h3 {
@@ -14045,7 +14129,8 @@ mobile 480px */
 mobile 360px */
 @media only screen and (max-width: 22.5em) {
   #menu-toggle {
-    left: 80;
+    left: 72%;
+    top: 2.5em;
   }
 
   .fixed-side-social-container {
@@ -14174,7 +14259,7 @@ mobile 360px */
     }
 
     h1 {
-      font-size: 1em;
+      font-size: 0.9em;
     }
 
     h2 {
@@ -14304,10 +14389,10 @@ mobile 360px */
             font-size: 1.4em;
           }
 
-          // a[href^="https://twitter.com"]:before {
-          //   content: "\f39e";
-          //   font-size: 1.4em;
-          // }
+          a[href^="https://twitter.com"]:before {
+            content: "\f39e";
+            font-size: 1.4em;
+          }
 
           a[href^="https://twitter.com"]:before {
             content: "\f099";
@@ -14355,7 +14440,7 @@ mobile 360px */
           width: 100%;
 
           h1#front-title {
-            text-indent: 0.2em;
+            font-size: 1.2em;
           }
 
           section.frntpgbox {
@@ -14430,7 +14515,7 @@ mobile 360px */
         }
 
         a#projectLink {
-          font-size: 1.2em;
+          font-size: 1.1em;
 
           &:hover {
             background-color: $color4;
@@ -14712,14 +14797,20 @@ mobile 360px */
         height: 1%;
       }
 
+      h1,
+      h1.page-title {
+        font-size: 1.2em;
+      }
+
       .websiteImage {
-        width: 50%;
+        width: 45%;
       }
 
       .website-text {
         width: 97%;
 
         h1.post-meta-key {
+          font-size:0.85em;
           margin-bottom: 0.5em;
         }
 
@@ -14807,7 +14898,7 @@ mobile 360px */
             width: 100%;
 
             .author-avatar {
-              width: 4.5em;
+              width: 29%;
             }
 
             .byline,
@@ -14895,11 +14986,11 @@ mobile 360px */
         }
 
         h2 {
-          font-size: 1em;
+          font-size: 0.95em;
         }
 
         h3 {
-          font-size: 1em;
+          font-size: 0.9em;
         }
 
         p {
@@ -15228,7 +15319,7 @@ mobile 320px */
 
   /*Header*/
   header {
-    
+    height: 65px;
 
     /*Site Logo*/
     .site-logo {
@@ -15339,7 +15430,7 @@ mobile 320px */
     }
 
     h1 {
-      font-size: 1em;
+      font-size: 0.9em;
     }
 
     h2 {
@@ -15469,10 +15560,10 @@ mobile 320px */
             font-size: 1.4em;
           }
 
-          // a[href^="https://twitter.com"]:before {
-          //   content: "\f39e";
-          //   font-size: 1.4em;
-          // }
+          a[href^="https://twitter.com"]:before {
+            content: "\f39e";
+            font-size: 1.4em;
+          }
 
           a[href^="https://twitter.com"]:before {
             content: "\f099";
@@ -15520,7 +15611,7 @@ mobile 320px */
           width: 100%;
 
           h1#front-title {
-            text-indent: 0.2em;
+            font-size: 1.2em;
           }
 
           section.frntpgbox { 
@@ -15595,7 +15686,7 @@ mobile 320px */
         }
 
         a#projectLink {
-          font-size: 1.1em;
+          font-size: 1em;
 
           &:hover {
             background-color: $color4;
@@ -15890,6 +15981,11 @@ mobile 320px */
         height: 1%;
       }
 
+      h1,
+      h1.page-title {
+        font-size: 1.1em;
+      }
+
       .websiteImage {
         width: 45%;
       }
@@ -15985,7 +16081,7 @@ mobile 320px */
             width: 100%;
 
             .author-avatar {
-              width: 4.5em;
+              width: 29%;
             }
 
             .byline,
@@ -16065,7 +16161,7 @@ mobile 320px */
       }
 
       .entry {
-        padding: 1%;
+        
         /*global*/
         h1 {
           font-size: 1.05em;

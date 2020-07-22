@@ -31,8 +31,6 @@ class BlogPage extends React.Component {
             development and web design related resources I have read, watched
             and listened to over the past few years, content like`}
           </p>
-          <br />
-          <br />
         </div>
 
         <div id="blogbox">
@@ -53,6 +51,7 @@ class BlogPage extends React.Component {
               )}
 
               <div dangerouslySetInnerHTML={{ __html: node.excerpt }}></div>
+              
               <Link to={`/blog/${node.slug}`}>Link</Link>
             </div>
           ))}

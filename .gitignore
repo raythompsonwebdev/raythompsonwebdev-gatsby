@@ -1,6 +1,8 @@
 node_modules
-src/fonts/
-src/images/
+src/static/data/
+src/static/fonts/
+src/static/images/
+src/static/js/
 files/
 js/
 LICENSE

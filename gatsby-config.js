@@ -1,6 +1,6 @@
-require('dotenv').config({
-  path: '.env',
-});
+require("dotenv").config({
+  path: ".env",
+})
 
 module.exports = {
   siteMetadata: {
@@ -35,12 +35,18 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        excludedRoutes: ["/wp/v2/users/**", "/wp/v2/settings*", "/jetpack/v4/**", "contact-form-7/v1/**", "yoast/v1/**"],
+        excludedRoutes: [
+          "/wp/v2/users/**",
+          "/wp/v2/settings*",
+          "/jetpack/v4/**",
+          "contact-form-7/v1/**",
+          "yoast/v1/**",
+        ],
         baseUrl: "localhost/wordpress",
         protocol: "http",
         restApiRoutePrefix: "wp-json",
         hostingWPCOM: false,
-        useACF: false,        
+        useACF: false,
         verboseOutput: true,
         // Search and Replace Urls across WordPress content.
         searchAndReplaceContentUrls: {
@@ -49,8 +55,6 @@ module.exports = {
         },
         // Set how many simultaneous requests are sent at once.
         concurrentRequests: 10,
-        
-        
       },
     },
 
@@ -85,7 +89,7 @@ module.exports = {
       options: {
         wordPressUrl: "http://localhost/wordpress/",
         uploadsUrl: "http://localhost/wordpress/wp-content/uploads/",
-        processPostTypes: ["page", "post", "project"],
+        processPostTypes: ["Page", "Post"],
         graphqlTypeName: "WPGraphQL",
       },
     },
@@ -107,7 +111,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./src/data/`,
+        path: `./src/static/data/`,
       },
     },
   ],

@@ -1,6 +1,5 @@
 import React from "react"
 import SEO from "../components/seo"
-import { Link } from "gatsby"
 
 const PrivacyPage = () => (
   <main id="main-content">
@@ -281,103 +280,103 @@ const PrivacyPage = () => (
       <br />
       <ul>
         <li>
-          <Link            
-            to="https://ico.org.uk/media/for-organisations/data-protection-reform/overview-of-the-gdpr-1-13.pdf"
+          <a            
+            href="https://ico.org.uk/media/for-organisations/data-protection-reform/overview-of-the-gdpr-1-13.pdf"
             target="new"
             title="Overview of the GDPR - General Data Protection Regulation"
           >
             {`Overview of the GDPR - General Data Protection Regulation`}
-          </Link>
+          </a>
         </li>
 
         <li>
-          <Link
-            to="https://www.gov.uk/data-protection"
+          <a
+            href="https://www.gov.uk/data-protection"
             alt="Data Protection Act 1998"
             target="new"
           >
             {`Data Protection Act 1998`}
-          </Link>
+          </a>
         </li>
 
         <li>
-          <Link
-            to="https://ico.org.uk/for-organisations/guide-to-pecr/"
+          <a
+            href="https://ico.org.uk/for-organisations/guide-to-pecr/"
             alt="Privacy and Electronic Communications Regulations 2003"
             target="new"
           >
             {`Privacy and Electronic Communications Regulations 2003`}
-          </Link>
+          </a>
         </li>
 
         <li>
-          <Link
-            to="https://ico.org.uk/media/for-organisations/guide-to-pecr-2-3.pdf"
+          <a
+            href="https://ico.org.uk/media/for-organisations/guide-to-pecr-2-3.pdf"
             alt="The Guide to the PECR 2003"
             target="new"
           >
             {`The Guide to the PECR 2003`}
-          </Link>
+          </a>
         </li>
 
         <li>
-          <Link
-            to="https://twitter.com/en/privacy"
+          <a
+            href="https://twitter.com/en/privacy"
             alt="Twitter Privacy Policy"
             target="new"
           >
             {`Twitter Privacy Policy`}
-          </Link>
+          </a>
         </li>
 
         <li>
-          <Link
-            to="https://www.facebook.com/legal/FB_Work_Privacy"
+          <a
+            href="https://www.facebook.com/legal/FB_Work_Privacy"
             alt="Facebook Privacy Policy"
             target="new"
           >
             {`Facebook Privacy Policy`}
-          </Link>
+          </a>
         </li>
 
         <li>
-          <Link
-            to="https://www.google.com/policies/privacy/"
+          <a
+            href="https://www.google.com/policies/privacy/"
             alt="Google Privacy Policy"
             target="new"
           >
             {`Google Privacy Policy`}
-          </Link>
+          </a>
         </li>
 
         <li>
-          <Link
-            to="https://www.linkedin.com/legal/privacy-policy"
-            alt="Linkedin Privacy Policy"
+          <a
+            href="https://www.linkedin.com/legal/privacy-policy"
+            alt="linkedin Privacy Policy"
             target="new"
           >
-            {`Linkedin Privacy Policy`}
-          </Link>
+            {`linkedin Privacy Policy`}
+          </a>
         </li>
 
         <li>
-          <Link
-            to="https://help.github.com/articles/github-privacy-statement/"
+          <a
+            href="https://help.github.com/articles/github-privacy-statement/"
             alt="GitHub Privacy Policy"
             target="new"
           >
             {`GitHub Privacy Policy`}
-          </Link>
+          </a>
         </li>
 
         <li>
-          <Link
-            to="https://jamieking.co.uk/blog/cyber-security/policies/free-sample-privacy-policy.php"
+          <a
+            href="https://jamieking.co.uk/blog/cyber-security/policies/free-sample-privacy-policy.php"
             alt="Website Privacy Policy Template"
             target="new"
           >
             {`Website Privacy Policy Template`}
-          </Link>
+          </a>
         </li>
       </ul>
       <br />
