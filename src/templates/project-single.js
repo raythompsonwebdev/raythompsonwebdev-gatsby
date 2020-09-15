@@ -8,20 +8,15 @@ export const data = graphql`
     allWpProject(filter: { slug: { eq: $slug } }) {
       edges {
         node {
-          id
-          slug
           title
-          meta {
-            project_code
-            project_description
-            project_name
-            project_url
-          }
-          featured_media {
-            localFile {
-              childImageSharp {
-                fixed {
-                  src
+          slug
+          featuredImage {
+            node {
+              localFile {
+                childImageSharp {
+                  fluid {
+                    src
+                  }
                 }
               }
             }

@@ -15,7 +15,7 @@ class ProjectPage extends React.Component {
 
   render() {
     const {
-      data: { allWordpressWpProject },
+      data: { allWpProject },
     } = this.state.data
 
     return (
@@ -25,7 +25,7 @@ class ProjectPage extends React.Component {
 
         <div id="photocontainer">
           <div className="content">
-            {allWordpressWpProject.nodes.map((items, i) => (
+            {allWpProject.nodes.map((items, i) => (
               <ProjectItem items={items} key={i} />
             ))}
           </div>
@@ -42,16 +42,21 @@ ProjectPage.propTypes = {
 export default ProjectPage
 
 export const projectQuery = graphql`
-  query SiteCustomQuery {
+  query {
     allWpProject {
-      nodes {
-        title
-        slug
-        featured_media {
-          localFile {
-            childImageSharp {
-              resolutions {
-                src
+      totalCount
+      edges {
+        node {
+          title
+          slug
+          featuredImage {
+            node {
+              localFile {
+                childImageSharp {
+                  fluid {
+                    src
+                  }
+                }
               }
             }
           }

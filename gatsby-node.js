@@ -21,7 +21,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
     console.log(node);
     
-    if (node.internal.type === `wordpress__POST` && `wordpress__wp_project`) {
+    if (node.internal.type === `wordpress__POST` && `wordpress__project`) {
 
       const slug = createFilePath({ node, getNode, basePath: `pages` })
 
