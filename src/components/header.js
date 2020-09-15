@@ -1,75 +1,78 @@
-import React from "react"
+import React , {useEffect} from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props)
-    this.sitedesciption = props.siteDescription
-    this.sitetitle = props.siteTitle
-  }
+function menuToggle() {  
+  // sliding menu mobile
+  var menuTogglebtn = document.getElementById("menu-toggle")
 
-  componentDidMount() {
+  var position, direction, previous
 
-    var position, direction, previous
-
-    let menuToggle = document.getElementById("menu-toggle")
-
-    window.scroll(function() {
-      
-      if (this.scrollTop() >= position) {
-        direction = "down"
-        if (direction !== previous) {
-          menuToggle.classList.add("hide")
-          previous = direction
-        }
-      } else {
-        direction = "up"
-        if (direction !== previous) {
-          menuToggle.classList.remove("hide")
-          previous = direction
-        }
+  window.scroll(function() {
+    if (this.scrollTop() >= position) {
+      direction = "down"
+      if (direction !== previous) {
+        menuTogglebtn.classList.add("hide")
+        previous = direction
       }
-      position = this.scrollTop()
-    })
+    } else {
+      direction = "up"
+      if (direction !== previous) {
+        menuTogglebtn.classList.remove("hide")
+        previous = direction
+      }
+    }
+    position = this.scrollTop()
+  })
 
-    // sliding menu mobile
-    menuToggle.addEventListener("click", function(event) {
-      event.preventDefault()
+  menuTogglebtn.addEventListener("click", function(event) {
+    event.preventDefault()
 
-      // create menu variables
-      let slideoutMenu = document.querySelector("#main-nav ")
-      let slideoutMenuWidth = slideoutMenu.style.width
+    // create menu variables
+    let slideoutMenu = document.querySelector("#main-nav ")
+    let slideoutMenuWidth = slideoutMenu.style.width
+
+    
+    // toggle open class
+    slideoutMenu.classList.toggle("open")
+
+    // slide menu
+    if (slideoutMenu.classList.contains("open")) {
+      slideoutMenu.style.left = "0px"
+    } else {
+      slideoutMenu.style.left = slideoutMenuWidth
+    }
+  })
+}
 
       
-      // toggle open class
-      slideoutMenu.classList.toggle("open")
+function Header (props) {
+  
+  const { siteTitle, siteDescription } = props  
 
-      // slide menu
-      if (slideoutMenu.classList.contains("open")) {
-        slideoutMenu.style.left = "0px"
-      } else {
-        slideoutMenu.style.left = slideoutMenuWidth
-      }
-    })
-  }
+  // replacement for component did mount to us ein function components
+    useEffect(() => {      
+      menuToggle(); 
+   
+    }); 
 
-  render() {
+        
     const ListLink = props => (
-      <li className="menu-item">
-        <Link to={props.to}>{props.children}</Link>
-      </li>
-    )
-
+        <li className="menu-item">
+           <Link to={props.to}>{props.children}</Link>
+        </li>
+    )  
+    
     return (
       <header>
+
         <div className="site-logo">
           <Link to="/">R</Link>
         </div>
 
         <hgroup>
-          <h1 id="logo">{this.sitetitle}</h1>
-          <h2>{this.sitedesciption}</h2>
+            <h1 id="logo">{siteTitle}</h1>
+            <h2>{siteDescription}</h2>
         </hgroup>
 
         <button
@@ -92,7 +95,7 @@ class Header extends React.Component {
         </nav>
       </header>
     )
-  }
+  
 }
 
 Header.propTypes = {

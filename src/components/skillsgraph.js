@@ -26,7 +26,7 @@ const responsiveGraph = () => {
 }
 function SkillsGraph(props) {
 
-  const { bars} = props
+  const { bars } = props
   
   useEffect(() => {    // Update the document title using the browser API
     responsiveGraph()  

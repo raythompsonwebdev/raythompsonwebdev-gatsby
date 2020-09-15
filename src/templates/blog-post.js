@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 
 const BlogPost = props => {
   const {
-    data: { allWordpressPost },
+    data: { allWpPost },
   } = props
 
   return (
@@ -13,33 +13,30 @@ const BlogPost = props => {
       <SEO title="Blog Post" />
 
       <article className="post group" id="post">
-        <h1 className="page-title">{allWordpressPost.edges[0].node.title}</h1>
+        <h1 className="page-title">{allWpPost.edges[0].node.title}</h1>
 
         <header className="byline">
           <div className="entry-meta">
             <div className="meta-content">
-              
               <div className="author-avatar">
                 <Link className="url fn n" to="">
                   <img
                     src={
-                      allWordpressPost.edges[0].node.author.avatar_urls
-                        .wordpress_96
+                      allWpPost.edges[0].node.author.avatar_urls.wordpress_96
                     }
                     alt="Blog"
                   />
                 </Link>
               </div>
 
-             
               <span className="posted-by">
-                Posted By : {allWordpressPost.edges[0].node.author.name}{" "}
+                Posted By : {allWpPost.edges[0].node.author.name}{" "}
               </span>
               <span className="posted-on">
                 Posted on :
                 <time className="entry-date published">
                   {" "}
-                  {allWordpressPost.edges[0].node.date}
+                  {allWpPost.edges[0].node.date}
                 </time>
               </span>
               <span className="updated">
@@ -55,12 +52,12 @@ const BlogPost = props => {
 
         <Link to="" title="Permanent Link to">
           <figure className="featuredImage">
-            {allWordpressPost.edges[0].node.featured_media == null ? (
+            {allWpPost.edges[0].node.featured_media == null ? (
               <p>No Image</p>
             ) : (
               <img
                 src={
-                  allWordpressPost.edges[0].node.featured_media.localFile
+                  allWpPost.edges[0].node.featured_media.localFile
                     .childImageSharp.resolutions.src
                 }
                 alt=""
@@ -72,7 +69,7 @@ const BlogPost = props => {
         <div className="entry">
           <div
             dangerouslySetInnerHTML={{
-              __html: allWordpressPost.edges[0].node.content,
+              __html: allWpPost.edges[0].node.content,
             }}
           ></div>
         </div>
@@ -102,36 +99,37 @@ BlogPost.propTypes = {
 export default BlogPost
 
 export const data = graphql`
-  query($slug: String!) {
-    allWordpressPost(filter: { slug: { eq: $slug } }) {
-      edges {
-        node {
-          featured_media {
+query($slug: String!) {
+  allWpPost(filter: {slug: {eq: $slug}}) {
+    edges {
+      node {
+        featuredImage {
+          node {
             localFile {
               childImageSharp {
-                resolutions {
+                fluid {
                   src
                 }
               }
+            }
+            uri
+          }
+        }
+        title
+        slug
+        date
+        author {
+          node {
+            avatar {
               url
             }
           }
-          title
-          slug
-          content
-          date(formatString: "Y:MM:DD")
-          author {
-            avatar_urls {
-              wordpress_24
-              wordpress_48
-              wordpress_96
-            }
-            name
-            slug
-            link
-          }
         }
+        excerpt
+        link
+        status
       }
     }
   }
-`
+}`
+  

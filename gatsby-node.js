@@ -18,6 +18,8 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {      
     const { createNodeField } = actions
+
+    console.log(node);
     
     if (node.internal.type === `wordpress__POST` && `wordpress__wp_project`) {
 
@@ -39,7 +41,7 @@ exports.createPages = ({ graphql, actions }) => {
     
     return graphql(`
       query {
-        allWordpressPost {
+        allWpPost {
           edges {
             node {
               slug
@@ -47,7 +49,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }       
-        allWordpressWpProject {
+        allWpProject {
           edges {
             node {
               slug
@@ -66,7 +68,7 @@ exports.createPages = ({ graphql, actions }) => {
 
       
      //posts
-     result.data.allWordpressPost.edges.forEach(({ node }) => {
+     result.data.allWpPost.edges.forEach(({ node }) => {
           
           createPage({
             path: `/blog/${node.slug}`,

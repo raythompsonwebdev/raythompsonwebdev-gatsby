@@ -1,6 +1,7 @@
-require('dotenv').config({
-  path: '.env',
-});
+// require('dotenv').config({
+//   path: '.env',
+// });
+
 
 module.exports = {
   siteMetadata: {
@@ -25,36 +26,24 @@ module.exports = {
       resolve: "gatsby-source-graphql",
       options: {
         // This type will contain remote schema Query type
-        typeName: "SWAPI",
+        typeName: "WPGraphQL",
         // This is the field under which it's accessible
-        fieldName: "swapi",
+        fieldName: "wpgraphql",
         // URL to query from
-        url: "https://swapi-graphql.netlify.app/.netlify/functions/index",
+        url: "http://localhost/wordpress/graphql",
       },
     },
 
     {
-      resolve: "gatsby-source-wordpress",
+      resolve: `gatsby-source-wordpress-experimental`,
       options: {
-        excludedRoutes: ["/wp/v2/users/**", "/wp/v2/settings*", "/jetpack/v4/**", "contact-form-7/v1/**", "yoast/v1/**"],
-        baseUrl: "localhost/wordpress",
-        protocol: "http",
-        restApiRoutePrefix: "wp-json",
-        hostingWPCOM: false,
-        useACF: false,        
-        verboseOutput: true,
-        // Search and Replace Urls across WordPress content.
-        searchAndReplaceContentUrls: {
-          sourceUrl: "http://localhost/wordpress",
-          replacementUrl: "",
-        },
-        // Set how many simultaneous requests are sent at once.
-        concurrentRequests: 10,
-        
-        
+        url:
+          process.env.WPGRAPHQL_URL ||
+          `http://localhost/wordpress/graphql`,
+       
       },
     },
-
+       
     `gatsby-plugin-styled-components`,
     {
       resolve: "gatsby-plugin-prefetch-google-fonts",

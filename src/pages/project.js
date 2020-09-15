@@ -43,7 +43,7 @@ export default ProjectPage
 
 export const projectQuery = graphql`
   query SiteCustomQuery {
-    allWordpressWpProject {
+    allWpProject {
       nodes {
         title
         slug

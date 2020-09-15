@@ -14,8 +14,6 @@ class AboutPage extends React.Component {
       lastIndex: 0,
       cert: [],
     }
-
-    //this.responsiveGraph = this.responsiveGraph.bind(this)
   }
 
   componentDidMount() {
@@ -56,10 +54,8 @@ class AboutPage extends React.Component {
         console.error(error)
       })      
     
-  } 
+  }   
   
-  // Similar to componentDidMount and componentDidUpdate:
-
   nextProperty = () => {
     const newIndex = this.state.cert.imageindex + 1
 

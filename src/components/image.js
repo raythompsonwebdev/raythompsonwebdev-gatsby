@@ -16,7 +16,7 @@ import PropTypes from "prop-types"
 
 export const data = graphql`
   query($slug: String!) {
-    allWordpressPost(filter: { slug: { eq: $slug } }) {
+    allWpPost(filter: { slug: { eq: $slug } }) {
       edges {
         node {
           featured_media {

@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 
 export const data = graphql`
   query($slug: String!) {
-    allWordpressWpProject(filter: { slug: { eq: $slug } }) {
+    allWpProject(filter: { slug: { eq: $slug } }) {
       edges {
         node {
           id

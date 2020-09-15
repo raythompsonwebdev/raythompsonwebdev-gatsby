@@ -14,7 +14,7 @@ class BlogPage extends React.Component {
 
   render() {
     const {
-      data: { allWordpressPost },
+      data: { allWpPost },
     } = this.state.data
 
     return (
@@ -36,7 +36,7 @@ class BlogPage extends React.Component {
         </div>
 
         <div id="blogbox">
-          {allWordpressPost.edges.map(({ node }, index) => (
+          {allWpPost.edges.map(({ node }, index) => (
             <div className="blogboxes" key={index}>
               <h1 dangerouslySetInnerHTML={{ __html: node.title }}></h1>
 
@@ -76,21 +76,23 @@ BlogPage.propTypes = {
 }
 
 export const pageQuery = graphql`
+
   query {
-    allWordpressPost {
+    allWpPost {
       edges {
         node {
           id
           title
           excerpt
-          path
           link
           slug
-          featured_media {
-            localFile {
-              childImageSharp {
-                resolutions {
-                  src
+          featuredImage {
+            node {
+              localFile {
+                childImageSharp {
+                  fluid {
+                    src
+                  }
                 }
               }
             }
