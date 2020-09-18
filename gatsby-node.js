@@ -1,101 +1,105 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
-
-// Implement the Gatsby API “createPages”. This is called once the
-// data layer is bootstrapped to let plugins create pages from data.
-
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
-
+const { resolve } = require(`path`)
 const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
-//const createPaginatedPages = require('gatsby-paginate')
+const glob = require(`glob`)
+const chunk = require(`lodash/chunk`)
+const { dd } = require(`dumper.js`)
 
+const getTemplates = () => {
+  const sitePath = path.resolve(`./`)
+  return glob.sync(`./src/templates/**/*.js`, { cwd: sitePath })
+}
 
-exports.onCreateNode = ({ node, getNode, actions }) => {      
-    const { createNodeField } = actions
-    
-    if (node.internal.type === `wordpress__POST` && `wordpress__wp_project`) {
+//
+// @todo move this to gatsby-theme-wordpress
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const templates = getTemplates()
 
-      const slug = createFilePath({ node, getNode, basePath: `pages` })
-
-      createNodeField({
-        node,
-        name: `slug`,
-        value: slug,
-      })
-    }
-  }
-  
-
-exports.createPages = ({ graphql, actions }) => {
-    
-    
-    const { createPage } = actions
-    
-    return graphql(`
-      query {
-        allWordpressPost {
-          edges {
-            node {
-              slug
-              path
-            }
-          }
-        }       
-        allWordpressWpProject {
-          edges {
-            node {
-              slug
-              path
-            }
-          }
+  const {
+    data: {
+      allWpContentNode: { nodes: contentNodes },
+    },
+  } = await graphql(/* GraphQL */ `
+    query ALL_CONTENT_NODES {
+      allWpContentNode(
+        sort: { fields: modifiedGmt, order: DESC }
+        filter: { nodeType: { ne: "MediaItem" } }
+      ) {
+        nodes {
+          nodeType
+          uri
+          id
         }
       }
-    `).then(result => {
-      
-      if (result.errors) {
+    }
+  `)
 
-        console.log(result.errors)
-        
+  const contentTypeTemplateDirectory = `./src/templates/single/`
+  const contentTypeTemplates = templates.filter((path) =>
+    path.includes(contentTypeTemplateDirectory)
+  )
+
+  await Promise.all(
+    contentNodes.map(async (node, i) => {
+      const { nodeType, uri, id } = node
+      // this is a super super basic template hierarchy
+      // this doesn't reflect what our hierarchy will look like.
+      // this is for testing/demo purposes
+      const templatePath = `${contentTypeTemplateDirectory}${nodeType}.js`
+
+      const contentTypeTemplate = contentTypeTemplates.find(
+        (path) => path === templatePath
+      )
+
+      if (!contentTypeTemplate) {
+        return
       }
 
-      
-     //posts
-     result.data.allWordpressPost.edges.forEach(({ node }) => {
-          
-          createPage({
-            path: `/blog/${node.slug}`,
-            component: path.resolve(`src/templates/blog-post.js`),
-            context: {
-              // Data passed to context is available
-              // in page queries as GraphQL variables.
-              slug: node.slug,
-            },
-          })
+      await actions.createPage({
+        component: resolve(contentTypeTemplate),
+        path: uri,
+        context: {
+          id,
+          nextPage: (contentNodes[i + 1] || {}).id,
+          previousPage: (contentNodes[i - 1] || {}).id,
+        },
       })
-
-      //custom posts
-      result.data.allWordpressWpProject.edges.forEach(({ node }) => {        
-
-        createPage({
-          path: `/project/${node.slug}`,
-          component: path.resolve(`src/templates/project-single.js`),
-          context: {
-            // Data passed to context is available
-            // in page queries as GraphQL variables.
-            slug: node.slug,
-          },
-        })
-      })
-
-
-
     })
+  )
 
+  // create the homepage
+  const {
+    data: { allWpPost },
+  } = await graphql(/* GraphQL */ `
+    {
+      allWpPost(sort: { fields: modifiedGmt, order: DESC }) {
+        nodes {
+          uri
+          id
+        }
+      }
+    }
+  `)
 
-  }
+  const perPage = 10
+  const chunkedContentNodes = chunk(allWpPost.nodes, perPage)
+
+  await Promise.all(
+    chunkedContentNodes.map(async (nodesChunk, index) => {
+      const firstNode = nodesChunk[0]
+      const page = index + 1
+      const offset = perPage * index
+
+      await actions.createPage({
+        component: resolve(`./src/templates/index.js`),
+        path: page === 1 ? `/blog/` : `/blog/${page}/`,
+        context: {
+          firstId: firstNode.id,
+          page: page,
+          offset: offset,
+          totalPages: chunkedContentNodes.length,
+          perPage,
+        },
+      })
+    })
+  )
+}

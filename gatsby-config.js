@@ -1,118 +1,59 @@
 require("dotenv").config({
-  path: ".env",
+  path: `.env.GATSBY_CONCURRENT_DOWNLOAD`,
+})
+
+// require .env.development or .env.production
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
 })
 
 module.exports = {
-  siteMetadata: {
-    title: `Raythompsonwebdev.com`,
-    description: `Web Developer, WordPress Enthusiast`,
-    author: `raythompsonwebdev.com`,
-  },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
+        name: `images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
-
-    `gatsby-plugin-sass`,
     {
-      //works with gatsby-wpgraphql-inline-images not gatsby-source-wordpress
-      resolve: "gatsby-source-graphql",
+      resolve: `gatsby-source-wordpress-experimental`,
       options: {
-        // This type will contain remote schema Query type
-        typeName: "SWAPI",
-        // This is the field under which it's accessible
-        fieldName: "swapi",
-        // URL to query from
-        url: "https://swapi-graphql.netlify.app/.netlify/functions/index",
-      },
-    },
-
-    {
-      resolve: "gatsby-source-wordpress",
-      options: {
-        excludedRoutes: [
-          "/wp/v2/users/**",
-          "/wp/v2/settings*",
-          "/jetpack/v4/**",
-          "contact-form-7/v1/**",
-          "yoast/v1/**",
-        ],
-        baseUrl: "localhost/wordpress",
-        protocol: "http",
-        restApiRoutePrefix: "wp-json",
-        hostingWPCOM: false,
-        useACF: false,
-        verboseOutput: true,
-        // Search and Replace Urls across WordPress content.
-        searchAndReplaceContentUrls: {
-          sourceUrl: "http://localhost/wordpress/",
-          replacementUrl: "",
+        url:
+          process.env.WPGRAPHQL_URL ||
+          `http://localhost/wordpress/graphql`,
+        verbose: true,
+        develop: {
+          hardCacheMediaFiles: true,
         },
-        // Set how many simultaneous requests are sent at once.
-        concurrentRequests: 10,
-      },
-    },
-
-    `gatsby-plugin-styled-components`,
-    {
-      resolve: "gatsby-plugin-prefetch-google-fonts",
-      options: {
-        fonts: [
-          {
-            family: "Cabin",
-            variants: ["200", "300", "400", "500", "600", "700"],
+        debug: {
+          graphql: {
+            writeQueriesToDisk: true,
           },
-          {
-            family: "PT Sans",
-            variants: ["200", "300", "400", "500", "600", "700"],
+        },
+        type: {
+          Post: {
+            limit:
+              process.env.NODE_ENV === `development`
+                ? // Lets just pull 50 posts in development to make it easy on ourselves.
+                  50
+                : // and we don't actually need more than 5000 in production for this particular site
+                  5000,
           },
-        ],
-        formats: ["woff", "woff2"],
+        },
       },
     },
-
-    {
-      resolve: `gatsby-plugin-layout`,
-      options: {
-        component: require.resolve(`./src/components/layout`),
-      },
-    },
-
-    //get images to show in posts
-    {
-      resolve: "gatsby-wpgraphql-inline-images",
-      options: {
-        wordPressUrl: "http://localhost/wordpress/",
-        uploadsUrl: "http://localhost/wordpress/wp-content/uploads/",
-        processPostTypes: ["Page", "Post"],
-        graphqlTypeName: "WPGraphQL",
-      },
-    },
-
+    `gatsby-plugin-chakra-ui`,
     `gatsby-transformer-sharp`,
-
     {
-      resolve: `gatsby-plugin-sharp`,
+      resolve: "gatsby-plugin-react-svg",
       options: {
-        useMozJpeg: false,
-        stripMetadata: true,
-        defaultQuality: 75,
-        pngQuality: 75,
+        rule: {
+          include: /\.inline\.svg$/, // See below to configure properly
+        },
       },
     },
-
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-json`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `./src/static/data/`,
-      },
-    },
+    `gatsby-plugin-netlify-cache`,
   ],
 }

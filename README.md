@@ -1,30 +1,18 @@
-![https://www.raythompsonwebdev.co.uk](/screenshot.png)
+# gatsby-source-wordpress V4 (alpha) starter
 
-## raythompsonwebdev.co.uk 
+This starter uses an early alpha version of the upcoming `gatsby-source-wordpress@v4`. You can find rough documentation for that package [here](https://github.com/gatsbyjs/gatsby-source-wordpress-experimental).
 
-Web developer portfolio website.  
+## Installation
 
+Follow along at the [alpha docs installation guide](https://github.com/gatsbyjs/gatsby-source-wordpress-experimental/blob/master/docs/getting-started.md#quick-start).
 
-Contributors: Raymond Thompson
+## Known issues
 
-Requires at least: 4.5
+- This starter doesn't build it's Styled components properly
+- The paginated blog on the homepage isn't offsetting posts properly
+- Probably other things :p
 
-Tested up to: 4.9.5
+## Links
 
-Stable tag: 1.0.0
-
-License: GNU General Public License v2 or later
-
-## Please be aware this is a custom made personal theme. download and use at your own risk.
-
-## Description 
-
-Gatsby version of portfolio.
-
-
-## Credits 
-
-* HTML5 Shiv 3.7.3 (C) @afarkas (C) @jdalton (C)@jon_neal @rem | MIT/GPL2 Licensed,https://github.com/aFarkas/html5shiv
-
-*  jQuery Cookie Plugin v1.3.1 https://github.com/carhartl/jquery-cookie Copyright 2013 Klaus Hartl * Released under the MIT license.
-
+- [gatsby-source-wordpress-experimental](https://github.com/gatsbyjs/gatsby-source-wordpress-experimental)
+- [wpgatsby](https://github.com/gatsbyjs/wp-gatsby)
