@@ -50,7 +50,7 @@ module.exports = {
         verboseOutput: true,
         // Search and Replace Urls across WordPress content.
         searchAndReplaceContentUrls: {
-          sourceUrl: "http://localhost/wordpress",
+          sourceUrl: "http://localhost/wordpress/",
           replacementUrl: "",
         },
         // Set how many simultaneous requests are sent at once.
