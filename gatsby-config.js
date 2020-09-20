@@ -1,59 +1,84 @@
-require("dotenv").config({
-  path: `.env.GATSBY_CONCURRENT_DOWNLOAD`,
-})
-
-// require .env.development or .env.production
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
 module.exports = {
+  siteMetadata: {
+    title: `Raythompsonwebdev.com`,
+    description: `Web Developer, WordPress Enthusiast`,
+    author: `raythompsonwebdev.com`,
+  },
   plugins: [
-    `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/assets/images`,
+        path: `${__dirname}/src/static/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
-        url:
-          process.env.WPGRAPHQL_URL ||
-          `http://localhost/wordpress/graphql`,
-        verbose: true,
-        develop: {
-          hardCacheMediaFiles: true,
-        },
-        debug: {
-          graphql: {
-            writeQueriesToDisk: true,
-          },
-        },
-        type: {
-          Post: {
-            limit:
-              process.env.NODE_ENV === `development`
-                ? // Lets just pull 50 posts in development to make it easy on ourselves.
-                  50
-                : // and we don't actually need more than 5000 in production for this particular site
-                  5000,
-          },
-        },
+        /*
+         * The full URL of the WordPress site's GraphQL API.
+         * Example : 'https://www.example-site.com/graphql'
+         */
+        url: `http://localhost/wordpress/graphql`,
       },
     },
-    `gatsby-plugin-chakra-ui`,
-    `gatsby-transformer-sharp`,
+
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: `gatsby-plugin-layout`,
       options: {
-        rule: {
-          include: /\.inline\.svg$/, // See below to configure properly
-        },
+        component: require.resolve(`./src/components/layout`),
       },
     },
-    `gatsby-plugin-netlify-cache`,
+     //get images to show in posts
+     {
+      resolve: "gatsby-wpgraphql-inline-images",
+      options: {
+        wordPressUrl: "http://localhost/wordpress/",
+        uploadsUrl: "http://localhost/wordpress/wp-content/uploads/",
+        processPostTypes: ["page", "post", "project"],
+        graphqlTypeName: "WPGraphQL",
+      },
+    },
+    `gatsby-transformer-sharp`,    
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 75,
+        pngQuality: 75,
+      },
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/static/data/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `${__dirname}/src/static/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
 }

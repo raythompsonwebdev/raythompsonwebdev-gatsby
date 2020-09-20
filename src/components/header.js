@@ -1,16 +1,13 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props)
-    this.sitedesciption = props.siteDescription
-    this.sitetitle = props.siteTitle
-  }
+ function Header (props) {
 
-  componentDidMount() {
+  //const [siteDescription, siteTitle] = useState(props); 
+
+  useEffect(() => {
 
     var position, direction, previous
 
@@ -53,47 +50,47 @@ class Header extends React.Component {
         slideoutMenu.style.left = slideoutMenuWidth
       }
     })
-  }
 
-  render() {
-    const ListLink = props => (
-      <li className="menu-item">
-        <Link to={props.to}>{props.children}</Link>
-      </li>
-    )
+  });
+  
+  const ListLink = props => (
+    <li className="menu-item">
+      <Link to={props.to}>{props.children}</Link>
+    </li>
+  )
 
-    return (
-      <header>
-        <div className="site-logo">
-          <Link to="/">R</Link>
-        </div>
+  return (
+    <header>
+      <div className="site-logo">
+        <Link to="/">R</Link>
+      </div>
 
-        <hgroup>
-          <h1 id="logo">{this.sitetitle}</h1>
-          <h2>{this.sitedesciption}</h2>
-        </hgroup>
+      <hgroup>
+        {/* <h1 id="logo">{siteTitle}</h1> */}
+        {/* <h2>{siteDescription}</h2> */}
+      </hgroup>
 
-        <button
-          className="menu-toggle"
-          id="menu-toggle"
-          aria-controls="primary-menu"
-          aria-expanded="false"
-        >
-          Menu
-        </button>
+      <button
+        className="menu-toggle"
+        id="menu-toggle"
+        aria-controls="primary-menu"
+        aria-expanded="false"
+      >
+        Menu
+      </button>
 
-        <nav id="main-nav">
-          <ul>
-            <ListLink to="/">Home</ListLink>
-            <ListLink to="/about">About</ListLink>
-            <ListLink to="/project">Projects</ListLink>
-            <ListLink to="/blog">Blog</ListLink>
-            <ListLink to="/contact">Contact</ListLink>
-          </ul>
-        </nav>
-      </header>
-    )
-  }
+      <nav id="main-nav">
+        <ul>
+          <ListLink to="/">Home</ListLink>
+          <ListLink to="/about">About</ListLink>
+          <ListLink to="/project">Projects</ListLink>
+          <ListLink to="/blog">Blog</ListLink>
+          <ListLink to="/contact">Contact</ListLink>
+        </ul>
+      </nav>
+    </header>
+  )
+  
 }
 
 Header.propTypes = {

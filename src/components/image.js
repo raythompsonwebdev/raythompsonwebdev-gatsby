@@ -1,7 +1,6 @@
 import React from "react"
-import graphql from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import PropTypes from "prop-types"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -14,35 +13,24 @@ import PropTypes from "prop-types"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-export const data = graphql`
-  query($slug: String!) {
-    allWordpressPost(filter: { slug: { eq: $slug } }) {
-      edges {
-        node {
-          featured_media {
-            localFile {
-              childImageSharp {
-                fixed {
-                  height
-                  src
-                  width
-                  srcSet
-                }
-              }
-            }
+const Image = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
+  `)
+
+  if (!data?.placeholderImage?.childImageSharp?.fluid) {
+    return <div>Picture not found</div>
   }
-`
 
-const Image = ({ data }) => {
-  return <Img fixed={data.featured_media.localFile.childImageSharp.fixed} />
-}
-
-Image.propTypes = {
-  data: PropTypes.any,
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 
 export default Image

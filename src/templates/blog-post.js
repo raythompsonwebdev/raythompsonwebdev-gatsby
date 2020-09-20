@@ -1,137 +1,26 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import SEO from "../components/seo"
-import PropTypes from "prop-types"
+import Layout from "../components/layout"
+import { graphql } from "gatsby"
 
-const BlogPost = props => {
-  const {
-    data: { allWordpressPost },
-  } = props
-
+export default function BlogPost({ data }) {
+  console.log(data)
+  const post = data.allWpPost.nodes[0]
   return (
-    <main id="main-content">
-      <SEO title="Blog Post" />
-
-      <article className="post group" id="post">
-        <h1 className="page-title">{allWordpressPost.edges[0].node.title}</h1>
-
-        <header className="byline">
-          <div className="entry-meta">
-            <div className="meta-content has-avatar">
-              <div className="author-avatar">
-                <Link className="url fn n" to="">
-                  <img
-                    src={
-                      allWordpressPost.edges[0].node.author.avatar_urls
-                        .wordpress_96
-                    }
-                    alt="Blog"
-                  />
-                </Link>
-              </div>
-
-              <Link to="" rel="bookmark"></Link>
-
-              <span className="byline">
-                Posted By : {allWordpressPost.edges[0].node.author.name}{" "}
-              </span>
-              <span className="posted-on">
-                Posted on :
-                <time className="entry-date published">
-                  {" "}
-                  {allWordpressPost.edges[0].node.date}
-                </time>
-              </span>
-              <span className="byline">
-                Updated: <time className="updated"></time>
-              </span>
-              <span className="comments-link">comments-link</span>
-              <span className="byline">
-                <time className="entry-date published updated">Tags-link</time>
-              </span>
-            </div>
-          </div>
-        </header>
-
-        <Link to="" title="Permanent Link to">
-          <figure className="featuredImage">
-            {allWordpressPost.edges[0].node.featured_media == null ? (
-              <p>No Image</p>
-            ) : (
-              <img
-                src={
-                  allWordpressPost.edges[0].node.featured_media.localFile
-                    .childImageSharp.resolutions.src
-                }
-                alt=""
-              />
-            )}
-          </figure>
-        </Link>
-
-        <div className="entry">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: allWordpressPost.edges[0].node.content,
-            }}
-          ></div>
-        </div>
-
-        <div className="continue-reading">
-          <Link to="/">Link</Link>
-        </div>
-
-        <footer className="byline">
-          <p className="right">
-            <Link to="/" className="comments-count">
-              Link
-            </Link>
-          </p>
-
-          <p>Text</p>
-        </footer>
-      </article>
-    </main>
+    <Layout>
+      <div>
+        <h1>{post.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      </div>
+    </Layout>
   )
 }
-
-BlogPost.propTypes = {
-  data: PropTypes.any,
-}
-
-export default BlogPost
-
-export const data = graphql`
+export const query = graphql`
   query($slug: String!) {
-    allWordpressPost(filter: { slug: { eq: $slug } }) {
-      edges {
-        node {
-          featured_media {
-            localFile {
-              childImageSharp {
-                resolutions {
-                  src
-                }
-              }
-              url
-            }
-          }
+    allWpPost(filter: { slug: { eq: $slug } }) {
+        nodes {
           title
-          slug
           content
-          date(formatString: "Y:MM:DD")
-          author {
-            avatar_urls {
-              wordpress_24
-              wordpress_48
-              wordpress_96
-            }
-            name
-            slug
-            link
-          }
         }
-      }
     }
   }
 `

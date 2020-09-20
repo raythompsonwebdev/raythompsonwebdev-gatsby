@@ -1,23 +1,98 @@
 import React from "react"
+import Layout from "../components/layout"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
 
+
+export default function ProjectSingle ({ data }) {
+
+  console.log(data);
+
+  return (
+    <Layout>
+    <main id="main-content">
+      <SEO title="Single Project Page" />
+      <article className="post group">
+        <h1> {data.allWpProject.nodes.title} </h1>
+        <figure className="websiteImage">
+          <Link to="" className="fancybox" title="">
+            <img
+              src={
+                data.allWpProject.nodes[0].featuredImage.node.localFile.childImageSharp.fixed.src
+              }
+              alt=""
+            />
+          </Link>
+        </figure>
+        <div className="website-text">
+
+          {/* <h1 className="post-meta-key">Project Name</h1>
+
+          <p className="websitetext">
+            {props.data.allWpProject.edges[0].node.meta.project_name}{" "}
+          </p>
+
+          <h1 className="post-meta-key">Project Description</h1>
+
+          <p className="websitetext">
+            {
+              props.data.allWpProject.edges[0].node.meta
+                .project_description
+            }{" "}
+          </p>
+
+          <h1 className="post-meta-key">Project Code</h1>
+
+          <p className="websitetext">
+            {props.data.allWpProject.edges[0].node.meta.project_code}{" "}
+          </p>
+
+          <h1 className="post-meta-key">Project URL</h1>
+
+          <Link className="webformats" to="">
+            {props.data.allWpProject.edges[0].node.meta.project_url}
+          </Link>
+
+          <h1 className="post-meta-key">Project Source Code</h1>
+
+          <Link
+            className="webformats"
+            href={`https://github.com/raythompsonwebdev/${props.data.allWpProject.edges[0].node.slug}`}
+          >
+            Link
+          </Link> */}
+
+        </div>
+
+        <footer className="byline">
+          <p className="right">
+            <Link to="/" className="comments-count">
+              Link
+            </Link>
+          </p>
+
+          <p>Text</p>
+        </footer>
+      </article>
+    </main>
+    </Layout>
+  )
+}
+
+ProjectSingle.propTypes = {
+  data: PropTypes.any,
+}
+
 export const data = graphql`
   query($slug: String!) {
-    allWordpressWpProject(filter: { slug: { eq: $slug } }) {
-      edges {
-        node {
-          id
-          slug
-          title
-          meta {
-            project_code
-            project_description
-            project_name
-            project_url
-          }
-          featured_media {
+    allWpProject(filter: { slug: { eq: $slug } }) {
+      nodes {
+        id
+        slug
+        title
+        featuredImage {
+          node {
             localFile {
               childImageSharp {
                 fixed {
@@ -31,77 +106,3 @@ export const data = graphql`
     }
   }
 `
-
-const ProjectSingle = props => {
-  return (
-    <main id="main-content">
-      <SEO title="Single Project Page" />
-      <article className="post group">
-        <h1> {props.data.allWordpressWpProject.edges[0].node.title} </h1>
-        <figure className="websiteImage">
-          <Link to="" className="fancybox" title="">
-            <img
-              src={
-                props.data.allWordpressWpProject.edges[0].node.featured_media
-                  .localFile.childImageSharp.fixed.src
-              }
-              alt=""
-            />
-          </Link>
-        </figure>
-        <div className="website-text">
-          <h1 className="post-meta-key">Project Name</h1>
-
-          <p className="websitetext">
-            {props.data.allWordpressWpProject.edges[0].node.meta.project_name}{" "}
-          </p>
-
-          <h1 className="post-meta-key">Project Description</h1>
-
-          <p className="websitetext">
-            {
-              props.data.allWordpressWpProject.edges[0].node.meta
-                .project_description
-            }{" "}
-          </p>
-
-          <h1 className="post-meta-key">Project Code</h1>
-
-          <p className="websitetext">
-            {props.data.allWordpressWpProject.edges[0].node.meta.project_code}{" "}
-          </p>
-
-          <h1 className="post-meta-key">Project URL</h1>
-
-          <Link className="webformats" to="">
-            {props.data.allWordpressWpProject.edges[0].node.meta.project_url}
-          </Link>
-
-          <h1 className="post-meta-key">Project Source Code</h1>
-
-          <Link
-            className="webformats"
-            href={`https://github.com/raythompsonwebdev/${props.data.allWordpressWpProject.edges[0].node.slug}`}
-          >
-            Link
-          </Link>
-        </div>
-        <footer className="byline">
-          <p className="right">
-            <Link to="/" className="comments-count">
-              Link
-            </Link>
-          </p>
-
-          <p>Text</p>
-        </footer>
-      </article>
-    </main>
-  )
-}
-
-ProjectSingle.propTypes = {
-  data: PropTypes.any,
-}
-
-export default ProjectSingle
