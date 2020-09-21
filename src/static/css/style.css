@@ -308,6 +308,13 @@ desktop 1920px*/
     text-align: center;
     /* Text meant only for screen readers. */
   }
+  header .site-logo a .gatsby-image-wrapper {
+    width: 100%;
+    height: 100%;
+    font-size: 1.5em;
+    color: #F2f2f2;
+    display: block;
+  }
   header .site-logo a div.screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute !important;
@@ -361,46 +368,9 @@ desktop 1920px*/
     height: 35px;
     font-weight: bold;
     line-height: 1.5;
-    color: #0d0d0d;
     text-transform: uppercase;
     letter-spacing: 0.03em;
     text-indent: 0.25em;
-  }
-  header hgroup h1#logo span {
-    height: 100%;
-    margin: 0;
-    color: #0d0d0d;
-    text-align: left;
-    display: inline-block;
-  }
-  header hgroup h1#logo span:last-of-type {
-    height: 100%;
-    color: #0d0d0d;
-    display: inline-block;
-    margin: 0 0.1em;
-  }
-  header hgroup h1#logo-blog {
-    margin: 0;
-    font-size: 1.5em;
-    height: 35px;
-    font-weight: bold;
-    line-height: 1.5;
-    color: #0d0d0d;
-    text-shadow: 2px 1px #0d0d0d;
-    text-indent: 0.5em;
-    letter-spacing: 0.03em;
-    width: 100%;
-  }
-  header hgroup h1#logo-blog span {
-    height: 100%;
-    margin: 0;
-    color: #0d0d0d;
-    text-align: left;
-  }
-  header hgroup h1#logo-blog span:last-of-type {
-    height: 100%;
-    color: #0d0d0d;
-    margin: 0 0.1em;
   }
   header hgroup h2 {
     float: none;
@@ -414,12 +384,6 @@ desktop 1920px*/
     clear: left;
     text-indent: 0.5em;
     height: 20px;
-  }
-  header hgroup #title {
-    float: left;
-    min-width: 280px;
-    max-width: 350px;
-    margin-left: 0;
   }
   header nav#main-nav {
     padding: 0;
@@ -499,7 +463,7 @@ desktop 1920px*/
     font-size: 1em;
     line-height: 1.8em;
     background-color: #F2f2f2;
-    padding: 0.5em;
+    padding: 0 0.5em;
   }
   #main-content div.main-text ul {
     width: 100%;
@@ -544,23 +508,23 @@ desktop 1920px*/
   }
   #main-content #blogbox .blogboxes {
     width: 31%;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    margin: 0.25em;
     padding: 0.25em;
     -webkit-transition: all 0.2s ease-in-out 0s;
     -moz-transition: all 0.2s ease-in-out 0s;
     -o-transition: all 0.2s ease-in-out 0s;
     -ms-transition: all 0.2s ease-in-out 0s;
     transition: all 0.2s ease-in-out 0s;
-    box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
   }
   #main-content #blogbox .blogboxes:hover {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
     cursor: pointer;
   }
   #main-content #blogbox .blogboxes h1 {
@@ -574,11 +538,11 @@ desktop 1920px*/
   }
   #main-content #blogbox .blogboxes p {
     font-size: 0.9em;
+    text-align: center;
     line-height: 1.5em;
     background-color: #F2f2f2;
-    padding: 0.5em;
     margin-top: 0.5em;
-    width: 95%;
+    width: 100%;
   }
   #main-content #blogbox .blogboxes a {
     background-color: #0d0d0d;
@@ -1194,7 +1158,7 @@ desktop 1920px*/
     font-size: 1em;
     margin-bottom: 0.25em;
     background-color: #F2f2f2;
-    padding: 0.5em;
+    padding: 0 0.5em;
     width: 98%;
   }
   #main-content div#profile_container #text-box-profile .introimg {
@@ -1236,13 +1200,6 @@ desktop 1920px*/
     margin: 0 0 0.25em 0;
     padding: 0.5em;
     background-color: #F2f2f2;
-  }
-  #main-content div#profile_container #text-box-profile-a .introimg {
-    width: 70px;
-    float: left;
-    margin: 1% 1% 0 0;
-    height: 70px;
-    display: block;
   }
   #main-content div#profile_container #text-box-profile-a a {
     background-color: unset;
@@ -1501,11 +1458,9 @@ desktop 1920px*/
     line-height: 25px;
     margin-bottom: 0.1em;
   }
-  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li:before {
-    font-family: "FontAwesome";
+  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li .fa-star {
     font-size: 0.95em;
     color: #0d0d0d;
-    content: "\f19d";
     margin: 0 1%;
     line-height: 1.5em;
   }
@@ -3304,27 +3259,8 @@ desktop 1680px*/
   header hgroup h1#logo {
     font-size: 1.5em;
   }
-  header hgroup h1#logo span {
-    margin: 0;
-  }
-  header hgroup h1#logo span:last-of-type {
-    height: 100%;
-  }
-  header hgroup h1#logo-blog {
-    font-size: 1.45em;
-    width: 100%;
-  }
-  header hgroup h1#logo-blog span {
-    margin: 0;
-  }
-  header hgroup h1#logo-blog span:last-of-type {
-    height: 100%;
-  }
   header hgroup h2 {
     font-size: 0.75em;
-  }
-  header hgroup #title {
-    float: left;
   }
   header nav#main-nav {
     width: 45%;
@@ -3378,11 +3314,6 @@ desktop 1680px*/
     width: 31%;
   }
   #main-content #blogbox .blogboxes:hover {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
     cursor: pointer;
   }
   #main-content #blogbox .blogboxes h1 {
@@ -3634,9 +3565,6 @@ desktop 1680px*/
   #main-content div#profile_container #text-box-profile-a p {
     font-size: 1em;
   }
-  #main-content div#profile_container #text-box-profile-a .introimg {
-    width: 70px;
-  }
   #main-content div#profile_container #text-box-profile-a a:hover {
     font-weight: normal;
   }
@@ -3728,7 +3656,7 @@ desktop 1680px*/
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li {
     font-size: 0.8em;
   }
-  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li:before {
+  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li .fa-star {
     font-size: 0.95em;
   }
   #main-content div#profile_container section#prof_cont {
@@ -4490,24 +4418,8 @@ desktop 1440px*/
   header hgroup h1#logo {
     font-size: 1.4em;
   }
-  header hgroup h1#logo span {
-    height: 100%;
-  }
-  header hgroup h1#logo span:last-of-type {
-    height: 100%;
-  }
-  header hgroup h1#logo-blog {
-    font-size: 1.4em;
-  }
-  header hgroup h1#logo-blog span:last-of-type {
-    height: 100%;
-  }
   header hgroup h2 {
     font-size: 0.7em;
-  }
-  header hgroup #title {
-    min-width: 280px;
-    max-width: 350px;
   }
   header nav#main-nav {
     height: 35px;
@@ -4759,8 +4671,8 @@ desktop 1440px*/
     font-size: 1em;
   }
   #main-content div#profile_container #text-box-profile .introimg {
-    width: 70px;
-    height: 70px;
+    width: 74px;
+    height: 74px;
   }
   #main-content div#profile_container #text-box-profile-a {
     width: 46%;
@@ -4770,10 +4682,6 @@ desktop 1440px*/
   }
   #main-content div#profile_container #text-box-profile-a p {
     font-size: 1em;
-  }
-  #main-content div#profile_container #text-box-profile-a .introimg {
-    width: 70px;
-    height: 70px;
   }
   #main-content div#profile_container section#prof_cont-a {
     width: 50%;
@@ -4832,7 +4740,7 @@ desktop 1440px*/
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li {
     font-size: 0.75em;
   }
-  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li:before {
+  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li .fa-star {
     font-size: 0.9em;
   }
   #main-content div#profile_container section#prof_cont {
@@ -5558,24 +5466,8 @@ desktop 1280px*/
   header hgroup h1#logo {
     font-size: 1.3em;
   }
-  header hgroup h1#logo span {
-    height: 100%;
-  }
-  header hgroup h1#logo span:last-of-type {
-    height: 100%;
-  }
-  header hgroup h1#logo-blog {
-    font-size: 1.3em;
-  }
-  header hgroup h1#logo-blog span:last-of-type {
-    height: 100%;
-  }
   header hgroup h2 {
     font-size: 0.65em;
-  }
-  header hgroup #title {
-    min-width: 280px;
-    max-width: 350px;
   }
   header nav#main-nav {
     height: 35px;
@@ -5799,8 +5691,8 @@ desktop 1280px*/
     font-size: 1em;
   }
   #main-content div#profile_container #text-box-profile .introimg {
-    width: 60px;
-    height: 60px;
+    width: 74px;
+    height: 74px;
   }
   #main-content div#profile_container #text-box-profile-a {
     width: 46%;
@@ -5810,10 +5702,6 @@ desktop 1280px*/
   }
   #main-content div#profile_container #text-box-profile-a p {
     font-size: 1em;
-  }
-  #main-content div#profile_container #text-box-profile-a .introimg {
-    width: 60px;
-    height: 60px;
   }
   #main-content div#profile_container section#prof_cont-a {
     width: 50%;
@@ -5863,7 +5751,7 @@ desktop 1280px*/
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li {
     font-size: 0.85em;
   }
-  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li:before {
+  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li .fa-star {
     font-size: 0.85em;
   }
   #main-content div#profile_container section#prof_cont {
@@ -6638,8 +6526,8 @@ desktop 1280px*/
     font-size: 0.9em;
   }
   #main-content div#profile_container #text-box-profile .introimg {
-    width: 50px;
-    height: 50px;
+    width: 74px;
+    height: 74px;
   }
   #main-content div#profile_container #text-box-profile-a {
     width: 40%;
@@ -6649,10 +6537,6 @@ desktop 1280px*/
   }
   #main-content div#profile_container #text-box-profile-a p {
     font-size: 0.9em;
-  }
-  #main-content div#profile_container #text-box-profile-a .introimg {
-    width: 60px;
-    height: 60px;
   }
   #main-content div#profile_container #text-box-profile-b {
     height: auto;
@@ -6721,7 +6605,7 @@ desktop 1280px*/
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li {
     font-size: 0.85em;
   }
-  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li:before {
+  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li .fa-star {
     font-size: 0.9em;
   }
   #main-content div#profile_container section#prof_cont {
@@ -7277,24 +7161,8 @@ desktop 980px*/
   header hgroup h1#logo {
     font-size: 1.4em;
   }
-  header hgroup h1#logo span {
-    height: 100%;
-  }
-  header hgroup h1#logo span:last-of-type {
-    height: 100%;
-  }
-  header hgroup h1#logo-blog {
-    font-size: 1.2em;
-  }
-  header hgroup h1#logo-blog span:last-of-type {
-    height: 100%;
-  }
   header hgroup h2 {
     font-size: 0.65em;
-  }
-  header hgroup #title {
-    min-width: 280px;
-    max-width: 350px;
   }
   header nav#main-nav {
     height: 35px;
@@ -7564,10 +7432,6 @@ desktop 980px*/
   #main-content div#profile_container #text-box-profile-a p {
     font-size: 0.9em;
   }
-  #main-content div#profile_container #text-box-profile-a .introimg {
-    width: 60px;
-    height: 60px;
-  }
   #main-content div#profile_container #text-box-profile-b {
     height: auto;
   }
@@ -7641,7 +7505,7 @@ desktop 980px*/
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li {
     font-size: 0.85em;
   }
-  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li:before {
+  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li .fa-star {
     font-size: 0.85em;
   }
   #main-content div#profile_container section#prof_cont {
@@ -8239,24 +8103,8 @@ tablet 800px */
   header hgroup h1#logo {
     font-size: 1.4em;
   }
-  header hgroup h1#logo span {
-    height: 100%;
-  }
-  header hgroup h1#logo span:last-of-type {
-    height: 100%;
-  }
-  header hgroup h1#logo-blog {
-    font-size: 1.2em;
-  }
-  header hgroup h1#logo-blog span:last-of-type {
-    height: 100%;
-  }
   header hgroup h2 {
     font-size: 0.65em;
-  }
-  header hgroup #title {
-    min-width: 280px;
-    max-width: 350px;
   }
   header nav#main-nav {
     height: 35px;
@@ -8563,10 +8411,6 @@ tablet 800px */
   #main-content div#profile_container #text-box-profile-a p {
     font-size: 0.9em;
   }
-  #main-content div#profile_container #text-box-profile-a .introimg {
-    width: 60px;
-    height: 60px;
-  }
   #main-content div#profile_container #text-box-profile-b {
     height: auto;
   }
@@ -8640,7 +8484,7 @@ tablet 800px */
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li {
     font-size: 0.85em;
   }
-  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li:before {
+  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li .fa-star {
     font-size: 0.9em;
   }
   #main-content div#profile_container section#prof_cont {
@@ -9265,24 +9109,8 @@ tablet 667px*/
   header hgroup h1#logo {
     font-size: 1.3em;
   }
-  header hgroup h1#logo span {
-    height: 100%;
-  }
-  header hgroup h1#logo span:last-of-type {
-    height: 100%;
-  }
-  header hgroup h1#logo-blog {
-    font-size: 1.3em;
-  }
-  header hgroup h1#logo-blog span:last-of-type {
-    height: 100%;
-  }
   header hgroup h2 {
     font-size: 0.6em;
-  }
-  header hgroup #title {
-    min-width: 280px;
-    max-width: 350px;
   }
   header nav#main-nav {
     height: 35px;
@@ -9527,10 +9355,6 @@ tablet 667px*/
   #main-content div#profile_container #text-box-profile-a p {
     font-size: 0.9em;
   }
-  #main-content div#profile_container #text-box-profile-a .introimg {
-    width: 60px;
-    height: 60px;
-  }
   #main-content div#profile_container #text-box-profile-b {
     height: auto;
   }
@@ -9599,7 +9423,7 @@ tablet 667px*/
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li {
     font-size: 0.85em;
   }
-  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li:before {
+  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li .fa-star {
     font-size: 0.85em;
   }
   #main-content div#profile_container section#prof_cont {
@@ -10237,24 +10061,8 @@ tablet 667px*/
   header hgroup h1#logo {
     font-size: 1.3em;
   }
-  header hgroup h1#logo span {
-    height: 100%;
-  }
-  header hgroup h1#logo span:last-of-type {
-    height: 100%;
-  }
-  header hgroup h1#logo-blog {
-    font-size: 1.2em;
-  }
-  header hgroup h1#logo-blog span:last-of-type {
-    height: 100%;
-  }
   header hgroup h2 {
     font-size: 0.6em;
-  }
-  header hgroup #title {
-    min-width: 280px;
-    max-width: 350px;
   }
   header nav#main-nav {
     position: fixed;
@@ -10564,14 +10372,10 @@ tablet 667px*/
   }
   #main-content div#profile_container #text-box-profile-a h1 {
     font-size: 1em;
-    line-height: 25px;
+    line-height: 35px;
   }
   #main-content div#profile_container #text-box-profile-a p {
     font-size: 0.9em;
-  }
-  #main-content div#profile_container #text-box-profile-a .introimg {
-    width: 50px;
-    height: 50px;
   }
   #main-content div#profile_container #text-box-profile-b {
     height: auto;
@@ -10642,7 +10446,7 @@ tablet 667px*/
     font-size: 0.85em;
     line-height: 30px;
   }
-  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li:before {
+  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li .fa-star {
     font-size: 0.9em;
   }
   #main-content div#profile_container section#prof_cont {
@@ -11200,24 +11004,8 @@ mobile 480px */
   header hgroup h1#logo {
     font-size: 1.2em;
   }
-  header hgroup h1#logo span {
-    height: 100%;
-  }
-  header hgroup h1#logo span:last-of-type {
-    height: 100%;
-  }
-  header hgroup h1#logo-blog {
-    font-size: 1.15em;
-  }
-  header hgroup h1#logo-blog he span:last-of-type {
-    height: 100%;
-  }
   header hgroup h2 {
     font-size: 0.6em;
-  }
-  header hgroup #title {
-    min-width: 280px;
-    max-width: 350px;
   }
   header nav#main-nav {
     top: 5em;
@@ -11473,14 +11261,9 @@ mobile 480px */
   }
   #main-content div#profile_container #text-box-profile-a h1 {
     font-size: 1em;
-    line-height: 25px;
   }
   #main-content div#profile_container #text-box-profile-a p {
     font-size: 0.85em;
-  }
-  #main-content div#profile_container #text-box-profile-a .introimg {
-    width: 50px;
-    height: 50px;
   }
   #main-content div#profile_container #text-box-profile-b {
     height: auto;
@@ -11551,7 +11334,7 @@ mobile 480px */
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li {
     line-height: 30px;
   }
-  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li:before {
+  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li .fa-star {
     font-size: 0.9em;
   }
   #main-content div#profile_container section#prof_cont {
@@ -12166,24 +11949,8 @@ mobile 360px */
   header hgroup h1#logo {
     font-size: 1.1em;
   }
-  header hgroup h1#logo span {
-    height: 100%;
-  }
-  header hgroup h1#logo span:last-of-type {
-    height: 100%;
-  }
-  header hgroup h1#logo-blog {
-    font-size: 1.1em;
-  }
-  header hgroup h1#logo-blog span:last-of-type {
-    height: 100%;
-  }
   header hgroup h2 {
     font-size: 0.5em;
-  }
-  header hgroup #title {
-    min-width: 280px;
-    max-width: 350px;
   }
   header nav#main-nav {
     top: 5em;
@@ -12424,14 +12191,9 @@ mobile 360px */
   }
   #main-content div#profile_container #text-box-profile-a h1 {
     font-size: 1em;
-    line-height: 25px;
   }
   #main-content div#profile_container #text-box-profile-a p {
     font-size: 0.85em;
-  }
-  #main-content div#profile_container #text-box-profile-a .introimg {
-    width: 50px;
-    height: 50px;
   }
   #main-content div#profile_container #text-box-profile-b {
     height: auto;
@@ -12496,7 +12258,7 @@ mobile 360px */
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li {
     font-size: 0.85em;
   }
-  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li:before {
+  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li .fa-star {
     font-size: 0.9em;
   }
   #main-content div#profile_container section#prof_cont {
@@ -13092,24 +12854,8 @@ mobile 320px */
   header hgroup h1#logo {
     font-size: 1.05em;
   }
-  header hgroup h1#logo span {
-    height: 100%;
-  }
-  header hgroup h1#logo span:last-of-type {
-    height: 100%;
-  }
-  header hgroup h1#logo-blog {
-    font-size: 1.05em;
-  }
-  header hgroup h1#logo-blog span:last-of-type {
-    height: 100%;
-  }
   header hgroup h2 {
     font-size: 0.5em;
-  }
-  header hgroup #title {
-    min-width: 280px;
-    max-width: 350px;
   }
   header nav#main-nav {
     top: 5em;
@@ -13350,15 +13096,10 @@ mobile 320px */
   }
   #main-content div#profile_container #text-box-profile-a h1 {
     font-size: 1em;
-    line-height: 25px;
   }
   #main-content div#profile_container #text-box-profile-a p {
     line-height: 1.9em;
     font-size: 0.85em;
-  }
-  #main-content div#profile_container #text-box-profile-a .introimg {
-    width: 50px;
-    height: 50px;
   }
   #main-content div#profile_container #text-box-profile-b {
     height: auto;
@@ -13428,7 +13169,7 @@ mobile 320px */
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li {
     font-size: 0.85em;
   }
-  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li:before {
+  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .slidesPanel figure.slider-panel figcaption ul li .fa-star {
     font-size: 0.9em;
   }
   #main-content div#profile_container section#prof_cont {

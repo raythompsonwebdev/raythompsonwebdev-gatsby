@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import Image from "../components/image"
 
  function Header (props) {
 
@@ -59,7 +60,7 @@ import PropTypes from "prop-types"
   return (
     <header>
       <div className="site-logo">
-        <Link to="/">R</Link>
+        <Link to="/"><Image /></Link>
       </div>
 
       <hgroup>

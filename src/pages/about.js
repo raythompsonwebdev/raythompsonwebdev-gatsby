@@ -3,6 +3,7 @@ import SEO from "../components/seo"
 import SkillsGraph from "../components/skillsgraph"
 import SliderPanel from "../components/sliderpanel"
 import {Link} from "gatsby" //highlight-line
+import Image from "../components/image"
 
 class AboutPage extends React.Component {
   constructor(props) {
@@ -87,7 +88,8 @@ class AboutPage extends React.Component {
 
           <article id="text-box-profile">
             <div className="introimg">
-              <img alt="me" src="./src/static/images/raythompsonwebdev.jpg" />
+              
+              <Image />
             </div>
 
             <p>
