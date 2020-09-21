@@ -1,14 +1,13 @@
 import React from "react"
-import { Link, graphql } from "gatsby" //highlight-line
-import Layout from "../components/layout"
-//import ProjectItem from "../components/projectitem"
+import {graphql } from "gatsby" 
+import ProjectItem from "../components/projectitem"
 //import Image from "../components/image"
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
 
-export default function ProjectPage({ data }) {
+export default function ProjectPage( props ) {
+  
   return (
-  <Layout>
     
     <main id="main-content">
     <SEO title="Home" />
@@ -18,23 +17,20 @@ export default function ProjectPage({ data }) {
         <div id="photocontainer">
           <div className="content">
 
-          {data.allWpProject.nodes.map((items, i) => (
+          {props.data.allWpProject.nodes.map((items,i) => (
+
             <div key={items.slug}>
 
-              {/* <ProjectItem items={items} key={i} /> */}
-
-            <Link to={items.slug}>
-              <p>{items.title}</p>
-            </Link>
-
-
+              <ProjectItem items={items} key={items.slug} />
+           
           </div>
         ))}
 
         </div>
       </div>
     </main>
-  </Layout>
+
+
   )
 }
 
@@ -42,7 +38,7 @@ ProjectPage.propTypes = {
   data: PropTypes.object,
 }
 
-export const pageQuery = graphql`
+export const projectQuery = graphql`
   query {
     allWpProject(sort: { fields: [date] }) {
       nodes {

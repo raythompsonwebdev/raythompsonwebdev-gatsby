@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 
  function Header (props) {
 
-  //const [siteDescription, siteTitle] = useState(props); 
+  console.log(props) 
 
   useEffect(() => {
 

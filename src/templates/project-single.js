@@ -1,5 +1,4 @@
 import React from "react"
-import Layout from "../components/layout"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
@@ -10,7 +9,7 @@ export default function ProjectSingle ({ data }) {
   console.log(data);
 
   return (
-    <Layout>
+ 
     <main id="main-content">
       <SEO title="Single Project Page" />
       <article className="post group">
@@ -76,7 +75,7 @@ export default function ProjectSingle ({ data }) {
         </footer>
       </article>
     </main>
-    </Layout>
+  
   )
 }
 

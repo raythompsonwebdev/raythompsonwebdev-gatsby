@@ -14,6 +14,9 @@ import "../static/css/style.scss"
 import posed, { PoseGroup } from "react-pose"
 
 const Layout = ({ children, location }) => {
+
+  console.log(location)
+  
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

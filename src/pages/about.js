@@ -2,6 +2,7 @@ import React from "react"
 import SEO from "../components/seo"
 import SkillsGraph from "../components/skillsgraph"
 import SliderPanel from "../components/sliderpanel"
+import {Link} from "gatsby" //highlight-line
 
 class AboutPage extends React.Component {
   constructor(props) {
@@ -101,7 +102,7 @@ class AboutPage extends React.Component {
               {`I spent the following years learning coding languages, practicing
               coding,`}
               <strong>
-                <a href="/projects"> {`Web Applications`} </a>
+                <Link href="/projects"> {`Web Applications`} </Link>
               </strong>
               {`helping others with their websites in my spare time while working
               full-time.`}
@@ -141,7 +142,7 @@ class AboutPage extends React.Component {
               {`I have gained some experience working with others interested in
               web development at events and on projects. I took part in a
               project called`}
-              <a to="https://vimeo.com/232481032">
+              <a href="https://vimeo.com/232481032" title="Digital Futures">
                 Digital Futures 2017{" "}
               </a>
               {`in Waterloo where I worked with other student to enhance a dance
@@ -150,7 +151,7 @@ class AboutPage extends React.Component {
             </p>
             <p>
               {`I also attended`}
-              <a to="https://2018.london.wordcamp.org/attendees/">
+              <a href="https://2018.london.wordcamp.org/attendees/" title="WordCamp Attendees">
                 WordCamp 2018{" "}
               </a>{" "}
               {`in London as a volunteer helping visitors find there way around

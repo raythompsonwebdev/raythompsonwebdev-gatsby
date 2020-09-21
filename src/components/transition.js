@@ -7,9 +7,12 @@ import PropTypes from "prop-types"
 const timeout = 0
 
 class Transition extends React.PureComponent {
+
+
+
   render() {
     const { children, location } = this.props
-
+    
     const RoutesContainer = posed.div({
       enter: {
         opacity: 1,

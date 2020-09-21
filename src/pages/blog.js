@@ -1,12 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby" //highlight-line
-import Layout from "../components/layout"
-import Image from "../components/image"
+//import Image from "../components/image"
 import SEO from "../components/seo"
 
-export default function IndexPage({ data }) {
-  return (
-  <Layout>
+export default function BlogPage(props) {
+  
+  return (  
     <main id="main-content">
       <SEO title="Blog Page" />
       <h1>{`Interested in web design and web development`}</h1>
@@ -20,8 +19,10 @@ export default function IndexPage({ data }) {
           and listened to over the past few years, content like`}
         </p>
       </div>
-      {/* highlight-start */}
-          {data.allWpPost.nodes.map((node, index) => (
+
+      <div id="blogbox">
+
+          {props.data.allWpPost.nodes.map((node) => (
 
             <div className="blogboxes" key={node.slug}>
             <h1 dangerouslySetInnerHTML={{ __html: node.title }}></h1>
@@ -43,11 +44,7 @@ export default function IndexPage({ data }) {
             </div>
              
           ))}
-          {/* highlight-end */}
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
       </div>
-
       <div className="clearfix"></div>
         <br />
         {/*Related Items */}
@@ -56,7 +53,7 @@ export default function IndexPage({ data }) {
         </section>
 
     </main>
-  </Layout>
+  
   )
 }
 

@@ -67,7 +67,7 @@ const ContactForm = props => {
           </li>
 
           <li>
-            <button id="submit"></button>
+            <button id="submit">Submit</button>
           </li>
         </ul>
       </form>

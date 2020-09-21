@@ -7,7 +7,26 @@
 // You can delete this file if you're not using it
 
 
-const path = require(`path`)
+const path = require(`path`);
+//const { slash } = require(`gatsby-core-utils`);
+const { createFilePath } = require(`gatsby-source-filesystem`)
+//const createPaginatedPages = require('gatsby-paginate')
+
+
+exports.onCreateNode = ({ node, getNode, actions }) => {      
+  const { createNodeField } = actions
+  
+  if (node.internal.type === `wordpress__POST` && `wordpress__wp_project`) {
+
+    const slug = createFilePath({ node, getNode, basePath: `pages` })
+
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    })
+  }
+}
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -40,12 +59,13 @@ exports.createPages = ({ graphql, actions }) => {
 
     //console.log(JSON.stringify(result, null, 4))
     //process.exit()
+    const postTemplate = path.resolve(`./src/templates/blog-post.js`);
 
     //highlight-start
     result.data.allWpPost.nodes.forEach((node) => {
       createPage({
-        path: node.slug,
-        component: path.resolve(`./src/templates/blog-post.js`),
+        path: `/blog/${node.slug}`,
+        component: postTemplate,
         context: {
           // This is the $slug variable
           // passed to blog-post.js
@@ -54,12 +74,12 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
     //highlight-end
-
+    const projectTemplate = path.resolve(`./src/templates/project-single.js`);
     //custom posts
     result.data.allWpProject.nodes.forEach((node) => {
       createPage({
-        path: node.slug,
-        component: path.resolve(`./src/templates/project-single.js`),
+        path: `/project/${node.slug}`,
+        component: projectTemplate,
         context: {
           // Data passed to context is available
           // in page queries as GraphQL variables.
