@@ -40,7 +40,7 @@ export default function BlogPage(props) {
 
             <div dangerouslySetInnerHTML={{ __html: node.excerpt }}></div>
 
-            <Link to={node.slug}><p>{node.title}</p></Link>
+            <Link to={node.slug}>{node.title}</Link>
             </div>
              
           ))}
@@ -65,6 +65,20 @@ export const pageQuery = graphql`
         title
         excerpt
         slug
+        featuredImage {
+          node {
+            localFile {
+              childImageSharp {
+                fixed {
+                  src
+                }
+              }
+            }
+          }
+        }
+        date
+        excerpt        
+        commentCount        
       }
     }
   }

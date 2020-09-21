@@ -73,7 +73,7 @@ a {
     width: 100%;
     height: 100%;
     text-decoration: none;
-    color: $color1;
+    color: $blackcolor;
     margin: 0;
     padding:0;
     cursor: pointer;
@@ -84,29 +84,25 @@ a {
     
     &:link {
         
-        color: $color1;
+        color: $blackcolor;
 
     }
 
     &:visited {
         
-        color: $color1;
+        color: $blackcolor;
     }
 
     &:focus {
-        outline: 1px dotted $color4;
-        color: $color1;
+        outline: 1px dotted $blackcolor;
+        color: $blackcolor;
     }
 
-    &:hover {
-        background-color: $color1;
-        font-weight: bold;
-        color: $color4;
-    }
+    
 
     &:active {
-        background-color: $color1;
-        color: $color4;
+        background-color: $blackcolor;
+        color: $yellowcolor;
     }
    
   }
@@ -116,14 +112,13 @@ h2,
 h3,
 h4 {
     font-family: $FontStyleHeader;
-    color: $color1;
     padding: 0;
     margin: 0;
     width: 100%;
 }
     
 hr {
-    background-color: $color1;
+    background-color: $blackcolor;
     height: 1px;
     margin: 0.5em auto;
     width: 80%;
@@ -136,7 +131,7 @@ p {
     margin: 0;
     padding: 0;
     font-family: ($FontStyle);
-    color: $color1;
+    color: $blackcolor;
   }
 
 ul {
@@ -146,12 +141,12 @@ ul {
     font-family: ($FontStyle);
 
     li {
-      color: $color8;
+      color: $blackcolor;
       list-style-type: none;
 
       &:before {
         font-style: normal;
-        color: $color8;
+        color: $blackcolor;
       }
 
       a {
@@ -190,7 +185,7 @@ figure {
 
 .screen-reader-text {
     font-size: 0.95em;
-    color: $color8;
+    color: $blackcolor;
     line-height: 1.5em;
 }
 
@@ -208,7 +203,7 @@ figure {
     margin: 0;
     height: 100%;
     list-style: none;
-    background-color: $color1;
+    background-color: $blackcolor;
     width: 23.9652349%;
     color: $color2;
     @include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
@@ -230,19 +225,6 @@ figure {
     margin: 0 1% 1% 2%;
 }
 
-div.textwidget {
-    height: auto;
-}
-
-.bypostauthor {
-    font-size: 1em;
-}
-
-.newExcerpt {
-    display: block;
-    padding: 1% 0;
-    margin: 0;
-}
 
 img.custom-logo {
     vertical-align: top;

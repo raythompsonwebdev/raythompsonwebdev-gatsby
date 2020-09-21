@@ -87,7 +87,7 @@ class AboutPage extends React.Component {
 
           <article id="text-box-profile">
             <div className="introimg">
-              <img alt="me" src="/src/static/images/raythompsonwebdev.jpg" />
+              <img alt="me" src="./src/static/images/raythompsonwebdev.jpg" />
             </div>
 
             <p>
@@ -102,7 +102,7 @@ class AboutPage extends React.Component {
               {`I spent the following years learning coding languages, practicing
               coding,`}
               <strong>
-                <Link href="/projects"> {`Web Applications`} </Link>
+                <Link to="/projects" title="See Projects"> {`Web Applications`} </Link>
               </strong>
               {`helping others with their websites in my spare time while working
               full-time.`}
@@ -112,8 +112,8 @@ class AboutPage extends React.Component {
               computer science fundementals courses on`}
               <strong>
                 {" "}
-                <a href="http://www.alinkedin.com/in/raymond-thompson-1b42b7b8">
-                  {`Lynda.com`}
+                <a href="http://www.alinkedin.com/in/raymond-thompson-1b42b7b8" title="Lynda.com">
+                  {` Lynda.com `}
                 </a>
               </strong>{`that year and have since then found it easier a understand how
               and why coding languages like Javascipt, PHP and Ruby work the way
@@ -143,7 +143,7 @@ class AboutPage extends React.Component {
               web development at events and on projects. I took part in a
               project called`}
               <a href="https://vimeo.com/232481032" title="Digital Futures">
-                Digital Futures 2017{" "}
+              {" "}Digital Futures 2017{" "}
               </a>
               {`in Waterloo where I worked with other student to enhance a dance
               performance with coreographed lights and music using Ruby and
@@ -151,27 +151,15 @@ class AboutPage extends React.Component {
             </p>
             <p>
               {`I also attended`}
-              <a href="https://2018.london.wordcamp.org/attendees/" title="WordCamp Attendees">
-                WordCamp 2018{" "}
+              <a href="https://2018.london.wordcamp.org/attendees/" title="WordCamp 2018 Attendees">
+              {" "}WordCamp 2018{" "}
               </a>{" "}
               {`in London as a volunteer helping visitors find there way around
               the venue, putting out sinage. I also attended contributors day
               and even reviewed a wordpress theme for the theme review team`}
             </p>
 
-            <p>
-              {`My aim is to continue improving my coding skills and workflow so
-              that I am able to create efficeintly, well designed and
-              maintaibable web applications. I want to be able to contribute to
-              improving user experience on the web, particularly for those have
-              difficulty accessing websites and web applications due to weak
-              signals or unreliable networks .`}
-            </p>
-
-            <p>
-              {`I am actively seeking employment opporunities in web development
-              industry.`}
-            </p>
+            
           </article>
 
           <section id="prof_cont-a">
@@ -208,8 +196,18 @@ class AboutPage extends React.Component {
               Previous
             </button>
           </section>
+          <article id="text-box-profile-b">
+
+            <p>{`My aim is to continue improving my coding skills and workflow so that I am able to create efficeintly, well designed and maintaibable web applications. I want to be able to contribute to improving user experience on the web, particularly for those have difficulty accessing websites and web applications due to weak signals or unreliable networks .`} </p>
+
+            <p>{`I am actively seeking  employment opporunities in web development industry.`}</p>
+
+</article>
+
+        
         </div>
 
+        
         <div className="clearfix"></div>
       </main>
     )

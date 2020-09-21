@@ -2,10 +2,7 @@ import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
-
  function Header (props) {
-
-  console.log(props) 
 
   useEffect(() => {
 
@@ -36,8 +33,8 @@ import PropTypes from "prop-types"
       event.preventDefault()
 
       // create menu variables
-      let slideoutMenu = document.querySelector("#main-nav ")
-      let slideoutMenuWidth = slideoutMenu.style.width
+      let slideoutMenu = document.querySelector("#main-nav")
+      let slideoutMenuHeight = slideoutMenu.offsetHeight
 
       
       // toggle open class
@@ -45,9 +42,9 @@ import PropTypes from "prop-types"
 
       // slide menu
       if (slideoutMenu.classList.contains("open")) {
-        slideoutMenu.style.left = "0px"
+        slideoutMenu.style.top = "0px"
       } else {
-        slideoutMenu.style.left = slideoutMenuWidth
+        slideoutMenu.style.top = -slideoutMenuHeight + 'px';
       }
     })
 
@@ -66,8 +63,8 @@ import PropTypes from "prop-types"
       </div>
 
       <hgroup>
-        {/* <h1 id="logo">{siteTitle}</h1> */}
-        {/* <h2>{siteDescription}</h2> */}
+        <h1 id="logo">{props.siteTitle}</h1>
+        <h2>{props.siteDescription}</h2>
       </hgroup>
 
       <button

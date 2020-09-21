@@ -26,7 +26,9 @@ const responsiveGraph = () => {
 }
 function SkillsGraph(props) {
 
-  const { bars} = props
+  console.log(props)
+
+  const {bars} = props
   
   useEffect(() => {    // Update the document title using the browser API
     responsiveGraph()  
@@ -46,7 +48,7 @@ function SkillsGraph(props) {
 }
 
 SkillsGraph.propTypes = {
-  bars: PropTypes.object,
+  bars: PropTypes.array,
   responsiveGraph: PropTypes.func,
 }
 

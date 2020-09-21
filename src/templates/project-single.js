@@ -6,19 +6,18 @@ import PropTypes from "prop-types"
 
 export default function ProjectSingle ({ data }) {
 
-  console.log(data);
-
+  const project = data.allWpProject.nodes[0]
   return (
  
     <main id="main-content">
       <SEO title="Single Project Page" />
       <article className="post group">
-        <h1> {data.allWpProject.nodes.title} </h1>
+        <h1> {project.title} </h1>
         <figure className="websiteImage">
           <Link to="" className="fancybox" title="">
             <img
               src={
-                data.allWpProject.nodes[0].featuredImage.node.localFile.childImageSharp.fixed.src
+                project.featuredImage.node.localFile.childImageSharp.fixed.src
               }
               alt=""
             />
@@ -26,52 +25,57 @@ export default function ProjectSingle ({ data }) {
         </figure>
         <div className="website-text">
 
-          {/* <h1 className="post-meta-key">Project Name</h1>
+          <h1 className="post-meta-key">Project Name</h1>
 
-          <p className="websitetext">
+          {/* <p className="websitetext">
             {props.data.allWpProject.edges[0].node.meta.project_name}{" "}
-          </p>
+          </p> */}
 
           <h1 className="post-meta-key">Project Description</h1>
 
-          <p className="websitetext">
+          {/* <p className="websitetext">
             {
               props.data.allWpProject.edges[0].node.meta
                 .project_description
             }{" "}
-          </p>
+          </p> */}
 
           <h1 className="post-meta-key">Project Code</h1>
 
-          <p className="websitetext">
+          {/* <p className="websitetext">
             {props.data.allWpProject.edges[0].node.meta.project_code}{" "}
-          </p>
+          </p> */}
 
           <h1 className="post-meta-key">Project URL</h1>
 
-          <Link className="webformats" to="">
+          {/* <Link className="webformats" to="">
             {props.data.allWpProject.edges[0].node.meta.project_url}
-          </Link>
+          </Link> */}
 
           <h1 className="post-meta-key">Project Source Code</h1>
 
-          <Link
+          <a
             className="webformats"
-            href={`https://github.com/raythompsonwebdev/${props.data.allWpProject.edges[0].node.slug}`}
+            href={`https://github.com/raythompsonwebdev/${project.slug}`}
           >
-            Link
-          </Link> */}
+            Link to github repo
+          </a>
 
         </div>
 
         <footer className="byline">
+
+        {/* <img
+              src={
+                project.author.node.avatar.url
+              }
+              alt="Blog"
+            /> */}
           <p className="right">
-            <Link to="/" className="comments-count">
-              Link
-            </Link>
+          
           </p>
 
-          <p>Text</p>
+            <p>Project created by {project.author.node.name}</p>
         </footer>
       </article>
     </main>
@@ -90,6 +94,14 @@ export const data = graphql`
         id
         slug
         title
+        author {
+          node {
+            name
+            avatar {
+              url
+            }
+          }
+        }
         featuredImage {
           node {
             localFile {

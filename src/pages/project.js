@@ -17,14 +17,11 @@ export default function ProjectPage( props ) {
         <div id="photocontainer">
           <div className="content">
 
-          {props.data.allWpProject.nodes.map((items,i) => (
-
-            <div key={items.slug}>
-
-              <ProjectItem items={items} key={items.slug} />
-           
-          </div>
-        ))}
+          {props.data.allWpProject.nodes.map((node) => ( 
+        
+            <ProjectItem node={node} key={node.slug} />
+          
+          ))}
 
         </div>
       </div>
@@ -44,6 +41,17 @@ export const projectQuery = graphql`
       nodes {
         title
         slug
+        featuredImage {
+          node {
+            localFile {
+              childImageSharp {
+                fixed {
+                  src
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
