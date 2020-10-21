@@ -39,7 +39,7 @@ module.exports = {
       },
     },
      //get images to show in posts
-     {
+    {
       resolve: "gatsby-wpgraphql-inline-images",
       options: {
         wordPressUrl: "http://localhost/wordpress/",
@@ -56,13 +56,6 @@ module.exports = {
         stripMetadata: true,
         defaultQuality: 75,
         pngQuality: 75,
-      },
-    },
-    `gatsby-transformer-json`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `./src/static/data/`,
       },
     },
     {

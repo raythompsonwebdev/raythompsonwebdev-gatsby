@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
 
@@ -18,17 +18,17 @@ export default function BlogPost({ data }) {
         <div className="entry-meta">
           <div className="meta-content has-avatar">
             <div className="author-avatar">
-              <Link className="url fn n" to="">
+              <a className="url fn n" href="">
                 <img
                   src={
                     post.author.node.avatar.url
                   }
                   alt="Blog"
                 />
-              </Link>
+              </a>
             </div>
 
-            <Link to="" rel="bookmark"></Link>
+            <a href="" rel="bookmark"></a>
 
             <span className="byline">
               Posted By : {post.author.node.name}{" "}
@@ -50,7 +50,7 @@ export default function BlogPost({ data }) {
         </div>
       </header>
 
-      <Link to="" title="Permanent Link to">
+      <a href="" title="Permanent Link to">
         <figure className="featuredImage">
           {post.featuredImage == null ? (
             <p>No Image</p>
@@ -63,7 +63,7 @@ export default function BlogPost({ data }) {
             />
           )}
         </figure>
-      </Link>
+      </a>
 
       <div className="entry">
         <div
@@ -74,14 +74,14 @@ export default function BlogPost({ data }) {
       </div>
 
       <div className="continue-reading">
-        <Link to="/">Link</Link>
+        <a href="/" title="continue reading">Link</a>
       </div>
 
       <footer className="byline">
         <p className="right">
-          <Link to="/" className="comments-count">
+          <a href="/" className="comments-count" title="comments link">
             Link
-          </Link>
+          </a>
         </p>
 
         <p>Text</p>

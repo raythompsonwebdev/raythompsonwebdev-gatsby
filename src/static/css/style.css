@@ -1154,12 +1154,12 @@ desktop 1920px*/
     display: block;
   }
   #main-content div#profile_container #text-box-profile p {
+    width: 100%;
     line-height: 1.9em;
     font-size: 1em;
     margin-bottom: 0.25em;
-    background-color: #F2f2f2;
-    padding: 0 0.5em;
-    width: 98%;
+    color: #0d0d0d;
+    background-color: #f5f2e4;
   }
   #main-content div#profile_container #text-box-profile .introimg {
     width: 50px;
@@ -1194,12 +1194,12 @@ desktop 1920px*/
     line-height: 25px;
   }
   #main-content div#profile_container #text-box-profile-a p {
-    width: 98%;
+    width: 100%;
     line-height: 1.9em;
     font-size: 1em;
-    margin: 0 0 0.25em 0;
-    padding: 0.5em;
-    background-color: #F2f2f2;
+    margin-bottom: 0.25em;
+    color: #0d0d0d;
+    background-color: #f5f2e4;
   }
   #main-content div#profile_container #text-box-profile-a a {
     background-color: unset;
@@ -1227,7 +1227,6 @@ desktop 1920px*/
     line-height: 1.9em;
     font-size: 1em;
     margin-bottom: 0.25em;
-    padding: 0.5em;
     color: #0d0d0d;
     background-color: #f5f2e4;
   }
@@ -1253,9 +1252,6 @@ desktop 1920px*/
     width: 50%;
     height: 500px;
     display: block;
-    float: right;
-    box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
-    padding: 1em;
     background-color: #F2f2f2;
     margin: 0;
     /* Hide the images by default */
@@ -1475,8 +1471,6 @@ desktop 1920px*/
     height: auto;
     display: block;
     float: right;
-    box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
-    padding: 1em;
     background-color: #F2f2f2;
     margin-bottom: 1em;
     /* Chart */
@@ -2388,15 +2382,18 @@ desktop 1920px*/
     /*global*/
   }
   #main-content .post .entry p {
-    padding: 0.75em;
-    width: 98%;
+    width: 100%;
     margin: 0;
-    font-size: 0.95em;
+    font-size: 1em;
     color: #000;
     font-weight: normal;
-    line-height: 2.1em;
+    line-height: 1.9em;
     letter-spacing: 0.02em;
-    margin-bottom: 2%;
+    margin-bottom: 0.5em;
+  }
+  #main-content .post .entry .wp-block-image {
+    width: 20%;
+    margin: 2em auto;
   }
   #main-content .post .entry ul.post-list {
     line-height: 1.5em;
@@ -2440,7 +2437,7 @@ desktop 1920px*/
     padding: 0;
     letter-spacing: 0.04em;
     width: 100%;
-    line-height: 60px;
+    line-height: 50px;
     text-align: left;
     color: #F2f2f2;
     background-color: #0d0d0d;
@@ -2453,7 +2450,7 @@ desktop 1920px*/
     letter-spacing: 0.04em;
     width: 100%;
     color: #0d0d0d;
-    line-height: 55px;
+    line-height: 45px;
     text-align: left;
   }
   #main-content .post .entry h3 {
@@ -3117,14 +3114,14 @@ desktop 1920px*/
     display: block;
     float: right;
     margin: 0;
-    width: 15%;
+    width: 20%;
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: space-between;
   }
   footer .socialpics .social-icon {
-    width: 15%;
+    width: 12%;
     background-repeat: no-repeat;
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
@@ -5682,7 +5679,7 @@ desktop 1280px*/
     padding: 0;
   }
   #main-content div#profile_container #text-box-profile {
-    width: 48%;
+    width: 51%;
   }
   #main-content div#profile_container #text-box-profile h1 {
     font-size: 1em;
@@ -5695,7 +5692,7 @@ desktop 1280px*/
     height: 74px;
   }
   #main-content div#profile_container #text-box-profile-a {
-    width: 46%;
+    width: 43%;
   }
   #main-content div#profile_container #text-box-profile-a h1 {
     font-size: 1em;
@@ -5704,7 +5701,7 @@ desktop 1280px*/
     font-size: 1em;
   }
   #main-content div#profile_container section#prof_cont-a {
-    width: 50%;
+    width: 52%;
   }
   #main-content div#profile_container section#prof_cont-a h1 {
     font-size: 1.1em;
@@ -6554,7 +6551,7 @@ desktop 1280px*/
     text-decoration: underline;
   }
   #main-content div#profile_container section#prof_cont-a {
-    width: 50%;
+    width: 55%;
     padding: 0.5em;
   }
   #main-content div#profile_container section#prof_cont-a h1 {
