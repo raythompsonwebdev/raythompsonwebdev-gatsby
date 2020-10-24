@@ -1,99 +1,46 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
-import SEO from "../components/seo"
-import PropTypes from "prop-types"
+import { graphql } from "gatsby"
+import PostLink from "../components/post-link"
+//import SEO from "../components/seo"
 
-class BlogPage extends React.Component {
-  constructor(props) {
-    super(props)
+const IndexPage = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => {
+  const Posts = edges
+    .filter(edge => edge.node.frontmatter.type == "post" ? edge.node.frontmatter.type : false) // You can filter your posts based on some criteria
+    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
-    this.state = {
-      data: props,
-    }
-  }
-
-  render() {
-    const {
-      data: { allWordpressPost },
-    } = this.state.data
-
-    return (
-      <main id="main-content">
-        <SEO title="Blog Page" />
-
-        <h1>{`Interested in web design and web development`}</h1>
-
-        <div className="main-text">
-          <p>
-            {`Whether you are just beginning to learn or are alreading building
-            websites I would like to share what I have learnt so far about web
-            design and web development through the tons of valuable web
-            development and web design related resources I have read, watched
-            and listened to over the past few years, content like`}
-          </p>
-        </div>
-
-        <div id="blogbox">
-          {allWordpressPost.edges.map(({ node }, index) => (
-            <div className="blogboxes" key={index}>
-              <h1 dangerouslySetInnerHTML={{ __html: node.title }}></h1>
-
-              {node.featured_media == null ? (
-                <p>No Image</p>
-              ) : (
-                <img
-                  src={
-                    node.featured_media.localFile.childImageSharp.resolutions
-                      .src
-                  }
-                  alt=""
-                />
-              )}
-
-              <div dangerouslySetInnerHTML={{ __html: node.excerpt }}></div>
-              
-              <Link to={`/blog/${node.slug}`}>Link</Link>
-            </div>
-          ))}
-        </div>
-
-        <div className="clearfix"></div>
-        <br />
-        {/*Related Items */}
-        <section className="contact-wide">
+  return (
+    <main id="main-content">
+        {/* <SEO title="Blog Page" /> */}
+        <div id="blogbox">{Posts}</div>
+         <section className="contact-wide">
           <h1>Related Items</h1>
         </section>
       </main>
-    )
-  }
+  )
+   
+       
 }
 
-export default BlogPage
-
-BlogPage.propTypes = {
-  data: PropTypes.object,
-}
+export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    allWordpressPost {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           id
-          title
-          excerpt
-          path
-          link
-          slug
-          featured_media {
-            localFile {
-              childImageSharp {
-                resolutions {
-                  src
-                }
-              }
-            }
-          }
+          excerpt(pruneLength: 150)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")            
+            title
+            description
+            featuredImage
+            type
+          }          
         }
       }
     }

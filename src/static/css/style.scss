@@ -1552,8 +1552,8 @@ desktop 1920px*/
           flex: 0 1 auto;
           margin: 0.4em;
           z-index: 1;
-          height: auto;
-          box-shadow: 0 0.5px 0.5px 0.2px rgba(0, 0, 0, 0.2);
+          height: 360px;
+          background-color:#fff;
 
           &:hover {
             cursor: pointer;

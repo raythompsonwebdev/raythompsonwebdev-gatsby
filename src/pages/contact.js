@@ -1,8 +1,8 @@
 import React from "react"
-import SEO from "../components/seo"
+//import SEO from "../components/seo"
 import ContactForm from "../components/contactform"
 import MapContainer from "../components/mapgoogle"
-import { Link } from "gatsby"
+//import { Link } from "gatsby"
 
 const mapCover = {
   position: "relative",
@@ -66,7 +66,7 @@ class contactPage extends React.Component {
   render() {
     return (
       <main id="main-content">
-        <SEO title="Contact Page" />
+        {/* <SEO title="Contact Page" /> */}
 
         <h1>Contact</h1>
 

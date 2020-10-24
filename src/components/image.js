@@ -13,24 +13,24 @@ import PropTypes from "prop-types"
  * - `gatsby-image`: https://gatsby.dev/gatsby-image
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
-
+// export const { data } = useStaticQuery(
+//   graphql`
+//     query{
+//       file(relativePath: {eq: "images/placeholder.jpg"}) {
+//         childImageSharp {
+//           fixed {          
+//             src
+//           }
+//         }
+//       }
+//     }
+// `)
 export const data = graphql`
-  query($slug: String!) {
-    allWordpressPost(filter: { slug: { eq: $slug } }) {
-      edges {
-        node {
-          featured_media {
-            localFile {
-              childImageSharp {
-                fixed {
-                  height
-                  src
-                  width
-                  srcSet
-                }
-              }
-            }
-          }
+  query{
+    file(relativePath: {eq: "images/placeholder.jpg"}) {
+      childImageSharp {
+        fixed {          
+          src
         }
       }
     }
@@ -38,7 +38,8 @@ export const data = graphql`
 `
 
 const Image = ({ data }) => {
-  return <Img fixed={data.featured_media.localFile.childImageSharp.fixed} />
+  console.log(data)
+  return <Img fixed={data.fluid.src} />
 }
 
 Image.propTypes = {

@@ -2,44 +2,54 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
+import Img from "gatsby-image"
 
-const BlogPost = props => {
-  const {
-    data: { allWordpressPost },
-  } = props
+// this prop will be injected by the GraphQL query below.
+
+export default function BlogPost ({
+  data, // this prop will be injected by the GraphQL query below.
+}) {
+  //console.log(data)
+ 
+  const { allMarkdownRemark } = data // data.markdownRemark holds your post data
+
+  //console.log(allMarkdownRemark.edges[0].node)
+
+  const { frontmatter, html } = allMarkdownRemark.edges[0].node
+
+  //console.log(frontmatter, html)
 
   return (
     <main id="main-content">
       <SEO title="Blog Post" />
 
       <article className="post group" id="post">
-        <h1 className="page-title">{allWordpressPost.edges[0].node.title}</h1>
+        <h1 className="page-title"></h1>
 
         <header className="byline">
           <div className="entry-meta">
             <div className="meta-content has-avatar">
               <div className="author-avatar">
-                <Link className="url fn n" to="">
+                {/* <Link className="url fn n" to="">
                   <img
                     src={
-                      allWordpressPost.edges[0].node.author.avatar_urls
-                        .wordpress_96
+                      
                     }
                     alt="Blog"
                   />
-                </Link>
+                </Link> */}
               </div>
 
               <Link to="" rel="bookmark"></Link>
 
               <span className="byline">
-                Posted By : {allWordpressPost.edges[0].node.author.name}{" "}
+                Posted By : {frontmatter.date}
               </span>
               <span className="posted-on">
                 Posted on :
                 <time className="entry-date published">
-                  {" "}
-                  {allWordpressPost.edges[0].node.date}
+                {frontmatter.title}
+                  
                 </time>
               </span>
               <span className="byline">
@@ -55,24 +65,25 @@ const BlogPost = props => {
 
         <Link to="" title="Permanent Link to">
           <figure className="featuredImage">
-            {allWordpressPost.edges[0].node.featured_media == null ? (
+            {/* {.node.featured_media == null ? (
               <p>No Image</p>
             ) : (
               <img
                 src={
-                  allWordpressPost.edges[0].node.featured_media.localFile
+                  .node.featured_media.localFile
                     .childImageSharp.resolutions.src
                 }
                 alt=""
               />
-            )}
+            )} */}
+            <Img fluid={featuredImageFluid} />
           </figure>
         </Link>
 
         <div className="entry">
           <div
             dangerouslySetInnerHTML={{
-              __html: allWordpressPost.edges[0].node.content,
+              __html: html
             }}
           ></div>
         </div>
@@ -99,36 +110,20 @@ BlogPost.propTypes = {
   data: PropTypes.any,
 }
 
-export default BlogPost
+// query($slug: String!) {
+//   allMarkdownRemark(filter: {frontmatter: {title: {eq: $slug}}}) {
 
 export const data = graphql`
-  query($slug: String!) {
-    allWordpressPost(filter: { slug: { eq: $slug } }) {
+  query($title: String!){
+    allMarkdownRemark(filter: {frontmatter: {title: {eq: $title}}}) {
       edges {
         node {
-          featured_media {
-            localFile {
-              childImageSharp {
-                resolutions {
-                  src
-                }
-              }
-              url
-            }
-          }
-          title
-          slug
-          content
-          date(formatString: "Y:MM:DD")
-          author {
-            avatar_urls {
-              wordpress_24
-              wordpress_48
-              wordpress_96
-            }
-            name
-            slug
-            link
+          html
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+            featuredImage 
           }
         }
       }

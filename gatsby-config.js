@@ -16,8 +16,14 @@ module.exports = {
         name: `src`,
         path: `${__dirname}/src/`,
       },
+    },    
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown-pages`,
+      },
     },
-
     `gatsby-plugin-sass`,
     {
       //works with gatsby-wpgraphql-inline-images not gatsby-source-wordpress
@@ -30,31 +36,35 @@ module.exports = {
         // URL to query from
         url: "https://swapi-graphql.netlify.app/.netlify/functions/index",
       },
-    },
+    }, 
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,   
 
     {
-      resolve: "gatsby-source-wordpress",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        excludedRoutes: [
-          "/wp/v2/users/**",
-          "/wp/v2/settings*",
-          "/jetpack/v4/**",
-          "contact-form-7/v1/**",
-          "yoast/v1/**",
+        name: `images`,
+        path: `${__dirname}/src/static/images`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
         ],
-        baseUrl: "localhost/wordpress",
-        protocol: "http",
-        restApiRoutePrefix: "wp-json",
-        hostingWPCOM: false,
-        useACF: false,
-        verboseOutput: true,
-        // Search and Replace Urls across WordPress content.
-        searchAndReplaceContentUrls: {
-          sourceUrl: "http://localhost/wordpress/",
-          replacementUrl: "",
-        },
-        // Set how many simultaneous requests are sent at once.
-        concurrentRequests: 10,
+      },
+    },    
+    `gatsby-plugin-emotion`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
       },
     },
 
@@ -82,37 +92,13 @@ module.exports = {
         component: require.resolve(`./src/components/layout`),
       },
     },
-
-    //get images to show in posts
-    {
-      resolve: "gatsby-wpgraphql-inline-images",
-      options: {
-        wordPressUrl: "http://localhost/wordpress/",
-        uploadsUrl: "http://localhost/wordpress/wp-content/uploads/",
-        processPostTypes: ["Page", "Post"],
-        graphqlTypeName: "WPGraphQL",
-      },
-    },
-
-    `gatsby-transformer-sharp`,
-
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        useMozJpeg: false,
-        stripMetadata: true,
-        defaultQuality: 75,
-        pngQuality: 75,
-      },
-    },
-
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-json`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `./src/static/data/`,
-      },
-    },
+    
+    // `gatsby-transformer-json`,
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `./src/static/data/`,
+    //   },
+    // },
   ],
 }

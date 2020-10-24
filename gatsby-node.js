@@ -11,91 +11,88 @@
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
-const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+//const path = require(`path`)
+//const { createFilePath } = require(`gatsby-source-filesystem`)
 //const createPaginatedPages = require('gatsby-paginate')
 
 
-exports.onCreateNode = ({ node, getNode, actions }) => {      
-    const { createNodeField } = actions
-    
-    if (node.internal.type === `wordpress__POST` && `wordpress__wp_project`) {
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const { createPage } = actions
 
-      const slug = createFilePath({ node, getNode, basePath: `pages` })
+  const blogPostTemplate = require.resolve(`./src/templates/blog-post.js`)
+  const projectTemplate = require.resolve(`./src/templates/project-single.js`)
 
-      createNodeField({
-        node,
-        name: `slug`,
-        value: slug,
-      })
-    }
-  }
-  
-
-exports.createPages = ({ graphql, actions }) => {
-    
-    
-    const { createPage } = actions
-    
-    return graphql(`
-      query {
-        allWordpressPost {
-          edges {
-            node {
-              slug
-              path
-            }
-          }
-        }       
-        allWordpressWpProject {
-          edges {
-            node {
-              slug
-              path
+  const result = await graphql(`
+    {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            frontmatter {
+              date
+              title
+              description
             }
           }
         }
       }
-    `).then(result => {
-      
-      if (result.errors) {
+    }
+  `)
 
-        console.log(result.errors)
-        
+  const results = await graphql(`
+    {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            frontmatter {
+              date
+              title
+              description
+              slug
+            }
+          }
+        }
       }
-
-      
-     //posts
-     result.data.allWordpressPost.edges.forEach(({ node }) => {
-          
-          createPage({
-            path: `/blog/${node.slug}`,
-            component: path.resolve(`src/templates/blog-post.js`),
-            context: {
-              // Data passed to context is available
-              // in page queries as GraphQL variables.
-              slug: node.slug,
-            },
-          })
-      })
-
-      //custom posts
-      result.data.allWordpressWpProject.edges.forEach(({ node }) => {        
-
-        createPage({
-          path: `/project/${node.slug}`,
-          component: path.resolve(`src/templates/project-single.js`),
-          context: {
-            // Data passed to context is available
-            // in page queries as GraphQL variables.
-            slug: node.slug,
-          },
-        })
-      })
+    }
+  `)
 
 
-
-    })
-
-
+  // Handle errors
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
   }
+
+  // Handle errors
+  if (results.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.title,
+      component: blogPostTemplate,
+      context: {
+        // additional data can be passed via context
+        title: node.frontmatter.title,
+      },
+    })
+  })
+
+  results.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.title,
+      component: projectTemplate,
+      context: {
+        // additional data can be passed via context
+        title: node.frontmatter.title,
+      },
+    })
+  })
+}

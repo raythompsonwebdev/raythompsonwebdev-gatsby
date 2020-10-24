@@ -4,27 +4,16 @@ import SEO from "../components/seo"
 import PropTypes from "prop-types"
 
 export const data = graphql`
-  query($slug: String!) {
-    allWordpressWpProject(filter: { slug: { eq: $slug } }) {
+  query($title: String!) {
+    allMarkdownRemark(filter: {frontmatter: {title: {eq: $title}}}) {
       edges {
         node {
-          id
-          slug
-          title
-          meta {
-            project_code
-            project_description
-            project_name
-            project_url
-          }
-          featured_media {
-            localFile {
-              childImageSharp {
-                fixed {
-                  src
-                }
-              }
-            }
+          html
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+            featuredImage
           }
         }
       }
@@ -32,17 +21,28 @@ export const data = graphql`
   }
 `
 
-const ProjectSingle = props => {
+const ProjectSingle = ({
+  data, // this prop will be injected by the GraphQL query below.
+}) => {
+  //console.log(data)
+ 
+  const { allMarkdownRemark } = data // data.markdownRemark holds your post data
+
+  //console.log(allMarkdownRemark.edges[0].node)
+
+  const { frontmatter, html } = allMarkdownRemark.edges[0].node
+
+  //console.log(frontmatter, html)
   return (
     <main id="main-content">
       <SEO title="Single Project Page" />
       <article className="post group">
-        <h1> {props.data.allWordpressWpProject.edges[0].node.title} </h1>
+        {/* <h1> {.node.title} </h1>
         <figure className="websiteImage">
           <Link to="" className="fancybox" title="">
             <img
               src={
-                props.data.allWordpressWpProject.edges[0].node.featured_media
+                .node.featured_media
                   .localFile.childImageSharp.fixed.src
               }
               alt=""
@@ -94,8 +94,8 @@ const ProjectSingle = props => {
           </p>
 
           <p>Text</p>
-        </footer>
-      </article>
+        </footer>*/}
+      </article> 
     </main>
   )
 }

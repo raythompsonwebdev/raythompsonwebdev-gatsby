@@ -1,29 +1,34 @@
 import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
+//import Img from "gatsby-image"
+//import Image from "./image"
 
-const ProjectItem = ({ items, i }) => (
-  <div id="panel" className={`prod-cnt ${items.slug}`} key={i}>
+const ProjectItem = ({ project }) => (
+  <div id="panel" className={`prod-cnt ${project.frontmatter.slug}`}>
     <figure className="showcase-container" id="showcaseimg1">
       <div className="showcase-img">
-        <img
-          src={items.featured_media.localFile.childImageSharp.resolutions.src}
+        {/* <img
+          src={project.frontmatter.featuredImage}
           alt=""
-        />
+        /> */}
+        
+        
       </div>
 
       <figcaption className="showcase-content showcase">
-        <h1>{items.title}</h1>
+        <h1>{project.frontmatter.title}</h1>
+        <h1>{project.frontmatter.date}</h1>
 
-        <Link to={`/project/${items.slug}`}>Link</Link>
+        <Link to={`/project/${project.frontmatter.slug}`}>Link</Link>
       </figcaption>
     </figure>
   </div>
 )
 
 ProjectItem.propTypes = {
-  i: PropTypes.any,
-  items: PropTypes.any,
+  project: PropTypes.any,
+ 
 }
 
 export default ProjectItem
