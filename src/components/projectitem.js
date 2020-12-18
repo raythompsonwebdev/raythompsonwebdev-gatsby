@@ -9,7 +9,7 @@ const ProjectItem = ({ project }) => (
     <figure className="showcase-container" id="showcaseimg1">
       <div className="showcase-img">
         {/* <img
-          src={project.frontmatter.featuredImage}
+          src={project.frontmatter.featured-image}
           alt=""
         /> */}
         

@@ -12,7 +12,8 @@ class AboutPage extends React.Component {
       panels: [],
       lastIndex: 0,
       cert: [],
-    }    
+    } 
+
   }
 
   componentDidMount() {
@@ -181,8 +182,7 @@ class AboutPage extends React.Component {
                 <div
                   className="slider-body"
                   style={{
-                    transform: `translateY(-${cert.imageindex *
-                      (100 / panels.length)}%)`,
+                    transform: `translateY(-${cert.imageindex * (100 / panels.length)}%)`,
                   }}
                 >
                   {panels.map(panel => (
@@ -191,6 +191,7 @@ class AboutPage extends React.Component {
                 </div>
               </div>
             </article>
+            
             {/* Buttons */}
             <button
               className="slider-btn"
@@ -199,6 +200,7 @@ class AboutPage extends React.Component {
             >
               Next
             </button>
+
             <button
               className="slider-btn"
               onClick={() => this.prevProperty()}
@@ -206,7 +208,9 @@ class AboutPage extends React.Component {
             >
               Previous
             </button>
+
           </section>
+
         </div>
 
         <div className="clearfix"></div>

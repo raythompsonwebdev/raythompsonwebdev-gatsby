@@ -7,17 +7,20 @@ module.exports = {
     title: `Raythompsonwebdev.com`,
     description: `Web Developer, WordPress Enthusiast`,
     author: `raythompsonwebdev.com`,
+    //url: `https://something.or.other`,
+    //logo: `static/logo.png`,
+    //twitter: `mor10`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
+    { //get all files from src folder in file system
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
         path: `${__dirname}/src/`,
       },
     },    
-    {
+    { //get markdown pages from file system
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
@@ -36,11 +39,12 @@ module.exports = {
         // URL to query from
         url: "https://swapi-graphql.netlify.app/.netlify/functions/index",
       },
-    }, 
+    },
+      
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,   
+    `gatsby-transformer-sharp`,  
 
-    {
+    { //get images from file system
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -67,6 +71,9 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+
+    //`gatsby-plugin-postcss`,
+    //`gatsby-plugin-css-customs`,
 
     `gatsby-plugin-styled-components`,
     {

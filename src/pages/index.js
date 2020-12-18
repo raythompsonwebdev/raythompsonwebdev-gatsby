@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { FaWordpress, FaWrench, FaLaptopCode, FaLaptop } from "react-icons/fa"
 
 const IndexPage = () => (
+  
   <main id="main-content">
     <SEO title="Home Page" />
 
@@ -25,6 +26,7 @@ const IndexPage = () => (
       <div id="text-box-front">
         <section id="calltoaction">
           <h1 id="front-title">{`Things I Do`}</h1>
+
           <section className="frntpgbox">
             <span>
               <FaLaptopCode className="fa fa-code" />
@@ -64,6 +66,7 @@ const IndexPage = () => (
             <p>{`Server`}</p>
             <p>{`Code Debugging`}</p>
           </section>
+        
         </section>
       </div>
 

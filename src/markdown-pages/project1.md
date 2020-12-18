@@ -3,7 +3,7 @@ title: "Greenfootprints"
 date: "2017-08-10"
 description: "Greenfootprints"
 type: "project"
-featuredImage: ../src/static/images/custom/www-greenfootprints-website-home-page-custom-large.png
+featured-image: ../src/static/images/custom/www-greenfootprints-website-home-page-custom-large.png
 slug : "greenfootprints"
 ---
 
