@@ -1,11 +1,11 @@
 node_modules
-static/
+
 static/fonts/
 static/images/
-static/js/
-data/
+
+
 files/
-js/
+
 LICENSE
 public/
 
