@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { FaStar } from "react-icons/fa";
-
+import { FaStar } from "react-icons/fa"
+// import style from "sliderpanel.module.scss"
 
 const SliderPanel = props => {
   const { panel } = props
@@ -25,11 +25,28 @@ const SliderPanel = props => {
           <h4>{panel.subheader}</h4>
 
           <ul>
-            <li><span><FaStar className="fa fa-star" /></span>{panel.task1}</li>
-            <li><FaStar className="fa fa-star" />{panel.task2}</li>
-            <li><FaStar className="fa fa-star" />{panel.task3}</li>
-            <li><FaStar className="fa fa-star" />{panel.task4}</li>
-            <li><FaStar className="fa fa-star" />{panel.task5}</li>
+            <li>
+              <span>
+                <FaStar className="fa fa-star" />
+              </span>
+              {panel.task1}
+            </li>
+            <li>
+              <FaStar className="fa fa-star" />
+              {panel.task2}
+            </li>
+            <li>
+              <FaStar className="fa fa-star" />
+              {panel.task3}
+            </li>
+            <li>
+              <FaStar className="fa fa-star" />
+              {panel.task4}
+            </li>
+            <li>
+              <FaStar className="fa fa-star" />
+              {panel.task5}
+            </li>
           </ul>
 
           <div className="clearfix"></div>

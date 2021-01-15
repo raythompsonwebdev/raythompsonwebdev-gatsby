@@ -2,15 +2,24 @@ module.exports = {
   siteMetadata: {
     title: `Raythompsonwebdev.com`,
     description: `Web Developer, WordPress Enthusiast`,
-    author: `raythompsonwebdev.com`,
+    author: {
+      name: `Raymond Thompson`,
+      summary: `trying a ting.`,
+    },
+    url: `https://raythompsonwebdev.co.uk`,
+    //logo: `/logo.png`,
+    twitter: `raythompWeb`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-css-customs`,
+    //`gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/static/images`,
+        path: `${__dirname}/static/images`,
       },
     },
     {
@@ -20,7 +29,12 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require("node-sass"),
+      },
+    },
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
@@ -38,8 +52,8 @@ module.exports = {
         component: require.resolve(`./src/components/layout`),
       },
     },
-     //get images to show in posts
-     {
+    //get images to show in posts
+    {
       resolve: "gatsby-wpgraphql-inline-images",
       options: {
         wordPressUrl: "http://localhost/wordpress/",
@@ -48,7 +62,7 @@ module.exports = {
         graphqlTypeName: "WPGraphQL",
       },
     },
-    `gatsby-transformer-sharp`,    
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -62,7 +76,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./src/static/data/`,
+        path: `./data/`,
       },
     },
     {
@@ -74,7 +88,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `${__dirname}/src/static/images/raythompsonwebdev.jpg`, // This path is relative to the root of the site.
+        icon: `${__dirname}/static/images/raythompsonwebdev.jpg`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

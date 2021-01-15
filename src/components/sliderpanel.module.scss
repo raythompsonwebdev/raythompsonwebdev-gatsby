@@ -1,0 +1,2227 @@
+@media only screen and (max-width: 1920px) {
+  #main-text {
+    /*profile-page-panel */
+    div#profile_container {
+      section#prof_cont-a {
+        -webkit-order: 3;
+        -ms-flex-order: 3;
+        order: 3;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        width: 50%;
+        height: 500px;
+        display: block;
+        float: right;
+        box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
+        padding: 1em;
+        background-color: $colorwhite;
+        margin: 0;
+
+        h1 {
+          height: 50px;
+          font-size: 1.3em;
+          line-height: 50px;
+          letter-spacing: 0.05em;
+          margin: 0;
+        }
+
+        #social {
+          width: 50%;
+          display: block;
+          float: left;
+          margin-top: 0;
+
+          h3 {
+            width: 100%;
+            margin: 2% 0;
+          }
+        }
+
+        /* Hide the images by default */
+
+        button.slider-btn {
+          position: relative;
+          top: -50px;
+          width: 48%;
+          line-height: 40px;
+          height: 40px;
+          background-color: $blackcolor;
+          color: $colorwhite;
+          outline: none;
+          border: none;
+
+          &:hover {
+            background-color: $yellowcolor;
+            color: $blackcolor;
+            font-weight: bold;
+            cursor: pointer;
+          }
+        }
+
+        /*Hero Slider*/
+        .hero-slider {
+          text-align: left;
+          margin: 0;
+
+          width: 100%;
+
+          .mask {
+            display: inline-block;
+            width: 100%;
+            height: 420px;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+
+            div.slider-body {
+              width: 100%;
+              position: absolute;
+              display: flex;
+              flex-flow: column;
+              transition: transform 300ms
+                cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+              #panel-1 {
+                background-image: url("../images/certificates/Large-Photoshop-Certicate-.jpg");
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: cover;
+              }
+
+              #panel-2 {
+                background-image: url("../images/certificates/ITQ-USERS-LEVEL1-LARGE.jpg");
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: cover;
+              }
+
+              #panel-3 {
+                background-image: url("../images/certificates/Large-Udemy-Certicate-.jpg");
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: cover;
+              }
+
+              #panel-4 {
+                background-image: url("../images/certificates/freecodecamp-org-certification-raythompsonwebdev-responsive-web-design.png");
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: cover;
+              }
+
+              #panel-5 {
+                background-image: url("../images/certificates/CertificateOfCompletion_Learning Git And Github.jpg");
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: cover;
+              }
+
+              #panel-6 {
+                background-image: url("../images/certificates/Mobile-web-applications-Certificate-Foundation-large.jpg");
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: cover;
+              }
+
+              #panel-7 {
+                background-image: url("../images/certificates/codecademy-users-raythompsonwebdev-achievements-.png");
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: cover;
+              }
+
+              #panel-8 {
+                background-image: url("../images/certificates/Udacity_logo.png");
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: cover;
+              }
+
+              #panel-9 {
+                background-image: url("../images/certificates/Digital-Futures-2017-Certificate-of-Participation-large.jpg");
+                background-repeat: no-repeat;
+                background-position: 50% 61%;
+                background-size: cover;
+              }
+
+              .slidesPanel {
+                font-family: ($FontStyle);
+                width: 100%;
+                height: 420px;
+                background-color: $colorwhite;
+                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+                transition: all 0.3s linear;
+                max-width: 100%;
+
+                h2 {
+                  text-transform: uppercase;
+                  padding: 0;
+                  color: $colorwhite;
+                  line-height: 40px;
+                  height: 40px;
+                  background-color: $blackcolor;
+                  letter-spacing: 0.1em;
+                  font-size: 1em;
+                  width: 100%;
+                  margin: 0;
+                  text-align: center;
+                }
+
+                figure.slider-panel {
+                  margin: 0;
+                  padding: 0;
+
+                  a.fancybox {
+                    @include Transition(
+                      all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s
+                    );
+
+                    span {
+                      float: none;
+                      display: block;
+                      width: 100%;
+                      height: 12vh;
+                      margin: 0 auto;
+                      outline: 0;
+                      padding: 0;
+                    }
+                  }
+
+                  figcaption {
+                    width: 90%;
+                    margin: 0 auto;
+                    display: block;
+
+                    h3 {
+                      font-weight: normal;
+                      font-size: 1em;
+                      background-color: $greencolor;
+                      color: $blackcolor;
+                      text-indent: 0;
+                      margin: 0;
+                      letter-spacing: 0.01em;
+                      text-align: center;
+                      line-height: 40px;
+                    }
+
+                    h4 {
+                      font-weight: normal;
+                      margin: 0;
+                      padding: 0;
+                      background-color: $blackcolor;
+                      color: $colorwhite;
+                      letter-spacing: 0.01em;
+                      padding: 0;
+                      line-height: 30px;
+                      font-size: 0.95em;
+                      display: block;
+                      text-indent: 2%;
+                    }
+
+                    ul {
+                      width: 100%;
+                      display: block;
+                      margin: 0;
+                      padding: 0.1em;
+
+                      li {
+                        width: 100%;
+                        background-color: $colorwhite;
+                        font-weight: normal;
+                        font-size: 0.8em;
+                        color: $blackcolor;
+                        display: block;
+                        height: auto;
+                        line-height: 25px;
+                        margin-bottom: 0.1em;
+
+                        .fa-star {
+                          font-size: 0.95em;
+                          color: $blackcolor;
+                          margin: 0 1%;
+                          line-height: 1.5em;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        /* END OF Hero Slider*/
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1680px) {
+  #main-text {
+    div#profile_container {
+      div#profile_container {
+        margin: 0 0 1em 0;
+
+        #text-box-profile {
+          width: 53%;
+          height: auto;
+
+          h1 {
+            font-size: 1.05em;
+          }
+
+          p {
+            font-size: 1em;
+          }
+
+          .introimg {
+            width: 50px;
+          }
+
+          a:hover {
+            font-weight: normal;
+          }
+        }
+
+        #text-box-profile-a {
+          width: 46%;
+
+          h1 {
+            font-size: 1em;
+          }
+
+          p {
+            font-size: 1em;
+          }
+
+          a:hover {
+            font-weight: normal;
+          }
+        }
+
+        section#prof_cont-a {
+          h1 {
+            font-size: 1.3em;
+          }
+
+          #social {
+            width: 50%;
+
+            h3 {
+              width: 100%;
+            }
+          }
+
+          button.slider-btn {
+            width: 47%;
+
+            &:hover {
+              font-weight: bold;
+            }
+          }
+
+          .hero-slider {
+            text-align: left;
+
+            width: 100%;
+
+            .mask {
+              display: inline-block;
+
+              div.slider-body {
+                width: 100%;
+
+                #panel-1 {
+                  background-position: 50% 50%;
+                  background-size: cover;
+                }
+
+                #panel-2 {
+                  background-position: 50% 50%;
+                  background-size: cover;
+                }
+
+                #panel-3 {
+                  background-position: 50% 50%;
+                  background-size: cover;
+                }
+
+                #panel-4 {
+                  background-position: 50% 50%;
+                  background-size: cover;
+                }
+
+                #panel-5 {
+                  background-position: 50% 50%;
+                  background-size: cover;
+                }
+
+                #panel-6 {
+                  background-position: 50% 50%;
+                  background-size: cover;
+                }
+
+                #panel-7 {
+                  background-position: 50% 50%;
+                  background-size: cover;
+                }
+
+                #panel-8 {
+                  background-position: 50% 50%;
+                  background-size: cover;
+                }
+
+                #panel-9 {
+                  background-size: cover;
+                }
+
+                .slidesPanel {
+                  font-family: ($FontStyle);
+
+                  h2 {
+                    font-size: 1em;
+                  }
+
+                  figure.slider-panel {
+                    margin: 0;
+                    padding: 0;
+
+                    a.fancybox {
+                      span {
+                        height: 15vh;
+                      }
+                    }
+
+                    figcaption {
+                      width: 90%;
+
+                      h3 {
+                        font-size: 1em;
+                      }
+
+                      h4 {
+                        font-size: 0.95em;
+                      }
+
+                      ul {
+                        width: 100%;
+
+                        li {
+                          font-size: 0.8em;
+
+                          .fa-star {
+                            font-size: 0.95em;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        section#prof_cont {
+          width: 45%;
+
+          h1 {
+            font-size: 1.3em;
+          }
+
+          #social {
+            width: 50%;
+
+            h3 {
+              width: 100%;
+            }
+          }
+
+          #chart {
+            width: 100%;
+
+            #bars {
+              margin: 0;
+
+              li {
+                margin-bottom: 0.2em;
+
+                .bar {
+                  display: block;
+
+                  &:hover {
+                    background: $color5;
+                    cursor: pointer;
+
+                    &:after {
+                      font-size: 1.1em;
+                    }
+                  }
+                }
+              }
+
+              span {
+                font-size: 1em;
+              }
+            }
+          }
+        }
+
+        #text-box-profile-b {
+          height: auto;
+
+          p {
+            font-size: 1em;
+
+            strong {
+              width: auto;
+              a {
+                font-weight: bold;
+
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  #main-text {
+    div#profile_container {
+      margin: 0 0 1em 0;
+      padding: 0;
+
+      #text-box-profile {
+        width: 53%;
+
+        h1 {
+          font-size: 1.05em;
+        }
+
+        p {
+          font-size: 1em;
+        }
+
+        .introimg {
+          width: 74px;
+          height: 74px;
+        }
+      }
+
+      #text-box-profile-a {
+        width: 46%;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 1em;
+        }
+      }
+
+      section#prof_cont-a {
+        width: 50%;
+
+        h1 {
+          font-size: 1.2em;
+        }
+
+        button.slider-btn {
+          top: -20px;
+
+          &:hover {
+            font-weight: bold;
+          }
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        .hero-slider {
+          text-align: left;
+          margin: 0;
+
+          width: 100%;
+
+          .mask {
+            height: 420px;
+
+            div.slider-body {
+              width: 100%;
+
+              .slidesPanel {
+                height: 420px;
+
+                h2 {
+                  font-size: 0.9em;
+                }
+
+                figure.slider-panel {
+                  margin: 0;
+                  padding: 0;
+
+                  a.fancybox {
+                    span {
+                      height: 15vh;
+                    }
+                  }
+
+                  figcaption {
+                    margin: auto;
+
+                    h3 {
+                      font-size: 1em;
+                    }
+
+                    h4 {
+                      font-size: 1em;
+                    }
+
+                    ul {
+                      padding: 0.1em;
+
+                      li {
+                        font-size: 0.75em;
+
+                        .fa-star {
+                          font-size: 0.9em;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      section#prof_cont {
+        width: 45%;
+
+        h1 {
+          font-size: 1.2em;
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        #chart {
+          #bars {
+            li {
+              height: 60px;
+
+              .bar {
+                &:hover {
+                  cursor: pointer;
+
+                  &:after {
+                    font-size: 1em;
+                  }
+                }
+              }
+            }
+
+            span {
+              width: 16.5%;
+            }
+          }
+        }
+      }
+
+      #text-box-profile-b {
+        height: auto;
+
+        p {
+          font-size: 1em;
+
+          strong {
+            width: auto;
+            a {
+              font-weight: bold;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 80em) {
+  #main-text {
+    div#profile_container {
+      padding: 0;
+
+      #text-box-profile {
+        width: 48%;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 1em;
+        }
+
+        .introimg {
+          width: 74px;
+          height: 74px;
+        }
+      }
+
+      #text-box-profile-a {
+        width: 46%;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 1em;
+        }
+      }
+
+      section#prof_cont-a {
+        width: 50%;
+
+        h1 {
+          font-size: 1.1em;
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        .hero-slider {
+          text-align: left;
+          margin: 0;
+
+          width: 100%;
+
+          .mask {
+            height: 420px;
+
+            div.slider-body {
+              width: 100%;
+
+              .slidesPanel {
+                height: 420px;
+
+                h2 {
+                  font-size: 0.8em;
+                }
+
+                figure.slider-panel {
+                  margin: 0;
+                  padding: 0;
+
+                  a.fancybox {
+                    span {
+                      height: 15vh;
+                    }
+                  }
+
+                  figcaption {
+                    h3 {
+                      font-size: 0.9em;
+                    }
+
+                    h4 {
+                      font-size: 0.85em;
+                    }
+
+                    ul {
+                      padding: 0.1em;
+
+                      li {
+                        font-size: 0.85em;
+
+                        .fa-star {
+                          font-size: 0.85em;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      section#prof_cont {
+        width: 45%;
+
+        h1 {
+          font-size: 1.2em;
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        #chart {
+          #bars {
+            li {
+              height: 60px;
+
+              .bar {
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+
+            span {
+              width: 16.5%;
+              font-size: 0.85em;
+            }
+          }
+        }
+      }
+
+      #text-box-profile-b {
+        height: auto;
+
+        p {
+          font-size: 1em;
+
+          strong {
+            width: auto;
+            a {
+              font-weight: bold;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  #main-text {
+    div#profile_container {
+      padding: 0;
+
+      #text-box-profile {
+        width: 48%;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 0.9em;
+        }
+
+        .introimg {
+          width: 74px;
+          height: 74px;
+        }
+      }
+
+      #text-box-profile-a {
+        width: 40%;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 0.9em;
+        }
+      }
+      #text-box-profile-b {
+        height: auto;
+
+        p {
+          font-size: 0.9em;
+
+          strong {
+            width: auto;
+            a {
+              font-weight: bold;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      section#prof_cont-a {
+        width: 50%;
+        padding: 0.5em;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        .hero-slider {
+          text-align: left;
+          margin: 0;
+
+          width: 100%;
+
+          .mask {
+            height: 420px;
+
+            div.slider-body {
+              width: 100%;
+
+              .slidesPanel {
+                height: 420px;
+
+                h2 {
+                  font-size: 0.9em;
+                }
+
+                figure.slider-panel {
+                  margin: 0;
+                  padding: 0;
+
+                  a.fancybox {
+                    span {
+                      height: 12vh;
+                    }
+                  }
+
+                  figcaption {
+                    margin: auto;
+
+                    h3 {
+                      font-size: 0.95em;
+                    }
+
+                    h4 {
+                      font-size: 0.9em;
+                    }
+
+                    ul {
+                      padding: 0.1em;
+
+                      li {
+                        font-size: 0.85em;
+
+                        .fa-star {
+                          font-size: 0.9em;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      section#prof_cont {
+        width: 50%;
+
+        h1 {
+          font-size: 1.2em;
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        #chart {
+          width: 100%;
+
+          #bars {
+            li {
+              height: 60px;
+
+              .bar {
+                &:hover {
+                  cursor: pointer;
+
+                  &:after {
+                    font-size: 0.9em;
+                  }
+                }
+              }
+            }
+
+            span {
+              font-size: 0.85em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  #main-text {
+    div#profile_container {
+      padding: 0;
+
+      #text-box-profile {
+        width: 48%;
+
+        h1 {
+          font-size: 0.95em;
+        }
+
+        p {
+          font-size: 0.9em;
+        }
+
+        .introimg {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      #text-box-profile-a {
+        width: 40%;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 0.9em;
+        }
+      }
+
+      #text-box-profile-b {
+        height: auto;
+
+        p {
+          font-size: 1em;
+
+          strong {
+            width: auto;
+            a {
+              font-weight: bold;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      section#prof_cont-a {
+        width: 50%;
+
+        button.slider-btn {
+          top: -15px;
+          width: 46.5%;
+          &:hover {
+            font-weight: bold;
+          }
+        }
+
+        h1 {
+          font-size: 1em;
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        .hero-slider {
+          text-align: left;
+          margin: 0;
+
+          width: 100%;
+
+          .mask {
+            height: 420px;
+
+            div.slider-body {
+              width: 100%;
+
+              .slidesPanel {
+                height: 420px;
+
+                h2 {
+                  font-size: 0.9em;
+                }
+
+                figure.slider-panel {
+                  margin: 0;
+                  padding: 0;
+
+                  a.fancybox {
+                    span {
+                      height: 12vh;
+                    }
+                  }
+
+                  figcaption {
+                    margin: auto;
+
+                    h3 {
+                      font-size: 1em;
+                    }
+
+                    h4 {
+                      font-size: 0.9em;
+                    }
+
+                    ul {
+                      padding: 0.1em;
+
+                      li {
+                        font-size: 0.85em;
+
+                        .fa-star {
+                          font-size: 0.85em;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      section#prof_cont {
+        width: 48%;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        #chart {
+          width: 100%;
+
+          #bars {
+            li {
+              height: 60px;
+
+              .bar {
+                &:hover {
+                  cursor: pointer;
+
+                  &:after {
+                    width: 60px;
+                    font-size: 0.9em;
+                  }
+                }
+              }
+            }
+
+            span {
+              width: 20%;
+              font-size: 0.85em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #main-text {
+    div#profile_container {
+      padding: 0;
+
+      #text-box-profile {
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        width: 98%;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 0.9em;
+        }
+
+        .introimg {
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+      #text-box-profile-a {
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2;
+        width: 98%;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 0.9em;
+        }
+      }
+
+      #text-box-profile-b {
+        height: auto;
+
+        p {
+          font-size: 0.9em;
+
+          strong {
+            width: auto;
+            a {
+              font-weight: bold;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      section#prof_cont-a {
+        -webkit-order: 3;
+        -ms-flex-order: 3;
+        order: 3;
+        width: 96%;
+        margin: 0.5em;
+
+        h1 {
+          font-size: 1.1em;
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        button.slider-btn {
+          top: -15px;
+          width: 47.5%;
+
+          &:hover {
+            font-weight: bold;
+          }
+        }
+
+        .hero-slider {
+          text-align: left;
+          margin: 0;
+
+          width: 100%;
+
+          .mask {
+            height: 420px;
+
+            div.slider-body {
+              width: 100%;
+
+              .slidesPanel {
+                height: 420px;
+
+                h2 {
+                  font-size: 0.9em;
+                }
+
+                figure.slider-panel {
+                  padding: 0;
+
+                  a.fancybox {
+                    span {
+                      height: 10vh;
+                    }
+                  }
+
+                  figcaption {
+                    h3 {
+                      font-size: 1em;
+                    }
+
+                    h4 {
+                      font-size: 0.9em;
+                    }
+
+                    ul {
+                      padding: 0.1em;
+
+                      li {
+                        font-size: 0.85em;
+
+                        .fa-star {
+                          font-size: 0.9em;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      section#prof_cont {
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
+        width: 96%;
+        margin: 0.5em;
+
+        h1 {
+          font-size: 1.2em;
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        #chart {
+          width: 100%;
+
+          #bars {
+            li {
+              .bar {
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+
+            span {
+              width: 16.5%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 667px) {
+  #main-text {
+    div#profile_container {
+      padding: 0;
+
+      #text-box-profile {
+        width: 98%;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 0.9em;
+        }
+
+        .introimg {
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+      #text-box-profile-a {
+        width: 98%;
+        margin: 0;
+        height: auto;
+
+        h1 {
+          font-size: 1em;
+          line-height: 25px;
+        }
+
+        p {
+          font-size: 0.9em;
+        }
+      }
+
+      #text-box-profile-b {
+        height: auto;
+
+        p {
+          font-size: 0.95em;
+
+          strong {
+            width: auto;
+            a {
+              font-weight: bold;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      section#prof_cont-a {
+        width: 96%;
+
+        h1 {
+          font-size: 1.1em;
+        }
+
+        button.slider-btn {
+          top: -15px;
+
+          &:hover {
+            font-weight: bold;
+          }
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        .hero-slider {
+          text-align: left;
+          margin: 0;
+
+          width: 100%;
+
+          .mask {
+            height: 420px;
+
+            div.slider-body {
+              width: 100%;
+
+              .slidesPanel {
+                height: 420px;
+
+                h2 {
+                  font-size: 0.8em;
+                }
+
+                figure.slider-panel {
+                  padding: 0;
+
+                  a.fancybox {
+                    span {
+                      height: 10vh;
+                    }
+                  }
+
+                  figcaption {
+                    h3 {
+                      font-size: 1em;
+                    }
+
+                    h4 {
+                      font-size: 0.9em;
+                    }
+
+                    ul {
+                      padding: 0.1em;
+
+                      li {
+                        font-size: 0.85em;
+
+                        .fa-star {
+                          font-size: 0.85em;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      section#prof_cont {
+        width: 96%;
+
+        h1 {
+          font-size: 1.1em;
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        #chart {
+          width: 100%;
+
+          #bars {
+            li {
+              .bar {
+                &:hover {
+                  cursor: pointer;
+
+                  &:after {
+                    width: 50px;
+                    font-size: 0.8em;
+                  }
+                }
+              }
+            }
+
+            span {
+              width: 16.5%;
+              font-size: 0.8em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 536px) {
+  #main-text {
+    div#profile_container {
+      padding: 0;
+
+      #text-box-profile {
+        width: 98%;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 0.9em;
+        }
+
+        .introimg {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      #text-box-profile-a {
+        width: 98%;
+
+        h1 {
+          font-size: 1em;
+          line-height: 35px;
+        }
+
+        p {
+          font-size: 0.9em;
+        }
+      }
+
+      #text-box-profile-b {
+        height: auto;
+
+        p {
+          font-size: 0.9em;
+
+          strong {
+            width: auto;
+            a {
+              font-weight: bold;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      section#prof_cont-a {
+        width: 98%;
+
+        h1 {
+          font-size: 1.1em;
+        }
+
+        button.slider-btn {
+          top: -15px;
+
+          &:hover {
+            font-weight: bold;
+          }
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        .hero-slider {
+          text-align: left;
+          margin: 0;
+
+          width: 100%;
+
+          .mask {
+            height: 420px;
+
+            div.slider-body {
+              width: 100%;
+
+              .slidesPanel {
+                height: 420px;
+
+                h2 {
+                  font-size: 0.8em;
+                }
+
+                figure.slider-panel {
+                  padding: 0;
+
+                  a.fancybox {
+                    span {
+                      height: 10vh;
+                    }
+                  }
+
+                  figcaption {
+                    h3 {
+                      font-size: 0.9em;
+                    }
+
+                    h4 {
+                      font-size: 0.85em;
+                    }
+
+                    ul {
+                      padding: 0.1em;
+
+                      li {
+                        font-size: 0.85em;
+                        line-height: 30px;
+
+                        .fa-star {
+                          font-size: 0.9em;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      section#prof_cont {
+        width: 90%;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        #chart {
+          width: 100%;
+
+          #bars {
+            li {
+              .bar {
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+
+            span {
+              width: 18.5%;
+              font-size: 0.75em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  #main-text {
+    div#profile_container {
+      padding: 0;
+
+      #text-box-profile {
+        width: 98%;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 0.85em;
+        }
+
+        .introimg {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      #text-box-profile-a {
+        width: 98%;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 0.85em;
+        }
+      }
+
+      #text-box-profile-b {
+        height: auto;
+
+        p {
+          font-size: 0.85em;
+
+          strong {
+            width: auto;
+            a {
+              font-weight: bold;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      section#prof_cont-a {
+        width: 100%;
+
+        h1 {
+          font-size: 1.05em;
+        }
+
+        button.slider-btn {
+          top: -15px;
+          width: 46%;
+
+          &:hover {
+            font-weight: bold;
+          }
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        .hero-slider {
+          text-align: left;
+          margin: 0;
+
+          width: 100%;
+
+          .mask {
+            height: 420px;
+
+            div.slider-body {
+              width: 100%;
+
+              .slidesPanel {
+                height: 420px;
+
+                h2 {
+                  font-size: 0.75em;
+                }
+
+                figure.slider-panel {
+                  padding: 0;
+
+                  a.fancybox {
+                    span {
+                      height: 9vh;
+                    }
+                  }
+
+                  figcaption {
+                    h3 {
+                      font-size: 0.9em;
+                    }
+
+                    h4 {
+                      font-size: 0.85em;
+                    }
+
+                    ul {
+                      padding: 0.1em;
+
+                      li {
+                        line-height: 30px;
+
+                        .fa-star {
+                          font-size: 0.9em;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      section#prof_cont {
+        width: 100%;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        #chart {
+          #bars {
+            li {
+              height: 60px;
+
+              .bar {
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+
+            span {
+              width: 22.5%;
+              font-size: 0.7em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 22.5em) {
+  #main-text {
+    div#profile_container {
+      padding: 0;
+
+      #text-box-profile {
+        width: 100%;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 0.85em;
+        }
+
+        .introimg {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      #text-box-profile-a {
+        width: 100%;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 0.85em;
+        }
+      }
+
+      #text-box-profile-b {
+        height: auto;
+
+        p {
+          font-size: 0.85em;
+
+          strong {
+            width: auto;
+            a {
+              font-weight: bold;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      section#prof_cont-a {
+        width: 100%;
+        margin: 0.5em;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        .hero-slider {
+          text-align: left;
+          margin: 0;
+
+          width: 100%;
+
+          .mask {
+            height: 420px;
+
+            div.slider-body {
+              width: 100%;
+
+              .slidesPanel {
+                height: 420px;
+
+                h2 {
+                  font-size: 0.75em;
+                }
+
+                figure.slider-panel {
+                  padding: 0;
+
+                  a.fancybox {
+                    span {
+                      height: 9vh;
+                    }
+                  }
+
+                  figcaption {
+                    h3 {
+                      font-size: 0.9em;
+                    }
+
+                    h4 {
+                      font-size: 0.85em;
+                    }
+
+                    ul {
+                      padding: 0.1em;
+
+                      li {
+                        font-size: 0.85em;
+
+                        .fa-star {
+                          font-size: 0.9em;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      section#prof_cont {
+        width: 98%;
+        margin: 0.5em;
+
+        h1 {
+          font-size: 0.9em;
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        #chart {
+          width: 100%;
+
+          #bars {
+            li {
+              height: 60px;
+
+              .bar {
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+
+            span {
+              width: 23.5%;
+              font-size: 0.7em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 20em) {
+  #main-text {
+    div#profile_container {
+      padding: 0;
+
+      #text-box-profile {
+        width: 100%;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 0.85em;
+        }
+
+        .introimg {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      #text-box-profile-a {
+        width: 100%;
+
+        h1 {
+          font-size: 1em;
+        }
+
+        p {
+          line-height: 1.9em;
+          font-size: 0.85em;
+        }
+      }
+
+      #text-box-profile-b {
+        height: auto;
+
+        p {
+          font-size: 0.85em;
+
+          strong {
+            width: auto;
+            a {
+              font-weight: bold;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      section#prof_cont-a {
+        width: 100%;
+
+        button.slider-btn {
+          width: 45.5%;
+
+          &:hover {
+            font-weight: bold;
+          }
+        }
+
+        h1 {
+          font-size: 1em;
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        .hero-slider {
+          text-align: left;
+          margin: 0;
+
+          width: 100%;
+
+          .mask {
+            height: 420px;
+
+            div.slider-body {
+              width: 100%;
+
+              .slidesPanel {
+                height: 420px;
+
+                h2 {
+                  font-size: 0.7em;
+                }
+
+                figure.slider-panel {
+                  padding: 0;
+
+                  a.fancybox {
+                    span {
+                      height: 8vh;
+                    }
+                  }
+
+                  figcaption {
+                    h3 {
+                      font-size: 0.9em;
+                    }
+
+                    h4 {
+                      font-size: 0.85em;
+                    }
+
+                    ul {
+                      padding: 0.1em;
+
+                      li {
+                        font-size: 0.85em;
+
+                        .fa-star {
+                          font-size: 0.9em;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      section#prof_cont {
+        width: 98%;
+        margin: 0.5em;
+
+        h1 {
+          font-size: 0.9em;
+        }
+
+        #social {
+          width: 50%;
+
+          h3 {
+            width: 100%;
+          }
+        }
+
+        #chart {
+          width: 96%;
+
+          #bars {
+            li {
+              height: 60px;
+
+              .bar {
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+
+            span {
+              width: 23.5%;
+              font-size: 0.65em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
