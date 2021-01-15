@@ -87,7 +87,6 @@ class AboutPage extends React.Component {
             <div className="introimg">
               <Image />
             </div>
-
             <p>
               {`I have had a passion for web development since 2012 after
             attending a course in basic web design for beginners at a place
@@ -95,7 +94,6 @@ class AboutPage extends React.Component {
             the course, learning the process of developing a website inspired
             me to learn more about web development.`}
             </p>
-
             <p>
               {`I spent the following years learning coding languages, practicing
               coding,`}
@@ -107,7 +105,7 @@ class AboutPage extends React.Component {
               </strong>
               {`helping others with their websites in my spare time while working
               full-time.`}
-            </p>
+            </p>{" "}
             <p>
               {`I became more interested in programming around 2016 after taking
               computer science fundementals courses on`}
@@ -124,7 +122,6 @@ class AboutPage extends React.Component {
               and why coding languages like Javascipt, PHP and Ruby work the way
               they do.`}
             </p>
-
             <div className="clearfix"></div>
           </article>
 
