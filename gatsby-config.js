@@ -58,7 +58,7 @@ module.exports = {
       options: {
         wordPressUrl: "http://localhost/wordpress/",
         uploadsUrl: "http://localhost/wordpress/wp-content/uploads/",
-        processPostTypes: ["page", "post", "project"],
+        processPostTypes: ["Page", "Post", "Project"],
         graphqlTypeName: "WPGraphQL",
       },
     },

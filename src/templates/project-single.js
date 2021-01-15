@@ -3,12 +3,9 @@ import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
 
-
-export default function ProjectSingle ({ data }) {
-
+export default function ProjectSingle({ data }) {
   const project = data.allWpProject.nodes[0]
   return (
- 
     <main id="main-content">
       <SEO title="Single Project Page" />
       <article className="post group">
@@ -17,14 +14,13 @@ export default function ProjectSingle ({ data }) {
           <Link to="" className="fancybox" title="">
             <img
               src={
-                project.featuredImage.node.localFile.childImageSharp.fixed.src
+                project.featuredImage.node.localFile.childImageSharp.fluid.src
               }
               alt=""
             />
           </Link>
         </figure>
         <div className="website-text">
-
           <h1 className="post-meta-key">Project Name</h1>
 
           {/* <p className="websitetext">
@@ -60,26 +56,21 @@ export default function ProjectSingle ({ data }) {
           >
             Link to github repo
           </a>
-
         </div>
 
         <footer className="byline">
-
-        {/* <img
+          {/* <img
               src={
                 project.author.node.avatar.url
               }
               alt="Blog"
             /> */}
-          <p className="right">
-          
-          </p>
+          <p className="right"></p>
 
-            <p>Project created by {project.author.node.name}</p>
+          <p>Project created by {project.author.node.name}</p>
         </footer>
       </article>
     </main>
-  
   )
 }
 
@@ -106,7 +97,7 @@ export const data = graphql`
           node {
             localFile {
               childImageSharp {
-                fixed {
+                fluid {
                   src
                 }
               }

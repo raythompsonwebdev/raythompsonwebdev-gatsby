@@ -28,7 +28,9 @@
     "react-pose": "^4.0.10"
   },
   "devDependencies": {
+    "@mdx-js/react": "^1.6.22",
     "babel-plugin-styled-components": "^1.12.0",
+    "dompurify": "^2.2.6",
     "eslint": "^7.17.0",
     "gatsby-plugin-css-customs": "^0.4.0",
     "gatsby-plugin-postcss": "^3.5.0",
