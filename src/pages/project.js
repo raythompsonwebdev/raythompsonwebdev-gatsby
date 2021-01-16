@@ -4,30 +4,29 @@ import { graphql } from "gatsby"
 import ProjectItem from "../components/projectitem"
 import PropTypes from "prop-types"
 
-
 const ProjectPage = ({
   data: {
     allMarkdownRemark: { edges },
   },
 }) => {
-
   const Project = edges
-    .filter(edge => edge.node.frontmatter.type == "project" ? edge.node.frontmatter.type : false ) // You can filter your posts based on some criteria
+    .filter(edge =>
+      edge.node.frontmatter.type === "project"
+        ? edge.node.frontmatter.type
+        : false
+    ) // You can filter your posts based on some criteria
     .map(edge => <ProjectItem key={edge.node.id} project={edge.node} />)
-  
-    return (
-      <main id="main-content">
-        {/* <SEO title="Project Page" /> */}
-        <h1>Projects</h1>
 
-        <div id="photocontainer">
-          <div className="content">
-            {Project}
-          </div>
-        </div>
-      </main>
-    )
-  
+  return (
+    <main id="main-content">
+      {/* <SEO title="Project Page" /> */}
+      <h1>Projects</h1>
+
+      <div id="photocontainer">
+        <div className="content">{Project}</div>
+      </div>
+    </main>
+  )
 }
 
 ProjectPage.propTypes = {
@@ -41,15 +40,15 @@ export const data = graphql`
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
-          id         
+          id
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")            
+            date(formatString: "MMMM DD, YYYY")
             title
             description
             type
             featuredImage
-            slug 
-          }          
+            slug
+          }
         }
       }
     }

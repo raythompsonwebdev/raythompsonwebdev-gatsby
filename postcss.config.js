@@ -3,7 +3,7 @@ module.exports = {
     "postcss-preset-env": {
       importFrom: "src/styles/global.module.css",
       features: {
-        "custom-properties": true, // already enabled by default
+        "custom-properties": true,
         "custom-media-queries": true,
         "custom-selectors": true,
       },

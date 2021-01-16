@@ -1,26 +1,28 @@
-require("dotenv").config({
-  path: ".env",
-})
+// require("dotenv").config({
+//   path: ".env",
+// })
 
 module.exports = {
   siteMetadata: {
     title: `Raythompsonwebdev.com`,
     description: `Web Developer, WordPress Enthusiast`,
     author: `raythompsonwebdev.com`,
-    //url: `https://something.or.other`,
-    //logo: `static/logo.png`,
-    //twitter: `mor10`,
+    url: `https://raythompsonwebdev`,
+    //logo: `static/images/logo.png`,
+    twitter: `raythompweb`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    { //get all files from src folder in file system
+    {
+      //get all files from src folder in file system
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
         path: `${__dirname}/src/`,
       },
-    },    
-    { //get markdown pages from file system
+    },
+    {
+      //get markdown pages from file system
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
@@ -40,15 +42,16 @@ module.exports = {
         url: "https://swapi-graphql.netlify.app/.netlify/functions/index",
       },
     },
-      
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,  
 
-    { //get images from file system
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+
+    {
+      //get images from file system
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/static/images`,
+        path: `${__dirname}/static/images`,
       },
     },
     {
@@ -63,35 +66,35 @@ module.exports = {
           },
         ],
       },
-    },    
-    `gatsby-plugin-emotion`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
     },
+    `gatsby-plugin-emotion`,
+    // {
+    //   resolve: `gatsby-plugin-typography`,
+    //   options: {
+    //     pathToConfigModule: `src/utils/typography`,
+    //   },
+    // },
 
-    //`gatsby-plugin-postcss`,
-    //`gatsby-plugin-css-customs`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-css-customs`,
 
     `gatsby-plugin-styled-components`,
-    {
-      resolve: "gatsby-plugin-prefetch-google-fonts",
-      options: {
-        fonts: [
-          {
-            family: "Cabin",
-            variants: ["200", "300", "400", "500", "600", "700"],
-          },
-          {
-            family: "PT Sans",
-            variants: ["200", "300", "400", "500", "600", "700"],
-          },
-        ],
-        formats: ["woff", "woff2"],
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-prefetch-google-fonts",
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: "Cabin",
+    //         variants: ["200", "300", "400", "500", "600", "700"],
+    //       },
+    //       {
+    //         family: "PT Sans",
+    //         variants: ["200", "300", "400", "500", "600", "700"],
+    //       },
+    //     ],
+    //     formats: ["woff", "woff2"],
+    //   },
+    // },
 
     {
       resolve: `gatsby-plugin-layout`,
@@ -99,13 +102,13 @@ module.exports = {
         component: require.resolve(`./src/components/layout`),
       },
     },
-    
-    // `gatsby-transformer-json`,
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     path: `./src/static/data/`,
-    //   },
-    // },
+
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./data/`,
+      },
+    },
   ],
 }

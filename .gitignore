@@ -1,14 +1,11 @@
 node_modules
-src/static/data/
-src/static/fonts/
-src/static/images/
-src/static/js/
+
+static/fonts/
+static/images/
 files/
-js/
 LICENSE
 public/
 
 .cache/
 .wordpress-cache/
 WordPress/
-src/images/

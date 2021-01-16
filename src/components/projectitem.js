@@ -8,19 +8,14 @@ const ProjectItem = ({ project }) => (
   <div id="panel" className={`prod-cnt ${project.frontmatter.slug}`}>
     <figure className="showcase-container" id="showcaseimg1">
       <div className="showcase-img">
-        {/* <img
-          src={project.frontmatter.featured-image}
-          alt=""
-        /> */}
-        
-        
+        <img src={project.frontmatter.featuredImage} alt="" />
       </div>
 
       <figcaption className="showcase-content showcase">
         <h1>{project.frontmatter.title}</h1>
         <h1>{project.frontmatter.date}</h1>
 
-        <Link to={`/project/${project.frontmatter.slug}`}>Link</Link>
+        <Link to={`${project.frontmatter.slug}`}>Link</Link>
       </figcaption>
     </figure>
   </div>
@@ -28,7 +23,6 @@ const ProjectItem = ({ project }) => (
 
 ProjectItem.propTypes = {
   project: PropTypes.any,
- 
 }
 
 export default ProjectItem

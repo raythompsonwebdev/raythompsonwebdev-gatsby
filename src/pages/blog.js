@@ -9,20 +9,20 @@ const IndexPage = ({
   },
 }) => {
   const Posts = edges
-    .filter(edge => edge.node.frontmatter.type == "post" ? edge.node.frontmatter.type : false) // You can filter your posts based on some criteria
+    .filter(edge =>
+      edge.node.frontmatter.type === "post" ? edge.node.frontmatter.type : false
+    )
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
   return (
     <main id="main-content">
-        {/* <SEO title="Blog Page" /> */}
-        <div id="blogbox">{Posts}</div>
-         <section className="contact-wide">
-          <h1>Related Items</h1>
-        </section>
-      </main>
+      {/* <SEO title="Blog Page" /> */}
+      <div id="blogbox">{Posts}</div>
+      <section className="contact-wide">
+        <h1>Related Items</h1>
+      </section>
+    </main>
   )
-   
-       
 }
 
 export default IndexPage
@@ -35,12 +35,13 @@ export const pageQuery = graphql`
           id
           excerpt(pruneLength: 150)
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")            
+            date(formatString: "MMMM DD, YYYY")
             title
             description
             featuredImage
             type
-          }          
+            slug
+          }
         }
       }
     }

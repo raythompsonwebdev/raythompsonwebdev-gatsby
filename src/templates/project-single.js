@@ -1,90 +1,81 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
 
-export const data = graphql`
-  query($title: String!) {
-    allMarkdownRemark(filter: {frontmatter: {title: {eq: $title}}}) {
-      edges {
-        node {
-          html
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-            featuredImage
+const ProjectSingle = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            html
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY")
+              title
+              description
+              featuredImage
+              slug
+            }
           }
         }
       }
     }
-  }
-`
+  `)
 
-const ProjectSingle = ({
-  data, // this prop will be injected by the GraphQL query below.
-}) => {
-  //console.log(data)
- 
   const { allMarkdownRemark } = data // data.markdownRemark holds your post data
 
-  //console.log(allMarkdownRemark.edges[0].node)
+  console.log(allMarkdownRemark.edges[0].node)
 
-  const { frontmatter, html } = allMarkdownRemark.edges[0].node
+  const { frontmatter } = allMarkdownRemark.edges[0].node
 
   //console.log(frontmatter, html)
   return (
     <main id="main-content">
       <SEO title="Single Project Page" />
       <article className="post group">
-        {/* <h1> {.node.title} </h1>
+        <h1> {frontmatter.title} </h1>
         <figure className="websiteImage">
-          <Link to="" className="fancybox" title="">
-            <img
-              src={
-                .node.featured_media
-                  .localFile.childImageSharp.fixed.src
-              }
-              alt=""
-            />
+          <Link to="/" className="fancybox" title="">
+            <img src={frontmatter.featuredImage} alt="f" />
           </Link>
         </figure>
         <div className="website-text">
           <h1 className="post-meta-key">Project Name</h1>
 
-          <p className="websitetext">
-            {props.data.allWordpressWpProject.edges[0].node.meta.project_name}{" "}
-          </p>
+          {/* <p className="websitetext">
+              {props.data.allWordpressWpProject.edges[0].node.meta.project_name}{" "}
+            </p> */}
 
           <h1 className="post-meta-key">Project Description</h1>
 
-          <p className="websitetext">
-            {
-              props.data.allWordpressWpProject.edges[0].node.meta
-                .project_description
-            }{" "}
-          </p>
+          {/* <p className="websitetext">
+              {
+                props.data.allWordpressWpProject.edges[0].node.meta
+                  .project_description
+              }{" "}
+            </p> */}
 
           <h1 className="post-meta-key">Project Code</h1>
 
-          <p className="websitetext">
-            {props.data.allWordpressWpProject.edges[0].node.meta.project_code}{" "}
-          </p>
+          {/* <p className="websitetext">
+              {props.data.allWordpressWpProject.edges[0].node.meta.project_code}{" "}
+            </p> */}
 
           <h1 className="post-meta-key">Project URL</h1>
 
-          <Link className="webformats" to="">
-            {props.data.allWordpressWpProject.edges[0].node.meta.project_url}
-          </Link>
+          {/* <Link className="webformats" to="/">
+              {props.data.allWordpressWpProject.edges[0].node.meta.project_url}
+            </Link> */}
 
           <h1 className="post-meta-key">Project Source Code</h1>
 
-          <Link
-            className="webformats"
-            href={`https://github.com/raythompsonwebdev/${props.data.allWordpressWpProject.edges[0].node.slug}`}
-          >
-            Link
-          </Link>
+          {/* <Link
+              className="webformats"
+              href={`https://github.com/raythompsonwebdev/${props.data.allWordpressWpProject.edges[0].node.slug}`}
+            >
+              Link
+            </Link> */}
         </div>
         <footer className="byline">
           <p className="right">
@@ -94,11 +85,30 @@ const ProjectSingle = ({
           </p>
 
           <p>Text</p>
-        </footer>*/}
-      </article> 
+        </footer>
+      </article>
     </main>
   )
 }
+
+// export const projectQuery = graphql`
+//   query($slug: String!) {
+//     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+//       edges {
+//         node {
+//           html
+//           frontmatter {
+//             date(formatString: "MMMM DD, YYYY")
+//             title
+//             description
+//             featuredImage
+//             slug
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 ProjectSingle.propTypes = {
   data: PropTypes.any,
