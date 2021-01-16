@@ -2,22 +2,24 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
-//import Img from "gatsby-image"
 
 // this prop will be injected by the GraphQL query below.
 
 export const data = graphql`
-  query {
-    allMarkdownRemark {
+  query($slug: String!) {
+    allMarkdownRemark(filter: { frontmatter: { slug: { eq: $slug } } }) {
       edges {
         node {
+          html
           frontmatter {
             title
+            author
             slug
             date(formatString: "MMMM DD, YYYY")
             description
             type
             image
+            avatar
           }
         }
       }
@@ -34,33 +36,26 @@ export default function BlogPost({ data }) {
       <SEO title="Blog Post" />
 
       <article className="post group" id="post">
-        <h1 className="page-title"> </h1>
+        <h1 className="page-title"> {frontmatter.title}</h1>
 
         <header className="byline">
           <div className="entry-meta">
             <div className="meta-content has-avatar">
               <div className="author-avatar">
-                {/* <Link className="url fn n" to="">
-                  <img
-                    src={
-                      
-                    }
-                    alt="Blog"
-                  />
-                </Link> */}
+                <Link className="url fn n" to="">
+                  <img src={frontmatter.avatar} alt="Blog" />
+                </Link>
               </div>
 
               <Link to="/" rel="bookmark"></Link>
 
-              <span className="byline">Posted By : {frontmatter.date}</span>
+              <span className="byline">Posted By : {frontmatter.author}</span>
               <span className="posted-on">
                 Posted on :
-                <time className="entry-date published">
-                  {frontmatter.title}
-                </time>
+                <time className="entry-date published">{frontmatter.date}</time>
               </span>
               <span className="byline">
-                Updated: <time className="updated"></time>
+                Updated: <time className="updated">{frontmatter.date}</time>
               </span>
               <span className="comments-link">comments-link</span>
               <span className="byline">
@@ -72,18 +67,7 @@ export default function BlogPost({ data }) {
 
         <Link to="/" title="Permanent Link to">
           <figure className="featuredImage">
-            {/* {.node.featured_media == null ? (
-              <p>No Image</p>
-            ) : (
-              <img
-                src={
-                  .node.featured_media.localFile
-                    .childImageSharp.resolutions.src
-                }
-                alt=""
-              />
-            )} */}
-            {/* <Img fluid={featuredImageFluid} /> */}
+            <img src={frontmatter.image} alt="" />
           </figure>
         </Link>
 

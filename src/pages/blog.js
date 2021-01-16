@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import PostLink from "../components/post-link"
-//import SEO from "../components/seo"
+import SEO from "../components/seo"
 
 const IndexPage = ({
   data: {
@@ -16,7 +16,7 @@ const IndexPage = ({
 
   return (
     <main id="main-content">
-      {/* <SEO title="Blog Page" /> */}
+      <SEO title="Blog Page" />
       <div id="blogbox">{Posts}</div>
       <section className="contact-wide">
         <h1>Related Items</h1>
@@ -37,8 +37,10 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            author
             description
             image
+            avatar
             type
             slug
           }

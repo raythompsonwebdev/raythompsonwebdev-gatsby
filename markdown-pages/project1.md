@@ -1,10 +1,10 @@
 ---
-title: "Mannering"
-date: 2019-20-16
-description: "Mannering"
+title: "Greenfootprints"
+date: 2017-10-15
+description: "Greenfootprints"
 type: "project"
-image: "./static/images/custom/mannering-musicmvc-home-page-custom-large.png"
-slug: "/project/mannering"
+image: /images/custom/www-greenfootprints-website-home-page-custom-large.png
+slug: "/project/greenfootprints"
 ---
 
 # Name

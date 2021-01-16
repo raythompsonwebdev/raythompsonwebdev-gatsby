@@ -1,13 +1,13 @@
 ---
+author: "raythompsonwebdev.com"
 title: "Avoiding Simple Design Mistakes"
 date: 2019-10-15
 description: "Avoiding Simple Design Mistakes."
-image: ../static/images/placeholder.jpg
+image: "/images/placeholder.jpg"
+avatar: "/images/raythompsonwebdev.jpg"
 type: "post"
 slug: "/blog/avoiding-simple-design-mistakes"
 ---
-
-![Minion](http://octodex.github.com/images/minion.png)
 
 Many websites suffer from mistakes that can dramatically impact their effectiveness. Here is a list I have compiled of 12 common mistakes made along with helpful advice on how to avoid them.
 
@@ -68,7 +68,3 @@ Web surfers are notoriously impatient and will punish slow sites by leaving them
 There are numerous tools available for monitoring your site. They can provide valuable insights into the behaviour of users on your site, allowing you to determine where they come from, how they found your site and the kind of content that they are interested in and which links are the most popular. With excellent tools available free of charge, there is no excuse not to monitor who is visiting your site and what they do once they arrive.
 
 This articles source
-
-Here's a video of a panda eating sweets.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe>

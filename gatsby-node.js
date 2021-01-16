@@ -27,12 +27,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       allMarkdownRemark(filter: { frontmatter: { type: { eq: "post" } } }) {
         edges {
           node {
+            html
             frontmatter {
               date
               title
+              author
               description
               slug
               image
+              avatar
               type
             }
           }
@@ -45,9 +48,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       allMarkdownRemark(filter: { frontmatter: { type: { eq: "project" } } }) {
         edges {
           node {
+            html
             frontmatter {
               date
               title
+              author
               description
               slug
               image

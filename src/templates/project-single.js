@@ -8,7 +8,9 @@ export const data = graphql`
     allMarkdownRemark(filter: { frontmatter: { slug: { eq: $slug } } }) {
       edges {
         node {
+          html
           frontmatter {
+            author
             title
             slug
             date(formatString: "MMMM DD, YYYY")
@@ -27,9 +29,8 @@ const ProjectSingle = ({ data }) => {
 
   console.log(data)
 
-  const { frontmatter } = allMarkdownRemark.edges[0].node
+  const { frontmatter, html } = allMarkdownRemark.edges[0].node
 
-  //console.log(frontmatter, html)
   return (
     <main id="main-content">
       <SEO title="Single Project Page" />
@@ -41,36 +42,42 @@ const ProjectSingle = ({ data }) => {
           </Link>
         </figure>
         <div className="website-text">
-          <h1 className="post-meta-key">Project Name</h1>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: html,
+            }}
+          ></div>
 
-          {/* <p className="websitetext">
+          {/* <h1 className="post-meta-key">Project Name</h1>
+
+           <p className="websitetext">
               {props.data.allWordpressWpProject.edges[0].node.meta.project_name}{" "}
-            </p> */}
+            </p> 
 
           <h1 className="post-meta-key">Project Description</h1>
 
-          {/* <p className="websitetext">
+           <p className="websitetext">
               {
                 props.data.allWordpressWpProject.edges[0].node.meta
                   .project_description
               }{" "}
-            </p> */}
+            </p> 
 
           <h1 className="post-meta-key">Project Code</h1>
 
-          {/* <p className="websitetext">
+           <p className="websitetext">
               {props.data.allWordpressWpProject.edges[0].node.meta.project_code}{" "}
-            </p> */}
+            </p>
 
           <h1 className="post-meta-key">Project URL</h1>
 
-          {/* <Link className="webformats" to="/">
+           <Link className="webformats" to="/">
               {props.data.allWordpressWpProject.edges[0].node.meta.project_url}
-            </Link> */}
+            </Link> 
 
           <h1 className="post-meta-key">Project Source Code</h1>
 
-          {/* <Link
+           <Link
               className="webformats"
               href={`https://github.com/raythompsonwebdev/${props.data.allWordpressWpProject.edges[0].node.slug}`}
             >

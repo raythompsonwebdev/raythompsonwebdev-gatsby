@@ -1,8 +1,10 @@
 ---
+author: "raythompsonwebdev.com"
 title: "Graphic Design Principles"
 date: 2019-08-19
 description: "Graphic Design Principles"
-image: ../static/images/placeholder.jpg
+image: "/images/placeholder.jpg"
+avatar: "/images/raythompsonwebdev.jpg"
 type: "post"
 slug: "/blog/graphic-design-principles"
 ---
@@ -30,7 +32,7 @@ An example of proximity is the relationship between subheading for my paragraphs
 Williams also suggests never having the same amount of white space between elements that aren’t a part of a list.
 
 Proximity
-![alt text](image.jpg)
+![alt text](https://github.com/raythompsonwebdev/raythompsonwebdev-gatsby/blob/master/markdown-pages/images/graphic/Proximity.png)
 
 ## Alignment
 
@@ -43,7 +45,7 @@ You may have noticed that the alignment of the subheading “Alignment” was ce
 The lack of alignment between the subhead and the related paragraph made your eye have to travel across the page, and it was probably enough for you to notice.
 
 alignment
-![alt text](image.jpg)
+![alt text](graphic/alignment.png)
 
 ## Repetition
 
@@ -56,7 +58,7 @@ It is fairly easy, and I recommend you copy my stylesheet, just to see what one 
 You can also view the source of this web page to see how I linked up to the stylesheet.
 
 repetition
-![alt text](image.jpg)
+![alt text](graphic/repetition.png)
 
 ## Contrast
 
@@ -67,7 +69,7 @@ You can create visual interest by using color (as in the banner portion of this 
 Again, you can utilize style sheets to make this easier by setting contrasting values for heading font and paragraph font.
 
 contrast
-![alt text](image.jpg)
+![alt text](graphic/contrast.png)
 
 ## Typography
 
@@ -80,6 +82,4 @@ Typography can have a very profound affect on your work. Unfortunately, the web 
 Web designers are sometimes forced to use whatever fonts that may be available on a user’s system. Still, using CSS style @font-face can help you easily set up font of any choice that looks nice and will work on most systems.
 
 typography
-![alt text](image.jpg)
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe>
+![alt text](/graphic/typography.jpg)

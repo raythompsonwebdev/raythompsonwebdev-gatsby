@@ -41,12 +41,15 @@ export const data = graphql`
       edges {
         node {
           id
+          html
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            author
             description
             type
             image
+
             slug
           }
         }

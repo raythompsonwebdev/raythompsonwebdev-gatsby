@@ -19,9 +19,8 @@ desktop 1920px*/
     clear: both;
   }
 
-  #menu-toggle{
-    display:none;
-    
+  #menu-toggle {
+    display: none;
   }
 
   #wrapper_container {
@@ -127,7 +126,7 @@ desktop 1920px*/
     .site-logo a:focus,
     .site-logo a:hover {
       outline: 2px solid $color4;
-    }    
+    }
 
     /*Header Title*/
     hgroup {
@@ -270,7 +269,7 @@ desktop 1920px*/
     /*Mobile-Navigation*/
     nav#mobile-nav {
       display: none;
-    }    
+    }
   }
 
   /*main-content box*/
@@ -403,7 +402,7 @@ desktop 1920px*/
       font-size: 1.3em;
       letter-spacing: 0.05em;
       line-height: 50px;
-      height:auto;
+      height: auto;
     }
 
     /*Search Box*/
@@ -919,7 +918,7 @@ desktop 1920px*/
           line-height: 60px;
           display: block;
           text-align: left;
-          height:60px;
+          height: 60px;
           text-shadow: 1px 1px $color4;
         }
         h2 {
@@ -929,7 +928,7 @@ desktop 1920px*/
           padding: 0;
           text-align: left;
           line-height: 40px;
-          height:auto;
+          height: auto;
           text-shadow: 1px 1px $color4;
         }
 
@@ -1449,7 +1448,7 @@ desktop 1920px*/
               text-align: center;
               line-height: 60px;
               font-size: 1em;
-              
+
               color: $color4;
               z-index: 3;
               text-indent: 0;
@@ -1553,7 +1552,7 @@ desktop 1920px*/
           margin: 0.4em;
           z-index: 1;
           height: 360px;
-          background-color:#fff;
+          background-color: #fff;
 
           &:hover {
             cursor: pointer;
@@ -1818,7 +1817,7 @@ desktop 1920px*/
 
         /*gallery page styles*/
 
-        h1.post-meta-key {
+        h1 {
           display: block;
           border-bottom: 1px solid $color1;
           color: $color1;
@@ -1829,7 +1828,7 @@ desktop 1920px*/
           font-size: 1.2em;
         }
 
-        p.websitetext {
+        p {
           width: 100%;
           display: block;
           margin: 0;
@@ -1987,12 +1986,11 @@ desktop 1920px*/
               width: 10%;
               margin: 0;
               padding: 0 0.25em 1.5em 0.25em;
-              display:block;
-              float:left;
-              height:100%;
-              a{
-                display:block;
-                
+              display: block;
+              float: left;
+              height: 100%;
+              a {
+                display: block;
               }
             }
 
@@ -2003,7 +2001,7 @@ desktop 1920px*/
             .comments-link,
             .date,
             .posted-on {
-              display:inline-block;
+              display: inline-block;
               width: 90%;
               height: auto;
               line-height: 25px;
@@ -2154,20 +2152,21 @@ desktop 1920px*/
       }
 
       /*post*/
-      .entry {        
+      .entry {
         height: auto;
-        width: 100%;
+        width: 98%;
         margin: 0 auto;
         background-color: $color4;
+        padding: 0.5em;
 
         p {
-          padding:0.75em;
+          padding: 0.2em;
           width: 98%;
           margin: 0;
-          font-size: 0.95em;
+          font-size: 1em;
           color: $color8;
           font-weight: normal;
-          line-height: 2.1em;
+          line-height: 1.8em;
           letter-spacing: 0.02em;
           margin-bottom: 2%;
         }
@@ -2213,22 +2212,23 @@ desktop 1920px*/
           padding: 0;
           letter-spacing: 0.04em;
           width: 100%;
-          line-height: 60px;
+          line-height: 50px;
+          height: 50px;
           text-align: left;
-          color: $color4;
-          background-color: $color1;
+          color: $color1;
+          text-indent: 0.2em;
         }
 
         h2 {
-          text-indent: 0;
           font-size: 1.1em;
           margin: 0 auto;
           padding: 0;
           letter-spacing: 0.04em;
           width: 100%;
           color: $color1;
-          line-height: 55px;
+          line-height: 50px;
           text-align: left;
+          text-indent: 0.2em;
         }
 
         h3 {
@@ -2258,7 +2258,7 @@ desktop 1920px*/
 
       /*post footer*/
       footer.byline {
-        width: 100%;        
+        width: 100%;
         height: auto;
         font-size: 1em;
         display: inline-block;
@@ -2267,7 +2267,7 @@ desktop 1920px*/
 
         p {
           margin: 0;
-          display: inline-block;          
+          display: inline-block;
           width: auto;
           color: $color4;
           line-height: 35px;
@@ -3551,8 +3551,6 @@ desktop 1920px*/
       }
 
       section#prof_cont-a {
-       
-
         h1 {
           font-size: 1.3em;
         }
@@ -3886,11 +3884,11 @@ desktop 1920px*/
       .website-text {
         width: 96%;
 
-        h1.post-meta-key {
+        h1 {
           font-size: 1.2em;
         }
 
-        p.websitetext {
+        p {
           width: 100%;
         }
 
@@ -4052,7 +4050,6 @@ desktop 1920px*/
       }
 
       .entry {
-       
         p {
           font-size: 0.95em;
         }
@@ -4445,7 +4442,6 @@ desktop 1920px*/
     width: 100%;
 
     .socialpics {
-      
       .social-icon {
         &:hover {
           cursor: pointer;
@@ -4644,7 +4640,7 @@ desktop 1440px*/
     h1 {
       font-size: 1.3em;
       line-height: 50px;
-      height:50px;
+      height: 50px;
     }
 
     h2 {
@@ -4948,7 +4944,7 @@ desktop 1440px*/
 
       section#prof_cont-a {
         width: 50%;
-        
+
         h1 {
           font-size: 1.2em;
         }
@@ -5233,11 +5229,11 @@ desktop 1440px*/
       }
 
       .website-text {
-        h1.post-meta-key {
+        h1 {
           margin-bottom: 0.5em;
         }
 
-        p.websitetext {
+        p {
           margin-bottom: 0.5em;
         }
 
@@ -5399,7 +5395,6 @@ desktop 1440px*/
       }
 
       .entry {
-        
         /*global*/
         h1 {
           font-size: 1.2em;
@@ -5797,8 +5792,6 @@ desktop 1440px*/
     height: 120px;
 
     .socialpics {
-      
-
       .social-icon {
         &:hover {
           cursor: pointer;
@@ -6200,7 +6193,6 @@ desktop 1280px*/
 
         p {
           font-size: 0.9em;
-          
         }
 
         a#projectLink {
@@ -6267,7 +6259,7 @@ desktop 1280px*/
 
       section#prof_cont-a {
         width: 50%;
-        
+
         h1 {
           font-size: 1.1em;
         }
@@ -6528,12 +6520,11 @@ desktop 1280px*/
       }
 
       .website-text {
-        h1.post-meta-key {
+        h1 {
           font-size: 1.1em;
-
         }
 
-        p.websitetext {
+        p {
           margin-bottom: 0.5em;
           font-size: 0.9em;
         }
@@ -6691,7 +6682,6 @@ desktop 1280px*/
       }
 
       .entry {
-        
         /*global*/
         h1 {
           font-size: 1.15em;
@@ -6979,7 +6969,6 @@ desktop 1280px*/
   #main-content {
     #blogbox {
       .blogboxes {
-
         h1 {
           font-size: 0.9em;
           line-height: 45px;
@@ -6998,7 +6987,6 @@ desktop 1280px*/
 
     h1 {
       font-size: 1.1em;
-
     }
 
     h2 {
@@ -7245,8 +7233,6 @@ desktop 1280px*/
 
         p {
           font-size: 0.9em;
-          
-          
         }
 
         a#projectLink {
@@ -7551,11 +7537,11 @@ desktop 1280px*/
       }
 
       .website-text {
-        h1.post-meta-key {
+        h1 {
           margin-bottom: 0.5em;
         }
 
-        p.websitetext {
+        p {
           margin-bottom: 0.5em;
         }
 
@@ -7712,7 +7698,6 @@ desktop 1280px*/
       }
 
       .entry {
-        
         /*global*/
         h1 {
           font-size: 1.1em;
@@ -8134,8 +8119,6 @@ desktop 980px*/
 
     #blogbox {
       .blogboxes {
-
-
         h1 {
           font-size: 0.9em;
         }
@@ -8152,7 +8135,6 @@ desktop 980px*/
 
     h1 {
       font-size: 1.05em;
-
     }
 
     h2 {
@@ -8403,7 +8385,6 @@ desktop 980px*/
         p {
           font-size: 0.9em;
           width: 68%;
-          
         }
 
         a#projectLink {
@@ -8470,7 +8451,6 @@ desktop 980px*/
 
       section#prof_cont-a {
         width: 50%;
-        
 
         button.slider-btn {
           top: -15px;
@@ -8721,12 +8701,12 @@ desktop 980px*/
         display: block;
         padding: 0.5em;
 
-        h1.post-meta-key {
+        h1 {
           margin-bottom: 0.5em;
           font-size: 1.1em;
         }
 
-        p.websitetext {
+        p {
           margin-bottom: 0.5em;
           font-size: 0.9em;
         }
@@ -8817,7 +8797,7 @@ desktop 980px*/
             .comments-link,
             .date,
             .posted-on {
-              width:83%;
+              width: 83%;
               font-size: 0.8em;
 
               a {
@@ -8886,7 +8866,6 @@ desktop 980px*/
       }
 
       .entry {
-        
         /*global*/
         h1 {
           font-size: 1.15em;
@@ -9316,7 +9295,7 @@ tablet 800px */
   #main-content {
     #blogbox {
       .blogboxes {
-        width: 48%; 
+        width: 48%;
 
         h1 {
           font-size: 0.9em;
@@ -9333,11 +9312,8 @@ tablet 800px */
     }
 
     div.main-text {
-      
-
       p {
         font-size: 0.85em;
-        
       }
 
       ul {
@@ -9345,24 +9321,20 @@ tablet 800px */
 
         li {
           font-size: 0.85em;
-          
+
           div.error {
             font-size: 0.85em;
           }
 
           &:before {
-            
             font-size: 0.9em;
-            
           }
 
           a {
             display: inline-block;
 
-
             &:hover {
               font-weight: bold;
-
             }
           }
         }
@@ -9371,7 +9343,6 @@ tablet 800px */
 
     h1 {
       font-size: 1em;
-
     }
 
     h2 {
@@ -9555,8 +9526,8 @@ tablet 800px */
           h1#front-title {
             text-indent: 0;
             font-size: 1.5em;
-            text-align:center;
-            line-height:50px;
+            text-align: center;
+            line-height: 50px;
           }
 
           section.frntpgbox {
@@ -9571,14 +9542,13 @@ tablet 800px */
               .fa-wrench,
               .fa-laptop {
                 height: auto;
-                width:26%;
-              
+                width: 26%;
               }
             }
 
             h1 {
               margin: 0;
-              font-size:1.2em;
+              font-size: 1.2em;
               line-height: 45px;
             }
 
@@ -9643,20 +9613,20 @@ tablet 800px */
 
         p {
           font-size: 1em;
-          float:none;
-          width:96%;
-          display:block;
-          margin:auto;
-          padding:0.5em;
+          float: none;
+          width: 96%;
+          display: block;
+          margin: auto;
+          padding: 0.5em;
         }
 
         a#projectLink {
-          font-size: 1.3em;          
+          font-size: 1.3em;
           border: 2.5px solid white;
-          width:60%;
-          float:none;
-          display:block;
-          margin:1em auto;
+          width: 60%;
+          float: none;
+          display: block;
+          margin: 1em auto;
 
           &:hover {
             background-color: $color4;
@@ -9841,7 +9811,6 @@ tablet 800px */
 
             span {
               width: 16.5%;
-
             }
           }
         }
@@ -10000,11 +9969,11 @@ tablet 800px */
       .website-text {
         width: 97%;
 
-        h1.post-meta-key {
+        h1 {
           margin-bottom: 0.5em;
         }
 
-        p.websitetext {
+        p {
           margin-bottom: 0.5em;
           font-size: 0.9em;
         }
@@ -10095,7 +10064,7 @@ tablet 800px */
             .comments-link,
             .date,
             .posted-on {
-              width:78%;
+              width: 78%;
               font-size: 0.8em;
 
               a {
@@ -10166,7 +10135,6 @@ tablet 800px */
       }
 
       .entry {
-        
         /*global*/
         h1 {
           font-size: 1.2em;
@@ -10444,7 +10412,7 @@ tablet 800px */
     height: 120px;
 
     .socialpics {
-      width:30%;
+      width: 30%;
       .social-icon {
         &:hover {
           cursor: pointer;
@@ -10476,8 +10444,8 @@ tablet 800px */
 
           &:hover {
             font-weight: bold;
-            background-color:unset;
-            cursor:pointer;
+            background-color: unset;
+            cursor: pointer;
           }
         }
       }
@@ -10792,11 +10760,9 @@ tablet 667px*/
 
           h1#front-title {
             font-size: 1.4em;
-            
           }
 
           section.frntpgbox {
-            
             span {
               height: auto;
 
@@ -10804,13 +10770,13 @@ tablet 667px*/
               .fa-code,
               .fa-wrench,
               .fa-laptop {
-                width:28%;
+                width: 28%;
               }
             }
 
             h1 {
               margin: 0;
-              font-size:1.1em;
+              font-size: 1.1em;
             }
 
             p {
@@ -10861,8 +10827,8 @@ tablet 667px*/
       section#banner-container {
         h1 {
           font-size: 2.5em;
-          height:50px;
-          line-height:50px;
+          height: 50px;
+          line-height: 50px;
         }
         h2 {
           font-size: 1.3em;
@@ -10870,7 +10836,6 @@ tablet 667px*/
 
         p {
           font-size: 0.9em;
-          
         }
 
         a#projectLink {
@@ -10945,7 +10910,6 @@ tablet 667px*/
 
         button.slider-btn {
           top: -15px;
-          
 
           &:hover {
             font-weight: bold;
@@ -11187,12 +11151,12 @@ tablet 667px*/
       .website-text {
         width: 97%;
 
-        h1.post-meta-key {
+        h1 {
           font-size: 1em;
           margin-bottom: 0.5em;
         }
 
-        p.websitetext {
+        p {
           margin-bottom: 0.5em;
           font-size: 0.8em;
         }
@@ -11285,7 +11249,7 @@ tablet 667px*/
             .comments-link,
             .date,
             .posted-on {
-              width:75%;
+              width: 75%;
               font-size: 0.8em;
 
               a {
@@ -11357,7 +11321,6 @@ tablet 667px*/
       }
 
       .entry {
-        
         /*global*/
         h1 {
           font-size: 1.1em;
@@ -11660,7 +11623,6 @@ tablet 667px*/
       height: 100%;
 
       li {
-
         font-size: 1em;
 
         a {
@@ -11681,7 +11643,6 @@ tablet 667px*/
 
 /*tablet 536px */
 @media only screen and (max-width: 536px) {
-  
   #menu-toggle {
     position: fixed;
     z-index: 100;
@@ -11695,10 +11656,10 @@ tablet 667px*/
     border: none;
     transition: all ease-out 400ms;
     height: 45px;
-    width:15%;
+    width: 15%;
     display: block;
-    outline:none;
-    text-decoration:none;
+    outline: none;
+    text-decoration: none;
   }
 
   #menu-toggle.hide {
@@ -11802,7 +11763,7 @@ tablet 667px*/
     nav#main-nav {
       position: fixed;
       top: 5em;
-      z-index: 100;     
+      z-index: 100;
       left: -250px;
       width: 250px;
       height: auto;
@@ -11847,13 +11808,9 @@ tablet 667px*/
 
   /*main-content box*/
   #main-content {
-
     div.main-text {
-      
-
       p {
         font-size: 0.8em;
-        
       }
 
       ul {
@@ -11861,24 +11818,20 @@ tablet 667px*/
 
         li {
           font-size: 0.8em;
-          
+
           div.error {
             font-size: 0.8em;
           }
 
           &:before {
-            
             font-size: 0.9em;
-            
           }
 
           a {
             display: inline-block;
 
-
             &:hover {
               font-weight: bold;
-
             }
           }
         }
@@ -11907,9 +11860,9 @@ tablet 667px*/
     }
 
     h1 {
-      font-size:1em;
+      font-size: 1em;
       line-height: 40px;
-      height:40px;
+      height: 40px;
     }
 
     h2 {
@@ -12108,7 +12061,7 @@ tablet 667px*/
               .fa-code,
               .fa-wrench,
               .fa-laptop {
-                width:30%;
+                width: 30%;
               }
             }
 
@@ -12465,12 +12418,12 @@ tablet 667px*/
       .website-text {
         width: 97%;
 
-        h1.post-meta-key {
+        h1 {
           font-size: 0.9em;
           margin-bottom: 0.5em;
         }
 
-        p.websitetext {
+        p {
           margin-bottom: 0.5em;
         }
 
@@ -12629,7 +12582,6 @@ tablet 667px*/
       }
 
       .entry {
-        
         /*global*/
         h1 {
           font-size: 1.05em;
@@ -12917,7 +12869,7 @@ mobile 480px */
     left: 74%;
     font-size: 0.9em;
     top: 2.4em;
-    width:20%;
+    width: 20%;
   }
 
   .seperator {
@@ -13045,18 +12997,15 @@ mobile 480px */
     }
 
     h1 {
-      font-size:1em;
-
+      font-size: 1em;
     }
 
     h2 {
       font-size: 0.9em;
-
     }
 
     h3 {
       font-size: 0.85em;
-;
     }
 
     /*Search Box*/
@@ -13234,7 +13183,7 @@ mobile 480px */
 
           section.frntpgbox {
             width: 65%;
-            
+
             span {
               height: auto;
 
@@ -13242,7 +13191,7 @@ mobile 480px */
               .fa-code,
               .fa-wrench,
               .fa-laptop {
-                width:35%;
+                width: 35%;
               }
             }
 
@@ -13254,9 +13203,9 @@ mobile 480px */
               font-size: 0.9em;
             }
 
-            a#projectLink{
+            a#projectLink {
               margin: 0.5em auto;
-              width:75%;
+              width: 75%;
             }
           }
         }
@@ -13313,7 +13262,6 @@ mobile 480px */
 
         p {
           font-size: 0.85em;
-          
         }
 
         a#projectLink {
@@ -13636,11 +13584,11 @@ mobile 480px */
       .website-text {
         width: 97%;
 
-        h1.post-meta-key {
+        h1 {
           margin-bottom: 0.5em;
         }
 
-        p.websitetext {
+        p {
           margin-bottom: 0.5em;
           font-size: 0.75em;
         }
@@ -13734,7 +13682,7 @@ mobile 480px */
             .comments-link,
             .date,
             .posted-on {
-              width:70%;
+              width: 70%;
               font-size: 0.7em;
 
               a {
@@ -13806,7 +13754,6 @@ mobile 480px */
       }
 
       .entry {
-        
         /*global*/
         h1 {
           font-size: 1.05em;
@@ -14147,7 +14094,6 @@ mobile 360px */
 
   /*Header*/
   header {
-    
     /*Site Logo*/
     .site-logo {
       a {
@@ -14241,8 +14187,6 @@ mobile 360px */
   #main-content {
     #blogbox {
       .blogboxes {
-       
-
         h1 {
           font-size: 0.9em;
         }
@@ -14453,7 +14397,7 @@ mobile 360px */
               .fa-code,
               .fa-wrench,
               .fa-laptop {
-                width:35%;
+                width: 35%;
               }
             }
 
@@ -14809,12 +14753,12 @@ mobile 360px */
       .website-text {
         width: 97%;
 
-        h1.post-meta-key {
-          font-size:0.85em;
+        h1 {
+          font-size: 0.85em;
           margin-bottom: 0.5em;
         }
 
-        p.websitetext {
+        p {
           margin-bottom: 0.5em;
         }
 
@@ -15412,8 +15356,6 @@ mobile 320px */
   #main-content {
     #blogbox {
       .blogboxes {
-        
-
         h1 {
           font-size: 0.9em;
         }
@@ -15614,8 +15556,8 @@ mobile 320px */
             font-size: 1.2em;
           }
 
-          section.frntpgbox { 
-            width:70%;           
+          section.frntpgbox {
+            width: 70%;
 
             span {
               height: auto;
@@ -15624,7 +15566,7 @@ mobile 320px */
               .fa-code,
               .fa-wrench,
               .fa-laptop {
-                width:35%;
+                width: 35%;
               }
             }
 
@@ -15993,11 +15935,11 @@ mobile 320px */
       .website-text {
         width: 97%;
 
-        h1.post-meta-key {
+        h1 {
           margin-bottom: 0.5em;
         }
 
-        p.websitetext {
+        p {
           margin-bottom: 0.5em;
         }
 
@@ -16161,7 +16103,6 @@ mobile 320px */
       }
 
       .entry {
-        
         /*global*/
         h1 {
           font-size: 1.05em;
