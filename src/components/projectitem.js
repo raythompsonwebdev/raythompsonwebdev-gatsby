@@ -8,12 +8,11 @@ const ProjectItem = ({ project }) => (
   <div id="panel" className={`prod-cnt ${project.frontmatter.slug}`}>
     <figure className="showcase-container" id="showcaseimg1">
       <div className="showcase-img">
-        <img src={project.frontmatter.featuredImage} alt="" />
+        <img src={project.frontmatter.image} alt="" />
       </div>
 
       <figcaption className="showcase-content showcase">
         <h1>{project.frontmatter.title}</h1>
-        <h1>{project.frontmatter.date}</h1>
 
         <Link to={`${project.frontmatter.slug}`}>Link</Link>
       </figcaption>

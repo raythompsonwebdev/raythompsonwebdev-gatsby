@@ -2,7 +2,7 @@
 title: "Graphic Design Principles"
 date: 2019-08-19
 description: "Graphic Design Principles"
-featuredImage: ../../static/images/placeholder.jpg
+image: ../static/images/placeholder.jpg
 type: "post"
 slug: "/blog/graphic-design-principles"
 ---

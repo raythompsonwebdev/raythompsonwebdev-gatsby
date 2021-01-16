@@ -2,7 +2,7 @@
 title: "Avoiding Simple Design Mistakes"
 date: 2019-10-15
 description: "Avoiding Simple Design Mistakes."
-featuredImage: ../../static/images/placeholder.jpg
+image: ../static/images/placeholder.jpg
 type: "post"
 slug: "/blog/avoiding-simple-design-mistakes"
 ---

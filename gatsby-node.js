@@ -24,7 +24,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const results = await graphql(`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: { frontmatter: { type: { eq: "post" } } }) {
         edges {
           node {
             frontmatter {
@@ -32,7 +32,26 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               title
               description
               slug
-              featuredImage
+              image
+              type
+            }
+          }
+        }
+      }
+    }
+  `)
+  const result = await graphql(`
+    {
+      allMarkdownRemark(filter: { frontmatter: { type: { eq: "project" } } }) {
+        edges {
+          node {
+            frontmatter {
+              date
+              title
+              description
+              slug
+              image
+              type
             }
           }
         }
@@ -46,27 +65,34 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+
   results.data.allMarkdownRemark.edges.forEach(({ node }) => {
     console.group(node)
     createPage({
-      path: `/blog/${node.frontmatter.slug}`,
+      path: node.frontmatter.slug,
       component: path.resolve(`./src/templates/blog-post.js`),
       context: {
         // additional data can be passed via context
         slug: node.frontmatter.slug,
         title: node.frontmatter.title,
+        type: node.frontmatter.type,
       },
     })
   })
 
-  results.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: `/blog/${node.frontmatter.slug}`,
+      path: node.frontmatter.slug,
       component: path.resolve(`./src/templates/project-single.js`),
       context: {
         // additional data can be passed via context
         slug: node.frontmatter.slug,
         title: node.frontmatter.title,
+        type: node.frontmatter.type,
       },
     })
   })

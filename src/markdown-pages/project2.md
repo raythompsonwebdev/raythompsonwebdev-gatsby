@@ -3,7 +3,7 @@ title: "Mannering"
 date: 2019-20-16
 description: "Mannering"
 type: "project"
-featuredImage: "../static/images/custom/mannering-musicmvc-home-page-custom-large.png"
+image: "./static/images/custom/mannering-musicmvc-home-page-custom-large.png"
 slug: "/project/mannering"
 ---
 

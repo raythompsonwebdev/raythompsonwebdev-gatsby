@@ -46,7 +46,7 @@ export const data = graphql`
             title
             description
             type
-            featuredImage
+            image
             slug
           }
         }

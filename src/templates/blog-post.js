@@ -1,40 +1,33 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
 //import Img from "gatsby-image"
 
 // this prop will be injected by the GraphQL query below.
 
-export default function BlogPost() {
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            html
-            frontmatter {
-              date(formatString: "MMMM DD, YYYY")
-              title
-              description
-              featuredImage
-              slug
-              type
-            }
+export const data = graphql`
+  query {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            title
+            slug
+            date(formatString: "MMMM DD, YYYY")
+            description
+            type
+            image
           }
         }
       }
     }
-  `)
-  console.log(data)
-
+  }
+`
+export default function BlogPost({ data }) {
   const { allMarkdownRemark } = data // data.markdownRemark holds your post data
 
-  //console.log(allMarkdownRemark.edges[0].node)
-
-  const { frontmatter, html } = allMarkdownRemark
-
-  console.log(frontmatter)
+  const { frontmatter, html } = allMarkdownRemark.edges[0].node
 
   return (
     <main id="main-content">
@@ -123,25 +116,3 @@ export default function BlogPost() {
 BlogPost.propTypes = {
   data: PropTypes.any,
 }
-
-// query($slug: String!) {
-//   allMarkdownRemark(filter: {frontmatter: {title: {eq: $slug}}}) {
-
-// export const pageQuery = graphql`
-//   query($slug: String!) {
-//     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-//       edges {
-//         node {
-//           html
-//           frontmatter {
-//             date(formatString: "MMMM DD, YYYY")
-//             title
-//             description
-//             featuredImage
-//             slug
-//           }
-//         }
-//       }
-//     }
-//   }
-// `

@@ -1,31 +1,31 @@
 import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
 
-const ProjectSingle = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            html
-            frontmatter {
-              date(formatString: "MMMM DD, YYYY")
-              title
-              description
-              featuredImage
-              slug
-            }
+export const data = graphql`
+  query($slug: String!) {
+    allMarkdownRemark(filter: { frontmatter: { slug: { eq: $slug } } }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            slug
+            date(formatString: "MMMM DD, YYYY")
+            description
+            type
+            image
           }
         }
       }
     }
-  `)
+  }
+`
 
+const ProjectSingle = ({ data }) => {
   const { allMarkdownRemark } = data // data.markdownRemark holds your post data
 
-  console.log(allMarkdownRemark.edges[0].node)
+  console.log(data)
 
   const { frontmatter } = allMarkdownRemark.edges[0].node
 
@@ -37,7 +37,7 @@ const ProjectSingle = () => {
         <h1> {frontmatter.title} </h1>
         <figure className="websiteImage">
           <Link to="/" className="fancybox" title="">
-            <img src={frontmatter.featuredImage} alt="f" />
+            <img src={frontmatter.image} alt="f" />
           </Link>
         </figure>
         <div className="website-text">
@@ -90,25 +90,6 @@ const ProjectSingle = () => {
     </main>
   )
 }
-
-// export const projectQuery = graphql`
-//   query($slug: String!) {
-//     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-//       edges {
-//         node {
-//           html
-//           frontmatter {
-//             date(formatString: "MMMM DD, YYYY")
-//             title
-//             description
-//             featuredImage
-//             slug
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
 
 ProjectSingle.propTypes = {
   data: PropTypes.any,
