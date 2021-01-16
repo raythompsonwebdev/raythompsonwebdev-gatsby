@@ -347,8 +347,11 @@ desktop 1920px*/
         box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
 
         &:hover {
-          @include TransScale(scale(1.1));
+          @include TransScale(scale(1.05));
           cursor: pointer;
+        }
+        img {
+          width: 100%;
         }
 
         h1 {
@@ -1780,13 +1783,8 @@ desktop 1920px*/
         border: 0;
       }
 
-      h1,
-      h1.page-title {
+      h1 {
         font-size: 1.6em;
-        margin: 0;
-        padding: 0;
-        letter-spacing: 0.05em;
-        width: 100%;
         line-height: 65px;
         height: 65px;
         text-align: center;
@@ -1905,16 +1903,6 @@ desktop 1920px*/
         width: 20%;
         clear: both;
         margin: 1.5em auto;
-      }
-
-      /*search page image*/
-      a.post-thumbnail {
-        img {
-          width: 15%;
-          margin: 2em auto;
-          display: block;
-          padding: 0;
-        }
       }
 
       /*featured image*/
@@ -2208,12 +2196,8 @@ desktop 1920px*/
 
         h1 {
           font-size: 1.2em;
-          margin: 0;
-          padding: 0;
-          letter-spacing: 0.04em;
-          width: 100%;
           line-height: 50px;
-          height: 50px;
+          height: auto;
           text-align: left;
           color: $color1;
           text-indent: 0.2em;
@@ -2221,23 +2205,18 @@ desktop 1920px*/
 
         h2 {
           font-size: 1.1em;
-          margin: 0 auto;
-          padding: 0;
-          letter-spacing: 0.04em;
-          width: 100%;
           color: $color1;
           line-height: 50px;
+          height: auto;
           text-align: left;
           text-indent: 0.2em;
         }
 
         h3 {
-          margin: 0 auto;
-          height: 45px;
-          line-height: 45px;
+          line-height: 50px;
+          height: auto;
           font-size: 1em;
-          text-indent: 0;
-          width: 100%;
+          text-indent: 0.2em;
           text-align: left;
           color: $color1;
         }
@@ -2346,16 +2325,6 @@ desktop 1920px*/
 
     /*custom post*/
     .gallery {
-      /*serach page image*/
-      a.post-thumbnail {
-        img {
-          width: 15%;
-          margin: 2em auto;
-          display: block;
-          padding: 0;
-        }
-      }
-
       .entry {
         padding: 1%;
         height: auto;
@@ -3198,7 +3167,7 @@ desktop 1920px*/
         }
 
         a {
-          font-size: 1em;
+          font-size: 0.9em;
 
           &:hover {
             cursor: pointer;
@@ -3864,10 +3833,6 @@ desktop 1920px*/
     .post {
       background-color: $color4;
 
-      hr.blog-spacer {
-        width: 80%;
-      }
-
       h1,
       h1.page-title {
         font-size: 1.5em;
@@ -3926,13 +3891,6 @@ desktop 1920px*/
 
       div.postimg {
         width: 20%;
-      }
-
-      /*search page image*/
-      a.post-thumbnail {
-        img {
-          width: 15%;
-        }
       }
 
       /*featured image*/
@@ -4139,12 +4097,6 @@ desktop 1920px*/
     }
 
     .gallery {
-      a.post-thumbnail {
-        img {
-          width: 15%;
-        }
-      }
-
       .entry {
         padding: 1%;
       }
@@ -4632,7 +4584,7 @@ desktop 1440px*/
         }
 
         a {
-          font-size: 1em;
+          font-size: 0.9em;
         }
       }
     }
@@ -5211,10 +5163,6 @@ desktop 1440px*/
     }
 
     .post {
-      hr.blog-spacer {
-        margin: 2% auto;
-      }
-
       .seperator {
         height: 1%;
       }
@@ -5275,16 +5223,6 @@ desktop 1440px*/
 
       div.postimg {
         width: 25%;
-      }
-
-      a.post-thumbnail {
-        width: 12%;
-        margin: 0 auto;
-        display: block;
-
-        img {
-          width: 100%;
-        }
       }
 
       .featuredImage {
@@ -5484,12 +5422,6 @@ desktop 1440px*/
     }
 
     .gallery {
-      a.post-thumbnail {
-        img {
-          width: 15%;
-        }
-      }
-
       .entry {
         padding: 1%;
       }
@@ -5949,7 +5881,7 @@ desktop 1280px*/
         }
 
         a {
-          font-size: 1em;
+          font-size: 0.9em;
         }
       }
     }
@@ -6502,10 +6434,6 @@ desktop 1280px*/
     }
 
     .post {
-      hr.blog-spacer {
-        margin: 2% auto;
-      }
-
       .seperator {
         height: 1%;
       }
@@ -6567,12 +6495,6 @@ desktop 1280px*/
 
       div.postimg {
         width: 25%;
-      }
-
-      a.post-thumbnail {
-        img {
-          width: 15%;
-        }
       }
 
       .featuredImage {
@@ -6772,12 +6694,6 @@ desktop 1280px*/
     }
 
     .gallery {
-      a.post-thumbnail {
-        img {
-          width: 15%;
-        }
-      }
-
       .entry {
         padding: 1%;
       }
@@ -6980,7 +6896,7 @@ desktop 1280px*/
         }
 
         a {
-          font-size: 0.9em;
+          font-size: 0.8em;
         }
       }
     }
@@ -7520,10 +7436,6 @@ desktop 1280px*/
     }
 
     .post {
-      hr.blog-spacer {
-        margin: 2% auto;
-      }
-
       .seperator {
         height: 1%;
       }
@@ -7583,12 +7495,6 @@ desktop 1280px*/
 
       div.postimg {
         width: 30%;
-      }
-
-      a.post-thumbnail {
-        img {
-          width: 15%;
-        }
       }
 
       .featuredImage {
@@ -7785,12 +7691,6 @@ desktop 1280px*/
     }
 
     .gallery {
-      a.post-thumbnail {
-        img {
-          width: 15%;
-        }
-      }
-
       .entry {
         padding: 1%;
       }
@@ -8128,7 +8028,7 @@ desktop 980px*/
         }
 
         a {
-          font-size: 0.9em;
+          font-size: 0.8em;
         }
       }
     }
@@ -8674,10 +8574,6 @@ desktop 980px*/
     }
 
     .post {
-      hr.blog-spacer {
-        margin: 2% auto;
-      }
-
       .seperator {
         height: 1%;
       }
@@ -8749,12 +8645,6 @@ desktop 980px*/
 
       div.postimg {
         width: 30%;
-      }
-
-      a.post-thumbnail {
-        img {
-          width: 15%;
-        }
       }
 
       .featuredImage {
@@ -8948,12 +8838,6 @@ desktop 980px*/
     }
 
     .gallery {
-      a.post-thumbnail {
-        img {
-          width: 15%;
-        }
-      }
-
       .entry {
         padding: 1%;
       }
@@ -9306,7 +9190,7 @@ tablet 800px */
         }
 
         a {
-          font-size: 0.8em;
+          font-size: 0.75em;
         }
       }
     }
@@ -9946,10 +9830,6 @@ tablet 800px */
     .post {
       padding: 1%;
 
-      hr.blog-spacer {
-        margin: 2% auto;
-      }
-
       .seperator {
         height: 1%;
       }
@@ -10016,12 +9896,6 @@ tablet 800px */
 
       div.postimg {
         width: 30%;
-      }
-
-      a.post-thumbnail {
-        img {
-          width: 15%;
-        }
       }
 
       .featuredImage {
@@ -10217,12 +10091,6 @@ tablet 800px */
     }
 
     .gallery {
-      a.post-thumbnail {
-        img {
-          width: 15%;
-        }
-      }
-
       .entry {
         padding: 1%;
       }
@@ -10575,7 +10443,7 @@ tablet 667px*/
         }
 
         a {
-          font-size: 0.8em;
+          font-size: 0.75em;
         }
       }
     }
@@ -11136,10 +11004,6 @@ tablet 667px*/
     .post {
       padding: 1%;
 
-      hr.blog-spacer {
-        margin: 2% auto;
-      }
-
       .seperator {
         height: 1%;
       }
@@ -11199,12 +11063,6 @@ tablet 667px*/
 
       div.postimg {
         width: 35%;
-      }
-
-      a.post-thumbnail {
-        img {
-          width: 15%;
-        }
       }
 
       .featuredImage {
@@ -11404,12 +11262,6 @@ tablet 667px*/
     }
 
     .gallery {
-      a.post-thumbnail {
-        img {
-          width: 15%;
-        }
-      }
-
       .entry {
         padding: 1%;
       }
@@ -11853,7 +11705,7 @@ tablet 667px*/
         }
 
         a {
-          font-size: 0.8em;
+          font-size: 0.75em;
           width: 60%;
         }
       }
@@ -12396,12 +12248,6 @@ tablet 667px*/
     }
 
     .post {
-      padding: 1%;
-
-      hr.blog-spacer {
-        margin: 2% auto;
-      }
-
       .seperator {
         height: 1%;
       }
@@ -12465,12 +12311,6 @@ tablet 667px*/
 
       div.postimg {
         width: 45%;
-      }
-
-      a.post-thumbnail {
-        img {
-          width: 15%;
-        }
       }
 
       .featuredImage {
@@ -12664,12 +12504,6 @@ tablet 667px*/
     }
 
     .gallery {
-      a.post-thumbnail {
-        img {
-          width: 15%;
-        }
-      }
-
       .entry {
         padding: 1%;
       }
@@ -12990,7 +12824,7 @@ mobile 480px */
         }
 
         a {
-          font-size: 0.8em;
+          font-size: 0.75em;
           width: 60%;
         }
       }
@@ -13563,12 +13397,6 @@ mobile 480px */
     }
 
     .post {
-      padding: 1%;
-
-      hr.blog-spacer {
-        margin: 2% auto;
-      }
-
       .seperator {
         height: 1%;
       }
@@ -13631,12 +13459,6 @@ mobile 480px */
 
       div.postimg {
         width: 55%;
-      }
-
-      a.post-thumbnail {
-        img {
-          width: 15%;
-        }
       }
 
       .featuredImage {
@@ -13836,12 +13658,6 @@ mobile 480px */
     }
 
     .gallery {
-      a.post-thumbnail {
-        img {
-          width: 15%;
-        }
-      }
-
       .entry {
         padding: 1%;
       }
@@ -14196,7 +14012,7 @@ mobile 360px */
         }
 
         a {
-          font-size: 0.8em;
+          font-size: 0.7em;
           width: 60%;
         }
       }
@@ -14731,12 +14547,6 @@ mobile 360px */
     }
 
     .post {
-      padding: 1%;
-
-      hr.blog-spacer {
-        margin: 2% auto;
-      }
-
       .seperator {
         height: 1%;
       }
@@ -14800,12 +14610,6 @@ mobile 360px */
 
       div.postimg {
         width: 60%;
-      }
-
-      a.post-thumbnail {
-        img {
-          width: 20%;
-        }
       }
 
       .featuredImage {
@@ -15005,12 +14809,6 @@ mobile 360px */
     }
 
     .gallery {
-      a.post-thumbnail {
-        img {
-          width: 15%;
-        }
-      }
-
       .entry {
         padding: 1%;
       }
@@ -15365,7 +15163,7 @@ mobile 320px */
         }
 
         a {
-          font-size: 0.8em;
+          font-size: 0.7em;
           width: 60%;
         }
       }
@@ -15913,12 +15711,6 @@ mobile 320px */
     }
 
     .post {
-      padding: 1%;
-
-      hr.blog-spacer {
-        margin: 2% auto;
-      }
-
       .seperator {
         height: 1%;
       }
@@ -15981,12 +15773,6 @@ mobile 320px */
 
       div.postimg {
         width: 75%;
-      }
-
-      a.post-thumbnail {
-        img {
-          width: 20%;
-        }
       }
 
       .featuredImage {
@@ -16184,12 +15970,6 @@ mobile 320px */
     }
 
     .gallery {
-      a.post-thumbnail {
-        img {
-          width: 20%;
-        }
-      }
-
       .entry {
         padding: 1%;
       }

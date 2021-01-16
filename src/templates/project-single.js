@@ -47,42 +47,6 @@ const ProjectSingle = ({ data }) => {
               __html: html,
             }}
           ></div>
-
-          {/* <h1 className="post-meta-key">Project Name</h1>
-
-           <p className="websitetext">
-              {props.data.allWordpressWpProject.edges[0].node.meta.project_name}{" "}
-            </p> 
-
-          <h1 className="post-meta-key">Project Description</h1>
-
-           <p className="websitetext">
-              {
-                props.data.allWordpressWpProject.edges[0].node.meta
-                  .project_description
-              }{" "}
-            </p> 
-
-          <h1 className="post-meta-key">Project Code</h1>
-
-           <p className="websitetext">
-              {props.data.allWordpressWpProject.edges[0].node.meta.project_code}{" "}
-            </p>
-
-          <h1 className="post-meta-key">Project URL</h1>
-
-           <Link className="webformats" to="/">
-              {props.data.allWordpressWpProject.edges[0].node.meta.project_url}
-            </Link> 
-
-          <h1 className="post-meta-key">Project Source Code</h1>
-
-           <Link
-              className="webformats"
-              href={`https://github.com/raythompsonwebdev/${props.data.allWordpressWpProject.edges[0].node.slug}`}
-            >
-              Link
-            </Link> */}
         </div>
         <footer className="byline">
           <p className="right">

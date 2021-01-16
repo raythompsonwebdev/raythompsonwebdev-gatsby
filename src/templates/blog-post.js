@@ -89,7 +89,6 @@ export default function BlogPost({ data }) {
               Link
             </Link>
           </p>
-
           <p>Text</p>
         </footer>
       </article>
