@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
+import NoImage from "../components/noimage"
 
 export default function BlogPost({ data }) {
   const post = data.allWpPost.nodes[0]
@@ -37,11 +38,7 @@ export default function BlogPost({ data }) {
               <span className="comments-link">
                 Comments : {post.commentCount}
               </span>
-              <span className="byline">
-                Tags: {post.tags.nodes[0].slug}
-                {" ,"}
-                {post.tags.nodes[1].slug}
-              </span>
+              <span className="byline">Tags: </span>
             </div>
           </div>
         </header>
@@ -49,7 +46,7 @@ export default function BlogPost({ data }) {
         <a href="" title="Permanent Link to">
           <figure className="featuredImage">
             {post.featuredImage == null ? (
-              <p>No Image</p>
+              <NoImage />
             ) : (
               <img
                 src={

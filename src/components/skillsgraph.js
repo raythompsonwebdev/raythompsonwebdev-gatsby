@@ -1,11 +1,10 @@
-import React, {useEffect} from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
-
 
 const responsiveGraph = () => {
   var chartBar = document.querySelectorAll(".bar")
 
-  chartBar.forEach(function(key) {
+  chartBar.forEach(function (key) {
     var percentage = 0
 
     var percentageMaxWidth = key.dataset.percentage
@@ -25,14 +24,12 @@ const responsiveGraph = () => {
   })
 }
 function SkillsGraph(props) {
+  const { bars } = props
 
-  console.log(props)
-
-  const {bars} = props
-  
-  useEffect(() => {    // Update the document title using the browser API
-    responsiveGraph()  
-  });
+  useEffect(() => {
+    // Update the document title using the browser API
+    responsiveGraph()
+  })
 
   return (
     <ul id="bars">

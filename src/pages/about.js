@@ -58,8 +58,6 @@ class AboutPage extends React.Component {
   nextProperty = () => {
     const newIndex = this.state.cert.imageindex + 1
 
-    console.log(newIndex)
-
     this.setState({
       cert: this.state.panels[newIndex],
     })

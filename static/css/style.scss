@@ -327,24 +327,31 @@ desktop 1920px*/
           margin-top: 0.5em;
           width: 100%;
         }
+        div.blog-link {
+          a {
+            background-color: $blackcolor;
+            line-height: 35px;
+            height: 35px;
+            font-size: 1em;
+            display: block;
+            letter-spacing: 0.1em;
+            width: 70%;
+            margin: 1em auto;
+            color: $colorwhite;
+            text-align: center;
 
-        a {
-          background-color: $blackcolor;
-          line-height: 35px;
-          height: 35px;
-          font-size: 1em;
-          display: block;
-          letter-spacing: 0.1em;
-          width: 70%;
-          margin: 1em auto;
-          color: $colorwhite;
-          text-align: center;
-
-          &:hover {
-            background-color: $yellowcolor;
-            color: $blackcolor;
-            font-weight: bold;
+            &:hover {
+              background-color: $yellowcolor;
+              color: $blackcolor;
+              font-weight: bold;
+            }
           }
+        }
+        .sharedaddy {
+          display: none;
+        }
+        .continue-reading {
+          display: none;
         }
       }
     }
@@ -3188,12 +3195,13 @@ desktop 1680px*/
         p {
           font-size: 0.9em;
         }
+        div.blog-link {
+          a {
+            font-size: 0.9em;
 
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            cursor: pointer;
+            &:hover {
+              cursor: pointer;
+            }
           }
         }
       }
@@ -4597,9 +4605,10 @@ desktop 1440px*/
         p {
           font-size: 0.9em;
         }
-
-        a {
-          font-size: 0.9em;
+        div.blog-link {
+          a {
+            font-size: 0.9em;
+          }
         }
       }
     }
@@ -5886,9 +5895,10 @@ desktop 1280px*/
         p {
           font-size: 0.85em;
         }
-
-        a {
-          font-size: 0.85em;
+        div.blog-link {
+          a {
+            font-size: 0.85em;
+          }
         }
       }
     }
@@ -6915,9 +6925,10 @@ desktop 1280px*/
         p {
           font-size: 0.85em;
         }
-
-        a {
-          font-size: 0.85em;
+        div.blog-link {
+          a {
+            font-size: 0.85em;
+          }
         }
       }
     }
@@ -8037,9 +8048,10 @@ desktop 980px*/
         p {
           font-size: 0.85em;
         }
-
-        a {
-          font-size: 0.85em;
+        div.blog-link {
+          a {
+            font-size: 0.85em;
+          }
         }
       }
     }
@@ -9189,9 +9201,10 @@ tablet 800px */
         p {
           font-size: 0.8em;
         }
-
-        a {
-          font-size: 0.8em;
+        div.blog-link {
+          a {
+            font-size: 0.8em;
+          }
         }
       }
     }
@@ -10432,9 +10445,10 @@ tablet 667px*/
         p {
           font-size: 0.8em;
         }
-
-        a {
-          font-size: 0.8em;
+        div.blog-link {
+          a {
+            font-size: 0.8em;
+          }
         }
       }
     }
@@ -11693,10 +11707,11 @@ tablet 667px*/
         p {
           font-size: 0.8em;
         }
-
-        a {
-          font-size: 0.8em;
-          width: 75%;
+        div.blog-link {
+          a {
+            font-size: 0.8em;
+            width: 75%;
+          }
         }
       }
     }
@@ -12801,10 +12816,11 @@ mobile 480px */
         p {
           font-size: 0.8em;
         }
-
-        a {
-          font-size: 0.8em;
-          width: 60%;
+        div.blog-link {
+          a {
+            font-size: 0.8em;
+            width: 60%;
+          }
         }
       }
     }
@@ -13978,10 +13994,11 @@ mobile 360px */
         p {
           font-size: 0.8em;
         }
-
-        a {
-          font-size: 0.8em;
-          width: 60%;
+        div.blog-link {
+          a {
+            font-size: 0.8em;
+            width: 60%;
+          }
         }
       }
     }
@@ -15116,10 +15133,11 @@ mobile 320px */
         p {
           font-size: 0.8em;
         }
-
-        a {
-          font-size: 0.8em;
-          width: 60%;
+        div.blog-link {
+          a {
+            font-size: 0.8em;
+            width: 60%;
+          }
         }
       }
     }

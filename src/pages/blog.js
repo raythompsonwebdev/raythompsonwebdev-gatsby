@@ -1,9 +1,7 @@
 import React from "react"
-import { graphql } from "gatsby" //highlight-line
+import { graphql, Link } from "gatsby" //highlight-line
 import NoImage from "../components/noimage"
 import SEO from "../components/seo"
-//import contentParser from "gatsby-wpgraphql-inline-images"
-//import DOMPurify from "dompurify"
 
 export default function BlogPage(props) {
   return (
@@ -26,16 +24,16 @@ export default function BlogPage(props) {
                 alt=""
               />
             )}
-            {/* <div>
-              {contentParser({ excerpt }, { wordPressUrl, uploadsUrl })}
-            </div> */}
             <div
               dangerouslySetInnerHTML={{
                 __html: node.excerpt,
               }}
             ></div>
-
-            {/* <Link to={node.slug}>{node.title}</Link> */}
+            <div class="blog-link">
+              <Link to={`/blog/${node.slug}`}>
+                Continue reading : {node.title}
+              </Link>
+            </div>
           </div>
         ))}
       </div>

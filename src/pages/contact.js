@@ -2,7 +2,6 @@ import React from "react"
 import SEO from "../components/seo"
 import ContactForm from "../components/contactform"
 import MapContainer from "../components/mapgoogle"
-//import { Link } from "gatsby"
 
 const mapCover = {
   position: "relative",
@@ -46,7 +45,7 @@ class contactPage extends React.Component {
   handleSubmit(e) {
     //let url = "https://formspree.io/email@domain.tld"
 
-    console.log(
+    console.info(
       `Details : ${this.state.name}, ${this.state.email}, ${this.state.comments}`
     )
 
@@ -88,9 +87,7 @@ class contactPage extends React.Component {
         <address className="contact-details">
           <ul>
             <li>
-              <a 
-                href="mailto:ray@ray.com"
-              >
+              <a href="mailto:ray@ray.com">
                 {`raymond.thompson@raythompsonwebdev.co.uk`}
               </a>
             </li>
@@ -103,10 +100,7 @@ class contactPage extends React.Component {
               </a>
             </li>
             <li>
-              <a
-                href="https://twitter.com/RayThompWeb/"
-                target="new"
-              >
+              <a href="https://twitter.com/RayThompWeb/" target="new">
                 {`@RayThompWeb`}
               </a>
             </li>
