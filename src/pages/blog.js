@@ -1,37 +1,23 @@
 import React from "react"
-import { Link, graphql } from "gatsby" //highlight-line
-//import Image from "../components/image"
+import { graphql } from "gatsby" //highlight-line
+import NoImage from "../components/noimage"
 import SEO from "../components/seo"
 //import contentParser from "gatsby-wpgraphql-inline-images"
-import DOMPurify from "dompurify"
+//import DOMPurify from "dompurify"
 
 export default function BlogPage(props) {
   return (
     <main id="main-content">
       <SEO title="Blog Page" />
-      <h1>{`Interested in web design and web development`}</h1>
-
-      <div className="main-text">
-        <p>
-          {`Whether you are just beginning to learn or are alreading building
-          websites I would like to share what I have learnt so far about web
-          design and web development through the tons of valuable web
-          development and web design related resources I have read, watched
-          and listened to over the past few years, content like`}
-        </p>
-      </div>
+      <h1>{`Blogs`}</h1>
 
       <div id="blogbox">
         {props.data.allWpPost.nodes.map(node => (
           <div className="blogboxes" key={node.slug}>
-            <h1
-              dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(node.title),
-              }}
-            ></h1>
+            <h1>{node.title}</h1>
 
-            {node.featured_media == null ? (
-              <p>No Image</p>
+            {node.featuredImage == null ? (
+              <NoImage />
             ) : (
               <img
                 src={
@@ -45,11 +31,11 @@ export default function BlogPage(props) {
             </div> */}
             <div
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(node.excerpt),
+                __html: node.excerpt,
               }}
             ></div>
 
-            <Link to={node.slug}>{node.title}</Link>
+            {/* <Link to={node.slug}>{node.title}</Link> */}
           </div>
         ))}
       </div>
@@ -83,8 +69,13 @@ export const pageQuery = graphql`
           }
         }
         date
-        excerpt
         commentCount
+        tags {
+          nodes {
+            slug
+          }
+        }
+        modified(formatString: "DD-MMM-YYYY")
       }
     }
   }

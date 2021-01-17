@@ -12,8 +12,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-postcss`,
-    `gatsby-plugin-css-customs`,
+    //`gatsby-plugin-postcss`,
+    //`gatsby-plugin-css-customs`,
     //`gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -42,7 +42,8 @@ module.exports = {
          * The full URL of the WordPress site's GraphQL API.
          * Example : 'https://www.example-site.com/graphql'
          */
-        url: `http://localhost/wordpress/graphql`,
+        //url: `http://localhost/wordpress/graphql`,
+        url: `https://raythompsonwebdev.co.uk/graphql`,
       },
     },
 

@@ -19,9 +19,8 @@ desktop 1920px*/
     clear: both;
   }
 
-  #menu-toggle{
-    display:none;
-    
+  #menu-toggle {
+    display: none;
   }
 
   #wrapper_container {
@@ -73,7 +72,7 @@ desktop 1920px*/
         top: 0;
         content: "\e8e7";
         display: block;
-        background: $blackcolor;;
+        background: $blackcolor;
         color: $colorwhite;
         text-decoration: none;
         line-height: normal;
@@ -136,7 +135,7 @@ desktop 1920px*/
     .site-logo a:focus,
     .site-logo a:hover {
       outline: 2px solid $color4;
-    }    
+    }
 
     /*Header Title*/
     hgroup {
@@ -152,13 +151,12 @@ desktop 1920px*/
         width: 100%;
         height: 35px;
         font-weight: bold;
-        line-height: 1.5;        
+        line-height: 1.5;
         text-transform: uppercase;
         letter-spacing: 0.03em;
         text-indent: 0.25em;
-        
       }
-      
+
       h2 {
         float: none;
         display: block;
@@ -172,7 +170,6 @@ desktop 1920px*/
         text-indent: 0.5em;
         height: 20px;
       }
-      
     }
 
     /*Navigation*/
@@ -221,9 +218,7 @@ desktop 1920px*/
               background-color: $blackcolor;
               font-weight: bold;
               color: $yellowcolor;
-          }
-
-            
+            }
           }
         }
       }
@@ -232,7 +227,7 @@ desktop 1920px*/
     /*Mobile-Navigation*/
     nav#mobile-nav {
       display: none;
-    }    
+    }
   }
 
   /*main-content box*/
@@ -302,15 +297,15 @@ desktop 1920px*/
       align-items: flex-start;
       .blogboxes {
         width: 31%;
-        -webkit-flex: 1 0 auto;
-        -ms-flex: 1 0 auto;
-        flex: 1 0 auto;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
         margin: 0.25em;
         padding: 0.25em;
         @include Transition(all 0.2s ease-in-out 0s);
 
         &:hover {
-          @include TransScale(scale(1.05));
+          @include TransScale(scale(1.02));
           cursor: pointer;
         }
 
@@ -326,7 +321,7 @@ desktop 1920px*/
 
         p {
           font-size: 0.9em;
-          text-align:center;
+          text-align: center;
           line-height: 1.5em;
           background-color: $colorwhite;
           margin-top: 0.5em;
@@ -365,7 +360,7 @@ desktop 1920px*/
       font-size: 1.3em;
       letter-spacing: 0.05em;
       line-height: 50px;
-      height:auto;
+      height: auto;
     }
 
     /*Search Box*/
@@ -622,7 +617,8 @@ desktop 1920px*/
             float: left;
           }
 
-          a[href^="https://www.facebook.com"]:before {
+          a[href^="https://www.facebook.com"]:before
+          {
             content: "\f39e";
             font-size: 1.4em;
             font-style: normal;
@@ -635,7 +631,8 @@ desktop 1920px*/
             float: left;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f099";
             font-style: normal;
             display: block;
@@ -647,7 +644,8 @@ desktop 1920px*/
             float: left;
           }
 
-          a[href^="https://www.linkedin.com"]:before {
+          a[href^="https://www.linkedin.com"]:before
+          {
             content: "\f0e1";
             font-style: normal;
             display: block;
@@ -659,7 +657,8 @@ desktop 1920px*/
             float: left;
           }
 
-          a[href^="https://github.com"]:before {
+          a[href^="https://github.com"]:before
+          {
             content: "\f09b";
             font-style: normal;
             display: block;
@@ -767,26 +766,21 @@ desktop 1920px*/
                 padding: 2em;
               }
 
-              .fa-code{
-                background-color:$redcolor;
-
-
+              .fa-code {
+                background-color: $redcolor;
               }
 
-              .fa-laptop{
-                background-color:$yellowcolor;
-
+              .fa-laptop {
+                background-color: $yellowcolor;
               }
 
-              .fa-wordpress{
-                background-color:$greencolor;
-
+              .fa-wordpress {
+                background-color: $greencolor;
               }
 
-              .fa-wrench{
-                background-color:$blackcolor2;
-                color:$colorwhite;
-
+              .fa-wrench {
+                background-color: $blackcolor2;
+                color: $colorwhite;
               }
             }
 
@@ -907,7 +901,6 @@ desktop 1920px*/
         height: auto;
         font-family: ($FontStyle);
         padding-top: 3%;
-        
 
         h1 {
           font-size: 3.5em;
@@ -917,7 +910,7 @@ desktop 1920px*/
           line-height: 60px;
           display: block;
           text-align: left;
-          height:60px;
+          height: 60px;
           text-shadow: 1px 1px $colorwhite;
         }
         h2 {
@@ -927,7 +920,7 @@ desktop 1920px*/
           padding: 0;
           text-align: left;
           line-height: 40px;
-          height:auto;
+          height: auto;
           text-shadow: 1px 1px $colorwhite;
         }
 
@@ -1097,8 +1090,8 @@ desktop 1920px*/
           font-size: 1em;
           margin-bottom: 0.25em;
           padding: 0.5em;
-          color:$blackcolor;
-          background-color:$colorwhite2;
+          color: $blackcolor;
+          background-color: $colorwhite2;
 
           strong {
             display: inline-block;
@@ -1106,10 +1099,9 @@ desktop 1920px*/
             a {
               font-weight: bold;
               width: auto;
-              color:$blackcolor;
+              color: $blackcolor;
               &:hover {
-                text-decoration:underline;
-
+                text-decoration: underline;
               }
             }
           }
@@ -1275,7 +1267,7 @@ desktop 1920px*/
                   color: $colorwhite;
                   line-height: 40px;
                   height: 40px;
-                  background-color:$blackcolor;
+                  background-color: $blackcolor;
                   letter-spacing: 0.1em;
                   font-size: 1em;
                   width: 100%;
@@ -1476,8 +1468,8 @@ desktop 1920px*/
               height: auto;
               text-align: center;
               line-height: 60px;
-              font-size: 1em;  
-              background: $blackcolor;            
+              font-size: 1em;
+              background: $blackcolor;
               color: $colorwhite;
               z-index: 3;
               text-indent: 0;
@@ -1486,8 +1478,6 @@ desktop 1920px*/
             }
           }
         }
-
-        
       }
     }
 
@@ -1598,7 +1588,7 @@ desktop 1920px*/
               height: auto;
               width: 100%;
               display: block;
-              @include Transition(all 0.5s ease-in-out);
+              @include Transition(all 0.2s ease-in-out);
             }
 
             figcaption.showcase-content {
@@ -1608,7 +1598,7 @@ desktop 1920px*/
               padding: 1em 0;
               width: 100%;
               background-color: $colorwhite;
-              @include Transition(all 1s ease-in-out);
+              @include Transition(all 0.2s ease-in-out);
 
               h1 {
                 text-indent: 0;
@@ -1651,7 +1641,7 @@ desktop 1920px*/
           }
 
           figure.showcase-container:hover div.showcase-img {
-            @include TransScale(scale(1.1));
+            @include TransScale(scale(1.03));
           }
 
           figure.showcase-container:hover figcaption.showcase-content {
@@ -2015,12 +2005,11 @@ desktop 1920px*/
               width: 10%;
               margin: 0;
               padding: 0 0.25em 1.5em 0.25em;
-              display:block;
-              float:left;
-              height:100%;
-              a{
-                display:block;
-                
+              display: block;
+              float: left;
+              height: 100%;
+              a {
+                display: block;
               }
             }
 
@@ -2031,7 +2020,7 @@ desktop 1920px*/
             .comments-link,
             .date,
             .posted-on {
-              display:inline-block;
+              display: inline-block;
               width: 90%;
               height: auto;
               line-height: 25px;
@@ -2182,16 +2171,21 @@ desktop 1920px*/
       }
 
       /*post*/
-      .entry {        
+      .entry {
         height: auto;
         width: 100%;
         margin: 0 auto;
         background-color: $colorwhite;
         padding: 0 0.5em;
 
+        .wp-block-image {
+          width: 20%;
+          margin: auto;
+        }
+
         p {
-          padding:0.75em;
-          width: 98%;
+          padding: 0;
+          width: 100%;
           margin: 0;
           font-size: 0.95em;
           color: $color8;
@@ -2287,7 +2281,7 @@ desktop 1920px*/
 
       /*post footer*/
       footer.byline {
-        width: 100%;        
+        width: 100%;
         height: auto;
         font-size: 1em;
         display: inline-block;
@@ -2296,7 +2290,7 @@ desktop 1920px*/
 
         p {
           margin: 0;
-          display: inline-block;          
+          display: inline-block;
           width: auto;
           color: $colorwhite;
           line-height: 35px;
@@ -3072,12 +3066,10 @@ desktop 1680px*/
     width: 90%;
   }
 
-  
   header {
     top: 0;
     left: 0;
 
-    
     .site-logo {
       width: 5%;
 
@@ -3102,7 +3094,6 @@ desktop 1680px*/
       outline: 2px solid $color4;
     }
 
-    
     .site-logo a:focus .site-firstletter,
     .site-logo a:hover .site-firstletter {
       text-align: center;
@@ -3114,17 +3105,13 @@ desktop 1680px*/
 
       h1#logo {
         font-size: 1.5em;
-        
       }
-     
 
       h2 {
         font-size: 0.75em;
       }
-      
     }
 
-    
     nav#main-nav {
       width: 45%;
 
@@ -3141,13 +3128,11 @@ desktop 1680px*/
       }
     }
 
-    
     nav#mobile-nav {
       display: none;
     }
   }
 
-  
   #main-content {
     min-height: 760px;
 
@@ -3193,7 +3178,6 @@ desktop 1680px*/
         width: 31%;
 
         &:hover {
-
           cursor: pointer;
         }
 
@@ -3206,7 +3190,7 @@ desktop 1680px*/
         }
 
         a {
-          font-size: 1em;
+          font-size: 0.9em;
 
           &:hover {
             cursor: pointer;
@@ -3227,7 +3211,6 @@ desktop 1680px*/
       font-size: 1.2em;
     }
 
-    
     .social-1 {
       width: 30%;
 
@@ -3282,13 +3265,10 @@ desktop 1680px*/
       }
     }
 
-    
     #contactform {
       width: 48%;
 
       font-size: 1em;
-
-      
 
       form#contact-form {
         padding: 0.5em;
@@ -3340,14 +3320,12 @@ desktop 1680px*/
       }
     }
 
-    
     #map_container {
       width: 48.7293%;
 
       min-height: 250px;
     }
 
-    
     address.contact-details {
       width: 45%;
 
@@ -3370,24 +3348,28 @@ desktop 1680px*/
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f39e";
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f099";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://www.linkedin.com"]:before {
+          a[href^="https://www.linkedin.com"]:before
+          {
             content: "\f0e1";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://github.com"]:before {
+          a[href^="https://github.com"]:before
+          {
             content: "\f09b";
 
             font-size: 1.4em;
@@ -3396,9 +3378,7 @@ desktop 1680px*/
       }
     }
 
-    
     #frontpage_container {
-      
       div#text-box-front {
         width: 100%;
         padding: 0.5em;
@@ -3407,7 +3387,6 @@ desktop 1680px*/
           font-size: 0.9em;
         }
 
-        
         section#calltoaction {
           height: auto;
 
@@ -3438,7 +3417,6 @@ desktop 1680px*/
           }
         }
 
-        
         ul.webskills {
           list-style: none;
 
@@ -3500,7 +3478,6 @@ desktop 1680px*/
           }
         }
 
-        
         figure#image-6 {
           margin: 0;
           padding: 0;
@@ -3513,7 +3490,6 @@ desktop 1680px*/
       }
     }
 
-    
     div#profile_container {
       margin: 0 0 1em 0;
 
@@ -3538,7 +3514,6 @@ desktop 1680px*/
         }
       }
 
-      
       #text-box-profile-a {
         width: 46%;
 
@@ -3549,15 +3524,13 @@ desktop 1680px*/
         p {
           font-size: 1em;
         }
-        
+
         a:hover {
           font-weight: normal;
         }
       }
 
       section#prof_cont-a {
-       
-
         h1 {
           font-size: 1.3em;
         }
@@ -3695,7 +3668,6 @@ desktop 1680px*/
           }
         }
 
-        
         #chart {
           width: 100%;
 
@@ -3724,25 +3696,21 @@ desktop 1680px*/
             }
           }
         }
-
-        
       }
 
       #text-box-profile-b {
         height: auto;
 
         p {
-
           font-size: 1em;
 
           strong {
-
             width: auto;
             a {
               font-weight: bold;
 
               &:hover {
-                text-decoration:underline;
+                text-decoration: underline;
               }
             }
           }
@@ -4076,7 +4044,6 @@ desktop 1680px*/
       }
 
       .entry {
-       
         p {
           font-size: 0.95em;
         }
@@ -4469,7 +4436,6 @@ desktop 1680px*/
     width: 100%;
 
     .socialpics {
-      
       .social-icon {
         &:hover {
           cursor: pointer;
@@ -4522,11 +4488,9 @@ desktop 1440px*/
     width: 94%;
   }
 
-  
   header {
     height: 100px;
 
-    
     .site-logo {
       width: 5%;
 
@@ -4550,7 +4514,6 @@ desktop 1440px*/
       outline: 2px solid $color4;
     }
 
-    
     .site-logo a:focus .site-firstletter,
     .site-logo a:hover .site-firstletter {
       text-align: center;
@@ -4560,16 +4523,13 @@ desktop 1440px*/
     hgroup {
       h1#logo {
         font-size: 1.4em;
-       
       }
-      
+
       h2 {
         font-size: 0.7em;
       }
-      
     }
 
-    
     nav#main-nav {
       height: 35px;
 
@@ -4586,13 +4546,11 @@ desktop 1440px*/
       }
     }
 
-    
     nav#mobile-nav {
       display: none;
     }
   }
 
-  
   #main-content {
     div.main-text {
       p {
@@ -4641,7 +4599,7 @@ desktop 1440px*/
         }
 
         a {
-          font-size: 1em;
+          font-size: 0.9em;
         }
       }
     }
@@ -4649,7 +4607,7 @@ desktop 1440px*/
     h1 {
       font-size: 1.3em;
       line-height: 50px;
-      height:50px;
+      height: 50px;
     }
 
     h2 {
@@ -4660,7 +4618,6 @@ desktop 1440px*/
       font-size: 1.1em;
     }
 
-    
     .social-1 {
       height: 35px;
       width: 30%;
@@ -4709,7 +4666,6 @@ desktop 1440px*/
       }
     }
 
-    
     form#contact-form {
       ul {
         margin: 0;
@@ -4742,13 +4698,11 @@ desktop 1440px*/
       }
     }
 
-    
     #map_container {
       width: 48.7293%;
       min-height: 250px;
     }
 
-    
     address.contact-details {
       ul {
         li {
@@ -4769,24 +4723,28 @@ desktop 1440px*/
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f39e";
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f099";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://www.linkedin.com"]:before {
+          a[href^="https://www.linkedin.com"]:before
+          {
             content: "\f0e1";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://github.com"]:before {
+          a[href^="https://github.com"]:before
+          {
             content: "\f09b";
 
             font-size: 1.4em;
@@ -4795,11 +4753,9 @@ desktop 1440px*/
       }
     }
 
-    
     #frontpage_container {
       background-image: url("../images/raythompsonwebdev_banner-1280.png");
 
-      
       div#text-box-front {
         width: 100%;
 
@@ -4808,7 +4764,6 @@ desktop 1440px*/
           font-size: 0.85em;
         }
 
-        
         section#calltoaction {
           width: 100%;
 
@@ -4838,7 +4793,6 @@ desktop 1440px*/
           }
         }
 
-        
         ul.webskills {
           li {
             a {
@@ -4896,7 +4850,6 @@ desktop 1440px*/
           }
         }
 
-        
         figure#image-6 {
           margin: 0;
           padding: 0;
@@ -4909,12 +4862,9 @@ desktop 1440px*/
       }
     }
 
-    
     div#profile_container {
       margin: 0 0 1em 0;
       padding: 0;
-
-      
 
       #text-box-profile {
         width: 53%;
@@ -4933,7 +4883,6 @@ desktop 1440px*/
         }
       }
 
-      
       #text-box-profile-a {
         width: 46%;
 
@@ -4948,7 +4897,7 @@ desktop 1440px*/
 
       section#prof_cont-a {
         width: 50%;
-        
+
         h1 {
           font-size: 1.2em;
         }
@@ -5043,10 +4992,7 @@ desktop 1440px*/
           }
         }
 
-        
-        #chart {      
-          
-
+        #chart {
           #bars {
             li {
               height: 60px;
@@ -5067,25 +5013,21 @@ desktop 1440px*/
             }
           }
         }
-
-        
       }
 
       #text-box-profile-b {
         height: auto;
 
         p {
-
           font-size: 1em;
 
           strong {
-
             width: auto;
             a {
               font-weight: bold;
 
               &:hover {
-                text-decoration:underline;
+                text-decoration: underline;
               }
             }
           }
@@ -5420,7 +5362,6 @@ desktop 1440px*/
       }
 
       .entry {
-        
         /*global*/
         h1 {
           font-size: 1.2em;
@@ -5818,8 +5759,6 @@ desktop 1440px*/
     height: 120px;
 
     .socialpics {
-      
-
       .social-icon {
         &:hover {
           cursor: pointer;
@@ -5843,7 +5782,6 @@ desktop 1440px*/
       height: 100%;
 
       li {
-
         font-size: 1em;
 
         a {
@@ -5872,11 +5810,9 @@ desktop 1280px*/
     width: 96%;
   }
 
-  
   header {
     height: 100px;
 
-    
     .site-logo {
       width: 6%;
 
@@ -5900,7 +5836,6 @@ desktop 1280px*/
       outline: 2px solid $color4;
     }
 
-    
     .site-logo a:focus .site-firstletter,
     .site-logo a:hover .site-firstletter {
       text-align: center;
@@ -5910,17 +5845,13 @@ desktop 1280px*/
     hgroup {
       h1#logo {
         font-size: 1.3em;
-        
       }
-     
 
       h2 {
         font-size: 0.65em;
       }
-      
     }
 
-    
     nav#main-nav {
       height: 35px;
       width: 45%;
@@ -5938,13 +5869,11 @@ desktop 1280px*/
       }
     }
 
-    
     nav#mobile-nav {
       display: none;
     }
   }
 
-  
   #main-content {
     #blogbox {
       .blogboxes {
@@ -5955,11 +5884,11 @@ desktop 1280px*/
         }
 
         p {
-          font-size: 0.9em;
+          font-size: 0.85em;
         }
 
         a {
-          font-size: 1em;
+          font-size: 0.85em;
         }
       }
     }
@@ -5976,7 +5905,6 @@ desktop 1280px*/
       font-size: 1em;
     }
 
-    
     .social-1 {
       height: 35px;
       width: 30%;
@@ -6025,7 +5953,6 @@ desktop 1280px*/
       }
     }
 
-    
     form#contact-form {
       ul {
         margin: 0;
@@ -6058,13 +5985,11 @@ desktop 1280px*/
       }
     }
 
-    
     #map_container {
       width: 48.7293%;
       min-height: 250px;
     }
 
-    
     address.contact-details {
       ul {
         li {
@@ -6085,24 +6010,28 @@ desktop 1280px*/
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f39e";
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f099";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://www.linkedin.com"]:before {
+          a[href^="https://www.linkedin.com"]:before
+          {
             content: "\f0e1";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://github.com"]:before {
+          a[href^="https://github.com"]:before
+          {
             content: "\f09b";
 
             font-size: 1.4em;
@@ -6111,10 +6040,9 @@ desktop 1280px*/
       }
     }
 
-    
     #frontpage_container {
       background-image: url("../images/raythompsonwebdev_banner-1024.png");
-      
+
       div#text-box-front {
         width: 100%;
 
@@ -6123,7 +6051,6 @@ desktop 1280px*/
           font-size: 0.8em;
         }
 
-        
         section#calltoaction {
           width: 100%;
 
@@ -6153,7 +6080,6 @@ desktop 1280px*/
           }
         }
 
-        
         ul.webskills {
           li {
             a {
@@ -6191,8 +6117,6 @@ desktop 1280px*/
         }
       }
 
-      
-
       section#banner-container {
         h1 {
           font-size: 3.1em;
@@ -6203,7 +6127,6 @@ desktop 1280px*/
 
         p {
           font-size: 0.9em;
-          
         }
 
         a#projectLink {
@@ -6214,7 +6137,6 @@ desktop 1280px*/
           }
         }
 
-        
         figure#image-6 {
           margin: 0;
           padding: 0;
@@ -6227,11 +6149,8 @@ desktop 1280px*/
       }
     }
 
-    
     div#profile_container {
       padding: 0;
-
-      
 
       #text-box-profile {
         width: 48%;
@@ -6249,7 +6168,7 @@ desktop 1280px*/
           height: 74px;
         }
       }
-      
+
       #text-box-profile-a {
         width: 46%;
 
@@ -6260,13 +6179,11 @@ desktop 1280px*/
         p {
           font-size: 1em;
         }
-
-        
       }
 
       section#prof_cont-a {
         width: 50%;
-        
+
         h1 {
           font-size: 1.1em;
         }
@@ -6351,9 +6268,7 @@ desktop 1280px*/
           }
         }
 
-        
         #chart {
-          
           #bars {
             li {
               height: 60px;
@@ -6371,25 +6286,21 @@ desktop 1280px*/
             }
           }
         }
-
-        
       }
 
       #text-box-profile-b {
         height: auto;
 
         p {
-
           font-size: 1em;
 
           strong {
-
             width: auto;
             a {
               font-weight: bold;
 
               &:hover {
-                text-decoration:underline;
+                text-decoration: underline;
               }
             }
           }
@@ -6549,7 +6460,6 @@ desktop 1280px*/
       .website-text {
         h1.post-meta-key {
           font-size: 1.1em;
-
         }
 
         p.websitetext {
@@ -6710,7 +6620,6 @@ desktop 1280px*/
       }
 
       .entry {
-        
         /*global*/
         h1 {
           font-size: 1.15em;
@@ -6994,11 +6903,9 @@ desktop 1280px*/
 
 /*desktop 1120px*/
 @media only screen and (max-width: 1120px) {
-  
   #main-content {
     #blogbox {
       .blogboxes {
-
         h1 {
           font-size: 0.9em;
           line-height: 45px;
@@ -7010,14 +6917,13 @@ desktop 1280px*/
         }
 
         a {
-          font-size: 0.9em;
+          font-size: 0.85em;
         }
       }
     }
 
     h1 {
       font-size: 1.1em;
-
     }
 
     h2 {
@@ -7028,7 +6934,6 @@ desktop 1280px*/
       font-size: 0.95em;
     }
 
-    
     .social-1 {
       height: 35px;
       width: 30%;
@@ -7081,13 +6986,11 @@ desktop 1280px*/
       }
     }
 
-    
     #contactform {
       font-size: 1em;
 
       padding: 0.5em;
 
-      
       form#contact-form {
         ul {
           margin: 0;
@@ -7121,13 +7024,11 @@ desktop 1280px*/
       }
     }
 
-    
     #map_container {
       width: 48.7293%;
       min-height: 250px;
     }
 
-    
     address.contact-details {
       ul {
         li {
@@ -7148,24 +7049,28 @@ desktop 1280px*/
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f39e";
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f099";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://www.linkedin.com"]:before {
+          a[href^="https://www.linkedin.com"]:before
+          {
             content: "\f0e1";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://github.com"]:before {
+          a[href^="https://github.com"]:before
+          {
             content: "\f09b";
 
             font-size: 1.4em;
@@ -7174,10 +7079,9 @@ desktop 1280px*/
       }
     }
 
-    
     #frontpage_container {
       background-image: url("../images/raythompsonwebdev_banner-980.png");
-      
+
       div#text-box-front {
         width: 100%;
 
@@ -7186,7 +7090,6 @@ desktop 1280px*/
           font-size: 0.8em;
         }
 
-        
         section#calltoaction {
           width: 100%;
 
@@ -7216,7 +7119,6 @@ desktop 1280px*/
           }
         }
 
-        
         ul.webskills {
           li {
             a {
@@ -7264,8 +7166,6 @@ desktop 1280px*/
 
         p {
           font-size: 0.9em;
-          
-          
         }
 
         a#projectLink {
@@ -7276,7 +7176,6 @@ desktop 1280px*/
           }
         }
 
-        
         figure#image-6 {
           margin: 0;
           padding: 0;
@@ -7289,11 +7188,8 @@ desktop 1280px*/
       }
     }
 
-    
     div#profile_container {
       padding: 0;
-
-      
 
       #text-box-profile {
         width: 48%;
@@ -7312,7 +7208,6 @@ desktop 1280px*/
         }
       }
 
-      
       #text-box-profile-a {
         width: 40%;
 
@@ -7323,24 +7218,20 @@ desktop 1280px*/
         p {
           font-size: 0.9em;
         }
-        
       }
       #text-box-profile-b {
-
         height: auto;
 
         p {
-
           font-size: 0.9em;
 
           strong {
-
             width: auto;
             a {
               font-weight: bold;
 
               &:hover {
-                text-decoration:underline;
+                text-decoration: underline;
               }
             }
           }
@@ -7437,7 +7328,6 @@ desktop 1280px*/
           }
         }
 
-        
         #chart {
           width: 100%;
 
@@ -7461,8 +7351,6 @@ desktop 1280px*/
             }
           }
         }
-
-        
       }
     }
 
@@ -7748,7 +7636,6 @@ desktop 1280px*/
       }
 
       .entry {
-        
         /*global*/
         h1 {
           font-size: 1.1em;
@@ -8040,11 +7927,9 @@ desktop 980px*/
     width: 96%;
   }
 
-  
   header {
     height: 125px;
 
-    
     .site-logo {
       width: 7%;
 
@@ -8068,7 +7953,6 @@ desktop 980px*/
       outline: 2px solid $color4;
     }
 
-    
     .site-logo a:focus .site-firstletter,
     .site-logo a:hover .site-firstletter {
       text-align: center;
@@ -8080,17 +7964,13 @@ desktop 980px*/
 
       h1#logo {
         font-size: 1.4em;
-        
       }
-      
 
       h2 {
         font-size: 0.65em;
       }
-      
     }
 
-    
     nav#main-nav {
       height: 35px;
       width: 100%;
@@ -8108,13 +7988,11 @@ desktop 980px*/
       }
     }
 
-    
     nav#mobile-nav {
       display: none;
     }
   }
 
-  
   #main-content {
     div.main-text {
       p {
@@ -8152,8 +8030,6 @@ desktop 980px*/
 
     #blogbox {
       .blogboxes {
-
-
         h1 {
           font-size: 0.9em;
         }
@@ -8163,14 +8039,13 @@ desktop 980px*/
         }
 
         a {
-          font-size: 0.9em;
+          font-size: 0.85em;
         }
       }
     }
 
     h1 {
       font-size: 1.05em;
-
     }
 
     h2 {
@@ -8181,7 +8056,6 @@ desktop 980px*/
       font-size: 1em;
     }
 
-    
     .social-1 {
       height: 35px;
       width: 30%;
@@ -8234,13 +8108,11 @@ desktop 980px*/
       }
     }
 
-    
     #contactform {
       font-size: 1em;
 
       padding: 0.5em;
 
-      
       form#contact-form {
         ul {
           margin: 0;
@@ -8274,13 +8146,11 @@ desktop 980px*/
       }
     }
 
-    
     #map_container {
       width: 48.7293%;
       min-height: 250px;
     }
 
-    
     address.contact-details {
       ul {
         li {
@@ -8301,24 +8171,28 @@ desktop 980px*/
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f39e";
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f099";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://www.linkedin.com"]:before {
+          a[href^="https://www.linkedin.com"]:before
+          {
             content: "\f0e1";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://github.com"]:before {
+          a[href^="https://github.com"]:before
+          {
             content: "\f09b";
 
             font-size: 1.4em;
@@ -8327,10 +8201,9 @@ desktop 980px*/
       }
     }
 
-    
     #frontpage_container {
       background-image: url("../images/raythompsonwebdev_banner-800.png");
-      
+
       div#text-box-front {
         width: 100%;
 
@@ -8339,7 +8212,6 @@ desktop 980px*/
           font-size: 0.8em;
         }
 
-        
         section#calltoaction {
           width: 100%;
 
@@ -8372,7 +8244,6 @@ desktop 980px*/
           }
         }
 
-        
         ul.webskills {
           li {
             a {
@@ -8421,7 +8292,6 @@ desktop 980px*/
         p {
           font-size: 0.9em;
           width: 68%;
-          
         }
 
         a#projectLink {
@@ -8432,7 +8302,6 @@ desktop 980px*/
           }
         }
 
-        
         figure#image-6 {
           margin: 0;
           padding: 0;
@@ -8445,11 +8314,8 @@ desktop 980px*/
       }
     }
 
-    
     div#profile_container {
       padding: 0;
-
-      
 
       #text-box-profile {
         width: 48%;
@@ -8468,7 +8334,6 @@ desktop 980px*/
         }
       }
 
-      
       #text-box-profile-a {
         width: 40%;
 
@@ -8479,26 +8344,21 @@ desktop 980px*/
         p {
           font-size: 0.9em;
         }
-
-        
       }
 
       #text-box-profile-b {
-
         height: auto;
 
         p {
-
           font-size: 1em;
 
           strong {
-
             width: auto;
             a {
               font-weight: bold;
 
               &:hover {
-                text-decoration:underline;
+                text-decoration: underline;
               }
             }
           }
@@ -8507,7 +8367,6 @@ desktop 980px*/
 
       section#prof_cont-a {
         width: 50%;
-        
 
         button.slider-btn {
           top: -15px;
@@ -8603,7 +8462,6 @@ desktop 980px*/
           }
         }
 
-        
         #chart {
           width: 100%;
 
@@ -8629,8 +8487,6 @@ desktop 980px*/
             }
           }
         }
-
-        
       }
     }
 
@@ -8854,7 +8710,7 @@ desktop 980px*/
             .comments-link,
             .date,
             .posted-on {
-              width:83%;
+              width: 83%;
               font-size: 0.8em;
 
               a {
@@ -8923,7 +8779,6 @@ desktop 980px*/
       }
 
       .entry {
-        
         /*global*/
         h1 {
           font-size: 1.15em;
@@ -9261,9 +9116,7 @@ tablet 800px */
     width: 98%;
   }
 
-  
   header {
-    
     .site-logo {
       width: 7%;
 
@@ -9287,7 +9140,6 @@ tablet 800px */
       outline: 2px solid $color4;
     }
 
-    
     .site-logo a:focus .site-firstletter,
     .site-logo a:hover .site-firstletter {
       text-align: center;
@@ -9297,16 +9149,13 @@ tablet 800px */
     hgroup {
       h1#logo {
         font-size: 1.4em;
-        
       }
-     
+
       h2 {
         font-size: 0.65em;
       }
-      
     }
 
-    
     nav#main-nav {
       height: 35px;
 
@@ -9323,17 +9172,15 @@ tablet 800px */
       }
     }
 
-    
     nav#mobile-nav {
       display: none;
     }
   }
 
-  
   #main-content {
     #blogbox {
       .blogboxes {
-        width: 48%; 
+        width: 48%;
 
         h1 {
           font-size: 0.9em;
@@ -9350,11 +9197,8 @@ tablet 800px */
     }
 
     div.main-text {
-      
-
       p {
         font-size: 0.85em;
-        
       }
 
       ul {
@@ -9362,24 +9206,20 @@ tablet 800px */
 
         li {
           font-size: 0.85em;
-          
+
           div.error {
             font-size: 0.85em;
           }
 
           &:before {
-            
             font-size: 0.9em;
-            
           }
 
           a {
             display: inline-block;
 
-
             &:hover {
               font-weight: bold;
-
             }
           }
         }
@@ -9388,7 +9228,6 @@ tablet 800px */
 
     h1 {
       font-size: 1em;
-
     }
 
     h2 {
@@ -9399,7 +9238,6 @@ tablet 800px */
       font-size: 0.9em;
     }
 
-    
     .social-1 {
       height: 35px;
       width: 30%;
@@ -9452,7 +9290,6 @@ tablet 800px */
       }
     }
 
-    
     #contactform {
       width: 90%;
       font-size: 1em;
@@ -9460,7 +9297,6 @@ tablet 800px */
       margin: 1em auto;
       padding: 0.5em;
 
-      
       form#contact-form {
         ul {
           margin: 0;
@@ -9494,13 +9330,11 @@ tablet 800px */
       }
     }
 
-    
     #map_container {
       width: 100%;
       min-height: 250px;
     }
 
-    
     address.contact-details {
       width: 100%;
 
@@ -9523,24 +9357,28 @@ tablet 800px */
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f39e";
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f099";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://www.linkedin.com"]:before {
+          a[href^="https://www.linkedin.com"]:before
+          {
             content: "\f0e1";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://github.com"]:before {
+          a[href^="https://github.com"]:before
+          {
             content: "\f09b";
 
             font-size: 1.4em;
@@ -9549,11 +9387,9 @@ tablet 800px */
       }
     }
 
-    
     #frontpage_container {
       background-image: url("../images/raythompsonwebdev_banner-667.png");
 
-      
       div#text-box-front {
         width: 100%;
         -webkit-order: 1;
@@ -9565,15 +9401,14 @@ tablet 800px */
           font-size: 0.8em;
         }
 
-        
         section#calltoaction {
           width: 100%;
 
           h1#front-title {
             text-indent: 0;
             font-size: 1.5em;
-            text-align:center;
-            line-height:50px;
+            text-align: center;
+            line-height: 50px;
           }
 
           section.frntpgbox {
@@ -9588,14 +9423,13 @@ tablet 800px */
               .fa-wrench,
               .fa-laptop {
                 height: auto;
-                width:26%;
-              
+                width: 26%;
               }
             }
 
             h1 {
               margin: 0;
-              font-size:1.2em;
+              font-size: 1.2em;
               line-height: 45px;
             }
 
@@ -9606,7 +9440,6 @@ tablet 800px */
           }
         }
 
-        
         ul.webskills {
           li {
             a {
@@ -9660,27 +9493,26 @@ tablet 800px */
 
         p {
           font-size: 1em;
-          float:none;
-          width:96%;
-          display:block;
-          margin:auto;
-          padding:0.5em;
+          float: none;
+          width: 96%;
+          display: block;
+          margin: auto;
+          padding: 0.5em;
         }
 
         a#projectLink {
-          font-size: 1.3em;          
+          font-size: 1.3em;
           border: 2.5px solid white;
-          width:60%;
-          float:none;
-          display:block;
-          margin:1em auto;
+          width: 60%;
+          float: none;
+          display: block;
+          margin: 1em auto;
 
           &:hover {
             background-color: $colorwhite;
           }
         }
 
-        
         figure#image-6 {
           margin: 0;
           padding: 0;
@@ -9693,11 +9525,8 @@ tablet 800px */
       }
     }
 
-    
     div#profile_container {
       padding: 0;
-
-      
 
       #text-box-profile {
         -webkit-order: 0;
@@ -9719,7 +9548,6 @@ tablet 800px */
         }
       }
 
-      
       #text-box-profile-a {
         -webkit-order: 2;
         -ms-flex-order: 2;
@@ -9733,24 +9561,21 @@ tablet 800px */
         p {
           font-size: 0.9em;
         }
-        
       }
 
       #text-box-profile-b {
         height: auto;
 
         p {
-
           font-size: 0.9em;
 
           strong {
-
             width: auto;
             a {
               font-weight: bold;
 
               &:hover {
-                text-decoration:underline;
+                text-decoration: underline;
               }
             }
           }
@@ -9860,7 +9685,6 @@ tablet 800px */
           }
         }
 
-        
         #chart {
           width: 100%;
 
@@ -9875,12 +9699,9 @@ tablet 800px */
 
             span {
               width: 16.5%;
-
             }
           }
         }
-
-        
       }
     }
 
@@ -10129,7 +9950,7 @@ tablet 800px */
             .comments-link,
             .date,
             .posted-on {
-              width:78%;
+              width: 78%;
               font-size: 0.8em;
 
               a {
@@ -10200,7 +10021,6 @@ tablet 800px */
       }
 
       .entry {
-        
         /*global*/
         h1 {
           font-size: 1.2em;
@@ -10478,7 +10298,7 @@ tablet 800px */
     height: 120px;
 
     .socialpics {
-      width:35%;
+      width: 35%;
       .social-icon {
         &:hover {
           cursor: pointer;
@@ -10510,8 +10330,8 @@ tablet 800px */
 
           &:hover {
             font-weight: bold;
-            background-color:unset;
-            cursor:pointer;
+            background-color: unset;
+            cursor: pointer;
           }
         }
       }
@@ -10538,11 +10358,9 @@ tablet 667px*/
     width: 98%;
   }
 
-  
   header {
     padding: 0.25em;
 
-    
     .site-logo {
       width: 9%;
 
@@ -10566,7 +10384,6 @@ tablet 667px*/
       outline: 2px solid $color4;
     }
 
-    
     .site-logo a:focus .site-firstletter,
     .site-logo a:hover .site-firstletter {
       text-align: center;
@@ -10577,16 +10394,13 @@ tablet 667px*/
       width: 91%;
       h1#logo {
         font-size: 1.3em;
-        
       }
-     
+
       h2 {
         font-size: 0.6em;
       }
-      
     }
 
-    
     nav#main-nav {
       height: 35px;
 
@@ -10603,13 +10417,11 @@ tablet 667px*/
       }
     }
 
-    
     nav#mobile-nav {
       display: none;
     }
   }
 
-  
   #main-content {
     #blogbox {
       .blogboxes {
@@ -10640,7 +10452,6 @@ tablet 667px*/
       font-size: 0.9em;
     }
 
-    
     .social-1 {
       height: 35px;
       width: 30%;
@@ -10693,13 +10504,11 @@ tablet 667px*/
       }
     }
 
-    
     #contactform {
       font-size: 1em;
 
       padding: 0.5em;
 
-      
       form#contact-form {
         ul {
           margin: 0;
@@ -10733,12 +10542,10 @@ tablet 667px*/
       }
     }
 
-    
     #map_container {
       min-height: 250px;
     }
 
-    
     address.contact-details {
       ul {
         li {
@@ -10759,24 +10566,28 @@ tablet 667px*/
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f39e";
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f099";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://www.linkedin.com"]:before {
+          a[href^="https://www.linkedin.com"]:before
+          {
             content: "\f0e1";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://github.com"]:before {
+          a[href^="https://github.com"]:before
+          {
             content: "\f09b";
 
             font-size: 1.4em;
@@ -10785,11 +10596,9 @@ tablet 667px*/
       }
     }
 
-    
     #frontpage_container {
       background-image: url("../images/raythompsonwebdev_banner-536.png");
 
-      
       div#text-box-front {
         width: 100%;
         -webkit-order: 1;
@@ -10801,17 +10610,14 @@ tablet 667px*/
           font-size: 0.8em;
         }
 
-        
         section#calltoaction {
           width: 100%;
 
           h1#front-title {
             font-size: 1.4em;
-            
           }
 
           section.frntpgbox {
-            
             span {
               height: auto;
 
@@ -10819,13 +10625,13 @@ tablet 667px*/
               .fa-code,
               .fa-wrench,
               .fa-laptop {
-                width:28%;
+                width: 28%;
               }
             }
 
             h1 {
               margin: 0;
-              font-size:1.1em;
+              font-size: 1.1em;
             }
 
             p {
@@ -10834,7 +10640,6 @@ tablet 667px*/
           }
         }
 
-        
         ul.webskills {
           li {
             a {
@@ -10872,12 +10677,11 @@ tablet 667px*/
         }
       }
 
-      
       section#banner-container {
         h1 {
           font-size: 2.5em;
-          height:50px;
-          line-height:50px;
+          height: 50px;
+          line-height: 50px;
         }
         h2 {
           font-size: 1.3em;
@@ -10885,7 +10689,6 @@ tablet 667px*/
 
         p {
           font-size: 0.9em;
-          
         }
 
         a#projectLink {
@@ -10896,7 +10699,6 @@ tablet 667px*/
           }
         }
 
-        
         figure#image-6 {
           margin: 0;
           padding: 0;
@@ -10909,11 +10711,8 @@ tablet 667px*/
       }
     }
 
-    
     div#profile_container {
       padding: 0;
-
-      
 
       #text-box-profile {
         width: 98%;
@@ -10932,7 +10731,6 @@ tablet 667px*/
         }
       }
 
-      
       #text-box-profile-a {
         width: 98%;
         margin: 0;
@@ -10946,24 +10744,21 @@ tablet 667px*/
         p {
           font-size: 0.9em;
         }
-        
       }
 
       #text-box-profile-b {
         height: auto;
 
         p {
-
           font-size: 0.95em;
 
           strong {
-
             width: auto;
             a {
               font-weight: bold;
 
               &:hover {
-                text-decoration:underline;
+                text-decoration: underline;
               }
             }
           }
@@ -10979,7 +10774,6 @@ tablet 667px*/
 
         button.slider-btn {
           top: -15px;
-          
 
           &:hover {
             font-weight: bold;
@@ -11065,7 +10859,6 @@ tablet 667px*/
           }
         }
 
-        
         #chart {
           width: 100%;
 
@@ -11089,8 +10882,6 @@ tablet 667px*/
             }
           }
         }
-
-        
       }
     }
 
@@ -11319,7 +11110,7 @@ tablet 667px*/
             .comments-link,
             .date,
             .posted-on {
-              width:75%;
+              width: 75%;
               font-size: 0.8em;
 
               a {
@@ -11391,7 +11182,6 @@ tablet 667px*/
       }
 
       .entry {
-        
         /*global*/
         h1 {
           font-size: 1.1em;
@@ -11694,7 +11484,6 @@ tablet 667px*/
       height: 100%;
 
       li {
-
         font-size: 1em;
 
         a {
@@ -11715,7 +11504,6 @@ tablet 667px*/
 
 /*tablet 536px */
 @media only screen and (max-width: 536px) {
-  
   #menu-toggle {
     position: fixed;
     z-index: 115;
@@ -11729,10 +11517,10 @@ tablet 667px*/
     border: none;
     transition: all ease-out 400ms;
     line-height: 60px;
-    width:15%;
+    width: 15%;
     display: block;
-    outline:none;
-    text-decoration:none;
+    outline: none;
+    text-decoration: none;
   }
 
   #menu-toggle.hide {
@@ -11764,11 +11552,9 @@ tablet 667px*/
     width: 98%;
   }
 
-  
   header {
     height: 80px;
 
-    
     .site-logo {
       width: 12%;
 
@@ -11792,7 +11578,6 @@ tablet 667px*/
       outline: 2px solid $color4;
     }
 
-    
     .site-logo a:focus .site-firstletter,
     .site-logo a:hover .site-firstletter {
       text-align: center;
@@ -11804,16 +11589,13 @@ tablet 667px*/
 
       h1#logo {
         font-size: 1.3em;
-       
       }
 
       h2 {
         font-size: 0.6em;
       }
-
     }
 
-    
     nav#main-nav {
       position: fixed;
       z-index: 100;
@@ -11862,21 +11644,15 @@ tablet 667px*/
       }
     }
 
-    
     nav#mobile-nav {
       display: none;
     }
   }
 
-  
   #main-content {
-
     div.main-text {
-      
-
       p {
         font-size: 0.8em;
-        
       }
 
       ul {
@@ -11884,24 +11660,20 @@ tablet 667px*/
 
         li {
           font-size: 0.8em;
-          
+
           div.error {
             font-size: 0.8em;
           }
 
           &:before {
-            
             font-size: 0.9em;
-            
           }
 
           a {
             display: inline-block;
 
-
             &:hover {
               font-weight: bold;
-
             }
           }
         }
@@ -11930,9 +11702,9 @@ tablet 667px*/
     }
 
     h1 {
-      font-size:1em;
+      font-size: 1em;
       line-height: 40px;
-      height:40px;
+      height: 40px;
     }
 
     h2 {
@@ -11943,7 +11715,6 @@ tablet 667px*/
       font-size: 0.9em;
     }
 
-    
     .social-1 {
       height: 35px;
       width: 30%;
@@ -11996,13 +11767,11 @@ tablet 667px*/
       }
     }
 
-    
     #contactform {
       font-size: 1em;
 
       padding: 0.5em;
 
-      
       form#contact-form {
         ul {
           margin: 0;
@@ -12036,12 +11805,10 @@ tablet 667px*/
       }
     }
 
-    
     #map_container {
       min-height: 250px;
     }
 
-    
     address.contact-details {
       ul {
         li {
@@ -12062,24 +11829,28 @@ tablet 667px*/
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f39e";
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f099";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://www.linkedin.com"]:before {
+          a[href^="https://www.linkedin.com"]:before
+          {
             content: "\f0e1";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://github.com"]:before {
+          a[href^="https://github.com"]:before
+          {
             content: "\f09b";
 
             font-size: 1.4em;
@@ -12088,7 +11859,6 @@ tablet 667px*/
       }
     }
 
-    
     #frontpage_container {
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -12101,7 +11871,6 @@ tablet 667px*/
       -ms-flex-pack: center;
       justify-content: center;
 
-      
       div#text-box-front {
         width: 100%;
         -webkit-order: 1;
@@ -12113,7 +11882,6 @@ tablet 667px*/
           font-size: 0.75em;
         }
 
-        
         section#calltoaction {
           width: 100%;
 
@@ -12131,7 +11899,7 @@ tablet 667px*/
               .fa-code,
               .fa-wrench,
               .fa-laptop {
-                width:30%;
+                width: 30%;
               }
             }
 
@@ -12145,7 +11913,6 @@ tablet 667px*/
           }
         }
 
-        
         ul.webskills {
           li {
             a {
@@ -12183,7 +11950,6 @@ tablet 667px*/
         }
       }
 
-      
       section#banner-container {
         h1 {
           font-size: 2.2em;
@@ -12200,7 +11966,6 @@ tablet 667px*/
           }
         }
 
-        
         figure#image-6 {
           margin: 0;
           padding: 0;
@@ -12213,11 +11978,8 @@ tablet 667px*/
       }
     }
 
-    
     div#profile_container {
       padding: 0;
-
-      
 
       #text-box-profile {
         width: 98%;
@@ -12236,7 +11998,6 @@ tablet 667px*/
         }
       }
 
-      
       #text-box-profile-a {
         width: 98%;
 
@@ -12248,24 +12009,21 @@ tablet 667px*/
         p {
           font-size: 0.9em;
         }
-        
       }
 
       #text-box-profile-b {
         height: auto;
 
         p {
-
           font-size: 0.9em;
 
           strong {
-
             width: auto;
             a {
               font-weight: bold;
 
               &:hover {
-                text-decoration:underline;
+                text-decoration: underline;
               }
             }
           }
@@ -12367,7 +12125,6 @@ tablet 667px*/
           }
         }
 
-        
         #chart {
           width: 100%;
 
@@ -12386,8 +12143,6 @@ tablet 667px*/
             }
           }
         }
-
-        
       }
     }
 
@@ -12669,7 +12424,6 @@ tablet 667px*/
       }
 
       .entry {
-        
         /*global*/
         h1 {
           font-size: 1.05em;
@@ -12929,7 +12683,6 @@ tablet 667px*/
     ul {
       width: 35%;
 
-
       li {
         font-size: 1em;
 
@@ -12956,7 +12709,7 @@ mobile 480px */
     left: 74%;
     font-size: 0.9em;
     top: 2.4em;
-    width:20%;
+    width: 20%;
   }
 
   .seperator {
@@ -12967,11 +12720,9 @@ mobile 480px */
     width: 98%;
   }
 
-  
   header {
     height: 65px;
 
-    
     .site-logo {
       width: 15%;
 
@@ -12995,7 +12746,6 @@ mobile 480px */
       outline: 2px solid $color4;
     }
 
-    
     .site-logo a:focus .site-firstletter,
     .site-logo a:hover .site-firstletter {
       text-align: center;
@@ -13007,17 +12757,13 @@ mobile 480px */
 
       h1#logo {
         font-size: 1.2em;
-        
       }
 
-      
       h2 {
         font-size: 0.6em;
       }
-      
     }
 
-    
     nav#main-nav {
       top: 5em;
 
@@ -13038,13 +12784,11 @@ mobile 480px */
       }
     }
 
-    
     nav#mobile-nav {
       display: none;
     }
   }
 
-  
   #main-content {
     #blogbox {
       .blogboxes {
@@ -13066,21 +12810,17 @@ mobile 480px */
     }
 
     h1 {
-      font-size:1em;
-
+      font-size: 1em;
     }
 
     h2 {
       font-size: 0.9em;
-
     }
 
     h3 {
       font-size: 0.85em;
-;
     }
 
-    
     .social-1 {
       height: 35px;
       width: 30%;
@@ -13133,13 +12873,11 @@ mobile 480px */
       }
     }
 
-    
     #contactform {
       font-size: 1em;
 
       padding: 0.5em;
 
-      
       form#contact-form {
         ul {
           margin: 0;
@@ -13173,12 +12911,10 @@ mobile 480px */
       }
     }
 
-    
     #map_container {
       min-height: 250px;
     }
 
-    
     address.contact-details {
       ul {
         li {
@@ -13199,24 +12935,28 @@ mobile 480px */
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f39e";
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f099";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://www.linkedin.com"]:before {
+          a[href^="https://www.linkedin.com"]:before
+          {
             content: "\f0e1";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://github.com"]:before {
+          a[href^="https://github.com"]:before
+          {
             content: "\f09b";
 
             font-size: 1.4em;
@@ -13225,11 +12965,9 @@ mobile 480px */
       }
     }
 
-    
     #frontpage_container {
       background-image: url("../images/raythompsonwebdev_banner-480.png");
 
-      
       div#text-box-front {
         width: 100%;
         -webkit-order: 1;
@@ -13241,7 +12979,6 @@ mobile 480px */
           font-size: 0.75em;
         }
 
-        
         section#calltoaction {
           -webkit-flex-flow: row wrap;
           -ms-flex-flow: row wrap;
@@ -13255,7 +12992,7 @@ mobile 480px */
 
           section.frntpgbox {
             width: 65%;
-            
+
             span {
               height: auto;
 
@@ -13263,7 +13000,7 @@ mobile 480px */
               .fa-code,
               .fa-wrench,
               .fa-laptop {
-                width:35%;
+                width: 35%;
               }
             }
 
@@ -13275,14 +13012,13 @@ mobile 480px */
               font-size: 0.9em;
             }
 
-            a#projectLink{
+            a#projectLink {
               margin: 0.5em auto;
-              width:75%;
+              width: 75%;
             }
           }
         }
 
-        
         ul.webskills {
           li {
             a {
@@ -13320,7 +13056,6 @@ mobile 480px */
         }
       }
 
-      
       section#banner-container {
         h1 {
           font-size: 2.1em;
@@ -13334,7 +13069,6 @@ mobile 480px */
 
         p {
           font-size: 0.85em;
-          
         }
 
         a#projectLink {
@@ -13347,7 +13081,6 @@ mobile 480px */
           }
         }
 
-        
         figure#image-6 {
           margin: 0;
           padding: 0;
@@ -13360,11 +13093,8 @@ mobile 480px */
       }
     }
 
-    
     div#profile_container {
       padding: 0;
-
-      
 
       #text-box-profile {
         width: 98%;
@@ -13383,37 +13113,31 @@ mobile 480px */
         }
       }
 
-      
       #text-box-profile-a {
         width: 98%;
 
         h1 {
           font-size: 1em;
-
         }
 
         p {
           font-size: 0.85em;
         }
-
-        
       }
 
       #text-box-profile-b {
         height: auto;
 
         p {
-
           font-size: 0.85em;
 
           strong {
-
             width: auto;
             a {
               font-weight: bold;
 
               &:hover {
-                text-decoration:underline;
+                text-decoration: underline;
               }
             }
           }
@@ -13515,7 +13239,6 @@ mobile 480px */
           }
         }
 
-        
         #chart {
           #bars {
             li {
@@ -13534,8 +13257,6 @@ mobile 480px */
             }
           }
         }
-
-        
       }
     }
 
@@ -13773,7 +13494,7 @@ mobile 480px */
             .comments-link,
             .date,
             .posted-on {
-              width:70%;
+              width: 70%;
               font-size: 0.7em;
 
               a {
@@ -13845,7 +13566,6 @@ mobile 480px */
       }
 
       .entry {
-        
         /*global*/
         h1 {
           font-size: 1.05em;
@@ -14145,7 +13865,6 @@ mobile 480px */
       height: 100%;
 
       li {
-
         font-size: 1em;
 
         a {
@@ -14184,10 +13903,7 @@ mobile 360px */
     width: 98%;
   }
 
-  
   header {
-    
-    
     .site-logo {
       a {
         line-height: 50px;
@@ -14209,7 +13925,6 @@ mobile 360px */
       outline: 2px solid $color4;
     }
 
-    
     .site-logo a:focus .site-firstletter,
     .site-logo a:hover .site-firstletter {
       text-align: center;
@@ -14221,17 +13936,13 @@ mobile 360px */
 
       h1#logo {
         font-size: 1.1em;
-       
       }
 
-     
       h2 {
         font-size: 0.5em;
       }
-      
     }
 
-    
     nav#main-nav {
       top: 5em;
 
@@ -14252,18 +13963,14 @@ mobile 360px */
       }
     }
 
-    
     nav#mobile-nav {
       display: none;
     }
   }
 
-  
   #main-content {
     #blogbox {
       .blogboxes {
-       
-
         h1 {
           font-size: 0.9em;
         }
@@ -14291,7 +13998,6 @@ mobile 360px */
       font-size: 0.85em;
     }
 
-    
     .social-1 {
       height: 35px;
       width: 30%;
@@ -14344,13 +14050,11 @@ mobile 360px */
       }
     }
 
-    
     #contactform {
       font-size: 1em;
 
       padding: 0.5em;
 
-      
       form#contact-form {
         ul {
           margin: 0;
@@ -14384,12 +14088,10 @@ mobile 360px */
       }
     }
 
-    
     #map_container {
       min-height: 250px;
     }
 
-    
     address.contact-details {
       ul {
         li {
@@ -14410,24 +14112,28 @@ mobile 360px */
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f39e";
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f099";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://www.linkedin.com"]:before {
+          a[href^="https://www.linkedin.com"]:before
+          {
             content: "\f0e1";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://github.com"]:before {
+          a[href^="https://github.com"]:before
+          {
             content: "\f09b";
 
             font-size: 1.4em;
@@ -14436,11 +14142,9 @@ mobile 360px */
       }
     }
 
-    
     #frontpage_container {
       background-image: url("../images/raythompsonwebdev_banner-360.png");
 
-      
       div#text-box-front {
         width: 100%;
         -webkit-order: 1;
@@ -14452,7 +14156,6 @@ mobile 360px */
           font-size: 0.75em;
         }
 
-        
         section#calltoaction {
           -webkit-flex-flow: row wrap;
           -ms-flex-flow: row wrap;
@@ -14474,7 +14177,7 @@ mobile 360px */
               .fa-code,
               .fa-wrench,
               .fa-laptop {
-                width:35%;
+                width: 35%;
               }
             }
 
@@ -14488,7 +14191,6 @@ mobile 360px */
           }
         }
 
-        
         ul.webskills {
           li {
             a {
@@ -14526,7 +14228,6 @@ mobile 360px */
         }
       }
 
-      
       section#banner-container {
         h1 {
           font-size: 2em;
@@ -14543,7 +14244,6 @@ mobile 360px */
           }
         }
 
-        
         figure#image-6 {
           margin: 0;
           padding: 0;
@@ -14556,11 +14256,8 @@ mobile 360px */
       }
     }
 
-    
     div#profile_container {
       padding: 0;
-
-      
 
       #text-box-profile {
         width: 100%;
@@ -14579,36 +14276,31 @@ mobile 360px */
         }
       }
 
-      
       #text-box-profile-a {
         width: 100%;
 
         h1 {
           font-size: 1em;
-
         }
 
         p {
           font-size: 0.85em;
         }
-        
       }
 
       #text-box-profile-b {
         height: auto;
 
         p {
-
           font-size: 0.85em;
 
           strong {
-
             width: auto;
             a {
               font-weight: bold;
 
               &:hover {
-                text-decoration:underline;
+                text-decoration: underline;
               }
             }
           }
@@ -14703,7 +14395,6 @@ mobile 360px */
           }
         }
 
-        
         #chart {
           width: 100%;
 
@@ -14724,8 +14415,6 @@ mobile 360px */
             }
           }
         }
-
-        
       }
     }
 
@@ -14848,7 +14537,7 @@ mobile 360px */
         width: 97%;
 
         h1.post-meta-key {
-          font-size:0.85em;
+          font-size: 0.85em;
           margin-bottom: 0.5em;
         }
 
@@ -15318,7 +15007,6 @@ mobile 360px */
       height: 100%;
 
       li {
-
         a {
           font-size: 0.9em;
 
@@ -15353,11 +15041,9 @@ mobile 320px */
     width: 98%;
   }
 
-  
   header {
     height: 65px;
 
-    
     .site-logo {
       a {
         line-height: 50px;
@@ -15379,7 +15065,6 @@ mobile 320px */
       outline: 2px solid $color4;
     }
 
-    
     .site-logo a:focus .site-firstletter,
     .site-logo a:hover .site-firstletter {
       text-align: center;
@@ -15390,14 +15075,12 @@ mobile 320px */
       h1#logo {
         font-size: 1.05em;
       }
-      
+
       h2 {
         font-size: 0.5em;
       }
-
     }
 
-    
     nav#main-nav {
       top: 5em;
 
@@ -15418,18 +15101,14 @@ mobile 320px */
       }
     }
 
-    
     nav#mobile-nav {
       display: none;
     }
   }
 
-  
   #main-content {
     #blogbox {
       .blogboxes {
-        
-
         h1 {
           font-size: 0.9em;
         }
@@ -15457,7 +15136,6 @@ mobile 320px */
       font-size: 0.85em;
     }
 
-    
     .social-1 {
       height: 35px;
       width: 30%;
@@ -15510,13 +15188,11 @@ mobile 320px */
       }
     }
 
-    
     #contactform {
       font-size: 1em;
 
       padding: 0.5em;
 
-      
       form#contact-form {
         ul {
           margin: 0;
@@ -15550,12 +15226,10 @@ mobile 320px */
       }
     }
 
-    
     #map_container {
       min-height: 250px;
     }
 
-    
     address.contact-details {
       ul {
         li {
@@ -15576,24 +15250,28 @@ mobile 320px */
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f39e";
             font-size: 1.4em;
           }
 
-          a[href^="https://twitter.com"]:before {
+          a[href^="https://twitter.com"]:before
+          {
             content: "\f099";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://www.linkedin.com"]:before {
+          a[href^="https://www.linkedin.com"]:before
+          {
             content: "\f0e1";
 
             font-size: 1.4em;
           }
 
-          a[href^="https://github.com"]:before {
+          a[href^="https://github.com"]:before
+          {
             content: "\f09b";
 
             font-size: 1.4em;
@@ -15602,11 +15280,9 @@ mobile 320px */
       }
     }
 
-    
     #frontpage_container {
       background-image: url("../images/raythompsonwebdev_banner-320.png");
 
-      
       div#text-box-front {
         width: 100%;
         -webkit-order: 1;
@@ -15618,7 +15294,6 @@ mobile 320px */
           font-size: 0.75em;
         }
 
-        
         section#calltoaction {
           -webkit-flex-flow: row wrap;
           -ms-flex-flow: row wrap;
@@ -15630,8 +15305,8 @@ mobile 320px */
             font-size: 1.2em;
           }
 
-          section.frntpgbox { 
-            width:70%;           
+          section.frntpgbox {
+            width: 70%;
 
             span {
               height: auto;
@@ -15640,7 +15315,7 @@ mobile 320px */
               .fa-code,
               .fa-wrench,
               .fa-laptop {
-                width:35%;
+                width: 35%;
               }
             }
 
@@ -15654,7 +15329,6 @@ mobile 320px */
           }
         }
 
-        
         ul.webskills {
           li {
             a {
@@ -15692,7 +15366,6 @@ mobile 320px */
         }
       }
 
-      
       section#banner-container {
         h1 {
           font-size: 1.8em;
@@ -15709,7 +15382,6 @@ mobile 320px */
           }
         }
 
-        
         figure#image-6 {
           margin: 0;
           padding: 0;
@@ -15722,11 +15394,8 @@ mobile 320px */
       }
     }
 
-    
     div#profile_container {
       padding: 0;
-
-      
 
       #text-box-profile {
         width: 100%;
@@ -15745,37 +15414,32 @@ mobile 320px */
         }
       }
 
-      
       #text-box-profile-a {
         width: 100%;
 
         h1 {
           font-size: 1em;
-
         }
 
         p {
           line-height: 1.9em;
           font-size: 0.85em;
         }
-        
       }
 
       #text-box-profile-b {
         height: auto;
 
         p {
-
           font-size: 0.85em;
 
           strong {
-
             width: auto;
             a {
               font-weight: bold;
 
               &:hover {
-                text-decoration:underline;
+                text-decoration: underline;
               }
             }
           }
@@ -15877,7 +15541,6 @@ mobile 320px */
           }
         }
 
-        
         #chart {
           width: 96%;
 
@@ -15898,8 +15561,6 @@ mobile 320px */
             }
           }
         }
-
-        
       }
     }
 
@@ -16194,7 +15855,6 @@ mobile 320px */
       }
 
       .entry {
-        
         /*global*/
         h1 {
           font-size: 1.05em;
@@ -16488,7 +16148,6 @@ mobile 320px */
       height: 100%;
 
       li {
-
         a {
           font-size: 0.9em;
 

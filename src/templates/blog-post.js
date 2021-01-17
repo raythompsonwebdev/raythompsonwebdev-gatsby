@@ -2,10 +2,10 @@ import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
-import DOMPurify from "dompurify"
 
 export default function BlogPost({ data }) {
   const post = data.allWpPost.nodes[0]
+
   return (
     <main id="main-content">
       <SEO title="Blog Post" />
@@ -32,13 +32,15 @@ export default function BlogPost({ data }) {
                 <time className="entry-date published">{post.date}</time>
               </span>
               <span className="byline">
-                Updated: <time className="updated"></time>
+                Updated: <time className="updated">{post.modified}</time>
               </span>
               <span className="comments-link">
                 Comments : {post.commentCount}
               </span>
               <span className="byline">
-                <time className="entry-date published updated">Tags</time>
+                Tags: {post.tags.nodes[0].slug}
+                {" ,"}
+                {post.tags.nodes[1].slug}
               </span>
             </div>
           </div>
@@ -62,15 +64,9 @@ export default function BlogPost({ data }) {
         <div className="entry">
           <div
             dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(post.content),
+              __html: post.content,
             }}
           ></div>
-        </div>
-
-        <div className="continue-reading">
-          <a href="/" title="continue reading">
-            Link
-          </a>
         </div>
 
         <footer className="byline">
@@ -118,6 +114,12 @@ export const query = graphql`
             name
           }
         }
+        tags {
+          nodes {
+            slug
+          }
+        }
+        modified(formatString: "DD-MMM-YYYY")
       }
     }
   }
