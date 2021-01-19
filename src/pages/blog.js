@@ -29,7 +29,7 @@ export default function BlogPage(props) {
                 __html: node.excerpt,
               }}
             ></div>
-            <div class="blog-link">
+            <div className="blog-link">
               <Link to={`/blog/${node.slug}`}>
                 Continue reading : {node.title}
               </Link>

@@ -7,14 +7,13 @@ module.exports = {
       summary: `trying a ting.`,
     },
     url: `https://raythompsonwebdev.co.uk`,
-    //logo: `/logo.png`,
     twitter: `raythompWeb`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     //`gatsby-plugin-postcss`,
     //`gatsby-plugin-css-customs`,
-    //`gatsby-plugin-styled-components`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -57,8 +56,9 @@ module.exports = {
     {
       resolve: "gatsby-wpgraphql-inline-images",
       options: {
-        wordPressUrl: "http://localhost/wordpress/",
-        uploadsUrl: "http://localhost/wordpress/wp-content/uploads/",
+        wordPressUrl: "https://raythompsonwebdev.co.uk/wordpress/",
+        uploadsUrl:
+          "https://raythompsonwebdev.co.uk/wordpress/wp-content/uploads/",
         processPostTypes: ["Page", "Post", "Project"],
         graphqlTypeName: "WPGraphQL",
       },
